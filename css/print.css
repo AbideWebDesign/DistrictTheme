@@ -1,0 +1,16 @@
+@media print { 
+	.search, #header-global, #logo, #header-mobile, #mainmenu, .ubermenu, #footer-top, #footer-bottom {
+		display: none;
+	}
+	#tribe-events-content:before {
+		display: block;
+		content: "Corvallis School District Website";
+		margin-bottom: 10px;
+		border: 1px solid #bbb;
+		padding: 3px 5px;
+		font-style: italic;
+	}
+	a[href^="http://"]:after  {
+		display: none;
+	}
+}

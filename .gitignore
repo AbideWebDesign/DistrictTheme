@@ -1,0 +1,6 @@
+scss/*
+.DS_Store
+*.scss
+assets/stylesheets/boostrap/*
+.codekit-cache
+.sass-cache

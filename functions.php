@@ -9,7 +9,7 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 $myUpdateChecker->setBranch('master'); 
 
 function csd_enqueue_style() {
-	wp_enqueue_style( 'style.css', get_template_directory_uri() . '/css/style.css' ); 
+	wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css' ); 
 	wp_enqueue_style( 'print.css', get_template_directory_uri() . '/css/print.css' ); 
 	wp_enqueue_style( 'ie10-viewport-bug-workaround.css', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css' ); 
 	wp_enqueue_style( 'font-awesome.min.css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' ); 

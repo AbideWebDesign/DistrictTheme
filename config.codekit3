@@ -1336,16 +1336,6 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"\/css\/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/css\/style-min.css",
-		"oF": 0,
-		"oS": 0
-		},
 	"\/footer-calendar.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -1515,7 +1505,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "\/css\/style.css",
+		"oAP": "\/style.css",
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
@@ -1573,6 +1563,16 @@
 		"oA": 2,
 		"oAP": "\/single.php",
 		"oF": 0
+		},
+	"\/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "\/style-min.css",
+		"oF": 0,
+		"oS": 0
 		},
 	"\/template-parts\/content-alert.php": {
 		"ft": 8192,

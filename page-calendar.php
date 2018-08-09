@@ -9,7 +9,7 @@
  get_header();
 ?>
 <div id="primary" class="content-area">
-	<div class="padding-vertical-four bg-primary">
+	<div class="padding-vertical-four bg-secondary">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

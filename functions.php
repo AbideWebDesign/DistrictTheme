@@ -17,6 +17,9 @@ function csd_enqueue_style() {
 add_action( 'wp_enqueue_scripts', 'csd_enqueue_style', 100 );
 
 function csd_enqueue_script() {
+	wp_deregister_script( 'jquery' );
+	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', false, null );
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap.min.js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', '', '', true );
 	wp_enqueue_script( 'core.js', get_template_directory_uri() . '/assets/js/core.js', '', '', true );
 	
@@ -35,6 +38,7 @@ add_image_size('News Image Featured', 824, 425);
 add_image_size('Staff Directory', 326, 453);
 add_image_size('Callout Block', 586, 416);
 add_image_size('Page Builder Image', 825, 315);
+add_image_size('eFriday Folder Image', 230, 298, true);
 
 // Register 
 function register_my_menus() {
@@ -95,6 +99,7 @@ if( function_exists('acf_add_options_sub_page') ) {
     acf_add_options_sub_page( 'Pages' );
     acf_add_options_sub_page( 'Calendar' );
     acf_add_options_sub_page( 'Food Services' );
+    acf_add_options_sub_page( 'eFriday Folders' );
     acf_add_options_sub_page( 'Footer' );
     acf_add_options_sub_page( '404 Page' );
 }
@@ -234,3 +239,19 @@ function show_pagination_links()
         )
     );
 }
+
+function efriday_archive( $query ) {
+    if ( $query->is_post_type_archive( 'efriday' ) ) {
+	    $meta_query = array(
+			array(
+				'key' => 'end_date',
+				'value' => date('Ymd'),
+				'type' => 'DATE',
+				'compare' => '>='
+			)
+		);
+		$query->set( 'meta_key', 'end_date' );
+        $query->set( 'meta_query', $meta_query );
+    }
+}
+add_filter( 'pre_get_posts', 'efriday_archive' );

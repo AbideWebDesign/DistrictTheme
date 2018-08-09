@@ -176,8 +176,10 @@ get_header(); ?>
  						<h2>Calendar</h2>
  					</div>
 					
-					<?php echo do_shortcode('[tribe_events_list limit="3" category="school-year"]'); ?>
-						
+					<?php render_list_view_district(); ?>
+					<div class="margin-top-one">
+						<small><a href="<?php home_url(); ?>/calendar">More Events</a></small>
+					</div>
 				</div>
  			</div>			
 		</div>

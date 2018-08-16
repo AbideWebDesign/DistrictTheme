@@ -31,6 +31,11 @@
 					<div class="margin-bottom-one-xs">
 						<button class="btn btn-secondary btn-sm" onclick="FWP.reset()">Clear</button>
 					</div>
+					<div class="margin-vertical-two bg-orange text-white padding-one">
+						<h3><i class="fa fa-bullhorn"></i> <?php the_field('flyer_submit_title', 'options'); ?></h3>
+						<p class="small"><?php the_field('flyer_submit_text', 'options'); ?></p>
+						<a href="<?php the_field('flyer_submit_link', 'options'); ?>" class="btn btn-white btn-block"><?php the_field('flyer_submit_label', 'options'); ?></a>
+					</div>
 				</div>
 				<div class="col-md-9">
 					<div class="row">

@@ -21,7 +21,7 @@ get_header(); ?>
 <div id="primary" class="content-area padding-vertical-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3 well">
+			<div class="col-md-6 col-md-offset-3 well">
 				<?php
 				// Start the loop.
 				while ( have_posts() ) : the_post();

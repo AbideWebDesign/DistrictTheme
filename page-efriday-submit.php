@@ -13,10 +13,10 @@ get_header('simple');
 <div id="primary" class="content-area padding-vertical-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3 col-xs-12">
+			<div class="col-md-3 col-xs-12">
 				<?php get_sidebar(); ?>
 			</div>
-			<div class="col-main col-sm-9 pull-right">
+			<div class="col-main col-md-9 pull-right">
 				<header class="entry-header padding-bottom-one">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
@@ -55,7 +55,7 @@ get_header('simple');
 				</div>
 	
 			</div>
-			<div class="col-sm-3 col-xs-12 pull-left">
+			<div class="col-md-3 col-xs-12 pull-left">
 				<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 				<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 				<?php get_template_part( 'template-parts/content', 'contacts' ); ?>			

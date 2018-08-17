@@ -1,7 +1,7 @@
 				<section id="footer-top" class="bg-gray padding-vertical-two" role="contentinfo">
 					<div class="container">
 						<div class="row">
-							<div class="col-xs-12 col-sm-1-4 col-md-3">
+							<div class="col-xs-12 col-sm-3 col-md-3">
 							
 								<?php 
 								
@@ -41,7 +41,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-1-3', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-xs-12 col-sm-1-4 col-md-3">
+							<div class="col-xs-12 col-sm-3 col-md-3">
 								
 								<?php 
 								
@@ -57,7 +57,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-2-1', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-xs-12 col-sm-1-4 col-md-3 footer-top-section">
+							<div class="col-xs-12 col-sm-3 col-md-3 footer-top-section">
 								
 								<?php 
 								
@@ -85,7 +85,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-3-2', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-xs-12 col-sm-1-4 col-md-3">
+							<div class="col-xs-12 col-sm-3 col-md-3">
 								
 								<?php 
 

@@ -9,36 +9,30 @@
 
 get_header(); ?>
 <div class="inner-page-banner margin-bottom-two clearfix">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="content-top">
-				<div class="col-md-12 padding-none">
-					<div class="content">
-						<?php 
-						
-						$image = get_field('banner_image');
-	
-						if( !empty($image) ): ?>
-						
-							<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-						
-						<?php endif; ?>
-					</div>
-				</div>
-			</div>
-			<div class="inner-page-banner-gradient-left"></div>
-			<div class="inner-page-banner-gradient-right"></div>
+	<div class="content-top">
+		<div class="content">
+			<?php 
+			
+			$image = get_field('banner_image');
+
+			if( !empty($image) ): ?>
+			
+				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+			
+			<?php endif; ?>
 		</div>
 	</div>
+	<div class="inner-page-banner-gradient-left"></div>
+	<div class="inner-page-banner-gradient-right"></div>
 	<div class="inner-page-banner-overlay"></div>
 </div>
 <div id="primary" class="content-area padding-bottom-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-3 col-xs-12">
+			<div class="col-md-3 col-xs-12">
 				<?php get_sidebar("parent"); ?>
 			</div>
-			<div class="col-sm-9 pull-right">
+			<div class="col-md-9 pull-right">
 				<main id="main" class="site-main" role="main">
 					<?php 
 					
@@ -60,7 +54,7 @@ get_header(); ?>
 			
 				</main><!-- .site-main -->
 			</div>
-			<div class="col-sm-3 pull-left">
+			<div class="col-md-3 pull-left">
 				<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 				<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 				<?php get_template_part( 'template-parts/content', 'contacts' ); ?>

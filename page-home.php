@@ -77,7 +77,7 @@ get_header(); ?>
 	<!-- News Section Start -->
 	<section id="news" class="container padding-top-one padding-bottom-four">
 		<div class="row">
-			<div class="col-sm-9 col-xs-12">
+			<div class="col-sm-8 col-xs-12">
 				<div class="headline">
 					<h2>Latest News</h2>
 				</div>
@@ -108,7 +108,7 @@ get_header(); ?>
 					
 				?>
 				
-					<div class="col-sm-4 col-xs-12 news-item">
+					<div class="col-sm-6 col-xs-12 news-item">
 						<div class="row">
 							<div class="col-sm-12 col-xs-3 padding-bottom-one news-img">
 								<a href="<?php the_permalink(); ?>">
@@ -136,7 +136,7 @@ get_header(); ?>
 		 			
 		 			?>
 	 				
-	 				<div id="news-more" class="col-sm-4 col-xs-12">
+	 				<div id="news-more" class="col-sm-12">
 	 					<div class="subhead">
 	 						<h5>More Headlines</h5>
 	 					</div>
@@ -170,7 +170,7 @@ get_header(); ?>
 	 				</div>
 	 			</div>
  			</div>
- 			<div class="col-sm-3 col-xs-12">
+ 			<div class="col-sm-4 col-xs-12">
  				<div class="calendar">
  					<div class="headline">
  						<h2>Calendar</h2>
@@ -189,9 +189,9 @@ get_header(); ?>
 	<section id="social" class="bg-gray padding-vertical-two">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-10 col-xs-12">
+				<div class="col-sm-12 col-md-10">
 					<div class="row">
-						<div class="col-sm-2">
+						<div class="col-sm-4 col-md-2">
 							<a href="https://twitter.com/intent/user?screen_name=SuptNoss" target="_blank" id="twitter-id-link" >
 								<div class="well">
 									<div class="pull-left"><i class="fa fa-twitter fa-1x"></i></div>
@@ -199,7 +199,7 @@ get_header(); ?>
 								</div>
 							</a>
 						</div>
-						<div class="col-sm-10">
+						<div class="col-sm-8 col-md-10">
 							<?php
 								$tweets = getTweets(1);	
 							?>
@@ -215,7 +215,7 @@ get_header(); ?>
 						</div>
 					</div>
 				</div>
-				<div id="socialbtns" class="col-sm-2 col-xs-12">
+				<div id="socialbtns" class="col-sm-12 col-md-2">
 					<a href="https://www.twitter.com/SuptNoss" target="_blank" class="social">
 						<i class="fa fa-twitter-square fa-3x social"></i> 
 					</a>
@@ -234,7 +234,7 @@ get_header(); ?>
 	<section id="quick-links" class="padding-vertical-four">
 		<div class="container">
 			<div class="row">
-				<div id="quick-links" class="col-sm-3">
+				<div id="quick-links" class="col-sm-4 col-md-3">
 					<div class="headline">
 						<h2>Quick Links</h2>
 					</div>
@@ -252,7 +252,7 @@ get_header(); ?>
 						</div>
 					<?php endfor; ?>			
 				</div>
-				<div id="message" class="col-sm-9">
+				<div id="message" class="col-sm-8 col-md-9">
 					<div class="headline">
 						<h2>Superintendent’s Message</h2>
 					</div>
@@ -278,12 +278,12 @@ get_header(); ?>
 						$image = get_field('featured_image', $post->ID);
 
 					?>
-						<div class="col-sm-6">
+						<div class="col-sm-4 col-md-6">
 							<a href="<?php the_permalink(); ?>">
 								<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img img-responsive')); ?>
 							</a>
 						</div>
-						<div class="col-sm-6">
+						<div class="col-sm-8 col-md-6">
 							<div class="subhead">
 	 							<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
 	 						</div>
@@ -323,7 +323,7 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-4">
-					<img src="<?php the_field('community_events_image'); ?>" class="img-responsive" />
+					<img src="<?php the_field('community_events_image'); ?>" class="img-responsive margin-bottom-xs-one" />
 				</div>
 				<div class="col-sm-8">
 					<div class="headline">

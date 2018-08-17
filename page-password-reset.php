@@ -12,7 +12,7 @@ get_header(); ?>
 <div id="primary" class="content-area padding-vertical-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-6 col-sm-offset-3 well margin-bottom-none">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 well margin-bottom-none">
 				<h2 class="text-center">Password Reset</h2>		
 					<?php
 					

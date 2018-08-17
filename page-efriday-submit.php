@@ -13,7 +13,7 @@ get_header('simple');
 <div id="primary" class="content-area padding-vertical-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-xs-12">
+			<div class="col-xs-12 col-sm-12 col-md-3">
 				<?php get_sidebar(); ?>
 			</div>
 			<div class="col-main col-md-9 pull-right">
@@ -55,7 +55,7 @@ get_header('simple');
 				</div>
 	
 			</div>
-			<div class="col-md-3 col-xs-12 pull-left">
+			<div class="col-xs-12 col-sm-12 col-md-3 pull-left">
 				<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 				<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 				<?php get_template_part( 'template-parts/content', 'contacts' ); ?>			

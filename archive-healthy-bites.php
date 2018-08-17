@@ -12,7 +12,7 @@ get_header(); ?>
 <div id="primary" class="content-area padding-vertical-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-main col-sm-10 col-sm-offset-1">
+			<div class="col-main col-xs-12 col-sm-10 col-sm-offset-1">
 				<main id="main" class="site-main" role="main">
 					
 					<?php

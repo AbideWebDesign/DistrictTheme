@@ -29,10 +29,10 @@ get_header(); ?>
 <div id="primary" class="content-area padding-bottom-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-xs-12">
+			<div class="col-xs-12 col-sm-12 col-md-3">
 				<?php get_sidebar("parent"); ?>
 			</div>
-			<div class="col-md-9 pull-right">
+			<div class="col-xs-12 col-sm-12 col-md-9 pull-right">
 				<main id="main" class="site-main" role="main">
 					<?php 
 					
@@ -54,7 +54,7 @@ get_header(); ?>
 			
 				</main><!-- .site-main -->
 			</div>
-			<div class="col-md-3 pull-left">
+			<div class="col-xs-12 col-sm-12 col-md-3 pull-left">
 				<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 				<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 				<?php get_template_part( 'template-parts/content', 'contacts' ); ?>

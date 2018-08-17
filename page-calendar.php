@@ -21,10 +21,10 @@
 	<div class="padding-vertical-two bg-gray">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-7">
+				<div class="col-xs-12 col-sm-12 col-md-7">
 					<p class="lead"><?php the_field('calendar_text', 'options'); ?></p>
 				</div>
-				<div class="col-sm-5">
+				<div class="col-xs-12 col-sm-12 col-md-5">
 					<?php get_template_part('template-parts/page-block', 'table-dates'); ?>
 					<?php get_template_part('template-parts/page-block', 'table-calendar-downloads'); ?>
 				</div>

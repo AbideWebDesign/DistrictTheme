@@ -11,10 +11,10 @@ get_header(); ?>
 <div id="primary" class="content-area padding-vertical-two">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3 col-xs-12">
+			<div class="col-xs-12 col-sm-12 col-md-3">
 				<?php get_sidebar(); ?>
 			</div>
-			<div class="col-main col-md-9 col-xs-12 pull-right">
+			<div class="col-main col-xs-12 col-sm-12 col-md-9  pull-right">
 				<main id="main" class="site-main" role="main">
 					<?php
 					if ( function_exists('yoast_breadcrumb') ) {
@@ -33,7 +33,7 @@ get_header(); ?>
 					<div class="well well-sm"><div class="small"><?php the_field('food_services_legal', 'option'); ?></div></div>
 				</main><!-- .site-main -->
 			</div>
-			<div class="col-md-3 col-xs-12 pull-left">
+			<div class="col-xs-12 col-sm-12 col-md-3 pull-left">
 				<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 				<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 				<?php get_template_part( 'template-parts/content', 'contacts' ); ?>

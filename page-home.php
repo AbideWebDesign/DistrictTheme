@@ -108,7 +108,7 @@ get_header(); ?>
 					
 				?>
 				
-					<div class="col-sm-6 col-xs-12 news-item">
+					<div class="col-md-4 col-sm-6 col-xs-12 news-item">
 						<div class="row">
 							<div class="col-sm-12 col-xs-3 padding-bottom-one news-img">
 								<a href="<?php the_permalink(); ?>">
@@ -136,7 +136,7 @@ get_header(); ?>
 		 			
 		 			?>
 	 				
-	 				<div id="news-more" class="col-sm-12">
+	 				<div id="news-more" class="col-md-4 col-sm-12">
 	 					<div class="subhead">
 	 						<h5>More Headlines</h5>
 	 					</div>
@@ -170,7 +170,7 @@ get_header(); ?>
 	 				</div>
 	 			</div>
  			</div>
- 			<div class="col-sm-4 col-xs-12">
+ 			<div class="col-md-4 col-sm-4 col-xs-12">
  				<div class="calendar">
  					<div class="headline">
  						<h2>Calendar</h2>

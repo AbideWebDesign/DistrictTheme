@@ -181,37 +181,6 @@ function acf_set_featured_image( $value, $post_id, $field  ){
 // acf/update_value/name={$field_name} - filter for a specific field based on it's name
 add_filter( 'acf/update_value/name=featured_image', 'acf_set_featured_image', 10, 3 );
 
-
-function remove_search_from_bar( $filters ) {
-  if ( isset( $filters['tribe-bar-geoloc'] ) ) {
-        unset( $filters['tribe-bar-geoloc'] );
-  }
-    return $filters;
-}
-add_filter( 'tribe-events-bar-filters',  'remove_search_from_bar', 1000, 1 );
-
-function strip_events_for_from_titles( $title ) {
-	return str_replace( 'Events for', '', $title );
-}
-add_filter( 'tribe_get_events_title', 'strip_events_for_from_titles' );
-
-function tribe_custom_theme_text ( $translations, $text, $domain ) {
- 
-	$custom_text = array(
-		'Venue' => 'Location',
-		'Upcoming %s' => 'Calendar',
-		'Search' => 'Search Events',
-	);
- 
-	// If this text domain starts with "tribe-", "the-events-", or "event-" and we have replacement text
-	if( (strpos($domain, 'tribe-') === 0 || strpos($domain, 'the-events-') === 0 || strpos($domain, 'event-') === 0) && array_key_exists($text, $custom_text) ) {
-		$text = $custom_text[$text];
-	}
- 
-	return $text;
-}
-add_filter('gettext', 'tribe_custom_theme_text', 20, 3);
-
 /*
  * Custom pagination function
  */

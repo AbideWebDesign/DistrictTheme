@@ -33,19 +33,11 @@ $args = array(
 $query = new WP_Query($args);
     if ($query->have_posts()) :
     	while ($query->have_posts()) : $query->the_post(); ?>
-		<div class="alert-emergency-head">
+		<div class="alert-emergency-body" style="background-color: #<?php the_field('alert_color', get_the_ID()); ?>">
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						<h4>Important News</h4>					
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="alert-emergency-body">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
+						<h4><?php the_field('alert_sub_title', get_the_ID()); ?></h4>	
 						<h3>
 							<?php if ( get_field('link_to_post', get_the_id()) ): ?>
 								<a href="<?php the_field('link', get_the_id()); ?>">

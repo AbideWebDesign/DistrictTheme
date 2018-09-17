@@ -7,19 +7,13 @@
  * @since CSD 1.0
  */
 
-get_header(); ?>
+get_header(); 
+$image = get_field('banner_image');
+?>
 <div class="inner-page-banner margin-bottom-two clearfix">
 	<div class="content-top">
 		<div class="content">
-			<?php 
-			
-			$image = get_field('banner_image');
-
-			if( !empty($image) ): ?>
-			
-				<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-			
-			<?php endif; ?>
+			<?php echo wp_get_attachment_image($image['id'], 'Parent Header', false); ?>
 		</div>
 	</div>
 	<div class="inner-page-banner-gradient-left"></div>

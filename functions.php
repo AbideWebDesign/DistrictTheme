@@ -29,17 +29,23 @@ function csd_enqueue_script() {
 }
 add_action( 'wp_enqueue_scripts', 'csd_enqueue_script' );
 
-add_theme_support('post-thumbnails');
-add_image_size('square', 600, 600);
-add_image_size('Square Column 3', 219, 219, true);
-add_image_size('News Image Small', 262, 175);
-add_image_size('News Image Medium', 410, 273);
-add_image_size('News Image Large', 750, 500);
-add_image_size('News Image Featured', 824, 425);
-add_image_size('Staff Directory', 326, 453);
-add_image_size('Callout Block', 586, 416);
-add_image_size('Page Builder Image', 825, 315);
-add_image_size('eFriday Folder Image', 230, 298, true);
+function csd_theme_setup() {
+	add_theme_support('post-thumbnails');
+	add_image_size('square', 600, 600, true);
+	add_image_size('Square Column 3', 219, 219, true);
+	add_image_size('Square Column 4', 266, 266, true);
+	add_image_size('News Image Small', 262, 175, true);
+	add_image_size('News Image Medium', 410, 273, true);
+	add_image_size('News Image Large', 750, 500, true);
+	add_image_size('News Image Featured', 945, 500, true);
+	add_image_size('Staff Directory', 326, 453, true);
+	add_image_size('Callout Block', 263, 186, true);
+	add_image_size('Page Builder Image', 825, 315, true);
+	add_image_size('eFriday Folder Image', 230, 298, true);
+	add_image_size('Parent Header', 1600, 314, true);
+	add_image_size('Home Slider', 1600, 500, true);
+}
+add_action( 'after_setup_theme', 'csd_theme_setup' );
 
 // Custom CSS for Admin
 add_action('admin_head', 'dashboard_styles');

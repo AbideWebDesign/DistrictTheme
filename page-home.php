@@ -38,7 +38,7 @@ get_header(); ?>
 							<?php if (get_field('link', $image['id'])): ?>
 								<a href="<?php the_field('link', $image['id']); ?>" class="headline-link">
 							<?php endif; ?>
-					  		<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+					  		<?php echo wp_get_attachment_image($image['id'], 'Home Slider', false); ?>
 					  		<div class="carousel-caption">
 						  		<div class="carousel-title">
 						  			<h3><?php echo $image['title']; ?></h3>

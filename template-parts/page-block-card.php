@@ -5,7 +5,7 @@
 	if( get_sub_field('card_image') ): $image = get_sub_field('card_image'); ?>
 	
 	<div class="card-image col-sm-3 hidden-xs">
-		<?php echo wp_get_attachment_image($image['id'], 'full', 0, array('class' => 'img img-responsive')); ?>
+		<?php echo wp_get_attachment_image($image['id'], 'Square Column 3', 0, array('class' => 'img img-responsive')); ?>
 	</div>
 		
 	<?php endif; ?>

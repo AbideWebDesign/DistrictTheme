@@ -76,7 +76,7 @@ if ( get_field('sidebar_callout_blocks') ):
 											
 											<?php else: ?>
 												
-												<?php echo wp_get_attachment_image($image['id'], 'full', 0, array('class' => 'img img-responsive')); ?>
+												<?php echo wp_get_attachment_image($image['id'], 'Callout Block', 0, array('class' => 'img img-responsive')); ?>
 											
 											<?php endif; ?>
 											

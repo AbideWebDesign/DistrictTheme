@@ -49,8 +49,8 @@ function dashboard_styles() {
     /*
 	** Plugin: Imagify
 	*/
-	.imagify-notice {
-		display: none;
+	.imagify-notice.imagify-notice {
+		display: none !important;
 	}
 	
 	/*

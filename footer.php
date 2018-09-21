@@ -158,6 +158,11 @@
 										</a>
 									</li>
 									<li>
+										<a href="https://www.instagram.com/corvallis.schools/" target="_blank" class="social">
+											<i class="fa fa-instagram fa-2x"></i>
+										</a>
+									</li>
+									<li>
 										<a href="https://www.linkedin.com/company/corvallis-school-district-509j" target="_blank" class="social">
 											<i class="fa fa-linkedin-square fa-2x"></i>
 										</a>

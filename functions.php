@@ -239,12 +239,21 @@ function show_pagination_links()
 
 function efriday_archive( $query ) {
     if ( $query->is_post_type_archive( 'efriday' ) ) {
+	    $dt = new DateTime();
+		$dt->setTimezone(new DateTimeZone('America/Los_Angeles'));
+		
 	    $meta_query = array(
 			array(
 				'key' => 'end_date',
-				'value' => date('Ymd'),
+				'value' => $dt->format('Ymd'),
 				'type' => 'DATE',
 				'compare' => '>='
+			),
+			array(
+				'key' => 'start_date',
+				'value' => $dt->format('Ymd'),
+				'type' => 'DATE',
+				'compare' => '<='
 			)
 		);
 		$query->set( 'meta_key', 'end_date' );

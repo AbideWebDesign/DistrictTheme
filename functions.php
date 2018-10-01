@@ -238,26 +238,28 @@ function show_pagination_links()
 }
 
 function efriday_archive( $query ) {
-    if ( $query->is_post_type_archive( 'efriday' ) ) {
-	    $dt = new DateTime();
-		$dt->setTimezone(new DateTimeZone('America/Los_Angeles'));
-		
-	    $meta_query = array(
-			array(
-				'key' => 'end_date',
-				'value' => $dt->format('Ymd'),
-				'type' => 'DATE',
-				'compare' => '>='
-			),
-			array(
-				'key' => 'start_date',
-				'value' => $dt->format('Ymd'),
-				'type' => 'DATE',
-				'compare' => '<='
-			)
-		);
-		$query->set( 'meta_key', 'end_date' );
-        $query->set( 'meta_query', $meta_query );
-    }
-}
+	if( !is_admin() ){
+		if ( $query->is_post_type_archive( 'efriday' ) ) {
+		    $dt = new DateTime();
+			$dt->setTimezone(new DateTimeZone('America/Los_Angeles'));
+			
+		    $meta_query = array(
+				array(
+					'key' => 'end_date',
+					'value' => $dt->format('Ymd'),
+					'type' => 'DATE',
+					'compare' => '>='
+				),
+				array(
+					'key' => 'start_date',
+					'value' => $dt->format('Ymd'),
+					'type' => 'DATE',
+					'compare' => '<='
+				)
+			);
+			$query->set( 'meta_key', 'end_date' );
+		    $query->set( 'meta_query', $meta_query );
+		}
+	}
+}	
 add_filter( 'pre_get_posts', 'efriday_archive' );

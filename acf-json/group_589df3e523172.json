@@ -1,0 +1,576 @@
+{
+    "key": "group_589df3e523172",
+    "title": "Builder - Healthy Bites",
+    "fields": [
+        {
+            "key": "field_589e3ceae3645",
+            "label": "Post Options",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_589df3e52cf18",
+            "label": "Is this a Featured Post?",
+            "name": "featured_post",
+            "type": "true_false",
+            "instructions": "Featured post display in the carousel on Healthy Bites landing page. Be sure to also check the \"Featured\" category in the right column.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_589df3e52d095",
+            "label": "Featured Carousel Image",
+            "name": "featured_image_v2",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_589df3e52cf18",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "hard",
+            "target_size": "News Image Featured",
+            "width": 262,
+            "height": 165,
+            "preview_size": "thumbnail",
+            "force_crop": "yes",
+            "save_in_media_library": "yes",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
+            "key": "field_589df3e52d01d",
+            "label": "Featured Image",
+            "name": "featured_image",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "hard",
+            "target_size": "News Image Large",
+            "width": 262,
+            "height": 165,
+            "preview_size": "thumbnail",
+            "force_crop": "yes",
+            "save_in_media_library": "yes",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
+            "key": "field_589df3e52d17f",
+            "label": "Excerpt Text",
+            "name": "featured_text",
+            "type": "textarea",
+            "instructions": "Text to display next to image on landing page. Maximum of 88 characters.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": 88,
+            "rows": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_589e3d18e3646",
+            "label": "Post Builder",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 1
+        },
+        {
+            "key": "field_589e3dbe14bfa",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Always start post with the \"Lead Text\" block. This should be 1-2 sentences that provides the reader with the main idea of the post. The lead text should be followed by either an image or a text block. If followed by a text block, do not include a title for the text block.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_589df3e52d2e0",
+            "label": "Post Content Blocks",
+            "name": "post_content_blocks",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": "",
+            "layouts": [
+                {
+                    "key": "56e0bcd92fe6f",
+                    "name": "lead_text_block",
+                    "label": "Lead Text Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_589df3e54dc33",
+                            "label": "Lead Text Block",
+                            "name": "lead_text_block",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56e0bd0e696a2",
+                    "name": "text_block",
+                    "label": "Text Block",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_589df3e54dcb5",
+                            "label": "Heading",
+                            "name": "heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_589df3e54dd31",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56e0bd4b696a5",
+                    "name": "image",
+                    "label": "Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_589df3e54ddb4",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image_crop",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "hard",
+                            "target_size": "News Image Large",
+                            "width": 750,
+                            "height": 500,
+                            "preview_size": "small",
+                            "force_crop": "yes",
+                            "save_in_media_library": "yes",
+                            "retina_mode": "no",
+                            "save_format": "object",
+                            "library": "all"
+                        },
+                        {
+                            "key": "field_589df3e54de30",
+                            "label": "Image Caption",
+                            "name": "image_caption",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56e0bdb1696a8",
+                    "name": "button_group",
+                    "label": "Button Group",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_589df3e54dead",
+                            "label": "Button",
+                            "name": "button",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "button_label": "Add Row",
+                            "layout": "table",
+                            "sub_fields": [
+                                {
+                                    "key": "field_589df3e55ce90",
+                                    "label": "Button Text",
+                                    "name": "button_text",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_589df3e55cf10",
+                                    "label": "Link Type",
+                                    "name": "link_type",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Internal Page": "Internal Page",
+                                        "Internal Media": "Internal Media",
+                                        "External": "External"
+                                    },
+                                    "default_value": [],
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "disabled": 0,
+                                    "readonly": 0,
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_589df3e55cf8b",
+                                    "label": "Internal Page",
+                                    "name": "internal_page",
+                                    "type": "page_link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_589df3e55cf10",
+                                                "operator": "==",
+                                                "value": "Internal Page"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "post_type": [],
+                                    "taxonomy": [],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "allow_archives": 1
+                                },
+                                {
+                                    "key": "field_589df3e55d017",
+                                    "label": "Internal Media",
+                                    "name": "internal_media",
+                                    "type": "file",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_589df3e55cf10",
+                                                "operator": "==",
+                                                "value": "Internal Media"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "min_size": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "return_format": "array",
+                                    "library": "all"
+                                },
+                                {
+                                    "key": "field_589df3e55d097",
+                                    "label": "External Link",
+                                    "name": "external_link",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_589df3e55cf10",
+                                                "operator": "==",
+                                                "value": "External"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": "",
+                                    "readonly": 0,
+                                    "disabled": 0
+                                },
+                                {
+                                    "key": "field_589df3e55d113",
+                                    "label": "Button Type",
+                                    "name": "button_type",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "Primary": "Primary",
+                                        "Secondary": "Secondary"
+                                    },
+                                    "default_value": [],
+                                    "multiple": 0,
+                                    "allow_null": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "placeholder": "",
+                                    "disabled": 0,
+                                    "readonly": 0,
+                                    "return_format": "value"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                {
+                    "key": "56e0bea0696b0",
+                    "name": "blockquote",
+                    "label": "Blockquote",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_589df3e54df29",
+                            "label": "Blockquote Text",
+                            "name": "blockquote_text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_589df3e54dfa4",
+                            "label": "Blockquote Source",
+                            "name": "blockquote_source",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "healthy-bites"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1539200502
+}

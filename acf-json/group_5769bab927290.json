@@ -1,0 +1,653 @@
+{
+    "key": "group_5769bab927290",
+    "title": "Builder - Directory",
+    "fields": [
+        {
+            "key": "field_5769bac82edb4",
+            "label": "General Information",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 1
+        },
+        {
+            "key": "field_5769bad82edb5",
+            "label": "Directory Type",
+            "name": "directory_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "District Staff": "District Staff",
+                "School Administration": "School Administration",
+                "Board Member": "Board Member",
+                "School or Program": "School or Program"
+            },
+            "default_value": [],
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_576c4f446be1a",
+            "label": "Sort By Name",
+            "name": "sort_by_name",
+            "type": "text",
+            "instructions": "Used for alphabetical sorting purposes only. Use last name.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5769baf52edb6",
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "District Staff"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School Administration"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5769bb0d2edb8",
+            "label": "Profile Image",
+            "name": "profile_image",
+            "type": "image_crop",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "District Staff"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School Administration"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "crop_type": "hard",
+            "target_size": "Staff Directory",
+            "width": "",
+            "height": "",
+            "preview_size": "Staff Directory",
+            "force_crop": "yes",
+            "save_in_media_library": "yes",
+            "retina_mode": "no",
+            "save_format": "object",
+            "library": "all"
+        },
+        {
+            "key": "field_5769bb362edb9",
+            "label": "School",
+            "name": "school",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School Administration"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5769bb582edbb",
+            "label": "Board Position",
+            "name": "board_position",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Position #1": "Position #1",
+                "Position #2": "Position #2",
+                "Position #3": "Position #3",
+                "Position #4": "Position #4",
+                "Position #5": "Position #5",
+                "Position #6": "Position #6",
+                "Position #7": "Position #7"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5769bb7c2edbc",
+            "label": "Board Role",
+            "name": "board_role",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "None": "None",
+                "Chair": "Chair",
+                "Vice Chair": "Vice Chair"
+            },
+            "default_value": [
+                "None"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5769bb9b2edbd",
+            "label": "Elected Year",
+            "name": "elected_year",
+            "type": "number",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": "",
+            "max": "",
+            "step": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5769bbc12edbe",
+            "label": "Term Expiration Date",
+            "name": "term_expiration_date",
+            "type": "date_picker",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "display_format": "F j, Y",
+            "return_format": "F j, Y",
+            "first_day": 1
+        },
+        {
+            "key": "field_5769bbe22edbf",
+            "label": "Bio",
+            "name": "bio",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
+            "key": "field_5773f84cb2a67",
+            "label": "Principal\/Administrator",
+            "name": "principal",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School or Program"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_577406c2f2131",
+            "label": "Title Type",
+            "name": "title_type",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School or Program"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Principal": "Principal",
+                "Administrator": "Administrator"
+            },
+            "default_value": [
+                "Principal"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "disabled": 0,
+            "readonly": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_5769bbfa2edc1",
+            "label": "Contact Information",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "left",
+            "endpoint": 1
+        },
+        {
+            "key": "field_5769bc0c2edc2",
+            "label": "Email",
+            "name": "email",
+            "type": "email",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "District Staff"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School Administration"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_5769bc162edc3",
+            "label": "Phone",
+            "name": "phone",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "District Staff"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School Administration"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "xxx-xxx-xxxx ext. xxx",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5773f85bb2a68",
+            "label": "Address",
+            "name": "address",
+            "type": "text",
+            "instructions": "Street address only. City\/State added automatically.",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School or Program"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5773f874b2a69",
+            "label": "Zip Code",
+            "name": "zip_code",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School or Program"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5773f88fb2a6a",
+            "label": "Office Phone",
+            "name": "office_phone",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School or Program"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "xxx-xxx-xxxx",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "readonly": 0,
+            "disabled": 0
+        },
+        {
+            "key": "field_5773f8afb2a6b",
+            "label": "Website",
+            "name": "website",
+            "type": "url",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School or Program"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "directory"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1539200091
+}

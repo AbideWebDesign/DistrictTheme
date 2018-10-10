@@ -9,10 +9,11 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 $myUpdateChecker->setBranch('master'); 
 
 function csd_enqueue_style() {
-	wp_enqueue_style( 'style.css', get_template_directory_uri() . '/style.css' ); 
-	wp_enqueue_style( 'print.css', get_template_directory_uri() . '/css/print.css' ); 
-	wp_enqueue_style( 'ie10-viewport-bug-workaround.css', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css' ); 
-	wp_enqueue_style( 'font-awesome.min.css', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' ); 
+	$theme = wp_get_theme();
+	wp_enqueue_style( 'theme', get_template_directory_uri() . '/style.css', '', $theme->version ); 
+	wp_enqueue_style( 'print', get_template_directory_uri() . '/css/print.css', '', $theme->version ); 
+	wp_enqueue_style( 'ie10-viewport-bug-workaround', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css' ); 
+	wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' ); 
 }
 add_action( 'wp_enqueue_scripts', 'csd_enqueue_style', 100 );
 

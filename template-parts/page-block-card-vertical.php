@@ -1,4 +1,4 @@
-<div class="padding-bottom-one">
+<div class="padding-bottom-one clearfix">
 	<ul class="list list-unstyled list-inline list-inline-lg">
 	
 	<?php 

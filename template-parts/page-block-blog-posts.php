@@ -14,7 +14,7 @@
 	);
 	$query = new WP_Query($args);
 ?>
-<div id="posts-block" class="padding-vertical-two <?php echo (is_page_template('page-parent-no-sidebar.php') ? 'bg-gray' : ''); ?>">
+<div id="posts-block" class="padding-vertical-three <?php echo (is_page_template('page-parent-no-sidebar.php') ? 'bg-gray' : ''); ?>">
 	<?php echo (is_page_template('page-parent-no-sidebar.php') ? '<div class="container">' : ''); ?>
 	<div class="row">
 		<div class="col-xs-12">

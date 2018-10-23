@@ -1,14 +1,16 @@
 <?php $tax = get_sub_field('post_list_category'); ?>
 <?php 
-	$args = array(
-		'post_type' => 'news',
-		'post_per_page' => 3,
+	global $post;
+	$args = array( 
+		'post_type' => 'news', 
+		'posts_per_page' => 3, 
 		'tax_query' => array(
 			array(
 				'taxonomy' => 'news-category',
-				'terms' => $tax->name,
+				'field'    => 'slug',
+				'terms'    => $tax->slug,
 			),
-		),
+		), 
 	);
 	$query = new WP_Query($args);
 ?>

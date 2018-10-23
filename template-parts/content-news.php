@@ -140,6 +140,12 @@
 						
 						endif;
 						
+						if ( get_row_layout() == "table" ): 
+					
+							get_template_part( 'template-parts/page-block', 'table' );
+					
+						endif;
+						
 					endwhile;
 					
 				endif; ?>

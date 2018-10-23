@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -129,7 +129,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -201,7 +201,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -275,7 +275,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "placement": "left",
             "endpoint": 0
         },
         {
@@ -291,11 +291,8 @@
                 "class": "",
                 "id": ""
             },
-            "button_label": "Add Row",
-            "min": "",
-            "max": "",
-            "layouts": [
-                {
+            "layouts": {
+                "56e0bcd92fe6f": {
                     "key": "56e0bcd92fe6f",
                     "name": "lead_text_block",
                     "label": "Lead Text Block",
@@ -326,7 +323,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "56e0bd0e696a2": {
                     "key": "56e0bd0e696a2",
                     "name": "text_block",
                     "label": "Text Block",
@@ -376,7 +373,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "56e0bd4b696a5": {
                     "key": "56e0bd4b696a5",
                     "name": "image",
                     "label": "Image",
@@ -431,7 +428,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "56e0bdb1696a8": {
                     "key": "56e0bdb1696a8",
                     "name": "button_group",
                     "label": "Button Group",
@@ -619,7 +616,7 @@
                     "min": "",
                     "max": ""
                 },
-                {
+                "56e0bea0696b0": {
                     "key": "56e0bea0696b0",
                     "name": "blockquote",
                     "label": "Blockquote",
@@ -670,8 +667,36 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5bcf8d9cac203": {
+                    "key": "layout_5bcf8d9cac203",
+                    "name": "table",
+                    "label": "Table",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bcf8db0ac204",
+                            "label": "Table",
+                            "name": "table",
+                            "type": "table",
+                            "instructions": "To create a link, you will need to include the HTML code in the form:\r\n<xmp><a href=\"http:\/\/google.com\">Link Text<\/a><\/xmp>",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "use_header": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
-            ]
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
         }
     ],
     "location": [
@@ -685,7 +710,7 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -704,5 +729,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539200212
+    "modified": 1540329218
 }

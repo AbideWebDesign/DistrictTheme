@@ -31,6 +31,11 @@
 								</div>
 								<?php if(get_sub_field('buttons')): ?>
 									<div class="row">
+										<div class="col-xs-12">
+											<h2 class="margin-bottom-one"><?php the_sub_field('button_group_heading'); ?></h2>
+										</div>
+									</div>
+									<div class="row">
 										<?php while(have_rows('buttons')): the_row(); ?>
 											<div class="col-xs-12 col-sm-4 margin-bottom-two margin-bottom-one-xs">
 												<div class="button-group">
@@ -38,7 +43,7 @@
 														<?php the_sub_field('button_heading'); ?>
 													</div>
 													<div class="button-group-content">
-														<a href="<?php the_sub_field('button_link'); ?>" class="btn btn-primary btn-block"><?php the_sub_field('button_label'); ?></a>
+														<a href="<?php the_sub_field('button_link'); ?>" class="btn btn-primary"><?php the_sub_field('button_label'); ?></a>
 													</div>
 												</div>
 											</div>

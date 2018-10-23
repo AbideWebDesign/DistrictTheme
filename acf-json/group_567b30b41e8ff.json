@@ -991,9 +991,55 @@
                                     },
                                     "default_value": "",
                                     "tabs": "all",
-                                    "toolbar": "basic",
+                                    "toolbar": "full",
                                     "media_upload": 1,
                                     "delay": 0
+                                },
+                                {
+                                    "key": "field_5bc4fb34b538d",
+                                    "label": "Add Button Group",
+                                    "name": "add_buttons",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5bc4fb1db538c",
+                                    "label": "Button Group Heading",
+                                    "name": "button_group_heading",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bc4fb34b538d",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
                                 },
                                 {
                                     "key": "field_5bbb9fe78d551",
@@ -1002,7 +1048,15 @@
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5bc4fb34b538d",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -1236,6 +1290,41 @@
                             },
                             "allow_null": 0,
                             "allow_multiple": 0
+                        },
+                        {
+                            "key": "field_5bcf74513bbb8",
+                            "label": "Call to Action Button Type",
+                            "name": "call_to_action_button_type",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5bbcf565fb8ab",
+                                        "operator": "==",
+                                        "value": "Button"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "Horizontal": "Horizontal",
+                                "Vertical": "Vertical"
+                            },
+                            "default_value": [
+                                "Horizontal"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         },
                         {
                             "key": "field_5bbcf636fb8b0",
@@ -1522,5 +1611,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539200070
+    "modified": 1540322475
 }

@@ -520,13 +520,40 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5bede55eab98d",
+                            "label": "Include Text Block Image",
+                            "name": "include_text_block_image",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 1,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
                             "key": "field_5bedbea546e89",
                             "label": "Text Block Image Side",
                             "name": "text_block_image_side",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5bede55eab98d",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "25",
                                 "class": "",
@@ -553,7 +580,15 @@
                             "type": "image",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5bede55eab98d",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
                             "wrapper": {
                                 "width": "75",
                                 "class": "",
@@ -924,5 +959,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542308476
+    "modified": 1542317542
 }

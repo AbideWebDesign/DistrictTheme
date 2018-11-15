@@ -62,11 +62,13 @@
 									<?php endif; ?>
 									<?php if(get_sub_field('buttons')): ?>
 										<div class="margin-top-four">
-											<div class="row">
-												<div class="col-xs-12">
-													<h2 class="margin-bottom-one"><?php the_sub_field('button_group_heading'); ?></h2>
+											<?php if(get_sub_field('button_heading'): ?>
+												<div class="row">
+													<div class="col-xs-12">
+														<h2 class="margin-bottom-one"><?php the_sub_field('button_group_heading'); ?></h2>
+													</div>
 												</div>
-											</div>
+											<?php endif; ?>
 											<div class="row">
 												<?php while(have_rows('buttons')): the_row(); ?>
 													<div class="col-xs-12 col-sm-4 margin-bottom-two margin-bottom-one-xs">

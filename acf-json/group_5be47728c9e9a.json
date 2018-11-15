@@ -233,56 +233,6 @@
                                     "button_label": "Add List Item",
                                     "sub_fields": [
                                         {
-                                            "key": "field_5be4772b43887",
-                                            "label": "List Item Type",
-                                            "name": "list_item_type",
-                                            "type": "select",
-                                            "instructions": "",
-                                            "required": 1,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "choices": {
-                                                "Default": "Default",
-                                                "Calendar": "Calendar"
-                                            },
-                                            "default_value": [],
-                                            "allow_null": 0,
-                                            "multiple": 0,
-                                            "ui": 0,
-                                            "return_format": "value",
-                                            "ajax": 0,
-                                            "placeholder": ""
-                                        },
-                                        {
-                                            "key": "field_5be4772b43949",
-                                            "label": "List Item Date",
-                                            "name": "list_item_date",
-                                            "type": "date_time_picker",
-                                            "instructions": "",
-                                            "required": 1,
-                                            "conditional_logic": [
-                                                [
-                                                    {
-                                                        "field": "field_5be4772b43887",
-                                                        "operator": "==",
-                                                        "value": "Calendar"
-                                                    }
-                                                ]
-                                            ],
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "display_format": "F j, Y g:i a",
-                                            "return_format": "F j, Y g:i a",
-                                            "first_day": 1
-                                        },
-                                        {
                                             "key": "field_5be4772b43a2d",
                                             "label": "List Item Title",
                                             "name": "list_item_title",
@@ -362,7 +312,7 @@
                                     "name": "button_group_heading",
                                     "type": "text",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": [
                                         [
                                             {
@@ -951,5 +901,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542318321
+    "modified": 1542319674
 }

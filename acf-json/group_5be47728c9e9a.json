@@ -193,15 +193,7 @@
                                     "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5be4772b0b4eb",
-                                                "operator": "==",
-                                                "value": "Internal"
-                                            }
-                                        ]
-                                    ],
+                                    "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -959,5 +951,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542317542
+    "modified": 1542318321
 }

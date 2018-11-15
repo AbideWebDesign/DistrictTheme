@@ -62,7 +62,7 @@
 									<?php endif; ?>
 									<?php if(get_sub_field('buttons')): ?>
 										<div class="margin-top-four">
-											<?php if(get_sub_field('button_heading'): ?>
+											<?php if(get_sub_field('button_heading')): ?>
 												<div class="row">
 													<div class="col-xs-12">
 														<h2 class="margin-bottom-one"><?php the_sub_field('button_group_heading'); ?></h2>

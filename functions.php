@@ -45,6 +45,8 @@ function csd_theme_setup() {
 	add_image_size('eFriday Folder Image', 230, 298, true);
 	add_image_size('Parent Header', 1600, 314, true);
 	add_image_size('Home Slider', 1600, 500, true);
+	add_image_size('Full Width', 1170);
+	add_image_size('Text Block', 530, 640, true);
 }
 add_action( 'after_setup_theme', 'csd_theme_setup' );
 
@@ -209,6 +211,42 @@ function acf_set_featured_image( $value, $post_id, $field  ){
 
 // acf/update_value/name={$field_name} - filter for a specific field based on it's name
 add_filter( 'acf/update_value/name=featured_image', 'acf_set_featured_image', 10, 3 );
+
+/*
+ * Get pages for full-width subnav
+ */
+function get_full_width_children_pages($post) {
+	if($post->post_parent) {
+		$parent_id = get_topmost_parent($post->id);
+			  				  	
+		$children = wp_list_pages( array(
+		    'title_li' => '',
+		    'child_of' => $parent_id,
+		    'echo'	=> 0,
+		    'sort_column' => 'post_title'
+		));
+	} else {
+		$parent_id = $post->ID;
+		
+		$children = wp_list_pages( array (
+			'title_li' => '',
+			'depth' => 1,
+			'child_of' => $post->ID,
+			'echo' => 0,
+			'sort_column' => 'post_title'
+		));
+	}
+
+	if ($children) {
+		$pages = array(
+			'parent' => $parent_id,
+			'children' => $children,
+		);
+		return($pages);
+	} else {
+		return false;
+	}
+}
 
 /*
  * Custom pagination function

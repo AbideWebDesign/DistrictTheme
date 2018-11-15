@@ -14,13 +14,12 @@
 	);
 	$query = new WP_Query($args);
 ?>
-<div id="posts-block" class="padding-vertical-three <?php echo (is_page_template('page-parent-no-sidebar.php') ? 'bg-gray' : ''); ?>">
-	<?php echo (is_page_template('page-parent-no-sidebar.php') ? '<div class="container">' : ''); ?>
-	<div class="row">
-		<div class="col-xs-12">
-			<h2 class="margin-bottom-one"><?php the_sub_field('post_list_heading'); ?></h2>
-		</div>
+<div class="row">
+	<div class="col-xs-12 margin-top-two">
+		<h2 class="headline"><?php the_sub_field('post_list_heading'); ?></h2>
 	</div>
+</div>
+<div id="posts-block">
 	<div class="row">
 		<?php while($query->have_posts()): $query->the_post(); ?>
 			<?php $image = get_field('featured_image'); ?>
@@ -30,7 +29,7 @@
 				</div>
 				<div class="posts-content">
 					<div class="posts-content-heading">
-						<?php the_title(); ?>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						<div class="small"><?php the_date(); ?></div>
 					</div>
 					<?php the_excerpt(); ?>
@@ -39,5 +38,4 @@
 		<?php endwhile; ?>
 		<?php wp_reset_postdata(); ?>
 	</div>
-	<?php echo (is_page_template('page-parent-no-sidebar.php') ? '</div>' : ''); ?>
 </div>

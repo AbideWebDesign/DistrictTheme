@@ -7,14 +7,10 @@
  * @since CSD 1.0
  */
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php if(!is_page_template('page-parent-no-sidebar.php')): ?>
-		<header class="entry-header">
-			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</header><!-- .entry-header -->
-	<?php endif; ?>
-	
+	<header class="entry-header">
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	</header><!-- .entry-header -->	
 	<div class="entry-content">
 		<?php
 		// check for rows (parent repeater)
@@ -102,12 +98,6 @@
 				if ( get_row_layout() == "table" ): 
 					
 					get_template_part( 'template-parts/page-block', 'table' );
-					
-				endif;
-				
-				if ( get_row_layout() == "tabbed_content" ): 
-					
-					get_template_part( 'template-parts/page-block', 'tabs' );
 					
 				endif;
 				

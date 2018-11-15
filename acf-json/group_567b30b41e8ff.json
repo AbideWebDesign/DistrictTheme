@@ -38,6 +38,7 @@
                     "label": "Lead Text Block",
                     "display": "row",
                     "sub_fields": [
+                        [],
                         {
                             "key": "field_568af25a9cf34",
                             "label": "Lead Text Block",
@@ -58,7 +59,8 @@
                             "new_lines": "",
                             "readonly": 0,
                             "disabled": 0
-                        }
+                        },
+                        []
                     ],
                     "min": "",
                     "max": ""
@@ -913,222 +915,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5bbb9f568d54c": {
-                    "key": "layout_5bbb9f568d54c",
-                    "name": "tabbed_content",
-                    "label": "Tabbed Content",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bbb9f5e8d54d",
-                            "label": "Tabs",
-                            "name": "tabs",
-                            "type": "repeater",
-                            "instructions": "Use this block on pages with and without sidebars. If you use it on a page that uses the page template \"Parent - No Sidebar\" it MUST be the first block used.",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "collapsed": "",
-                            "min": 0,
-                            "max": 0,
-                            "layout": "row",
-                            "button_label": "Add Tab",
-                            "sub_fields": [
-                                {
-                                    "key": "field_5bbb9f778d54e",
-                                    "label": "Tab Name",
-                                    "name": "tab_name",
-                                    "type": "text",
-                                    "instructions": "Single word identifier that is not used in the display of this page block.",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5bbb9f828d54f",
-                                    "label": "Tab Label",
-                                    "name": "tab_label",
-                                    "type": "text",
-                                    "instructions": "Used in the tab as a label that describes tab content.",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5bbb9fd68d550",
-                                    "label": "Tab Content",
-                                    "name": "tab_content",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "tabs": "all",
-                                    "toolbar": "full",
-                                    "media_upload": 1,
-                                    "delay": 0
-                                },
-                                {
-                                    "key": "field_5bc4fb34b538d",
-                                    "label": "Add Button Group",
-                                    "name": "add_buttons",
-                                    "type": "true_false",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "",
-                                    "default_value": 0,
-                                    "ui": 1,
-                                    "ui_on_text": "",
-                                    "ui_off_text": ""
-                                },
-                                {
-                                    "key": "field_5bc4fb1db538c",
-                                    "label": "Button Group Heading",
-                                    "name": "button_group_heading",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5bc4fb34b538d",
-                                                "operator": "==",
-                                                "value": "1"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "maxlength": ""
-                                },
-                                {
-                                    "key": "field_5bbb9fe78d551",
-                                    "label": "Buttons",
-                                    "name": "buttons",
-                                    "type": "repeater",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5bc4fb34b538d",
-                                                "operator": "==",
-                                                "value": "1"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "collapsed": "field_5bbb9ff88d552",
-                                    "min": 0,
-                                    "max": 0,
-                                    "layout": "table",
-                                    "button_label": "Add Button",
-                                    "sub_fields": [
-                                        {
-                                            "key": "field_5bbb9ff88d552",
-                                            "label": "Button Heading",
-                                            "name": "button_heading",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 1,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_5bbba0098d553",
-                                            "label": "Button Label",
-                                            "name": "button_label",
-                                            "type": "text",
-                                            "instructions": "",
-                                            "required": 1,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "default_value": "",
-                                            "placeholder": "",
-                                            "prepend": "",
-                                            "append": "",
-                                            "maxlength": ""
-                                        },
-                                        {
-                                            "key": "field_5bbba0108d554",
-                                            "label": "Button Link",
-                                            "name": "button_link",
-                                            "type": "link",
-                                            "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
-                                            "wrapper": {
-                                                "width": "",
-                                                "class": "",
-                                                "id": ""
-                                            },
-                                            "return_format": "url"
-                                        }
-                                    ]
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5bbbbd9c3146a": {
                     "key": "layout_5bbbbd9c3146a",
                     "name": "blog_posts",
@@ -1175,6 +961,31 @@
                             "load_terms": 0,
                             "return_format": "object",
                             "multiple": 0
+                        },
+                        {
+                            "key": "field_5be219541a488",
+                            "label": "Post List Background Color",
+                            "name": "post_list_background_color",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "bg-white": "White",
+                                "bg-gray": "Gray"
+                            },
+                            "default_value": [],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         }
                     ],
                     "min": "",
@@ -1581,13 +1392,6 @@
                 "operator": "==",
                 "value": "page-food-services.php"
             }
-        ],
-        [
-            {
-                "param": "page_template",
-                "operator": "==",
-                "value": "page-parent-no-sidebar.php"
-            }
         ]
     ],
     "menu_order": 10,
@@ -1611,5 +1415,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1540324687
+    "modified": 1542316531
 }

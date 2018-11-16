@@ -19,6 +19,33 @@
             "endpoint": 0
         },
         {
+            "key": "field_5bef4e3d58d69",
+            "label": "Banner Type",
+            "name": "banner_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Default": "Default",
+                "Arrow": "Arrow"
+            },
+            "default_value": [
+                "Default"
+            ],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
             "key": "field_5be1e4d8a1e71",
             "label": "Banner Title",
             "name": "banner_title",
@@ -27,7 +54,7 @@
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "75",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
@@ -80,7 +107,7 @@
             },
             "default_value": "",
             "placeholder": "",
-            "maxlength": "",
+            "maxlength": 325,
             "rows": "",
             "new_lines": ""
         },
@@ -91,7 +118,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5bef4e3d58d69",
+                        "operator": "==",
+                        "value": "Arrow"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "25",
                 "class": "",
@@ -139,5 +174,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1541704303
+    "modified": 1542410528
 }

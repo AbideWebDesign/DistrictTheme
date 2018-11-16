@@ -8,24 +8,24 @@
  */
 
 get_header(); 
-$pages = get_full_width_children_pages($post); 
+$pages = get_full_width_children_pages($post);
 ?>
 <div id="primary" class="content-area">
-	<div class="<?php the_field('banner_background_color'); ?> padding-vertical-four">
+	<div id="full-width-header" class="<?php the_field('banner_background_color'); ?> <?php echo (get_field('banner_type') == 'Arrow' ? 'header-arrow' : ''); ?>">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-7">
+				<div class="col-md-12 <?php echo (get_field('banner_type') == 'Arrow' ? 'col-lg-7' : 'col-lg-9'); ?> padding-vertical-four">
 					<h1 class="margin-none"><?php the_title(); ?></h1>
 					<?php if(get_field('banner_text')): ?>
 						<p class="lead margin-top-one margin-bottom-none"><?php the_field('banner_text'); ?></p>
 					<?php endif; ?>
 				</div>
-				<div class="col-md-3 col-sm-offset-1 hidden-sm hidden-xs">
-					<?php if(get_field('banner_image') && get_field('banner_text')): ?>
+				<?php if(get_field('banner_image') && get_field('banner_text') && get_field('banner_type') == 'Arrow'): ?>
+					<div id="header-right" class="col-md-3 col-sm-offset-1 padding-vertical-four hidden-sm hidden-xs">
 						<?php $img_id = get_field('banner_image'); ?>
-						<?php echo wp_get_attachment_image($img_id, 'square', false, array('class'=>'img img-responsive')); ?>
-					<?php endif; ?>
-				</div>
+						<?php echo wp_get_attachment_image($img_id, 'square', false, array('class'=>'img img-responsive', 'style'=>'width:200px')); ?>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>

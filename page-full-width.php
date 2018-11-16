@@ -21,7 +21,7 @@ $pages = get_full_width_children_pages($post);
 					<?php endif; ?>
 				</div>
 				<?php if(get_field('banner_image') && get_field('banner_text') && get_field('banner_type') == 'Arrow'): ?>
-					<div id="header-right" class="col-md-3 col-sm-offset-1 padding-vertical-four hidden-sm hidden-xs">
+					<div id="header-right" class="col-md-3 col-sm-offset-1 padding-vertical-four hidden-md hidden-sm hidden-xs">
 						<?php $img_id = get_field('banner_image'); ?>
 						<?php echo wp_get_attachment_image($img_id, 'square', false, array('class'=>'img img-responsive', 'style'=>'width:200px')); ?>
 					</div>

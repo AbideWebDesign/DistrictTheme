@@ -223,7 +223,8 @@ function get_full_width_children_pages($post) {
 		    'title_li' => '',
 		    'child_of' => $parent_id,
 		    'echo'	=> 0,
-		    'sort_column' => 'post_title'
+		    'sort_column' => 'post_title',
+		    'exclude' => '36226,36236,36224,36234,36209,36229,36232,36333,36329,36327,36319,35781,36331',
 		));
 	} else {
 		$parent_id = $post->ID;
@@ -233,7 +234,8 @@ function get_full_width_children_pages($post) {
 			'depth' => 1,
 			'child_of' => $post->ID,
 			'echo' => 0,
-			'sort_column' => 'post_title'
+			'sort_column' => 'post_title',
+			'exclude' => '36226,36236,36224,36234,36209,36229,36232,36333,36329,36327,36319,35781,36331',
 		));
 	}
 

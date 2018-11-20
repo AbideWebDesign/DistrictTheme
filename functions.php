@@ -18,11 +18,12 @@ function csd_enqueue_style() {
 add_action( 'wp_enqueue_scripts', 'csd_enqueue_style', 100 );
 
 function csd_enqueue_script() {
+	$theme = wp_get_theme();
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', false, null );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'bootstrap.min.js', get_template_directory_uri() . '/assets/js/bootstrap.min.js', '', '', true );
-	wp_enqueue_script( 'core.js', get_template_directory_uri() . '/assets/js/core.js', '', '', true );
+	wp_enqueue_script( 'core.js', get_template_directory_uri() . '/assets/js/core.js', '', $theme->version, true );
 	
 	if ( is_page_template( 'page-calendar.php' ) || is_singular( 'tribe_events' ) || is_singular( 'news' ) || is_singular('tribe_venue') ) {
 		wp_enqueue_script( 'addthis_widget.js', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56c3954e3471722a' );				

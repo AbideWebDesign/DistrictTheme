@@ -39,6 +39,25 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5bf43c1e212cd",
+                            "label": "Tab Section Heading",
+                            "name": "tab_section_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5be47729ba00a",
                             "label": "Tabs",
                             "name": "tabs",
@@ -864,6 +883,69 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5bf43ae447908": {
+                    "key": "layout_5bf43ae447908",
+                    "name": "table",
+                    "label": "Table",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bf43e3992d12",
+                            "label": "Table Section Heading",
+                            "name": "table_section_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bf43e4c92d13",
+                            "label": "Table Section Text",
+                            "name": "table_section_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5bf43aea47909",
+                            "label": "Table",
+                            "name": "table",
+                            "type": "table",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "use_header": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Content",
@@ -901,5 +983,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542319674
+    "modified": 1542733821
 }

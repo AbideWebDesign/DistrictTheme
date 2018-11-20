@@ -37,7 +37,13 @@
 
 					get_template_part( 'template-parts/page-full-block', 'cta' );
 					
-				endif;				
+				endif;
+				
+				if ( get_row_layout() == "table" ): 
+
+					get_template_part( 'template-parts/page-full-block', 'table' );
+					
+				endif;					
 				
 			endwhile;
 			

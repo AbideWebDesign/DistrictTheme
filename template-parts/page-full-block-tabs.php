@@ -1,11 +1,11 @@
 <div id="tabs-block-header">
-	<?php echo (is_page_template('page-full-width.php') ? '<div class="container">' : ''); ?>		
+	<div class="container">		
 		<div class="row">
-			<div class="col-xs-12 margin-top-two	">
-				<h2 class="headline">Bond Program Information</h2>
+			<div class="col-xs-12 margin-top-two">
+				<h2 class="headline"><?php the_sub_field('tab_section_heading'); ?></h2>
 			</div>
 		</div>
-	<?php echo (is_page_template('page-full-width.php') ? '</div>' : ''); ?>
+	</div>
 </div>
 <div id="tabs-block" class="padding-bottom-two">
 	<div class="container">

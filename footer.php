@@ -1,7 +1,7 @@
-				<section id="footer-top" class="bg-gray py-2" role="contentinfo">
+				<section id="footer-top" class="bg-gray py-2">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-3">
+							<div class="col-md-6 col-lg-3">
 							
 								<?php 
 								
@@ -41,7 +41,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-1-3', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-sm-3">
+							<div class="col-md-6 col-lg-3">
 								
 								<?php 
 								
@@ -57,7 +57,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-2-1', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-sm-3 footer-top-section">
+							<div class="col-md-6 col-lg-3 footer-top-section">
 								
 								<?php 
 								
@@ -85,7 +85,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-3-2', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-sm-3">
+							<div class="col-md-6 col-lg-3">
 								
 								<?php 
 
@@ -121,21 +121,21 @@
 				<section id="footer-bottom" class="py-2">
 					<div class="container">
 						<div class="row">
-							<div class="col-8 col-sm-2">
+							<div class="col-6 col-md-4 col-lg-2 mb-1">
 								<a href="/"><img class="img-fluid" src="<?php the_field('logo', 'options'); ?>" alt="<?php bloginfo('name'); ?>" /></a>						
 							</div>
-							<div class="col-sm-5">
+							<div class="col-lg-5">
 								
 								<?php wp_nav_menu( array('theme_location' => 'footer-bottommenu', 'items_wrap' => '<ul class="list-unstyled">%3$s</ul>' )); ?>
 								
-								<p class="footer-text pt-1">
+								<p class="footer-text mb-1">
 									Report bullying, harassment or intimidation at your school. The Harassment, Intimidation and Bullying Compliance Officer is <a href="mailto:kevin.bogatin@corvallis.k12.or.us" target="_blank">Kevin Bogatin</a>. The Title IX Compliance Officer is <a href="mailto:jennifer.duval@corvallis.k12.or.us" target="_blank">Jennifer Duvall</a>. The Section 504 & ADA Compliance Officer is <a href="mailto:rynda.gregory@corvallis.k12.or.us" target="blank">Rynda Gregory</a>.  
 								</p>
-								<p class="footer-text pt-2">
+								<p class="footer-text mb-1">
 									&#169; Corvallis School District. Corvallis, Oregon 97333
 								</p>
 							</div>
-							<div class="col-sm-5 col-xs-12">
+							<div class="col-lg-5">
 								<p class="footer-text"><?php the_field('statement', 'options'); ?> <?php the_field('statement_contact_name', 'options'); ?> <?php the_field('statement_contact_title', 'options'); ?>, <a href="mailto:<?php the_field('statement_contact_email', 'options'); ?>" target="_blank"><?php the_field('statement_contact_email', 'options'); ?></a> <?php the_field('statement_contact_phone', 'options'); ?> </p>
 							</div>
 						</div>
@@ -144,7 +144,7 @@
 				<section id="footer-social" class="py-2">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-6">
+							<div class="col-lg-6 mb-1 mb-lg-0">
 								<ul class="social-media-links">
 									<p>Connect with Us</p>
 									<li>
@@ -169,7 +169,7 @@
 									</li>
 								</ul>
 							</div>
-							<div id="credits" class="col-sm-6 text-center text-md-right">
+							<div id="credits" class="col-lg-6 text-center text-lg-right">
 								<a href="https://abidewebdesign.com" target="_blank">Website Designed and Maintained by Abide Web Design</a>
 							</div>
 						</div>

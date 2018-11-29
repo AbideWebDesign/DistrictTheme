@@ -75,10 +75,11 @@
 			endif;
 			
 			if( get_sub_field( 'form_select' ) ): 
-			
+				
 				$form_object = get_sub_field('form_select');
+				echo "<div class='bg-gray p-2'>";
 				echo do_shortcode('[gravityform id="' . $form_object['id'] . '" title="true" description="true" ajax="true"]');
-			
+				echo "</div>";
 			endif;
 			
 			if ( get_sub_field ( 'directory_category' ) ): 

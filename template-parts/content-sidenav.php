@@ -50,7 +50,7 @@
 			  
 		if ($children): ?>
 		
-		<div class="navbar-header d-block d-md-none w-100">
+		<div class="navbar-header d-block d-lg-none w-100">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 				<i class="fa fa-1x fa-chevron-down"></i>
@@ -59,7 +59,7 @@
 				<span <?php if ( is_page_template( 'page-parent.php' ) ): ?> class="sidebar-parent-title" <?php endif; ?>><a href="<?php the_permalink($root_page_id); ?>"><?php echo $titlenamer; ?></a></span>
 			</h2>
 		</div>
-		<h2 class="d-none d-md-block w-100">
+		<h2 class="d-none d-lg-block w-100">
 			<span<?php if ( is_page_template( 'page-parent.php' ) ): ?> class="sidebar-parent-title" <?php endif; ?>><a href="<?php the_permalink($root_page_id); ?>"><?php echo $titlenamer; ?></a></span>
 		</h2>
 		<div class="navbar-collapse collapse sidebar-navbar-collapse">

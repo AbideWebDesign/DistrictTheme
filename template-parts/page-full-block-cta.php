@@ -1,5 +1,5 @@
 <?php $type = get_sub_field('call_to_action_type'); ?>
-<div id="cta-block" class="py-3">
+<div id="cta-block" class="py-2">
 	<div class="container">
 		<div class="row">
 			<?php if($type == "Form"): ?>

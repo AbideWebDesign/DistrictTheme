@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <div id="primary" class="content-area">
-	<div id="section-efriday-top" class="bg-orange py-4">
+	<div id="section-efriday-top" class="bg-orange py-3">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
 					<h1><?php the_field('efriday_header_title', 'options'); ?></h1>
 					<p class="m-0"><?php the_field('efriday_header_text', 'options'); ?></p>
 				</div>
-				<div class="col-sm-6">
-					<div class="header-box mt-1">
+				<div class="col-sm-6 align-self-center mt-1 mt-lg-0">
+					<div class="header-box">
 						<div class="small text-center"><?php the_field('efriday_disclaimer', 'options'); ?></div>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 					<div class="row">
 						<div class="col-sm-12">
 							<div class="search-heading bg-dark-blue mb-1 p-1">
-								<h3 class="margin-none text-white">Upcoming Events</h3>
+								<h3 class="mb-0 text-white">Upcoming Events</h3>
 							</div>
 						</div>
 					</div>
@@ -66,7 +66,7 @@
 											<div class="small"><?php the_field('event_description'); ?></div>
 											<hr>
 											<div class="row">
-												<div class="col-md-12">
+												<div class="col-12">
 													<div class="mb-1 small"><strong>Organizer:</strong> <?php the_field('name_of_organization'); ?></div>
 													<div class="mb-1 small"><strong>Age Group:</strong> <?php the_field('targeted_age_group'); ?></div>
 													<div class="small"><strong>Contact:</strong> <?php the_field('contact_person'); ?>, <?php the_field('contact_phone_number'); ?>, <a href="mailto:<?php the_field('contact_email'); ?>"><?php the_field('contact_email'); ?></a></div>

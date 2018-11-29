@@ -15,14 +15,14 @@ $pages = get_full_width_children_pages($post);
 	<div id="full-width-header" class="<?php the_field('banner_background_color'); ?> <?php echo (get_field('banner_type') == 'Arrow' ? 'header-arrow' : ''); ?>">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 <?php echo (get_field('banner_type') == 'Arrow' ? 'col-lg-7' : 'col-lg-9'); ?> py-3 align-self-center">
+				<div class="col-lg-12 <?php echo (get_field('banner_type') == 'Arrow' ? 'col-xl-7' : 'col-xl-9'); ?> py-3 align-self-center">
 					<h1 class="mb-0"><?php the_title(); ?></h1>
 					<?php if(get_field('banner_text')): ?>
 						<p class="lead mt-1 mb-0"><?php the_field('banner_text'); ?></p>
 					<?php endif; ?>
 				</div>
 				<?php if(get_field('banner_image') && get_field('banner_text') && get_field('banner_type') == 'Arrow'): ?>
-					<div id="header-right" class="col-lg-3 offset-lg-1 d-none d-lg-block">
+					<div id="header-right" class="col-xl-3 offset-xl-1 d-none d-xl-block">
 						<div class="d-flex h-100 align-self-center">	
 							<?php $img_id = get_field('banner_image'); ?>
 							<?php echo wp_get_attachment_image($img_id, 'square', false, array('class'=>'img img-fluid', 'style'=>'align-self:center')); ?>

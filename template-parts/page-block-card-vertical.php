@@ -1,52 +1,45 @@
 <div class="pb-1">
-	<ul class="list list-unstyled list-inline list-inline-lg">
-	
-	<?php 
-	
-	if( have_rows('card_vertical_blocks') ): 
+	<div class="row">
+		<?php 
 		
-		while ( have_rows('card_vertical_blocks') ) : the_row(); 
-		
-			if ( get_sub_field('card_vertical_link_type') == 'Page' ):
-				
-				$link = get_sub_field('page_link');
+		if( have_rows('card_vertical_blocks') ): 
 			
-			elseif ( get_sub_field('card_vertical_link_type') == 'News Post' ):
+			while ( have_rows('card_vertical_blocks') ) : the_row(); 
+			
+				if ( get_sub_field('card_vertical_link_type') == 'Page' ):
+					
+					$link = get_sub_field('page_link');
 				
-				$post_object = get_sub_field('news_post_link');
-				
-				if( $post_object ): 
-
-					$post = $post_object;
-					setup_postdata( $post ); 
-					$link = get_the_permalink();
-					wp_reset_postdata();
-				
+				elseif ( get_sub_field('card_vertical_link_type') == 'News Post' ):
+					
+					$post_object = get_sub_field('news_post_link');
+					
+					if( $post_object ): 
+	
+						$post = $post_object;
+						setup_postdata( $post ); 
+						$link = get_the_permalink();
+						wp_reset_postdata();
+					
+					endif;
+							
+				elseif ( get_sub_field('card_vertical_link_type') == 'Media File' ):
+					
+					$link = get_sub_field('media_link');
+									
 				endif;
-						
-			elseif ( get_sub_field('card_vertical_link_type') == 'Media File' ):
-				
-				$link = get_sub_field('media_link');
-								
-			endif;
-	?>
-		<li class="col-sm-4 card-vertical-block-wrap">
-			<div class="card-vertical-block">
-					
-			<?php $image = get_sub_field('card_vertical_image'); ?>
-			
-				<div class="card-vertical-img">
-					<a href="<?php echo $link; ?>" <?php if ( get_sub_field('card_vertical_link_type') == 'Media File' ): ?>target="_blank"<?php endif; ?>><?php echo wp_get_attachment_image($image['id'], 'Square Column 4', 0, array('class' => 'img img-fluid')); ?></a>
+			?>
+			<div class="col-sm-6 col-md-4 align-items-stretch mb-2 mb-md-0">
+				<div class="h-100 bg-gray">
+					<?php $image = get_sub_field('card_vertical_image'); ?>
+					<div class="card-vertical-img">
+						<a href="<?php echo $link; ?>" <?php if ( get_sub_field('card_vertical_link_type') == 'Media File' ): ?>target="_blank"<?php endif; ?>><?php echo wp_get_attachment_image($image['id'], 'Square Column 4', 0, array('class' => 'img img-fluid w-100')); ?></a>
+					</div>
+					<div class="card-vertical-content px-1 py-2 p-lg-2">
+						<a href="<?php echo $link; ?>" <?php if ( get_sub_field('card_vertical_link_type') == 'Media File' ): ?>target="_blank"<?php endif; ?>><h4 class="mb-0"><?php the_sub_field('card_vertical_title'); ?></h4></a>
+					</div>
 				</div>
-					
-				<div class="card-vertical-content">
-					<a href="<?php echo $link; ?>" <?php if ( get_sub_field('card_vertical_link_type') == 'Media File' ): ?>target="_blank"<?php endif; ?>><h4><?php the_sub_field('card_vertical_title'); ?></h4></a>
-				</div>
-										
 			</div>
-		</li>
-	
-	<?php endwhile; endif; ?>
-	 
-	</ul>
+		<?php endwhile; endif; ?>	 
+	</div>
 </div>

@@ -34,32 +34,30 @@ $total_results = $wp_query->found_posts;
 				</div>
 			</div>
 		</div>
-		<?php if ( have_posts() ) : ?>
-		
 		<div class="row">
 			<div class="col-md-8">
-				<?php
-				// Start the loop.
-				while ( have_posts() ) : the_post();
-	
-					/**
-					 * Run the loop for the search to output the results.
-					 * If you want to overload this in a child theme then include a file
-					 * called content-search.php and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', 'search' );
-	
-				// End the loop.
-				endwhile;
-	
-				// Previous/next page navigation.
-				show_pagination_links( );
-			// If no content, include the "No posts found" template.
-			else :
-				echo "No results returned.";
-	
-			endif;
-			?>
+				<?php 
+				if ( have_posts() ) : 
+					// Start the loop.
+					while ( have_posts() ) : the_post();
+		
+						/**
+						 * Run the loop for the search to output the results.
+						 * If you want to overload this in a child theme then include a file
+						 * called content-search.php and that will be used instead.
+						 */
+						get_template_part( 'template-parts/content', 'search' );
+		
+					// End the loop.
+					endwhile;
+		
+					// Previous/next page navigation.
+					show_pagination_links( );
+				else :
+					echo "No results returned.";
+		
+				endif;
+				?>
 			</div>
 			<div class="col-md-3 offset-md-1">
 				<div class="bg-gray p-1 text-center">

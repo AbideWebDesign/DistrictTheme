@@ -12,8 +12,8 @@
 		<?php if( have_rows('contact') ): ?>
 			<?php while( have_rows('contact') ): the_row(); ?>
 				<div class="row justify-content-center">
-					<div class="col-lg-4">
-						<div class="list-cards h-100 text-center">
+					<div class="col-md-4">
+						<div class="list-cards p-1 p-lg-2  h-100 text-center">
 							<div class="mb-1">
 								<i class="fas fa-phone-volume fa-2x"></i>
 							</div>
@@ -35,8 +35,8 @@
 						</div>
 					</div>
 					<?php if ( get_sub_field('contact_address') ): ?>
-						<div class="col-lg-4">
-							<div class="list-cards h-100 text-center">
+						<div class="col-md-4">
+							<div class="list-cards p-1 p-lg-2 h-100 text-center">
 								<div class="mb-1">
 									<i class="fas fa-map-marked-alt fa-2x"></i>
 								</div>
@@ -45,15 +45,15 @@
 								<?php the_sub_field('contact_address'); ?> - <a href="https://www.google.com/maps/place/<?php the_sub_field('contact_address'); ?>" target="_blank">Google Map</a>
 								<?php if ( get_sub_field('contact_mailing_address') ): ?>
 									<hr class="hr-sm hr-center">
-									<h3>Mailing Address</h3>
+									<strong>Mailing Address:</strong><br>
 									<?php the_sub_field('contact_mailing_address'); ?>
 								<?php endif; ?>
 							</div>	
 						</div>
 					<?php endif; ?>
 					<?php if( have_rows('contact_staff') ): ?>
-						<div class="col-lg-4">
-							<div class="list-cards h-100 text-center">
+						<div class="col-md-4">
+							<div class="list-cards p-1 p-lg-2 h-100 text-center">
 								<div class="mb-1">
 									<i class="fas fa-users fa-2x"></i>
 								</div>

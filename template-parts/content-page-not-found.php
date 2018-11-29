@@ -8,16 +8,24 @@ $links_col_2 = get_field('popular_resources_list', 'option');
 	<div class="col-sm-10 offset-sm-1">
 		<div class="entry-content well">
 			<h2><?php the_field('error_page_title', 'option'); ?></h2>
-			<div class="entry-lead">
+			<div class="page-lead">
 				<p class="lead"><?php the_field('error_page_message', 'option'); ?></p>
 			</div>
-			<div class="pb-2" id="search-form">
-				<form role="search" id="sites-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
-					 <label class="sr-only" for="search-text">Search</label>
-					 <input type="text" class="search-field form-control-lg" id="search-text" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s">
-					 <button type="submit" class="btn btn-primary btn-lg">Search</button>
-				</form>
-			</div>	
+			<div class="bg-gray p-1">
+				<div id="search-form">
+					<form role="search" id="sites-search" class="form-inline" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
+						<div class="form-row w-100">
+							<div class="col-sm-10">
+								<label class="sr-only" for="search-text">Search</label>
+								<input type="text" class="search-field form-control form-control-lg w-100" id="search-text" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s">
+							</div>
+							<div class="col-sm-2">	
+								<button type="submit" class="btn btn-primary btn-block h-100">Search</button>
+							</div>
+						</div>
+					</form>
+				</div>	
+			</div>
 		</div>
 	</div>
 </div>

@@ -70,7 +70,7 @@
 	</div>
 	<div class="wrapper">
 		<div class="wrapper-inner">
-			<div id="header-mobile" class="d-md-none d-lg-none">
+			<div id="header-mobile" class="d-block d-lg-none">
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
@@ -84,26 +84,28 @@
 					</div>
 				</div>
 			</div>
-			<div id="header-global" class="d-none d-md-block">
+			<div id="header-global" class="d-none d-lg-block">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-3 col-md-4 col-lg-5">
+						<div class="col-lg-5">
 							<div id="logo" class="clearfix">
 								<a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 							</div>
 						</div>
-						<div class="col-sm-9 col-md-8 col-lg-6 float-right">
-							<div id="nav-top-links">
-								<div class="menu-top-links-container">
+						<div class="col-lg-7">
+							<div id="nav-top-links" class="d-flex justify-content-end">
+								<div id="nav-top-links-container">
 									<?php wp_nav_menu( array('theme_location' => 'header-toplinks', 'items_wrap' => '<ul class="nav navbar-nav" aria-label="Top Links">%3$s</ul>' )); ?>
 								</div>
-								<a href="#" id="search-toggle"><i class="fa fa-search fa-lg"></i></a>
+								<div id="nav-top-search-container">
+									<a href="#" id="search-toggle"><i class="fa fa-search"></i></a>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div id="mainmenu" class="clearfix d-none d-md-block" role="navigation">
+			<div id="mainmenu" class="clearfix d-none d-lg-block" role="navigation">
 				<div class="container">
 					<div role="navigation">
 						<div id="primary-nav" tabindex="0">

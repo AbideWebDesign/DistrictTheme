@@ -1,7 +1,7 @@
-				<section id="footer-top" class="bg-gray padding-vertical-two" role="contentinfo">
+				<section id="footer-top" class="bg-gray py-2" role="contentinfo">
 					<div class="container">
 						<div class="row">
-							<div class="col-xs-12 col-sm-3 col-md-3">
+							<div class="col-sm-3">
 							
 								<?php 
 								
@@ -41,7 +41,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-1-3', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-xs-12 col-sm-3 col-md-3">
+							<div class="col-sm-3">
 								
 								<?php 
 								
@@ -57,7 +57,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-2-1', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-xs-12 col-sm-3 col-md-3 footer-top-section">
+							<div class="col-sm-3 footer-top-section">
 								
 								<?php 
 								
@@ -85,7 +85,7 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-3-2', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 							
 							</div>
-							<div class="col-xs-12 col-sm-3 col-md-3">
+							<div class="col-sm-3">
 								
 								<?php 
 
@@ -118,20 +118,20 @@
 						</div>
 					</div>
 				</section>
-				<section id="footer-bottom">
+				<section id="footer-bottom" class="py-2">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-2 col-xs-8">
-								<a href="/"><img class="img-responsive" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>						
+							<div class="col-8 col-sm-2">
+								<a href="/"><img class="img-fluid" src="<?php the_field('logo', 'options'); ?>" alt="<?php bloginfo('name'); ?>" /></a>						
 							</div>
-							<div class="col-sm-5 col-xs-12">
+							<div class="col-sm-5">
 								
 								<?php wp_nav_menu( array('theme_location' => 'footer-bottommenu', 'items_wrap' => '<ul class="list-unstyled">%3$s</ul>' )); ?>
 								
-								<p class="footer-text padding-top-one">
+								<p class="footer-text pt-1">
 									Report bullying, harassment or intimidation at your school. The Harassment, Intimidation and Bullying Compliance Officer is <a href="mailto:kevin.bogatin@corvallis.k12.or.us" target="_blank">Kevin Bogatin</a>. The Title IX Compliance Officer is <a href="mailto:jennifer.duval@corvallis.k12.or.us" target="_blank">Jennifer Duvall</a>. The Section 504 & ADA Compliance Officer is <a href="mailto:rynda.gregory@corvallis.k12.or.us" target="blank">Rynda Gregory</a>.  
 								</p>
-								<p class="footer-text padding-top-two">
+								<p class="footer-text pt-2">
 									&#169; Corvallis School District. Corvallis, Oregon 97333
 								</p>
 							</div>
@@ -141,35 +141,35 @@
 						</div>
 					</div>
 				</section>
-				<section id="footer-social" class="padding-vertical-two">
+				<section id="footer-social" class="py-2">
 					<div class="container">
 						<div class="row">
-							<div class="col-sm-6 col-xs-12">
+							<div class="col-sm-6">
 								<ul class="social-media-links">
 									<p>Connect with Us</p>
 									<li>
 										<a href="https://www.twitter.com/SuptNoss" target="_blank" class="social">
-											<i class="fa fa-twitter-square fa-2x"></i>
+											<i class="fab fa-twitter-square fa-2x"></i>
 										</a>	
 									</li>
 									<li>
 										<a href="https://www.facebook.com/csd509j" target="_blank" class="social">
-											<i class="fa fa-facebook-square fa-2x"></i>
+											<i class="fab fa-facebook-square fa-2x"></i>
 										</a>
 									</li>
 									<li>
 										<a href="https://www.instagram.com/corvallis.schools/" target="_blank" class="social">
-											<i class="fa fa-instagram fa-2x"></i>
+											<i class="fab fa-instagram fa-2x"></i>
 										</a>
 									</li>
 									<li>
 										<a href="https://www.linkedin.com/company/corvallis-school-district-509j" target="_blank" class="social">
-											<i class="fa fa-linkedin-square fa-2x"></i>
+											<i class="fab fa-linkedin-square fa-2x"></i>
 										</a>
 									</li>
 								</ul>
 							</div>
-							<div id="credits" class="col-sm-6 col-xs-12 text-right">
+							<div id="credits" class="col-sm-6 text-center text-md-right">
 								<a href="https://abidewebdesign.com" target="_blank">Website Designed and Maintained by Abide Web Design</a>
 							</div>
 						</div>
@@ -179,7 +179,7 @@
 		</div>
 	
 		<?php wp_footer(); ?>
-		<div id="google_translate_element" class="hidden"></div>
+		<div id="google_translate_element" class="d-none"></div>
 		<script type="text/javascript">
 			function googleTranslateElementInit() {
 			  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');

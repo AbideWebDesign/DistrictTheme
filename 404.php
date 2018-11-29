@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area padding-vertical-two">
+<div id="primary" class="content-area py-2">
 	<div class="container">
 		<?php get_template_part( 'template-parts/content', 'page-not-found' ); ?>
 	</div>

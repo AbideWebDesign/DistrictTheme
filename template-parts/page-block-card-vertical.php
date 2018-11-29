@@ -1,4 +1,4 @@
-<div class="padding-bottom-one clearfix">
+<div class="pb-1">
 	<ul class="list list-unstyled list-inline list-inline-lg">
 	
 	<?php 
@@ -36,7 +36,7 @@
 			<?php $image = get_sub_field('card_vertical_image'); ?>
 			
 				<div class="card-vertical-img">
-					<a href="<?php echo $link; ?>" <?php if ( get_sub_field('card_vertical_link_type') == 'Media File' ): ?>target="_blank"<?php endif; ?>><?php echo wp_get_attachment_image($image['id'], 'Square Column 4', 0, array('class' => 'img img-responsive')); ?></a>
+					<a href="<?php echo $link; ?>" <?php if ( get_sub_field('card_vertical_link_type') == 'Media File' ): ?>target="_blank"<?php endif; ?>><?php echo wp_get_attachment_image($image['id'], 'Square Column 4', 0, array('class' => 'img img-fluid')); ?></a>
 				</div>
 					
 				<div class="card-vertical-content">

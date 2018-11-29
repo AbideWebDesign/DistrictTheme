@@ -9,7 +9,7 @@
 ?>
 
 <?php if ( is_active_sidebar( 'sidebar' )  ) : ?>
-	<aside id="secondary" class="sidebar widget-area" role="complementary">
+	<div class="sidebar">
 		<?php get_template_part('template-parts/content','sidenav'); ?>
-	</aside><!-- .sidebar .widget-area -->
+	</div><!-- .sidebar -->
 <?php endif; ?>

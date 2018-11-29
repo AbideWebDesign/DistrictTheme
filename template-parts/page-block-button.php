@@ -1,6 +1,6 @@
 <?php if( have_rows('button') ): ?>
 
-<div class="padding-bottom-one">
+<div class="pb-1">
 	<ul class="list list-unstyled list-inline">
 
 		<?php
@@ -33,7 +33,7 @@
 		
 		?>	
 		
-		<li class="padding-bottom-one">
+		<li class="pb-1">
 			<a <?php if ( get_sub_field('external_link') || get_sub_field('internal_media') ): ?> target="_blank" <?php endif; ?> href="<?php echo $link; ?>" class="btn <?php echo $class; ?>"><?php the_sub_field('button_text'); ?></a>
 		</li>	 			
 		

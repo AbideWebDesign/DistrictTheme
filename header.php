@@ -56,7 +56,7 @@
 			<div class="search-bar-inner">
 				<div class="container">
 					<div class="row">
-						<div class="col-sm-12">
+						<div class="col-12">
 							<form role="search" id="sites-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 								 <label class="sr-only" for="search-text">Search</label>
 								 <input type="text" class="search-field" id="search-text" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s">
@@ -70,12 +70,12 @@
 	</div>
 	<div class="wrapper">
 		<div class="wrapper-inner">
-			<div id="header-mobile" class="visible-sm-block visible-xs-block">
+			<div id="header-mobile" class="d-md-none d-lg-none">
 				<div class="container">
 					<div class="row">
-						<div class="col-xs-12">
+						<div class="col-12">
 							<div id="logo" class="clearfix">
-								<a href="<?php echo get_home_url(); ?>"><img class="img-responsive" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+								<a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 							</div>
 							
 							<?php wp_nav_menu( array('theme_location' => 'header-menu-mobile' )); ?>
@@ -84,15 +84,15 @@
 					</div>
 				</div>
 			</div>
-			<div id="header-global" class="hidden-sm hidden-xs">
+			<div id="header-global" class="d-none d-md-block">
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-5 col-md-4 col-sm-3">
+						<div class="col-sm-3 col-md-4 col-lg-5">
 							<div id="logo" class="clearfix">
-								<a href="<?php echo get_home_url(); ?>"><img class="img-responsive" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+								<a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 							</div>
 						</div>
-						<div class="col-lg-6 col-md-8 col-sm-9 pull-right">
+						<div class="col-sm-9 col-md-8 col-lg-6 float-right">
 							<div id="nav-top-links">
 								<div class="menu-top-links-container">
 									<?php wp_nav_menu( array('theme_location' => 'header-toplinks', 'items_wrap' => '<ul class="nav navbar-nav" aria-label="Top Links">%3$s</ul>' )); ?>
@@ -103,7 +103,7 @@
 					</div>
 				</div>
 			</div>
-			<div id="mainmenu" class="cleanfix hidden-sm hidden-xs" role="navigation">
+			<div id="mainmenu" class="clearfix d-none d-md-block" role="navigation">
 				<div class="container">
 					<div role="navigation">
 						<div id="primary-nav" tabindex="0">

@@ -10,6 +10,6 @@ if ( get_sub_field('type') == 'Vimeo' ) {
 } 
 
 ?>
-<div class="embed-responsive embed-responsive-16by9 margin-vertical-two">
+<div class="embed-responsive embed-responsive-16by9 my-2">
 	<iframe class="embed-responsive-item" src="<?php echo $url; ?>"></iframe>
 </div>

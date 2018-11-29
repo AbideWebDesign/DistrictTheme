@@ -8,6 +8,6 @@
  */
 ?>
 
-<aside id="secondary" class="sidebar widget-area" role="complementary">
+<div class="sidebar">
 	<?php get_template_part('template-parts/content','sidenav-directory'); ?>
-</aside>
+</div>

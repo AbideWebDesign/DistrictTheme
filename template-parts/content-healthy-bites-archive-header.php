@@ -18,7 +18,7 @@ if( $the_query->have_posts() ):
 
 ?>
 
-<div id="carousel-news" class="carousel-wrap margin-bottom-two">
+<div id="carousel-news" class="carousel-wrap mb-2">
 	<div id="carousel" class="carousel slide" data-ride="carousel">
 	<!-- Indicators -->
 		<ol class="carousel-indicators">
@@ -44,9 +44,9 @@ if( $the_query->have_posts() ):
 		?>
 			
 			<!-- Wrapper for slides -->
-				<div class="item <?php if ($x == 0): ?>active<?php endif; ?>">
+				<div class="carousel-item <?php if ($x == 0): ?>active<?php endif; ?>">
 					<a href="<?php the_permalink(); ?>">
-						<?php echo wp_get_attachment_image($image['id'], 'News Image Featured', 0, array('class' => 'img img-responsive')); ?>
+						<?php echo wp_get_attachment_image($image['id'], 'News Image Featured', 0, array('class' => 'img img-fluid')); ?>
 					</a>
 					<a href="<?php the_permalink(); ?>">
 				  		<div class="carousel-caption">
@@ -65,15 +65,6 @@ if( $the_query->have_posts() ):
 		<?php endwhile; ?>
 		
 		</div>
-		<!-- Controls -->
-		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-			<span class="sr-only">Next</span>
-		</a>
 	</div>
 </div>
 

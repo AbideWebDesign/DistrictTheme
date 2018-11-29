@@ -23,7 +23,7 @@ if ( get_field('sidebar_contact_block') ):
 								
 								if( get_sub_field('contact_email') ): ?>
 								
-									<i class="fa fa-envelope"></i> <a href="mailto:<?php the_sub_field('contact_email'); ?>" target="_blank"><?php the_sub_field('contact_email'); ?></a>
+									<i class="fas fa-envelope"></i> <a href="mailto:<?php the_sub_field('contact_email'); ?>" target="_blank"><?php the_sub_field('contact_email'); ?></a>
 									<br>
 								
 								<?php 
@@ -32,7 +32,7 @@ if ( get_field('sidebar_contact_block') ):
 								
 								if ( get_sub_field('contact_phone') ): ?>
 								
-									<i class="fa fa-phone"></i> <?php the_sub_field('contact_phone'); ?>
+									<i class="fas fa-phone"></i> <?php the_sub_field('contact_phone'); ?>
 									<br>
 								
 								<?php 
@@ -41,7 +41,7 @@ if ( get_field('sidebar_contact_block') ):
 								
 								if( get_sub_field('contact_fax') ): ?>
 								
-									<i class="fa fa-fax"></i> <?php the_sub_field('contact_fax'); ?>
+									<i class="fas fa-fax"></i> <?php the_sub_field('contact_fax'); ?>
 									<br>
 								
 								<?php 
@@ -50,7 +50,7 @@ if ( get_field('sidebar_contact_block') ):
 								
 								if ( get_sub_field('contact_address') ): ?>
 								
-									<i class="fa fa-map-marker"></i> <?php the_sub_field('contact_address'); ?>
+									<i class="fas fa-map-marker"></i> <?php the_sub_field('contact_address'); ?>
 									<br>
 								
 								<?php 

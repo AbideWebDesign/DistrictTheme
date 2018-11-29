@@ -16,20 +16,20 @@
 ?>
 <div class="container">
 	<div class="row">
-		<div class="col-xs-12 margin-top-two">
+		<div class="col-12 mt-2">
 			<h2 class="headline"><?php the_sub_field('post_list_heading'); ?></h2>
 		</div>
 	</div>
 </div>
-<div class="padding-vertical-one">
+<div class="py-1">
 	<div class="container">
 		<div id="posts-block">
 			<div class="row">
 				<?php while($query->have_posts()): $query->the_post(); ?>
 					<?php $image = get_field('featured_image'); ?>
-					<div class="col-xs-12 col-sm-4 margin-bottom-one-xs">
+					<div class="col-sm-4 mb-xs-1">
 						<div class="posts-image">
-							<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($image['id'], 'News Image Medium', false, array('class' => 'img-responsive img-block')); ?></a>
+							<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($image['id'], 'News Image Medium', false, array('class' => 'img-fluid img-block')); ?></a>
 						</div>
 						<div class="posts-content">
 							<div class="posts-content-heading">

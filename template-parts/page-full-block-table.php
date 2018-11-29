@@ -1,10 +1,10 @@
-<div id="table-block" class="padding-top-one padding-bottom-two">
+<div id="table-block" class="pt-1 pb-2">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-12">
+			<div class="col-12">
 				<div class="text-block-wrap">
 					<div class="text-block-content">
-						<h2 class="margin-bottom-one"><?php the_sub_field('table_section_heading'); ?></h2>
+						<h2 class="mb-1"><?php the_sub_field('table_section_heading'); ?></h2>
 						<?php if(get_sub_field('table_section_text')): ?>
 							<?php the_sub_field('table_section_text'); ?>
 						<?php endif; ?>
@@ -14,7 +14,7 @@
 							
 							if ( $table ) {
 							
-							    echo '<table class="table margin-bottom-one">';
+							    echo '<table class="table mb-1">';
 							
 							        if ( $table['header'] ) {
 							

@@ -36,7 +36,7 @@ $query = new WP_Query($args);
 		<div class="alert-emergency-body" style="background-color: #<?php the_field('alert_color', get_the_ID()); ?>">
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-12">
+					<div class="col-12">
 						<h4><?php the_field('alert_sub_title', get_the_ID()); ?></h4>	
 						<h3>
 							<?php if ( get_field('link_to_post', get_the_id()) ): ?>

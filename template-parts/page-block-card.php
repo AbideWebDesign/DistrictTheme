@@ -1,16 +1,16 @@
-<div class="card-left row padding-bottom-two">
+<div class="row pb-2">
 					
 	<?php
 	
 	if( get_sub_field('card_image') ): $image = get_sub_field('card_image'); ?>
 	
-	<div class="card-image col-sm-3 hidden-xs">
-		<?php echo wp_get_attachment_image($image['id'], 'Square Column 3', 0, array('class' => 'img img-responsive')); ?>
+	<div class="col-sm-3 d-none d-md-block">
+		<?php echo wp_get_attachment_image($image['id'], 'Square Column 3', 0, array('class' => 'img img-fluid')); ?>
 	</div>
 		
 	<?php endif; ?>
 	
-	<div class="card-text col-sm-9 col-xs-12">
+	<div class="card-text col-sm-9">
 		<div class="subhead">
 			<h3><?php the_sub_field('card_title'); ?></h3>
 		</div>

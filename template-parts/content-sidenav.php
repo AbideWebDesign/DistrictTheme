@@ -1,4 +1,4 @@
-<div id="sidebar-first" class="pull-left">
+<div id="sidebar-first">
 	<div class="navbar navbar-default" role="navigation">
 		<?php 
 		
@@ -50,25 +50,21 @@
 			  
 		if ($children): ?>
 		
-		<div class="navbar-header">
+		<div class="navbar-header d-block d-md-none w-100">
 			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
 				<span class="sr-only">Toggle navigation</span>
 				<i class="fa fa-1x fa-chevron-down"></i>
 			</button>
-			<span class="visible-xs">
-				<h2>
-					<span <?php if ( is_page_template( 'page-parent.php' ) ): ?> class="sidebar-parent-title" <?php endif; ?>><a href="<?php the_permalink($root_page_id); ?>"><?php echo $titlenamer; ?></a></span>
-				</h2>
-			</span>
+			<h2>
+				<span <?php if ( is_page_template( 'page-parent.php' ) ): ?> class="sidebar-parent-title" <?php endif; ?>><a href="<?php the_permalink($root_page_id); ?>"><?php echo $titlenamer; ?></a></span>
+			</h2>
 		</div>
-		<h2 class="hidden-xs">
+		<h2 class="d-none d-md-block w-100">
 			<span<?php if ( is_page_template( 'page-parent.php' ) ): ?> class="sidebar-parent-title" <?php endif; ?>><a href="<?php the_permalink($root_page_id); ?>"><?php echo $titlenamer; ?></a></span>
 		</h2>
 		<div class="navbar-collapse collapse sidebar-navbar-collapse">
 			<ul class="nav navbar-nav">
-		  		
-		  		<?php echo $children; ?>
-		  		
+		  		<?php echo $children; ?>		  		
 			</ul>
 		</div>		
 		

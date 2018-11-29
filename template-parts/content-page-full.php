@@ -43,7 +43,13 @@
 
 					get_template_part( 'template-parts/page-full-block', 'table' );
 					
-				endif;					
+				endif;
+				
+				if ( get_row_layout() == "contact" ): 
+
+					get_template_part( 'template-parts/page-full-block', 'contact' );
+					
+				endif;						
 				
 			endwhile;
 			

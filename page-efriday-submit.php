@@ -10,18 +10,18 @@ acf_form_head();
 get_header('simple'); 
 ?>
 
-<div id="primary" class="content-area padding-vertical-two">
+<div id="primary" class="content-area py-2">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-3">
+			<div class="col-md-3">
 				<?php get_sidebar(); ?>
 			</div>
-			<div class="col-main col-md-9 pull-right">
-				<header class="entry-header padding-bottom-one">
+			<div class="col-md-9">
+				<header class="entry-header pb-1">
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 				<?php the_field('content'); ?>
-				<div class="acf-form margin-top-two">
+				<div class="acf-form mt-2">
 					<?php
 			
 					// Start the loop.
@@ -55,7 +55,7 @@ get_header('simple');
 				</div>
 	
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-3 pull-left">
+			<div class="col-12 col-md-3 float-left">
 				<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 				<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 				<?php get_template_part( 'template-parts/content', 'contacts' ); ?>			

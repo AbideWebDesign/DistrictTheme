@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area padding-vertical-two">
+<div id="primary" class="content-area py-3">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 well margin-bottom-none">
+			<div class="col-md-6 offset-md-3 well mb-0">
 				<h2 class="text-center">Password Reset</h2>		
 					<?php
 					
@@ -79,18 +79,16 @@ get_header(); ?>
 					
 					endif;
 				?>
-
-					<!--html code-->
-					<form method="post">
-						<p>Please enter your username or email address. You will receive an email your new password.</p>
-						<div class="form-group">
-							<label for="user_login">Username or E-mail:</label>
-							<?php $user_login = isset( $_POST['user_login'] ) ? $_POST['user_login'] : ''; ?>
-							<input type="text" name="user_login" id="user_login" class="form-control" value="<?php echo $user_login; ?>" />
-						</div>
-						<input type="hidden" name="action" value="reset" />
-						<input type="submit" value="Get New Password" class="btn btn-primary" id="submit" />
-					</form>
+				<form method="post">
+					<p>Please enter your username or email address. You will receive an email your new password.</p>
+					<div class="form-group">
+						<label for="user_login">Username or E-mail:</label>
+						<?php $user_login = isset( $_POST['user_login'] ) ? $_POST['user_login'] : ''; ?>
+						<input type="text" name="user_login" id="user_login" class="form-control" value="<?php echo $user_login; ?>" />
+					</div>
+					<input type="hidden" name="action" value="reset" />
+					<input type="submit" value="Get New Password" class="btn btn-primary" id="submit" />
+				</form>
 			</div>
 		</div>			
 	</div>		

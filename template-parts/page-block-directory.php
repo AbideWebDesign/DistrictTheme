@@ -1,4 +1,4 @@
-<div class="padding-vertical-one">
+<div class="py-1">
 
 <?php
 
@@ -29,12 +29,12 @@ while ( $loop->have_posts() ) : $loop->the_post();
 	if ( get_field( 'profile_image', get_the_ID() ) ):
 
 		$image = get_field( 'profile_image', get_the_ID() );
-		$col = "col-xs-8";
+		$col = "col-8";
 	
 	else:
 	
 		$image = "";
-		$col = "col-xs-12";
+		$col = "col-12";
 		
 	endif;
 	
@@ -49,24 +49,24 @@ while ( $loop->have_posts() ) : $loop->the_post();
 		endif;
 
 		$meta .= "<br>Elected in " . get_field( 'elected_year', get_the_ID() ) . " | Term Expires " . get_field( 'term_expiration_date', get_the_ID() ); 
-		$contact = '<i class="fa fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fa fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
 		$bio = get_field ( 'bio', get_the_ID() );
 		
 	elseif ( $directory_type == 'School Administration' ):
 
 		$meta = get_field( 'title', get_the_ID() ) . ", " . get_field( 'school', get_the_ID() );
-		$contact = '<i class="fa fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fa fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
 
 	elseif ( $directory_type == 'School or Program' ):
 		
 		$meta = get_field( 'title_type', get_the_ID() ) . ": " . get_field( 'principal', get_the_ID() );
-		$contact = '<i class="fa fa-map-marker"></i> ' . get_field( 'address', get_the_ID() ) . ", Corvallis, OR " . get_field( 'zip', get_the_ID() );
-		$contact .= '<br><i class="fa fa-phone"></i> <a href="tel:' . get_field( 'office_phone', get_the_ID() ) . '">' . get_field( 'office_phone', get_the_ID() ) .'</a><br><i class="fa fa-globe"></i> <a href="' . get_field( 'website', get_the_ID() ) . '" target="_blank">' . get_field( 'website', get_the_ID() ) . '</a>';
+		$contact = '<i class="fas fa-map-marker"></i> ' . get_field( 'address', get_the_ID() ) . ", Corvallis, OR " . get_field( 'zip', get_the_ID() );
+		$contact .= '<br><i class="fa fa-phone"></i> <a href="tel:' . get_field( 'office_phone', get_the_ID() ) . '">' . get_field( 'office_phone', get_the_ID() ) .'</a><br><i class="fas fa-globe"></i> <a href="' . get_field( 'website', get_the_ID() ) . '" target="_blank">' . get_field( 'website', get_the_ID() ) . '</a>';
 	
 	else:
 			
 		$meta = get_field( 'title', get_the_ID() );
-		$contact = '<i class="fa fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fa fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
 
 	endif;
 	
@@ -76,13 +76,13 @@ while ( $loop->have_posts() ) : $loop->the_post();
 	
 	<?php endif; ?>
 
-		<div class="col-sm-6 col-xs-12 padding-bottom-two">
+		<div class="col-sm-6 pb-2">
 			<div class="row">
 			
 				<?php if ($image): ?>
 				
-					<div class="col-xs-4 profile-image">
-						<?php echo wp_get_attachment_image($image['id'], 'Staff Directory', 0, array('class' => 'img img-responsive')); ?>
+					<div class="col-4 profile-image">
+						<?php echo wp_get_attachment_image($image['id'], 'Staff Directory', 0, array('class' => 'img img-fluid')); ?>
 					</div>
 					
 				<?php endif; ?>

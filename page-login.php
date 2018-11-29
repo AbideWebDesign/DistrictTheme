@@ -18,10 +18,10 @@ endif;
 
 get_header(); ?>
 
-<div id="primary" class="content-area padding-vertical-two">
+<div id="primary" class="content-area py-3">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3 well">
+			<div class="col-md-6 offset-md-3 well">
 				<?php
 				// Start the loop.
 				while ( have_posts() ) : the_post();
@@ -30,7 +30,7 @@ get_header(); ?>
 					
 					?>
 					
-					<h2 class="text-center padding-bottom-one">Sign in</h2>
+					<h2 class="text-center pb-1">Sign in</h2>
 					
 					<?php if(isset($_GET['login']) && $_GET['login'] == 'failed'): ?>
 					
@@ -55,7 +55,7 @@ get_header(); ?>
 					
 						?>
 						
-						<p class="meta text-center padding-top-one"><a href="<?php echo wp_lostpassword_url(); ?>" title="Lost Password">Forgot password?</a></p>
+						<p class="meta text-center pt-1"><a href="<?php echo wp_lostpassword_url(); ?>" title="Lost Password">Forgot password?</a></p>
 
 					<?php
 					

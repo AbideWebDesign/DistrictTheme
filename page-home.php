@@ -10,7 +10,7 @@
 get_header(); ?>
 <div id="content" role="main" tabindex="0">
 	<!-- Carousel Section Start -->
-	<section class="carousel-wrap margin-bottom-one">
+	<section class="carousel-wrap mb-1">
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 		
 		<?php 
@@ -34,11 +34,11 @@ get_header(); ?>
 					
 					foreach( $images as $image ): ?>
 						
-						<div class="item <?php if ($x == 0): ?>active<?php endif; ?>">
+						<div class="carousel-item <?php if ($x == 0): ?>active<?php endif; ?>">
 							<?php if (get_field('link', $image['id'])): ?>
 								<a href="<?php the_field('link', $image['id']); ?>" class="headline-link">
 							<?php endif; ?>
-					  		<?php echo wp_get_attachment_image($image['id'], 'Home Slider', false); ?>
+					  		<?php echo wp_get_attachment_image($image['id'], 'Home Slider', false, array('class'=>'d-block w-100 img-fluid')); ?>
 					  		<div class="carousel-caption">
 						  		<div class="carousel-title">
 						  			<h3><?php echo $image['title']; ?></h3>
@@ -60,24 +60,15 @@ get_header(); ?>
 					endforeach; ?>
 					
 				</div>
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
-				
+								
 			<?php endif; ?>
 		</div>
 	</section>
 	<!-- Carousel Section End -->
 	<!-- News Section Start -->
-	<section id="news" class="container padding-top-one padding-bottom-four">
+	<section id="news" class="container py-2">
 		<div class="row">
-			<div class="col-sm-8 col-xs-12">
+			<div class="col-12 col-sm-8">
 				<div class="headline">
 					<h2>Latest News</h2>
 				</div>
@@ -108,14 +99,14 @@ get_header(); ?>
 					
 				?>
 				
-					<div class="col-md-4 col-sm-6 col-xs-12 news-item">
+					<div class="col-12 col-sm-6 col-md-4 news-item">
 						<div class="row">
-							<div class="col-sm-12 col-xs-3 padding-bottom-one news-img">
+							<div class="col-3 col-sm-12 pb-1 news-img">
 								<a href="<?php the_permalink(); ?>">
-									<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img img-responsive')); ?>
+									<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img img-fluid')); ?>
 								</a>
 							</div>
-							<div class="col-sm-12 col-xs-9 news-content">
+							<div class="col-9 col-sm-12 news-content">
 								<h4>
 									<a href="<?php the_permalink(); ?>">
 										<?php the_title(); ?>
@@ -136,11 +127,11 @@ get_header(); ?>
 		 			
 		 			?>
 	 				
-	 				<div id="news-more" class="col-md-4 col-sm-12">
+	 				<div id="news-more" class="col-12 col-md-4">
 	 					<div class="subhead">
 	 						<h5>More Headlines</h5>
 	 					</div>
-	 					<ul>
+	 					<ul class="fa-ul">
 	 					
 	 					<?php 
 
@@ -159,7 +150,7 @@ get_header(); ?>
 								$link = get_permalink();
 							endif;
 						?>
-							<li>
+							<li><span class="fa-li" ><i class="fas fa-chevron-right fa-xs"></i></span>
 								<a href="<?php echo $link; ?>" <?php if ( get_field('news_post_source', $post->ID) == 'External' ): ?> target="_blank" <?php endif; ?>><?php the_title(); ?></a>
 							</li>
 						
@@ -170,14 +161,14 @@ get_header(); ?>
 	 				</div>
 	 			</div>
  			</div>
- 			<div class="col-md-4 col-sm-4 col-xs-12">
+ 			<div class="col-12 col-sm-4">
  				<div class="calendar">
  					<div class="headline">
  						<h2>Calendar</h2>
  					</div>
 					
 					<?php render_list_view_district(); ?>
-					<div class="margin-top-one">
+					<div class="mt-1">
 						<small><a href="<?php home_url(); ?>/calendar">More Events</a></small>
 					</div>
 				</div>
@@ -186,15 +177,15 @@ get_header(); ?>
 	</section>
 	<!-- News Section End -->
 	<!-- Social Section Start -->
-	<section id="social" class="bg-gray padding-vertical-two">
+	<section id="social" class="bg-gray py-2">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-10">
+			<div class="row align-items-center">
+				<div class="col-12 col-md-10">
 					<div class="row">
 						<div class="col-sm-4 col-md-2">
 							<a href="https://twitter.com/intent/user?screen_name=SuptNoss" target="_blank" id="twitter-id-link" >
 								<div class="well">
-									<div class="pull-left"><i class="fa fa-twitter fa-1x"></i></div>
+									<div class="float-left"><i class="fab fa-twitter fa-1x"></i></div>
 									<div id="twitter-id">@SuptNoss</div>
 								</div>
 							</a>
@@ -203,27 +194,27 @@ get_header(); ?>
 							<?php
 								$tweets = getTweets(1);	
 							?>
-							<p id="tweet">
+							<div id="tweet">
 								<?php echo $tweets[0]['text']; ?>
-								<span id="tweet-meta">
+								<div id="tweet-meta">
 									<a href="https://twitter.com/SuptNoss/status/<?php echo $tweets[0]['id'] ?>" target="_blank">
 										<?php echo '<span>'.humanTiming(strtotime($tweets[0]['created_at'])) . ' ago</span>'; ?>
 									</a> /
 									<a href="https://twitter.com/intent/retweet?tweet_id=<?php echo $tweets[0]['id'] ?>">Retweet</a>
-								</span>
-							</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div id="socialbtns" class="col-sm-12 col-md-2">
+				<div id="socialbtns" class="col-12 col-md-2">
 					<a href="https://www.twitter.com/SuptNoss" target="_blank" class="social">
-						<i class="fa fa-twitter-square fa-3x social"></i> 
+						<i class="fab fa-twitter-square fa-3x social"></i> 
 					</a>
 					<a href="https://www.facebook.com/csd509j" target="_blank" class="social">
-						<i class="fa fa-facebook-square fa-3x"></i>
+						<i class="fab fa-facebook-square fa-3x"></i>
 					</a> 
 					<a href="https://www.linkedin.com/company/corvallis-school-district-509j" target="_blank" class="social">
-						<i class="fa fa-linkedin-square fa-3x social"></i>
+						<i class="fab fa-linkedin-square fa-3x social"></i>
 					</a>
 				</div>
 			</div>
@@ -231,7 +222,7 @@ get_header(); ?>
 	</section>
 	<!-- Social Section End -->
 	<!-- Quick Links Section Start -->
-	<section id="quick-links" class="padding-vertical-four">
+	<section id="quick-links" class="py-3">
 		<div class="container">
 			<div class="row">
 				<div id="quick-links" class="col-sm-4 col-md-3">
@@ -280,7 +271,7 @@ get_header(); ?>
 					?>
 						<div class="col-sm-4 col-md-6">
 							<a href="<?php the_permalink(); ?>">
-								<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img img-responsive')); ?>
+								<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img img-fluid')); ?>
 							</a>
 						</div>
 						<div class="col-sm-8 col-md-6">
@@ -302,14 +293,14 @@ get_header(); ?>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-7">
-					<div id="cta-text" class="padding-vertical-four">
-						<h1 class="text-white strong margin-bottom-one"><?php the_field('cta_title'); ?></h1>
+					<div id="cta-text" class="py-3">
+						<h1 class="text-white strong mb-1"><?php the_field('cta_title'); ?></h1>
 						<?php the_field('cta_text'); ?>
 					</div>
 				</div>
 				<div id="cta-form-wrap" class="col-sm-5">
-					<div id="cta-form" class="padding-vertical-four clearfix">
-						<div class="embed-responsive embed-responsive-16by9">
+					<div id="cta-form" class="d-flex h-100">
+						<div class="embed-responsive embed-responsive-16by9 d-flex align-self-center">
 							<iframe class="embed-responsive-item" src="<?php the_field('cta_video'); ?>"></iframe>
 						</div>
 					</div>
@@ -319,18 +310,18 @@ get_header(); ?>
 	</section>
 	<!-- CTA Section End -->
 	<!-- Community Section Start -->
-	<section id="commiunity" class="padding-vertical-four">
+	<section id="commiunity" class="py-3">
 		<div class="container">
-			<div class="row">
+			<div class="row align-items-center">
 				<div class="col-sm-4">
-					<img src="<?php the_field('community_events_image'); ?>" class="img-responsive margin-bottom-xs-one" />
+					<img src="<?php the_field('community_events_image'); ?>" class="img-fluid mb-1 mb-md-0" />
 				</div>
 				<div class="col-sm-8">
 					<div class="headline">
 						<h2><?php the_field('community_events_title'); ?></h2>
 					</div>
 					<p><?php the_field('community_events_text'); ?></p>
-					<a href="<?php the_field('community_events_link'); ?>" class="btn btn-primary"><i class="fa fa-calendar"></i> <?php the_field('community_events_link_text'); ?></a>
+					<a href="<?php the_field('community_events_link'); ?>" class="btn btn-primary"><i class="fa fa-calendar-alt"></i> <?php the_field('community_events_link_text'); ?></a>
 				</div>
 			</div>
 		</div>

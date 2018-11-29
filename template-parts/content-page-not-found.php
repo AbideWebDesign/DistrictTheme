@@ -5,24 +5,24 @@ $links_col_2 = get_field('popular_resources_list', 'option');
 
 ?>
 <div class="row">
-	<div class="col-sm-10 col-sm-offset-1">
+	<div class="col-sm-10 offset-sm-1">
 		<div class="entry-content well">
 			<h2><?php the_field('error_page_title', 'option'); ?></h2>
 			<div class="entry-lead">
 				<p class="lead"><?php the_field('error_page_message', 'option'); ?></p>
 			</div>
-			<div class="padding-bottom-two" id="search-form">
+			<div class="pb-2" id="search-form">
 				<form role="search" id="sites-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 					 <label class="sr-only" for="search-text">Search</label>
-					 <input type="text" class="search-field input-lg" id="search-text" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s">
+					 <input type="text" class="search-field form-control-lg" id="search-text" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s">
 					 <button type="submit" class="btn btn-primary btn-lg">Search</button>
 				</form>
 			</div>	
 		</div>
 	</div>
 </div>
-<div class="row entry-content padding-top-two">
-	<div class="col-sm-3 col-sm-offset-1">
+<div class="row entry-content pt-2">
+	<div class="col-sm-3 offset-sm-1">
 		<h3>Popular Pages</h3>
 		<ul class="list list-flush">
 			<?php foreach($links_col_1 as $link): ?>

@@ -9,29 +9,29 @@
  get_header();
 ?>
 <div id="primary" class="content-area">
-	<div class="padding-vertical-four bg-orange">
+	<div class="bg-orange py-3">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12">
-					<h1 class="margin-bottom-none"><?php the_field('calendar_title', 'options'); ?></h1>
+				<div class="col-12">
+					<h1 class="mb-0"><?php the_field('calendar_title', 'options'); ?></h1>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="padding-vertical-two bg-gray">
+	<div class="bg-gray py-2">
 		<div class="container">
 			<div class="row">
-				<div class="col-xs-12 col-sm-12 col-md-7">
+				<div class="col-12 col-md-7">
 					<p class="lead"><?php the_field('calendar_text', 'options'); ?></p>
 				</div>
-				<div class="col-xs-12 col-sm-12 col-md-5">
+				<div class="col-12 col-md-5">
 					<?php get_template_part('template-parts/page-block', 'table-dates'); ?>
 					<?php get_template_part('template-parts/page-block', 'table-calendar-downloads'); ?>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="padding-vertical-four">
+	<div class="py-3">
 		<div class="container">
 			<?php render_calendar(); ?>
 		</div>

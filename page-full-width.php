@@ -10,7 +10,6 @@
 get_header(); 
 $pages = get_full_width_children_pages($post);
 ?>
-
 <div id="primary" class="content-area">
 	<div id="full-width-header" class="<?php the_field('banner_background_color'); ?> <?php echo (get_field('banner_type') == 'Arrow' ? 'header-arrow' : ''); ?>">
 		<div class="container">

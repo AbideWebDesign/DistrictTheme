@@ -58,6 +58,15 @@ jQuery(function ($) {
 	});
 });
 
+$( document ).ready(function() {
+	var height = $('#full-width-header').height();
+	if (height % 2 == 0) {
+		$('#header-right').css({
+			height: height+1
+		});
+	}
+});
+
 function print_screen() {
     window.print();
 }

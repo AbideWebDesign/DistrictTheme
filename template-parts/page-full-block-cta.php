@@ -14,7 +14,7 @@
 				<div id="cta-block-button" class="<?php echo (get_sub_field('call_to_action_button_type') == 'Horizontal' ? 'col-md-12' : 'col-12 mb-1 text-center'); ?>">
 					<ul class="list-unstyled <?php echo (get_sub_field('call_to_action_button_type') == 'Horizontal' ? 'list-inline' : ''); ?>">
 						<li <?php echo (get_sub_field('call_to_action_button_type') == 'Horizontal' ? 'class="list-inline-item mr-2"' : ''); ?>>
-							<h2 class="<?php echo (get_sub_field('call_to_action_button_type') == 'Vertical' ? 'mb-2' : 'mb-0'); ?>"><?php the_sub_field('call_to_action_heading'); ?></h2>
+							<h2 class="<?php echo (get_sub_field('call_to_action_button_type') == 'Vertical' ? 'mb-2' : 'mb-2 mb-sm-0'); ?>"><?php the_sub_field('call_to_action_heading'); ?></h2>
 						</li>
 						<li <?php echo (get_sub_field('call_to_action_button_type') == 'Horizontal' ? 'class="list-inline-item"' : ''); ?>>
 							<a href="<?php the_sub_field('call_to_action_button_link'); ?>" class="btn btn-white"><?php the_sub_field('call_to_action_button_label'); ?></a>

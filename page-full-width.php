@@ -33,7 +33,7 @@ $pages = get_full_width_children_pages($post);
 		</div>
 	</div>
 	<?php if($pages): ?>
-		<div id="full-width-nav" class="py-1 bg-orange d-none d-md-block">
+		<div id="full-width-nav" class="py-1 bg-orange d-none d-xl-block">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">

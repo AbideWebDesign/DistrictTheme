@@ -70,7 +70,7 @@
 											<?php endif; ?>
 											<div class="row">
 												<?php while(have_rows('buttons')): the_row(); ?>
-													<div class="col-sm-4 mb-1 mb-lg-2">
+													<div class="col-md-6 col-lg-4 mb-1 mb-lg-2">
 														<div class="button-group">
 															<div class="button-group-title">
 																<?php the_sub_field('button_heading'); ?>

@@ -27,16 +27,22 @@
 			<div class="row">
 				<?php while($query->have_posts()): $query->the_post(); ?>
 					<?php $image = get_field('featured_image'); ?>
-					<div class="col-sm-4 mb-xs-1">
-						<div class="posts-image">
-							<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($image['id'], 'News Image Medium', false, array('class' => 'img-fluid img-block')); ?></a>
-						</div>
-						<div class="posts-content">
-							<div class="posts-content-heading">
-								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								<div class="small"><?php the_date(); ?></div>
+					<div class="col-lg-4 mb-1 mb-lg-0">
+						<div class="row no-gutters">
+							<div class="col-12 col-sm-4 col-lg-12">
+								<div class="posts-image">
+									<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($image['id'], 'News Image Medium', false, array('class' => 'img-fluid img-block')); ?></a>
+								</div>
 							</div>
-							<?php the_excerpt(); ?>
+							<div class="col-12 col-sm-8 col-lg-12">
+								<div class="posts-content h-100 d-flex align-items-center pl-sm-2">
+									<div class="posts-content-heading">
+										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+										<div class="small"><?php the_date(); ?></div>
+									</div>
+									<?php the_excerpt(); ?>
+								</div>
+							</div>
 						</div>
 					</div>
 				<?php endwhile; ?>

@@ -8,7 +8,7 @@
  */
 ?>
 <div class="full-width-container">		
-	<div class="entry-content">
+	<div class="page-content entry-content">
 		<?php
 		// check for rows (parent repeater)
 		if( have_rows('page_content_blocks') ):

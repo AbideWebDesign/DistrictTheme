@@ -244,22 +244,6 @@
             "mime_types": ".pdf"
         },
         {
-            "key": "field_586d77783701b",
-            "label": "Website URL",
-            "name": "ticket_url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_5b588bc01ac03",
             "label": "Flyer Image",
             "name": "flyer_image",
@@ -282,6 +266,69 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ".jpg, .jpeg"
+        },
+        {
+            "key": "field_5bcf724c0ce78",
+            "label": "Flyer Image Spanish",
+            "name": "flyer_image_spanish",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ".jpg, .jpeg"
+        },
+        {
+            "key": "field_586d77783701b",
+            "label": "Website URL",
+            "name": "ticket_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5c06f24f23bbd",
+            "label": "Disclaimer",
+            "name": "disclaimer",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "My flyer has the following disclaimer: The Corvallis School District does not necessarily sponsor this organization or its activities. The District assumes no liability for its contents or events arising out of this distribution.": "My flyer has the following disclaimer: The Corvallis School District does not necessarily sponsor this organization or its activities. The District assumes no liability for its contents or events arising out of this distribution."
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "horizontal",
+            "toggle": 0,
+            "return_format": "value",
+            "save_custom": 0
         }
     ],
     "location": [
@@ -316,5 +363,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1540321928
+    "modified": 1543959188
 }

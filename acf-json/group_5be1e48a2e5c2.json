@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
@@ -174,5 +174,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542410528
+    "modified": 1543956039
 }

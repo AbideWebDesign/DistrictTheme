@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
@@ -691,6 +691,35 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_5c06e53979eda",
+                            "label": "Background Color",
+                            "name": "call_to_action_background_color",
+                            "type": "select",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "bg-light-blue": "Light Blue",
+                                "bg-dark-blue": "Dark Blue",
+                                "bg-orange": "Orange",
+                                "bg-green": "Green"
+                            },
+                            "default_value": [
+                                "Orange"
+                            ],
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "ui": 1,
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
+                        },
+                        {
                             "key": "field_5be47729ba32c",
                             "label": "Call to Action Heading",
                             "name": "call_to_action_heading",
@@ -1242,5 +1271,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542822679
+    "modified": 1543957767
 }

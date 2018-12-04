@@ -1,5 +1,5 @@
 <?php $type = get_sub_field('call_to_action_type'); ?>
-<div id="cta-block" class="py-2">
+<div id="cta-block" class="py-2 <?php the_sub_field('call_to_action_background_color'); ?>">
 	<div class="container">
 		<div class="row justify-content-center">
 			<?php if($type == "Form"): ?>

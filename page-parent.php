@@ -23,15 +23,15 @@ $image = get_field('banner_image');
 <div id="primary" class="content-area pb-2">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-lg-3">
 				<?php get_sidebar("parent"); ?>
-				<div class="d-none d-md-block">
+				<div class="d-none d-lg-block">
 					<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 					<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 					<?php get_template_part( 'template-parts/content', 'contacts' ); ?>
 				</div>
 			</div>
-			<div class="col-md-9">
+			<div class="col-lg-9">
 				<?php 
 				
 				if ( function_exists('yoast_breadcrumb') ):
@@ -50,11 +50,11 @@ $image = get_field('banner_image');
 				endwhile;
 				?>			
 			</div>
-			<div class="d-block d-md-none">
+			<div class="col-12 d-block d-lg-none">
 				<?php get_template_part( 'template-parts/content', 'callouts' ); ?>
 				<?php get_template_part( 'template-parts/content', 'calendar' ); ?>
 				<?php get_template_part( 'template-parts/content', 'contacts' ); ?>
-			</div>	
+			</div>
 		</div>
 	</div>
 </div>

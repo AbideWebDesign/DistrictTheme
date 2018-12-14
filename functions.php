@@ -321,7 +321,7 @@ add_filter( 'pre_get_posts', 'efriday_archive' );
 function render_calendar() {
 ?>
 	<div class="row">
-		<div class="col-4">
+		<div class="col-lg-4 d-none d-lg-flex">
 			<div class="calendar-dropdown">
 				<button type="button" id="dropdown-menu" class="btn btn-sm btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-rss"></i> Subscribe </button>
 	            <ul class="dropdown-menu" aria-labelledby="dropdown-menu" >
@@ -368,16 +368,16 @@ function render_calendar() {
 				</ul>
 			</div>
 		</div>
-		<div class="col-4 text-center">
+		<div class="col-12 col-md-7 col-lg-4 text-center text-md-left text-lg-center">
 			<h1 id="month" class="mb-0"><?php echo date('F Y'); ?></h1>
 		</div>
-		<div class="col-4 text-right">
+		<div id="calendar-buttons" class="col-12 col-md-5 col-lg-4 text-center text-md-right">
 			<button id="prev" class="btn btn-primary btn-sm"><i class="fa fa-caret-left"></i> Prev</button>
 			<button id="next" class="btn btn-primary btn-sm">Next <i class="fa fa-caret-right "></i></button>
 		</div>
 	</div>
 	<div class="row">
-		<div class="col-12">
+		<div class="col-12 mt-1 mt-lg-0">
 			<div id="calendar"></div>
 		</div>
 	</div>

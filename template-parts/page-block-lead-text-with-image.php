@@ -3,7 +3,7 @@
 	<?php echo (is_page_template('page-parent-no-sidebar.php') ? '<div class="container">' : ''); ?>
 		<div class="row">
 			<div class="col-sm-8">
-				<div class="entry-lead">
+				<div class="page-lead">
 					<div class="lead">
 						<?php the_sub_field('text_content'); ?>
 					</div>

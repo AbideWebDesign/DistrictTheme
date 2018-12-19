@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
@@ -38,7 +38,6 @@
                     "label": "Lead Text Block",
                     "display": "row",
                     "sub_fields": [
-                        [],
                         {
                             "key": "field_568af25a9cf34",
                             "label": "Lead Text Block",
@@ -59,8 +58,7 @@
                             "new_lines": "",
                             "readonly": 0,
                             "disabled": 0
-                        },
-                        []
+                        }
                     ],
                     "min": "",
                     "max": ""
@@ -215,15 +213,39 @@
                                 "id": ""
                             },
                             "crop_type": "hard",
-                            "target_size": "Page Builder Image",
+                            "target_size": "thumbnail",
                             "width": "",
                             "height": "",
-                            "preview_size": "Page Builder Image",
-                            "force_crop": "yes",
+                            "preview_size": "medium",
+                            "force_crop": "no",
                             "save_in_media_library": "yes",
                             "retina_mode": "no",
                             "save_format": "object",
                             "library": "all"
+                        },
+                        {
+                            "key": "field_5c1ac13a8986a",
+                            "label": "Image",
+                            "name": "img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         }
                     ],
                     "min": "",
@@ -456,7 +478,7 @@
                             "name": "card_image",
                             "type": "image_crop",
                             "instructions": "",
-                            "required": 1,
+                            "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
@@ -464,15 +486,39 @@
                                 "id": ""
                             },
                             "crop_type": "hard",
-                            "target_size": "custom",
-                            "width": 440,
-                            "height": 440,
-                            "preview_size": "thumbnail",
-                            "force_crop": "yes",
+                            "target_size": "thumbnail",
+                            "width": "",
+                            "height": "",
+                            "preview_size": "medium",
+                            "force_crop": "no",
                             "save_in_media_library": "yes",
                             "retina_mode": "no",
                             "save_format": "object",
                             "library": "all"
+                        },
+                        {
+                            "key": "field_5c1ac1638986b",
+                            "label": "Card Image",
+                            "name": "card_img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
                             "key": "field_5682135fe183f",
@@ -587,7 +633,7 @@
                                     "name": "card_vertical_image",
                                     "type": "image_crop",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -595,7 +641,7 @@
                                         "id": ""
                                     },
                                     "crop_type": "hard",
-                                    "target_size": "medium",
+                                    "target_size": "thumbnail",
                                     "width": "",
                                     "height": "",
                                     "preview_size": "medium",
@@ -604,6 +650,30 @@
                                     "retina_mode": "no",
                                     "save_format": "object",
                                     "library": "all"
+                                },
+                                {
+                                    "key": "field_5c1ac18a8986c",
+                                    "label": "Image",
+                                    "name": "card_vertical_img",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "preview_size": "thumbnail",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
                                 },
                                 {
                                     "key": "field_57a123c255dd4",
@@ -1209,7 +1279,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
@@ -1415,5 +1485,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1542316531
+    "modified": 1545258888
 }

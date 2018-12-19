@@ -26,8 +26,14 @@ while ( $loop->have_posts() ) : $loop->the_post();
 	
 	$directory_type = get_field( 'directory_type', get_the_ID() );
 
-	if ( get_field( 'profile_image', get_the_ID() ) ):
+	if ( get_field( 'profile_img', get_the_ID() ) ):
+		
+		$image = get_field( 'profile_img', get_the_ID() );
+		$col = "col-8";
+	
+	elseif ( get_field( 'profile_image', get_the_ID() ) ):
 
+		// Check if image added via ACF-Crop
 		$image = get_field( 'profile_image', get_the_ID() );
 		$col = "col-8";
 	

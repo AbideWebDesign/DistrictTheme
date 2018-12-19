@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
@@ -33,16 +33,15 @@
             },
             "min": 1,
             "max": "",
-            "preview_size": "thumbnail",
+            "insert": "append",
             "library": "all",
             "min_width": 1140,
             "min_height": 425,
             "min_size": "",
-            "max_width": 1140,
-            "max_height": 425,
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
-            "mime_types": ".jpg",
-            "insert": "append"
+            "mime_types": ".jpg"
         },
         {
             "key": "field_5773f349efdd9",
@@ -57,7 +56,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
@@ -565,7 +564,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
@@ -701,7 +700,7 @@
             "key": "field_59c58522de2e7",
             "label": "Community Events Link",
             "name": "community_events_link",
-            "type": "page_link",
+            "type": "link",
             "instructions": "",
             "required": 1,
             "conditional_logic": 0,
@@ -710,13 +709,7 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "page"
-            ],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
+            "return_format": "url"
         },
         {
             "key": "field_59c5854ade2e8",
@@ -724,7 +717,7 @@
             "name": "community_events_image",
             "type": "image_crop",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -739,8 +732,32 @@
             "force_crop": "no",
             "save_in_media_library": "yes",
             "retina_mode": "no",
-            "save_format": "url",
+            "save_format": "object",
             "library": "all"
+        },
+        {
+            "key": "field_5c1ab739f9234",
+            "label": "Community Events Image",
+            "name": "community_events_img",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -754,7 +771,7 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -775,5 +792,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539200190
+    "modified": 1545255543
 }

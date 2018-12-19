@@ -1,19 +1,32 @@
 <?php
 
-$image = get_field('featured_image', $post->ID);
+if ( get_field('featured_img', $post->ID) ) {
+	
+	$image = get_field('featured_img', $post->ID);
+	
+} else {
+	
+	// For legacy images added by ACF-Crop
+	$image = get_field('featured_image', $post->ID);
+	
+}
 
-if ( get_field('news_post_source') == 'External' ):
+if ( get_field('news_post_source') == 'External' ) {
+	
 	$link = get_field('external_news_link');
-else: 
+
+} else {
+	 
 	$link = get_permalink();
-endif;
+	
+}
 
 ?>
 <div class="news-item-list mb-1">
 	<div class="row news-item pb-1">
 		<div class="col-3 news-img">
 			<a href="<?php echo $link; ?>" <?php if ( get_field('news_post_source') == 'External' ): ?> target="_blank" <?php endif; ?>>
-				<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img img-fluid')); ?>	
+				<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img-fluid')); ?>	
 			</a>
 		</div>
 		<div class="col-7">

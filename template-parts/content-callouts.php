@@ -55,28 +55,49 @@ if ( get_field('sidebar_callout_blocks') ):
 								
 								endif;
 								
-								$image = get_sub_field('callout_block_image');
+								if ( get_sub_field('callout_block_img') ):
+
+									$image = get_sub_field('callout_block_img');
 								
+								else:
+		
+									// For legacy images added with ACF-Crop
+									$image = get_sub_field('callout_block_image');
+
+								endif;
+
 								?>
 								
 								<div class="row">
 								
 								<?php
-								
 								if ( !empty($image) ):
+									if (is_array($image)):
+										
+										// Image added after legacy
+										$image_id = $image['id'];
 								
+									else:
+										
+										// Image added by ACF-Crop
+										$image_id = $image;
+									
+									endif; 
+									
+									$image_file = wp_get_attachment_image_src($image_id, 'Callout Block');
 								?>
 								
-									<div class="col-12">
-										<div class="sidebar-callout-image">
+									<div class="col-12 col-sm-4 col-md-5 col-lg-12">
+										<div class="sidebar-callout-image-bg d-none d-sm-flex d-md-flex d-lg-none h-100" style="background-image:url(<?php echo $image_file[0]; ?>);"></div>
+										<div class="sidebar-callout-image d-block d-sm-none d-md-none d-lg-block">
 										
 											<?php if ($link): ?>
 											
-												<a <?php if ( get_sub_field('callout_block_link_type') == 'External' ): ?> target="_blank" <?php endif; ?> href="<?php echo $link; ?>"><?php echo wp_get_attachment_image($image['id'], 'full', 0, array('class' => 'img img-fluid')); ?></a>
+												<a <?php if ( get_sub_field('callout_block_link_type') == 'External' ): ?> target="_blank" <?php endif; ?> href="<?php echo $link; ?>"><?php echo wp_get_attachment_image($image_id, 'Callout Block', 0, array('class' => 'img-fluid')); ?></a>
 											
 											<?php else: ?>
-												
-												<?php echo wp_get_attachment_image($image['id'], 'Callout Block', 0, array('class' => 'img img-fluid w-100')); ?>
+											
+												<?php echo wp_get_attachment_image($image_id, 'Callout Block', 0, array('class' => 'img-fluid w-100')); ?>
 											
 											<?php endif; ?>
 											
@@ -85,7 +106,7 @@ if ( get_field('sidebar_callout_blocks') ):
 								
 								<?php endif; ?>
 								
-									<div class="col-12">
+									<div class="col-12 col-sm-8 col-md-7 col-lg-12">
 										<div class="sidebar-callout-inner">
 											
 											<?php if ($link): ?>
@@ -102,7 +123,7 @@ if ( get_field('sidebar_callout_blocks') ):
 											
 											<?php if (get_sub_field('add_a_button')): ?>
 												
-												<a class="btn btn-block btn-primary" <?php if ( get_sub_field('callout_block_link_type') == 'External' ): ?> target="_blank" <?php endif; ?> href="<?php echo $link; ?>"><?php the_sub_field('button_label'); ?></a>
+												<a class="btn btn-block btn-primary mt-1" <?php if ( get_sub_field('callout_block_link_type') == 'External' ): ?> target="_blank" <?php endif; ?> href="<?php echo $link; ?>"><?php the_sub_field('button_label'); ?></a>
 												
 											<?php endif; ?>
 										</div>

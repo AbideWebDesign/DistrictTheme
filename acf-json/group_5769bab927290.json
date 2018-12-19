@@ -15,7 +15,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 1
         },
         {
@@ -149,6 +149,52 @@
             "retina_mode": "no",
             "save_format": "object",
             "library": "all"
+        },
+        {
+            "key": "field_5c1a9e5443da0",
+            "label": "Profile Image",
+            "name": "profile_img",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "District Staff"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "School Administration"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_5769bad82edb5",
+                        "operator": "==",
+                        "value": "Board Member"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_5769bb362edb9",
@@ -419,7 +465,7 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 1
         },
         {
@@ -628,7 +674,7 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -649,5 +695,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539200091
+    "modified": 1545255922
 }

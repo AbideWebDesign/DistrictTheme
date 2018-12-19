@@ -16,7 +16,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 1
+            "endpoint": 0
         },
         {
             "key": "field_589df3e52cf18",
@@ -43,7 +43,7 @@
             "name": "featured_image_v2",
             "type": "image_crop",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": [
                 [
                     {
@@ -70,12 +70,44 @@
             "library": "all"
         },
         {
+            "key": "field_5c1ab4365710a",
+            "label": "Featured Carousel Image",
+            "name": "featured_carousel_img",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_589df3e52cf18",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_589df3e52d01d",
             "label": "Featured Image",
             "name": "featured_image",
             "type": "image_crop",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -92,6 +124,30 @@
             "retina_mode": "no",
             "save_format": "object",
             "library": "all"
+        },
+        {
+            "key": "field_5c1ab45b5710b",
+            "label": "Featured Image",
+            "name": "featured_img",
+            "type": "image",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "thumbnail",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
             "key": "field_589df3e52d17f",
@@ -126,7 +182,7 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 1
+            "endpoint": 0
         },
         {
             "key": "field_589e3dbe14bfa",
@@ -272,6 +328,30 @@
                             "retina_mode": "no",
                             "save_format": "object",
                             "library": "all"
+                        },
+                        {
+                            "key": "field_5c1ab47c5710c",
+                            "label": "Image",
+                            "name": "img",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
                         },
                         {
                             "key": "field_589df3e54de30",
@@ -554,7 +634,7 @@
     ],
     "menu_order": 0,
     "position": "acf_after_title",
-    "style": "seamless",
+    "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
@@ -572,5 +652,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1539200502
+    "modified": 1545255775
 }

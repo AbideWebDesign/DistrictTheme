@@ -40,7 +40,7 @@
 						
 						if( have_rows('button') ): ?>
 						
-						<div class="padding-bottom-two">
+						<div class="pb-2">
 						
 						<?php
 						
@@ -87,13 +87,28 @@
 					endif; 
 					
 					
-					if( get_row_layout() == 'image' ): $image = get_sub_field('image'); ?>
+					if( get_row_layout() == 'image' ): ?>
+					
+						<?php 
+							
+							if ( get_sub_field('img') ) {
+								
+								$image = get_sub_field('img');
+								
+							} else {
+								
+								// For legacy images added with ACF-Crop
+								$image = get_sub_field('image');
+								
+							}
+							
+						?>
 					
 						<div class="post-image">
 						
 							<?php 
 							
-							echo wp_get_attachment_image($image['id'], 'News Image Large', 0, array('class' => 'img img-fluid')); 
+							echo wp_get_attachment_image($image['id'], 'News Image Large', 0, array('class' => 'img-fluid')); 
 							
 							if ( get_sub_field('image_caption') ) : ?>
 							

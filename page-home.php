@@ -103,7 +103,7 @@ get_header(); ?>
 						<div class="row">
 							<div class="col-3 col-md-12 pb-1 news-img">
 								<a href="<?php the_permalink(); ?>">
-									<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img img-fluid w-100')); ?>
+									<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img-fluid w-100')); ?>
 								</a>
 							</div>
 							<div class="col-9 col-md-12 news-content">
@@ -279,12 +279,21 @@ get_header(); ?>
 					
 					while ( $loop->have_posts() ) : $loop->the_post();
 						
-						$image = get_field('featured_image', $post->ID);
-
+						if ( get_field('featured_img', $post->ID) ) {
+	
+							$image = get_field('featured_img', $post->ID);
+							
+						} else {
+							
+							// For legacy images added by ACF-Crop
+							$image = get_field('featured_image', $post->ID);
+							
+						}
+						
 					?>
 						<div class="col-sm-5 col-lg-4">
 							<a href="<?php the_permalink(); ?>">
-								<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img img-fluid w-100')); ?>
+								<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img-fluid w-100')); ?>
 							</a>
 						</div>
 						<div class="col-sm-7 col-lg-8">
@@ -323,11 +332,25 @@ get_header(); ?>
 	</section>
 	<!-- CTA Section End -->
 	<!-- Community Section Start -->
+	<?php 
+		
+		if (get_field('community_events_img')) {
+			
+			$events_image = get_field('community_events_img');
+			
+		} else {
+			
+			// For legacy images add by ACF-Crop
+			$events_image = get_field('community_events_image');
+			
+		}
+			
+	?>
 	<section id="community" class="py-3">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="d-none d-lg-block col-lg-4">
-					<img src="<?php the_field('community_events_image'); ?>" class="img-fluid mb-1 mb-md-0" />
+					<?php echo wp_get_attachment_image($events_image['id'], 'Square Column 4', false, array('class'=>'img-fluid mb-1 mb-md-0')); ?>
 				</div>
 				<div class="col-lg-8">
 					<div class="headline">

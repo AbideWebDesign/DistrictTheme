@@ -39,14 +39,24 @@ if( $the_query->have_posts() ):
 		while ( $the_query->have_posts() ): 
 		
 			$the_query->the_post();
-			$image = get_field('featured_image_v2', $post->ID); 
+			
+			if ( get_field('featured_carousel_img') ) {
+				
+				$image = get_field('featured_carousel_img', $post->ID); 
+				
+			} else {
+				
+				// For legacy images add by ACF-Crop
+				$image = get_field('featured_image_v2', $post->ID); 
+				
+			}
 		
 		?>
 			
 			<!-- Wrapper for slides -->
 				<div class="carousel-item <?php if ($x == 0): ?>active<?php endif; ?>">
 					<a href="<?php the_permalink(); ?>">
-						<?php echo wp_get_attachment_image($image['id'], 'News Image Featured', 0, array('class' => 'img img-fluid')); ?>
+						<?php echo wp_get_attachment_image($image['id'], 'News Image Featured', 0, array('class' => 'img-fluid')); ?>
 					</a>
 					<a href="<?php the_permalink(); ?>">
 				  		<div class="carousel-caption">

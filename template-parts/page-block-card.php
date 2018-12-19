@@ -1,12 +1,24 @@
+<?php 
+	
+if ( get_sub_field('card_img') ) {
+	
+	$image = get_sub_field('card_img');
+	
+} else {
+	
+	// For legacy images add by ACF-Crop
+	$image = get_sub_field('card_image');
+	
+}
+	
+?>
 <div class="row pb-2">
 					
-	<?php
+	<?php if ( $image ): ?>
 	
-	if( get_sub_field('card_image') ): $image = get_sub_field('card_image'); ?>
-	
-	<div class="col-sm-3 d-none d-md-block">
-		<?php echo wp_get_attachment_image($image['id'], 'Square Column 3', 0, array('class' => 'img img-fluid')); ?>
-	</div>
+		<div class="col-sm-3 d-none d-md-block">
+			<?php echo wp_get_attachment_image($image['id'], 'Square Column 3', 0, array('class' => 'img-fluid')); ?>
+		</div>
 		
 	<?php endif; ?>
 	

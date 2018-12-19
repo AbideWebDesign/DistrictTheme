@@ -45,8 +45,8 @@ add_action( 'wp_enqueue_scripts', 'csd_calendar_scripts' );
 function csd_theme_setup() {
 	add_theme_support('post-thumbnails');
 	add_image_size('square', 600, 600, true);
-	add_image_size('Square Column 3', 219, 219, true);
-	add_image_size('Square Column 4', 266, 266, true);
+	add_image_size('Square Column 3', 285, 285, true);
+	add_image_size('Square Column 4', 380, 380, true);
 	add_image_size('News Image Small', 262, 175, true);
 	add_image_size('News Image Medium', 410, 273, true);
 	add_image_size('News Image Large', 750, 500, true);
@@ -80,6 +80,14 @@ function dashboard_styles() {
 	#searchwp-index-errors-notice {
 		display: none;
 	}
+	
+	/* 
+	** Plugin: ACF-Crop
+	*/
+	.acf-field-image-crop {
+		display: none;
+	}
+	
   </style>';
 }
 
@@ -594,3 +602,12 @@ function render_list_view_district() {
 <?php
 }
 
+// Helper function to help migrate away from ACF-Crop
+function get_string_between($string, $start, $end){
+	$string = ' ' . $string;
+	$ini = strpos($string, $start);
+	if ($ini == 0) return '';
+	$ini += strlen($start);
+	$len = strpos($string, $end, $ini) - $ini;
+	return substr($string, $ini, $len);
+}

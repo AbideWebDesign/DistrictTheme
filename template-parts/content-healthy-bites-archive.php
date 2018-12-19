@@ -1,10 +1,25 @@
-<?php $image = get_field('featured_image', $post->ID); ?>
+<?php 
+	
+	if (get_field('featured_img')) {
+		
+		$image = get_field('featured_img');
+	
+	} else {
+		
+		// For legacy images added with ACF-Crop
+		$image = get_field('featured_image');
+	
+	}
+	
+	$image = get_field('featured_img', $post->ID); 
+
+?>
 
 <div class="news-item-list mb-1">
 	<div class="row news-item pb-1">
 		<div class="col-3 news-img">
 			<a href="<?php the_permalink(); ?>">
-				<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img img-fluid')); ?>	
+				<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img-fluid')); ?>	
 			</a>
 		</div>
 		<div class="col-7">

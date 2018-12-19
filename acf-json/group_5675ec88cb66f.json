@@ -38,7 +38,31 @@
             "button_label": "Add Callout Block",
             "sub_fields": [
                 {
-                    "key": "field_567b2f73fc4ba",
+                    "key": "field_5c1a8c37e0ef1",
+                    "label": "Callout Block Image",
+                    "name": "callout_block_img",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_5c1a99af66d9c",
                     "label": "Callout Block Image",
                     "name": "callout_block_image",
                     "type": "image_crop",
@@ -50,16 +74,14 @@
                         "class": "",
                         "id": ""
                     },
+                    "force_crop": "no",
                     "crop_type": "hard",
-                    "target_size": "Callout Block",
-                    "width": "",
-                    "height": "",
-                    "preview_size": "thumbnail",
-                    "force_crop": "yes",
+                    "preview_size": "medium",
+                    "save_format": "id",
                     "save_in_media_library": "yes",
-                    "retina_mode": "no",
-                    "save_format": "object",
-                    "library": "all"
+                    "target_size": "thumbnail",
+                    "library": "all",
+                    "retina_mode": "no"
                 },
                 {
                     "key": "field_567b2f82fc4bb",
@@ -631,5 +653,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1543514911
+    "modified": 1545247260
 }

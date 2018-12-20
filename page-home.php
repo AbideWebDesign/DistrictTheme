@@ -21,9 +21,9 @@ get_header(); ?>
 			
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
-					<?php for($i = 0; $i < count($images); ++$i){ ?>
+					<?php for($i = 0; $i < count($images); ++$i): ?>
 							<li data-target="#carousel" data-slide-to="<?php echo $i; ?>" <?php if ($i == 0): ?>class="active"<?php endif; ?>></li>
-					<?php } ?>
+					<?php endfor; ?>
 				</ol>
 				
 				<!-- Wrapper for slides -->
@@ -39,17 +39,19 @@ get_header(); ?>
 								<a href="<?php the_field('link', $image['id']); ?>" class="headline-link">
 							<?php endif; ?>
 					  		<?php echo wp_get_attachment_image($image['id'], 'Home Slider', false, array('class'=>'d-block w-100 img-fluid')); ?>
-					  		<div class="carousel-caption">
-						  		<div class="carousel-title">
-						  			<h3><?php echo $image['title']; ?></h3>
+					  		<?php if ( $image['title'] || $image['caption'] ): ?>
+						  		<div class="carousel-caption">
+							  		<div class="carousel-title">
+							  			<h3><?php echo $image['title']; ?></h3>
+							  		</div>
+							  		<?php if ( $image['caption'] ): ?>
+							  		<div class="carousel-caption-bg">
+						  				<p><?php echo $image['caption']; ?></p>
+						  			</div>
+						  			<?php endif; ?>
 						  		</div>
-						  		<?php if ($image['caption']): ?>
-						  		<div class="carousel-caption-bg">
-					  				<p><?php echo $image['caption']; ?></p>
-					  			</div>
-					  			<?php endif; ?>
-					  		</div>
-					  		<?php if (get_field('link', $image['id'])): ?>
+						  	<?php endif; ?>
+					  		<?php if ( get_field('link', $image['id']) ): ?>
 								</a>
 							<?php endif; ?>
 						</div>
@@ -349,10 +351,10 @@ get_header(); ?>
 	<section id="community" class="py-3">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="d-none d-lg-block col-lg-4">
+				<div class="d-none d-lg-block col-lg-3">
 					<?php echo wp_get_attachment_image($events_image['id'], 'Square Column 4', false, array('class'=>'img-fluid mb-1 mb-md-0')); ?>
 				</div>
-				<div class="col-lg-8">
+				<div class="col-lg-9">
 					<div class="headline">
 						<h2><?php the_field('community_events_title'); ?></h2>
 					</div>

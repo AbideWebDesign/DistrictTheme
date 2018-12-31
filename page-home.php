@@ -104,7 +104,8 @@ get_header(); ?>
  				while ( $loop->have_posts() ) : $loop->the_post();
 					
 					$featured_ids[] = $post->ID;
-					$image = get_field('featured_image', $post->ID);
+					$crop = get_field('featured_image', $post->ID);
+					$image = $crop['original_image'];
 					
 				?>
 				

@@ -295,7 +295,8 @@ get_header(); ?>
 						} else {
 							
 							// For legacy images added by ACF-Crop
-							$image = get_field('featured_image', $post->ID);
+							$crop = get_field('featured_image', $post->ID);
+							$image = $crop['original_image'];
 							
 						}
 						
@@ -350,7 +351,8 @@ get_header(); ?>
 		} else {
 			
 			// For legacy images add by ACF-Crop
-			$events_image = get_field('community_events_image');
+			$crop = get_field('community_events_image');
+			$events_image = $crop['original_image'];
 			
 		}
 			

@@ -7,7 +7,8 @@
 	} else {
 		
 		// For legacy images added with ACF-Crop
-		$image = get_field('featured_image');
+		$crop = get_field('featured_image');
+		$image = $crop['original_image'];
 	
 	}
 	

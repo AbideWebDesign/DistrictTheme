@@ -7,7 +7,8 @@ if ( get_field('featured_img', $post->ID) ) {
 } else {
 	
 	// For legacy images added by ACF-Crop
-	$image = get_field('featured_image', $post->ID);
+	$crop = get_field('featured_image', $post->ID);
+	$image = $crop['original_image'];
 	
 }
 

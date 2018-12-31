@@ -47,8 +47,8 @@ if( $the_query->have_posts() ):
 			} else {
 				
 				// For legacy images add by ACF-Crop
-				$image = get_field('featured_image_v2', $post->ID); 
-				
+				$crop = get_field('featured_image_v2', $post->ID); 
+				$image = $crop['original_image'];
 			}
 		
 		?>

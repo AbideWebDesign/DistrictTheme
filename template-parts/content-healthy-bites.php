@@ -98,8 +98,8 @@
 							} else {
 								
 								// For legacy images added with ACF-Crop
-								$image = get_sub_field('image');
-								
+								$crop = get_sub_field('image');
+								$image = $crop['original_image'];
 							}
 							
 						?>

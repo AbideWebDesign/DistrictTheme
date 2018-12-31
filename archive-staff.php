@@ -9,10 +9,10 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area padding-vertical-two">
+<div id="primary" class="content-area py-2">
 	<div class="container">
 		<div class="row">
-			<div class="col-main col-sm-12">
+			<div class="col-sm-12">
 				<main id="main" class="site-main" role="main">
 					
 					<?php

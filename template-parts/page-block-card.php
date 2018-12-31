@@ -7,8 +7,8 @@ if ( get_sub_field('card_img') ) {
 } else {
 	
 	// For legacy images add by ACF-Crop
-	$image = get_sub_field('card_image');
-	
+	$crop = get_sub_field('card_image');
+	$image = $crop['original_image'];
 }
 	
 ?>

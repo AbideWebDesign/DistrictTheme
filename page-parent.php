@@ -9,6 +9,7 @@
 
 get_header(); 
 $image = get_field('banner_image');
+
 ?>
 <div class="inner-page-banner mb-2 clearfix">
 	<div class="content-top">

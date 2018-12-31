@@ -40,8 +40,8 @@
 						} else {
 							
 							// For legacy images add by ACF-Crop
-							$image = get_sub_field('card_vertical_image');
-							
+							$crop = get_sub_field('card_vertical_image');
+							$image = $crop['original_image'];
 						}
 						
 					?>

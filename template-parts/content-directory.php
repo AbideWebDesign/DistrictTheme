@@ -6,8 +6,19 @@
  * @subpackage CSD
  * @since CSD 1.0
  */
- 
- $image = get_field( 'profile_image' );
+
+if ( get_field('profile_img') ) {
+	
+	$image = get_field('profile_img');
+	
+} else {
+	
+	// For legacy images added with ACF-Crop
+	$crop = get_field( 'profile_image' );
+	$image = $crop['original_image'];
+	
+}
+
 
 
 ?>

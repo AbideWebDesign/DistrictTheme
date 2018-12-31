@@ -9,8 +9,9 @@
 	} else {
 		
 		// For legacy images added by ACF-Crop
-		$image = get_sub_field('image');
-	
+		$crop = get_sub_field('image');
+		$image = $crop['original_image'];
+		
 	}
 	
 	echo wp_get_attachment_image($image['id'], 'Page Builder Image', 0, array('class' => 'img-fluid'));

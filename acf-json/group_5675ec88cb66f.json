@@ -74,14 +74,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "force_crop": "no",
                     "crop_type": "hard",
-                    "preview_size": "medium",
-                    "save_format": "id",
-                    "save_in_media_library": "yes",
                     "target_size": "thumbnail",
-                    "library": "all",
-                    "retina_mode": "no"
+                    "width": "",
+                    "height": "",
+                    "preview_size": "medium",
+                    "force_crop": "no",
+                    "save_in_media_library": "yes",
+                    "retina_mode": "no",
+                    "save_format": "object",
+                    "library": "all"
                 },
                 {
                     "key": "field_567b2f82fc4bb",
@@ -653,5 +655,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1545247260
+    "modified": 1546285873
 }

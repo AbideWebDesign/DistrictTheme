@@ -34,7 +34,8 @@ while ( $loop->have_posts() ) : $loop->the_post();
 	elseif ( get_field( 'profile_image', get_the_ID() ) ):
 
 		// Check if image added via ACF-Crop
-		$image = get_field( 'profile_image', get_the_ID() );
+		$crop = get_field( 'profile_image', get_the_ID() );
+		$image = $crop['original_image'];
 		$col = "col-8";
 	
 	else:

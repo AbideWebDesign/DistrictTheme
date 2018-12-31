@@ -33,7 +33,7 @@ get_header(); ?>
 					<div class="col-12 text-center">
 							<?php // Previous/next page navigation.
 							// next_posts_link() usage with max_num_pages
-							next_posts_link( '<span class="btn btn-primary">More News</span>', $the_query->max_num_pages );
+							next_posts_link( '<span class="btn btn-primary">More News</span>', $post->max_num_pages );
 						
 							?>
 					</div>

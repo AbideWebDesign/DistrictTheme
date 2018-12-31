@@ -62,7 +62,8 @@ if ( get_field('sidebar_callout_blocks') ):
 								else:
 		
 									// For legacy images added with ACF-Crop
-									$image = get_sub_field('callout_block_image');
+									$crop = get_sub_field('callout_block_image');
+									$image = $crop['original_image'];
 
 								endif;
 

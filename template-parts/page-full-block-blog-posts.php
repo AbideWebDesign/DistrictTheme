@@ -25,8 +25,22 @@
 	<div class="container">
 		<div id="posts-block">
 			<div class="row">
-				<?php while($query->have_posts()): $query->the_post(); ?>
-					<?php $image = get_field('featured_image'); ?>
+				<?php while( $query->have_posts() ): $query->the_post(); ?>
+					<?php 
+						
+						if ( get_field('featured_img') ) {
+							
+							$image = get_field('featured_img');
+							
+						} else {
+							
+							// For legacy images added with ACF-Crop
+							$crop = get_field('featured_image');
+							$image = $crop['original_image'];
+							
+						}
+						
+					?>
 					<div class="col-lg-4 mb-1 mb-lg-0">
 						<div class="row no-gutters">
 							<div class="col-12 col-sm-4 col-lg-12">

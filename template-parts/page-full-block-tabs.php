@@ -47,7 +47,7 @@
 										<?php if(get_sub_field('tab_image')): ?>
 											<?php $img_id = get_sub_field('tab_image'); ?>
 											<div class="mb-2">
-												<?php echo wp_get_attachment_image($img_id, 'Full Width', false, array('class'=>'img img-fluid')); ?>
+												<?php echo wp_get_attachment_image($img_id, 'Full Width', false, array('class'=>'img-fluid')); ?>
 											</div>
 										<?php endif; ?>
 										<?php the_sub_field('tab_content'); ?>

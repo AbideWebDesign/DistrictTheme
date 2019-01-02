@@ -113,7 +113,7 @@ get_header(); ?>
 						<div class="row">
 							<div class="col-3 col-md-12 pb-1 news-img">
 								<a href="<?php the_permalink(); ?>">
-									<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img-fluid w-100')); ?>
+									<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img-fluid w-100')); ?>
 								</a>
 							</div>
 							<div class="col-9 col-md-12 news-content">

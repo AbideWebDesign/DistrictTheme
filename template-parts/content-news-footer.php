@@ -14,7 +14,7 @@
 	
 	while ( $loop->have_posts() ) : $loop->the_post();
 		
-		if ( get_field('featured_img'), $post->ID ) {
+		if ( get_field('featured_img', $post->ID) ) {
 			
 			$image = get_field('featured_image', $post->ID);
 			

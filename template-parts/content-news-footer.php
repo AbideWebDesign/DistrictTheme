@@ -16,7 +16,7 @@
 		
 		if ( get_field('featured_img', $post->ID) ) {
 			
-			$image = get_field('featured_image', $post->ID);
+			$image = get_field('featured_img', $post->ID);
 			
 		} else {
 			

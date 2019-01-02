@@ -88,6 +88,13 @@ function dashboard_styles() {
 		display: none;
 	}
 	
+	/* 
+	** Plugin: WP-Media Folder
+	*/	
+	.attachments-browser .media-toolbar, .attachments-browser #wpmf-breadcrumb {
+		display: none !important;
+	}
+	
   </style>';
 }
 

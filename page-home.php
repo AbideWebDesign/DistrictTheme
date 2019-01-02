@@ -104,8 +104,17 @@ get_header(); ?>
  				while ( $loop->have_posts() ) : $loop->the_post();
 					
 					$featured_ids[] = $post->ID;
-					$crop = get_field('featured_image', $post->ID);
-					$image = $crop['original_image'];
+					
+					if ( get_field('featured_img', $post->ID) ) {
+						
+						$image = get_field('featured_img', $post->ID);
+						
+					} else {
+						
+						// For legacy images add with ACF-Crop
+						$crop = get_field('featured_image', $post->ID);
+						$image = $crop['original_image'];
+					}
 					
 				?>
 				

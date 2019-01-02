@@ -67,11 +67,11 @@
 											<hr>
 											<div class="row">
 												<div class="col-12">
-													<div class="mb-1 small"><strong>Organizer:</strong> <?php the_field('name_of_organization'); ?></div>
-													<div class="mb-1 small"><strong>Age Group:</strong> <?php the_field('targeted_age_group'); ?></div>
+													<div class="small"><strong>Organizer:</strong> <?php the_field('name_of_organization'); ?></div>
+													<div class="small"><strong>Age Group:</strong> <?php the_field('targeted_age_group'); ?></div>
 													<div class="small"><strong>Contact:</strong> <?php the_field('contact_person'); ?>, <?php the_field('contact_phone_number'); ?>, <a href="mailto:<?php the_field('contact_email'); ?>"><?php the_field('contact_email'); ?></a></div>
 													<?php if(get_field('ticket_url')): ?>
-														<div class="mt-1 small"><strong>Website:</strong> <a href="<?php the_field('ticket_url'); ?>" target="_blank" rel="nofollow">View Website</a></div>
+														<div class="small"><strong>Website:</strong> <a href="<?php the_field('ticket_url'); ?>" target="_blank" rel="nofollow">View Website</a></div>
 													<?php endif; ?>
 												</div>
 											</div>

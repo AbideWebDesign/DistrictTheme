@@ -220,17 +220,12 @@ function acf_load_sidebar_contact_blocks_field_choices( $field ) {
 add_filter('acf/load_field/name=sidebar_contact_block', 'acf_load_sidebar_contact_blocks_field_choices');
 
 function acf_set_featured_image( $value, $post_id, $field  ){
-	$id = $value;
-	if( ! is_numeric( $id ) ){
-		$data = json_decode( stripcslashes($id), true );
-		$id = $data['cropped_image'];
-	}
-	update_post_meta( $post_id, '_thumbnail_id', $id );
+	
+	update_post_meta( $post_id, '_thumbnail_id', $value );
+	
 	return $value;
 }
-
-// acf/update_value/name={$field_name} - filter for a specific field based on it's name
-add_filter( 'acf/update_value/name=featured_image', 'acf_set_featured_image', 10, 3 );
+add_filter( 'acf/update_value/name=featured_img', 'acf_set_featured_image', 10, 3 );
 
 /*
  * Get pages for full-width subnav

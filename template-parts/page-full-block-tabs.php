@@ -52,6 +52,7 @@
 										<?php endif; ?>
 										<?php the_sub_field('tab_content'); ?>
 									<?php elseif (get_sub_field('tab_type') == 'List'): ?>
+										<?php the_sub_field('tab_content'); ?>
 										<?php while(have_rows('tab_list_content')): the_row(); ?>
 											<div class="tab-list-item">
 												<h3><?php the_sub_field('list_item_title'); ?></h3>

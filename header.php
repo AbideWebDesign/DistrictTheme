@@ -60,7 +60,7 @@
 							<form role="search" id="sites-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
 								 <label class="sr-only" for="search-text">Search</label>
 								 <input type="text" class="search-field" id="search-text" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s">
-								 <button type="submit" id="ss-icon"><i class="fa fa-search"></i></button>
+								 <button type="submit" id="ss-icon"><i class="fas fa-search"></i></button>
 							</form>
 						</div>
 					</div>
@@ -98,7 +98,7 @@
 									<?php wp_nav_menu( array('theme_location' => 'header-toplinks', 'items_wrap' => '<ul class="nav navbar-nav" aria-label="Top Links">%3$s</ul>' )); ?>
 								</div>
 								<div id="nav-top-search-container">
-									<a href="#" id="search-toggle"><i class="fa fa-search"></i></a>
+									<a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
 								</div>
 							</div>
 						</div>

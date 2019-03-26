@@ -68,7 +68,7 @@ while ( $loop->have_posts() ) : $loop->the_post();
 		
 		$meta = get_field( 'title_type', get_the_ID() ) . ": " . get_field( 'principal', get_the_ID() );
 		$contact = '<i class="fas fa-map-marker"></i> ' . get_field( 'address', get_the_ID() ) . ", Corvallis, OR " . get_field( 'zip', get_the_ID() );
-		$contact .= '<br><i class="fa fa-phone"></i> <a href="tel:' . get_field( 'office_phone', get_the_ID() ) . '">' . get_field( 'office_phone', get_the_ID() ) .'</a><br><i class="fas fa-globe"></i> <a href="' . get_field( 'website', get_the_ID() ) . '" target="_blank">' . get_field( 'website', get_the_ID() ) . '</a>';
+		$contact .= '<br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'office_phone', get_the_ID() ) . '">' . get_field( 'office_phone', get_the_ID() ) .'</a><br><i class="fas fa-globe"></i> <a href="' . get_field( 'website', get_the_ID() ) . '" target="_blank">' . get_field( 'website', get_the_ID() ) . '</a>';
 	
 	else:
 			

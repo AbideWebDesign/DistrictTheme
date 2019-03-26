@@ -378,7 +378,7 @@ get_header(); ?>
 						<h2><?php the_field('community_events_title'); ?></h2>
 					</div>
 					<p><?php the_field('community_events_text'); ?></p>
-					<a href="<?php the_field('community_events_link'); ?>" class="btn btn-primary"><i class="fa fa-calendar-alt"></i> <?php the_field('community_events_link_text'); ?></a>
+					<a href="<?php the_field('community_events_link'); ?>" class="btn btn-primary"><i class="fas fa-calendar-alt"></i> <?php the_field('community_events_link_text'); ?></a>
 				</div>
 			</div>
 		</div>

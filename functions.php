@@ -594,3 +594,145 @@ function get_string_between($string, $start, $end){
 	$len = strpos($string, $end, $ini) - $ini;
 	return substr($string, $ini, $len);
 }
+
+function cptui_register_my_cpts() {
+
+	/**
+	 * Post Type: eFriday Folders.
+	 */
+
+	$labels = array(
+		"name" => __( "eFriday Folders", "custom-post-type-ui" ),
+		"singular_name" => __( "eFriday Folder", "custom-post-type-ui" ),
+	);
+
+	$args = array(
+		"label" => __( "eFriday Folders", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"delete_with_user" => false,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "efriday", "with_front" => true ),
+		"query_var" => true,
+		"menu_icon" => "dashicons-portfolio",
+		"supports" => array( "title" ),
+	);
+
+	register_post_type( "efriday", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts' );
+
+function cptui_register_my_cpts_efriday() {
+
+	/**
+	 * Post Type: eFriday Folders.
+	 */
+
+	$labels = array(
+		"name" => __( "eFriday Folders", "custom-post-type-ui" ),
+		"singular_name" => __( "eFriday Folder", "custom-post-type-ui" ),
+	);
+
+	$args = array(
+		"label" => __( "eFriday Folders", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"delete_with_user" => false,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"has_archive" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "efriday", "with_front" => true ),
+		"query_var" => true,
+		"menu_icon" => "dashicons-portfolio",
+		"supports" => array( "title" ),
+	);
+
+	register_post_type( "efriday", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_efriday' );
+function cptui_register_my_taxes() {
+
+	/**
+	 * Taxonomy: eFriday Categories.
+	 */
+
+	$labels = array(
+		"name" => __( "eFriday Categories", "custom-post-type-ui" ),
+		"singular_name" => __( "eFriday Category", "custom-post-type-ui" ),
+	);
+
+	$args = array(
+		"label" => __( "eFriday Categories", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => array( 'slug' => 'efriday-category', 'with_front' => true, ),
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"rest_base" => "efriday-category",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+		);
+	register_taxonomy( "efriday-category", array( "efriday" ), $args );
+}
+add_action( 'init', 'cptui_register_my_taxes' );
+function cptui_register_my_taxes_efriday_category() {
+
+	/**
+	 * Taxonomy: eFriday Categories.
+	 */
+
+	$labels = array(
+		"name" => __( "eFriday Categories", "custom-post-type-ui" ),
+		"singular_name" => __( "eFriday Category", "custom-post-type-ui" ),
+	);
+
+	$args = array(
+		"label" => __( "eFriday Categories", "custom-post-type-ui" ),
+		"labels" => $labels,
+		"public" => true,
+		"publicly_queryable" => true,
+		"hierarchical" => false,
+		"show_ui" => true,
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"query_var" => true,
+		"rewrite" => array( 'slug' => 'efriday-category', 'with_front' => true, ),
+		"show_admin_column" => false,
+		"show_in_rest" => true,
+		"rest_base" => "efriday-category",
+		"rest_controller_class" => "WP_REST_Terms_Controller",
+		"show_in_quick_edit" => false,
+		);
+	register_taxonomy( "efriday-category", array( "efriday" ), $args );
+}
+add_action( 'init', 'cptui_register_my_taxes_efriday_category' );

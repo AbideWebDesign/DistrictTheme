@@ -595,7 +595,7 @@ function get_string_between($string, $start, $end){
 	return substr($string, $ini, $len);
 }
 
-function cptui_register_my_cpts() {
+function cptui_register_district_cpts() {
 
 	/**
 	 * Post Type: eFriday Folders.
@@ -633,9 +633,9 @@ function cptui_register_my_cpts() {
 	register_post_type( "efriday", $args );
 }
 
-add_action( 'init', 'cptui_register_my_cpts' );
+add_action( 'init', 'cptui_register_district_cpts' );
 
-function cptui_register_my_cpts_efriday() {
+function cptui_register_district_cpts_efriday() {
 
 	/**
 	 * Post Type: eFriday Folders.
@@ -673,8 +673,8 @@ function cptui_register_my_cpts_efriday() {
 	register_post_type( "efriday", $args );
 }
 
-add_action( 'init', 'cptui_register_my_cpts_efriday' );
-function cptui_register_my_taxes() {
+add_action( 'init', 'cptui_register_district_cpts_efriday' );
+function cptui_register_district_taxes_efriday() {
 
 	/**
 	 * Taxonomy: eFriday Categories.
@@ -704,8 +704,8 @@ function cptui_register_my_taxes() {
 		);
 	register_taxonomy( "efriday-category", array( "efriday" ), $args );
 }
-add_action( 'init', 'cptui_register_my_taxes' );
-function cptui_register_my_taxes_efriday_category() {
+add_action( 'init', 'cptui_register_district_taxes_efriday' );
+function cptui_register_district_taxes_efriday_category() {
 
 	/**
 	 * Taxonomy: eFriday Categories.
@@ -735,4 +735,4 @@ function cptui_register_my_taxes_efriday_category() {
 		);
 	register_taxonomy( "efriday-category", array( "efriday" ), $args );
 }
-add_action( 'init', 'cptui_register_my_taxes_efriday_category' );
+add_action( 'init', 'cptui_register_district_taxes_efriday_category' );

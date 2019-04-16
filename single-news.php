@@ -3,20 +3,21 @@
  * The template for displaying news posts
  *
  * @package WordPress
- * @subpackage CSD
- * @since CSD 1.0
+ * @subpackage CSD Schools
+ * @since CSD Schools 1.0
  */
 get_header(); ?>
-
-<div id="primary" class="content-area py-2">
+<div id="news-header" class="bg-primary py-2">
+	<div class="container">
+		<?php the_title( '<h1 class="text-white mb-0">', '</h1>' ); ?>
+		<?php get_template_part('template-parts/content', 'breadcrumbs'); ?>
+	</div>
+</div>
+<div id="primary" class="content-area my-2">
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-10 offset-sm-1">
+			<div class="col-12">
 				<?php
-				if ( function_exists('yoast_breadcrumb') ) {
-					
-					yoast_breadcrumb('<p class="small padding-bottom-two" id="breadcrumbs">','</p>');
-				} 
 				// Start the loop.
 				while ( have_posts() ) : the_post();
 		
@@ -25,7 +26,6 @@ get_header(); ?>
 					// End of the loop.
 				endwhile;
 				?>
-				<?php get_template_part( 'template-parts/content', 'news-footer' ); ?>
 			</div>
 		</div>
 	</div>

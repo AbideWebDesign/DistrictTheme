@@ -12,8 +12,13 @@ get_header();
 $args = array( 
 	'post_type' => 'news', 
 	'posts_per_page' => '3', 
-	'meta_key'		=> 'news_post_type',
-	'meta_value'	=> 'featured'
+	'tax_query' => array(
+		array(
+			'taxonomy' => 'news-category',
+			'field'    => 'slug',
+			'terms'    => 'featured',
+		),
+	),
 );
 
 $excluded_post_ids = array();

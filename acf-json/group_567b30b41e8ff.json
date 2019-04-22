@@ -1310,7 +1310,6 @@
                 "Celebrating the life and work of Martin Luther King Jr.": "Celebrating the life and work of Martin Luther King Jr.",
                 "Student Transfer FAQs": "Student Transfer FAQs",
                 "Get connected and join an e-news list.": "Get connected and join an e-news list.",
-                "Additional Special Education Support": "Additional Special Education Support",
                 "Emerging Language Learners": "Emerging Language Learners",
                 "Oregon Seal of Biliteracy": "Oregon Seal of Biliteracy",
                 "Food & Nutrition Services on Facebook": "Food & Nutrition Services on Facebook",
@@ -1345,7 +1344,10 @@
                 "Learn to research!": "Learn to research!",
                 "Creating a Culture of Safety in our Schools": "Creating a Culture of Safety in our Schools",
                 "Follow the Welcome Center on Facebook!": "Follow the Welcome Center on Facebook!",
-                "Next steps for facilities bond projects": "Next steps for facilities bond projects"
+                "Next steps for facilities bond projects": "Next steps for facilities bond projects",
+                "Design Guidance Teams will meet October 24, November 7, & November 28": "Design Guidance Teams will meet October 24, November 7, & November 28",
+                "Inclement Weather Delays and Closures": "Inclement Weather Delays and Closures",
+                "Budget Earns Award": "Budget Earns Award"
             },
             "default_value": [],
             "allow_null": 0,
@@ -1356,28 +1358,6 @@
             "disabled": 0,
             "readonly": 0,
             "return_format": "value"
-        },
-        {
-            "key": "field_572fc7805d9cb",
-            "label": "Sidebar Calendar Block",
-            "name": "sidebar_calendar_block",
-            "type": "taxonomy",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "taxonomy": "tribe_events_cat",
-            "field_type": "select",
-            "allow_null": 1,
-            "add_term": 0,
-            "save_terms": 0,
-            "load_terms": 0,
-            "return_format": "object",
-            "multiple": 0
         },
         {
             "key": "field_56818d824ef19",
@@ -1407,9 +1387,7 @@
                 "School District Nurses": "School District Nurses",
                 "Payroll and Benefits": "Payroll and Benefits",
                 "Facilities Department": "Facilities Department",
-                "Teaching and Learning - Special Education": "Teaching and Learning - Special Education",
                 "Title I and Homeless Education Support": "Title I and Homeless Education Support",
-                "Special Education- Autism Services": "Special Education- Autism Services",
                 "ELL and Dual Language Immersion": "ELL and Dual Language Immersion",
                 "Early Learning Programs": "Early Learning Programs",
                 "Technology Services": "Technology Services",
@@ -1428,7 +1406,9 @@
                 "Library and Central Instructional Media Center": "Library and Central Instructional Media Center",
                 "Bullying & Harassment Prevention": "Bullying & Harassment Prevention",
                 "2018 Facilities Bond": "2018 Facilities Bond",
-                "Wenaha Group- Construction Manager": "Wenaha Group- Construction Manager"
+                "Wenaha Group- Construction Manager": "Wenaha Group- Construction Manager",
+                "Teen Parenting Program": "Teen Parenting Program",
+                "Call your neighborhood school for Kindergarten enrollment info": "Call your neighborhood school for Kindergarten enrollment info"
             },
             "default_value": [],
             "allow_null": 1,
@@ -1485,5 +1465,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1545258888
+    "modified": 1555977113
 }

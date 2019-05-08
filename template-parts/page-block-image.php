@@ -1,6 +1,6 @@
 <div class="pb-2">
 
-<?php
+	<?php
 
 	if ( get_sub_field('img') ) {
 	
@@ -16,12 +16,12 @@
 	
 	echo wp_get_attachment_image($image['id'], 'Page Builder Image', 0, array('class' => 'img-fluid'));
 
-	if ( get_sub_field('image_caption') ) : 
+	?>
 	
-?>
-			
-	<p class="post-image-caption"><?php the_sub_field('image_caption'); ?></p>
-	
-<?php endif; ?>
+	<?php if ( get_sub_field('image_caption') ) : ?>
+				
+		<p class="post-image-caption"><?php the_sub_field('image_caption'); ?></p>
+		
+	<?php endif; ?>
 
 </div>

@@ -5,6 +5,12 @@
 		if( have_rows('post_content_blocks') ):
 			
 			while( have_rows('post_content_blocks') ): the_row(); 
+			
+				if( get_row_layout() == 'image' ): 
+				
+					get_template_part( 'template-parts/page-block', 'image' );	
+							
+				endif;
 				
 				if( get_sub_field('lead_text_block') ): ?>
 					

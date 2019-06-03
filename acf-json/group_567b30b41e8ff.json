@@ -1351,13 +1351,11 @@
             },
             "default_value": [],
             "allow_null": 0,
-            "multiple": 1,
+            "multiple": 0,
             "ui": 1,
             "ajax": 1,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
+            "return_format": "value",
+            "placeholder": ""
         },
         {
             "key": "field_56818d824ef19",
@@ -1465,5 +1463,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1555977113
+    "modified": 1559583681
 }

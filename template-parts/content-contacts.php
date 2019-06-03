@@ -3,7 +3,7 @@
 if ( get_field('sidebar_contact_block') ): 
 
 	$values = get_field('sidebar_contact_block');	
-	
+
 	if ($values):
 		
 		foreach ($values as $value):

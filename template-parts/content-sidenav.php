@@ -10,22 +10,26 @@
 		
 		endif;
 		
-		if($post->post_parent):
+		if ( $post->post_parent ) {
 		  
 		  	$parents = get_post_ancestors( $post->ID );
 
-		  	if ( empty($parents) || count($parents) == 1 ):
+		  	if ( empty($parents) || count($parents) == 1 ) {
+		  		
 		  		$root_page_id = $post->ID;
 		  		$titlenamer = get_the_title($post->ID);
-		  	else:
+		  
+		  	} else {
+		  
 		  		$x = $post->ancestors;
 		  		end($x);
 		  		$root_page_id = prev($x);
 		  		$titlenamer = get_the_title($root_page_id);
-		  	endif;
+		  
+		  	}
 		  		
-		  	
 			$walker = new Razorback_Walker_Page_Selective_Children();
+			
 			$children = wp_list_pages( array(
 			    'title_li' => '',
 			    'child_of' => $root_page_id,
@@ -34,7 +38,8 @@
 			    'sort_column' => 'post_title'
 			));
 			
-		else:
+		} else {
+			
 			$children = wp_list_pages( array (
 				'title_li' => '',
 				'depth' => 1,
@@ -46,7 +51,7 @@
 			$root_page_id = $post->ID;
 			$titlenamer = get_the_title($post->ID);
 		
-		endif;
+		}
 			  
 		if ($children): ?>
 		
@@ -64,7 +69,9 @@
 		</h2>
 		<div class="navbar-collapse collapse sidebar-navbar-collapse">
 			<ul class="nav navbar-nav">
+		  		
 		  		<?php echo $children; ?>		  		
+			
 			</ul>
 		</div>		
 		

@@ -13,53 +13,70 @@ get_header(); ?>
 	<section class="carousel-wrap mb-0">
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 		
-		<?php 
+		<?php $images = get_field('carousel_images'); ?>
 
-			$images = get_field('carousel_images');
-
-			if( $images ): ?>
+			<?php if ( $images ): ?>
 			
 				<!-- Indicators -->
 				<ol class="carousel-indicators">
-					<?php for($i = 0; $i < count($images); ++$i): ?>
+					
+					<?php for ( $i = 0; $i < count($images); ++$i ): ?>
+					
 							<li data-target="#carousel" data-slide-to="<?php echo $i; ?>" <?php if ($i == 0): ?>class="active"<?php endif; ?>></li>
+					
 					<?php endfor; ?>
+				
 				</ol>
 				
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
-					<?php 
 					
-					$x = 0;	
+					<?php $x = 0; ?>
 					
-					foreach( $images as $image ): ?>
+					<?php foreach( $images as $image ): ?>
 						
 						<div class="carousel-item <?php if ($x == 0): ?>active<?php endif; ?>">
-							<?php if (get_field('link', $image['id'])): ?>
-								<a href="<?php the_field('link', $image['id']); ?>" class="headline-link">
+							
+							<?php if ( get_field('link', $image['id']) ): ?>
+							
+								<?php $link = get_field('link', $image['id']); ?>
+							
+								<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="headline-link">
+							
 							<?php endif; ?>
-					  		<?php echo wp_get_attachment_image($image['id'], 'Home Slider', false, array('class'=>'d-block w-100 img-fluid')); ?>
+					  		
+					  		<?php echo wp_get_attachment_image( $image['id'], 'Home Slider', false, array('class'=>'d-block w-100 img-fluid') ); ?>
+					  		
 					  		<?php if ( $image['title'] || $image['caption'] ): ?>
+						  	
 						  		<div class="carousel-caption">
 							  		<div class="carousel-title">
 							  			<h3><?php echo $image['title']; ?></h3>
 							  		</div>
+							
 							  		<?php if ( $image['caption'] ): ?>
-							  		<div class="carousel-caption-bg">
-						  				<p><?php echo $image['caption']; ?></p>
-						  			</div>
+							
+								  		<div class="carousel-caption-bg">
+						  					<p><?php echo $image['caption']; ?></p>
+						  				</div>
+						  			
 						  			<?php endif; ?>
+						  	
 						  		</div>
+						  	
 						  	<?php endif; ?>
+					  		
 					  		<?php if ( get_field('link', $image['id']) ): ?>
+								
 								</a>
+							
 							<?php endif; ?>
+						
 						</div>
-					<?php 
 					
-					$x ++;
+						<?php $x ++; ?>
 					
-					endforeach; ?>
+					<?php endforeach; ?>
 					
 				</div>
 				<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
@@ -69,8 +86,10 @@ get_header(); ?>
 				<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="sr-only">Next</span>
-				</a>				
+				</a>
+								
 			<?php endif; ?>
+			
 		</div>
 	</section>
 	<!-- Carousel Section End -->
@@ -221,11 +240,13 @@ get_header(); ?>
 							</div>
 						</div>
 						<div class="col-md-9 col-lg-9">
-							<?php
-								$tweets = getTweets(1);	
-							?>
+							
+							<?php $tweets = getTweets(1); ?>
+							
 							<div id="tweet">
+								
 								<?php echo $tweets[0]['text']; ?>
+								
 								<div id="tweet-meta">
 									<a href="https://twitter.com/SuptNoss/status/<?php echo $tweets[0]['id'] ?>" target="_blank">
 										<?php echo '<span>'.humanTiming(strtotime($tweets[0]['created_at'])) . ' ago</span>'; ?>

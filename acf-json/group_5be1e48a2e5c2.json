@@ -33,7 +33,8 @@
             },
             "choices": {
                 "Default": "Default",
-                "Arrow": "Arrow"
+                "Arrow": "Arrow",
+                "Arrow Image": "Arrow Image"
             },
             "default_value": [
                 "Default"
@@ -125,6 +126,13 @@
                         "operator": "==",
                         "value": "Arrow"
                     }
+                ],
+                [
+                    {
+                        "field": "field_5bef4e3d58d69",
+                        "operator": "==",
+                        "value": "Arrow Image"
+                    }
                 ]
             ],
             "wrapper": {
@@ -174,5 +182,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543956039
+    "modified": 1566336030
 }

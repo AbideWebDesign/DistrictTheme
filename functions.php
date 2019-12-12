@@ -153,6 +153,7 @@ if( function_exists('acf_add_options_sub_page') ) {
     acf_add_options_sub_page( 'eFriday Folders' );
     acf_add_options_sub_page( 'Footer' );
     acf_add_options_sub_page( '404 Page' );
+    acf_add_options_sub_page( 'External Links' );
 }
 
 function humanTiming ($time) {

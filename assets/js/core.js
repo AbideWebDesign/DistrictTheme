@@ -33,29 +33,37 @@ jQuery(function ($) {
 	let url = location.href.replace(/\/$/, "");
 	
 	if (location.hash) {
-		const hash = url.split("#");
-		$('.nav-tabs a[href="#'+hash[1]+'"]').tab("show");
+		const hash = url.split('#');
+		$('.nav-tabs a[href="#'+hash[1]+'"]').tab('show');
 		url = location.href.replace(/\/#/, "#");
 		history.replaceState(null, null, url);
 		setTimeout(() => {
 			$(window).scrollTop(0);
 		}, 400);
 		$('html, body').animate({
-			scrollTop: $("#tabs-block-header").offset().top
+			scrollTop: $('#tabs-block-header').offset().top
 		}, 600);
 	} 
 	
-	$('a[data-toggle="tab"]').on("click", function() {
+	$('a[data-toggle="tab"]').on('click', function() {
 		let newUrl;
-		const hash = $(this).attr("href");
-		if(hash == "#home") {
-			newUrl = url.split("#")[0];
+		const hash = $(this).attr('href');
+		if(hash == '#home') {
+			newUrl = url.split('#')[0];
 		} else {
-			  newUrl = url.split("#")[0] + hash;
+			  newUrl = url.split('#')[0] + hash;
 		}
-		newUrl += "/";
+		newUrl += '/';
 		history.replaceState(null, null, newUrl);
 	});
+	
+	var currentDomain = document.location.protocol + '//' + document.location.hostname;
+	
+	$('a[href^="http"]:not([href*="' + currentDomain + '"])').on('click', function (e) {
+		e.preventDefault();
+		$('#externalLink').attr('href', $(this).attr('href'));
+		$('#modalNotification').modal('show');
+    });
 });
 
 $( document ).ready(function() {

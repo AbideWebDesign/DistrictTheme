@@ -45,6 +45,7 @@ jQuery(function ($) {
 		}, 600);
 	} 
 	
+	// Linking to tabs
 	$('a[data-toggle="tab"]').on('click', function() {
 		let newUrl;
 		const hash = $(this).attr('href');
@@ -57,6 +58,15 @@ jQuery(function ($) {
 		history.replaceState(null, null, newUrl);
 	});
 	
+	// Tabbed content button links to tabs
+	$('.btn-tab').on('click', function (e) {
+		e.preventDefault();
+		var target = '#' + $(this).attr('aria-controls') + '-tab';
+		$('html, body').animate({scrollTop: $(target).offset().top}, 'fast');
+		$(target).tab('show');
+	})
+
+	// External Link pop-up
 	var currentDomain = document.location.protocol + '//' + document.location.hostname;
 	
 	$('a[href^="http"]:not([href*="' + currentDomain + '"])').on('click', function (e) {

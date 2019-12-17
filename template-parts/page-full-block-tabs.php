@@ -21,7 +21,7 @@
 										<?php if(get_sub_field('tab_type') == 'Link'): ?>
 											<a class="nav-link d-flex <?php echo ($counter == 0 ? 'active' : ''); ?>" href="<?php the_sub_field('tab_external_link'); ?>"><?php the_sub_field('tab_label'); ?></a>
 										<?php else: ?>
-											<a class="d-flex <?php echo ($counter == 0 ? 'active' : ''); ?>" href="#<?php the_sub_field('tab_name'); ?>" aria-controls="<?php the_sub_field('tab_name'); ?>" role="tab" data-toggle="tab"><?php the_sub_field('tab_label'); ?></a>
+											<a id="<?php the_sub_field('tab_name'); ?>-tab" class="d-flex <?php echo ($counter == 0 ? 'active' : ''); ?>" href="#<?php the_sub_field('tab_name'); ?>" aria-controls="<?php the_sub_field('tab_name'); ?>" role="tab" data-toggle="tab"><?php the_sub_field('tab_label'); ?></a>
 										<?php endif; ?>
 									</li>
 									<?php $counter ++; ?>
@@ -77,7 +77,7 @@
 																<?php the_sub_field('button_heading'); ?>
 															</div>
 															<div class="button-group-content">
-																<a href="<?php echo ( (get_sub_field('button_link_type') != 'Tab') ? get_sub_field('button_link') : '#' . get_sub_field('tab_name') ); ?>" <?php echo ( ( get_sub_field('button_link_type') == 'External' ) ? 'target="blank"' : ''); ?> class="btn btn-primary" <?php echo ( (get_sub_field('button_link_type') == 'Tab') ? 'aria-controls="' . get_sub_field('tab_name') . '" data-toggle="tab" role="tab" aria-expanded="false"'  : ''); ?>><?php the_sub_field('button_label'); ?></a>
+																<a href="<?php echo ( (get_sub_field('button_link_type') != 'Tab') ? get_sub_field('button_link') : '#' . get_sub_field('tab_name') ); ?>" <?php echo ( ( get_sub_field('button_link_type') == 'External' ) ? 'target="blank"' : ''); ?> class="btn btn-primary <?php echo ( (get_sub_field('button_link_type') == 'Tab') ? 'btn-tab' : '' ); ?>" <?php echo ( (get_sub_field('button_link_type') == 'Tab') ? 'aria-controls="' . get_sub_field('tab_name') . '"'  : ''); ?>><?php the_sub_field('button_label'); ?></a>
 															</div>
 														</div>
 													</div>

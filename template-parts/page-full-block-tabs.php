@@ -60,7 +60,7 @@
 											</div>
 										<?php endwhile; ?>
 									<?php endif; ?>
-									<?php if(get_sub_field('buttons')): ?>
+									<?php if(get_sub_field('add_buttons')): ?>
 										<div class="mt-3">
 											<?php if(get_sub_field('button_heading')): ?>
 												<div class="row">
@@ -77,7 +77,7 @@
 																<?php the_sub_field('button_heading'); ?>
 															</div>
 															<div class="button-group-content">
-																<a href="<?php the_sub_field('button_link'); ?>" class="btn btn-primary"><?php the_sub_field('button_label'); ?></a>
+																<a href="<?php echo ( (get_sub_field('button_link_type') != 'Tab') ? get_sub_field('button_link') : '#' . get_sub_field('tab_name') ); ?>" <?php echo ( ( get_sub_field('button_link_type') == 'External' ) ? 'target="blank"' : ''); ?> class="btn btn-primary" <?php echo ( (get_sub_field('button_link_type') == 'Tab') ? 'aria-controls="' . get_sub_field('tab_name') . '" data-toggle="tab" role="tab" aria-expanded="false"'  : ''); ?>><?php the_sub_field('button_label'); ?></a>
 															</div>
 														</div>
 													</div>

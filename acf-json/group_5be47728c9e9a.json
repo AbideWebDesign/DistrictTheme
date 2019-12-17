@@ -70,7 +70,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "collapsed": "",
+                            "collapsed": "field_5be4772b0b575",
                             "min": 0,
                             "max": 0,
                             "layout": "row",
@@ -245,7 +245,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "collapsed": "field_5be222dba8d7e",
+                                    "collapsed": "field_5be4772b43a2d",
                                     "min": 0,
                                     "max": 0,
                                     "layout": "row",
@@ -407,12 +407,40 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "collapsed": "field_5bbb9ff88d552",
+                                    "collapsed": "field_5be4772b88aa6",
                                     "min": 0,
                                     "max": 0,
-                                    "layout": "table",
+                                    "layout": "row",
                                     "button_label": "Add Button",
                                     "sub_fields": [
+                                        {
+                                            "key": "field_5df818e5985f8",
+                                            "label": "Button Link Type",
+                                            "name": "button_link_type",
+                                            "type": "select",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "choices": {
+                                                "Internal": "Internal",
+                                                "External": "External",
+                                                "Tab": "Tab"
+                                            },
+                                            "default_value": [
+                                                "Internal"
+                                            ],
+                                            "allow_null": 0,
+                                            "multiple": 0,
+                                            "ui": 1,
+                                            "ajax": 0,
+                                            "return_format": "value",
+                                            "placeholder": ""
+                                        },
                                         {
                                             "key": "field_5be4772b88aa6",
                                             "label": "Button Heading",
@@ -457,14 +485,56 @@
                                             "name": "button_link",
                                             "type": "link",
                                             "instructions": "",
-                                            "required": 0,
-                                            "conditional_logic": 0,
+                                            "required": 1,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_5df818e5985f8",
+                                                        "operator": "==",
+                                                        "value": "Internal"
+                                                    }
+                                                ],
+                                                [
+                                                    {
+                                                        "field": "field_5df818e5985f8",
+                                                        "operator": "==",
+                                                        "value": "External"
+                                                    }
+                                                ]
+                                            ],
                                             "wrapper": {
                                                 "width": "",
                                                 "class": "",
                                                 "id": ""
                                             },
                                             "return_format": "url"
+                                        },
+                                        {
+                                            "key": "field_5df81c33b9b24",
+                                            "label": "Tab Name",
+                                            "name": "tab_name",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": [
+                                                [
+                                                    {
+                                                        "field": "field_5df818e5985f8",
+                                                        "operator": "==",
+                                                        "value": "Tab"
+                                                    }
+                                                ]
+                                            ],
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
                                         }
                                     ]
                                 }
@@ -1271,5 +1341,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1543957767
+    "modified": 1576541411
 }

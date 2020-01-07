@@ -66,19 +66,22 @@ jQuery(function ($) {
 		$(target).tab('show');
 	})
 
-	// External Link Pop-up
- 	var domain = 'csd509j.net';
+	// External Link Pop-up with domains to whitelist
+ 	var domains = ['csd509j.net', 'csd509j.us2', 'https://teachcorvallis.org'];
 
 	$('a[href^="http"]').on('click', function (e) {
 		
 		var link = $(this).attr('href');
-		var reg = new RegExp( domain );
 		
-		if ( link.match(reg) == null ) {
+		var external = domains.find( function (domain) {
+			var reg = new RegExp( domain );
+			return link.match(reg) !== null;		
+		});
+
+		if ( external === undefined ) {
 			e.preventDefault();
 			$('#externalLink').attr('href', $(this).attr('href'));
 			$('#modalNotification').modal('show');
-
 		}
 				
 	});

@@ -27,9 +27,12 @@ $excluded_post_ids = array();
 
 <div class="bg-primary py-3">
 	<div class="container">
-		<div class="row">
-			<div class="col-12">
+		<div class="row justify-content-between">
+			<div class="col-12 col-lg-auto text-center text-lg-left mb-1 mb-lg-0">
 				<h1 class='mb-0 text-white'>District News</h1>
+			</div>
+			<div class="col text-center text-lg-right">
+				<a href="https://csd509j.us2.list-manage.com/subscribe?u=018348dc6e5df65c071cb232d&id=e96b4b4c88" target="_blank" class="btn btn-light btn-sm"><i class="fas fa-rss"></i> Subscribe</a>
 			</div>
 		</div>
 	</div>

@@ -33,7 +33,11 @@
 	</div>
 	<div class="py-3">
 		<div class="container">
-			<?php render_calendar(); ?>
+			<div class="row">
+				<div class="col-12">
+					<?php render_calendar(); ?>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

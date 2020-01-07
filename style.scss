@@ -3093,8 +3093,9 @@ fieldset:disabled .acf-form a.acf-button,
     border-color: #dae0e5
 }
 
-.btn-light:focus,
-.btn-light.focus {
+.btn.btn-light:focus,
+.btn.btn-light.focus {
+	color: #212529;
     box-shadow: 0 0 0 .2rem rgba(248, 249, 250, 0.5)
 }
 
@@ -11647,7 +11648,7 @@ small a {
     margin-top: 0;
     border-radius: 0;
     padding: 5px 15px;
-    min-width: 250px
+    min-width: 300px
 }
 
 .calendar-dropdown .dropdown-menu>li>a:hover,
@@ -11657,7 +11658,8 @@ small a {
 }
 
 .calendar-dropdown .dropdown-menu>li {
-    padding: 3px 0
+    padding: 3px 0;
+    font-size: 14px
 }
 
 .calendar-dropdown .dropdown-menu>li.divider {

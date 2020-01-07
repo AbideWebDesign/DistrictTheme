@@ -66,14 +66,23 @@ jQuery(function ($) {
 		$(target).tab('show');
 	})
 
-	// External Link pop-up
-	var currentDomain = document.location.protocol + '//' + document.location.hostname;
+	// External Link Pop-up
+ 	var domain = 'csd509j.net';
+
+	$('a[href^="http"]').on('click', function (e) {
+		
+		var link = $(this).attr('href');
+		var reg = new RegExp( domain );
+		
+		if ( link.match(reg) == null ) {
+			e.preventDefault();
+			$('#externalLink').attr('href', $(this).attr('href'));
+			$('#modalNotification').modal('show');
+
+		}
+				
+	});
 	
-	$('a[href^="http"]:not([href*="' + currentDomain + '"])').on('click', function (e) {
-		e.preventDefault();
-		$('#externalLink').attr('href', $(this).attr('href'));
-		$('#modalNotification').modal('show');
-    });
 });
 
 $( document ).ready(function() {

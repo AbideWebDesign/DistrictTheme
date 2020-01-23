@@ -49,7 +49,13 @@
 
 					get_template_part( 'template-parts/page-full-block', 'contact' );
 					
-				endif;						
+				endif;		
+				
+				if ( get_row_layout() == "notification" ): 
+
+					get_template_part( 'template-parts/page-full-block', 'notification' );
+					
+				endif;					
 				
 			endwhile;
 			

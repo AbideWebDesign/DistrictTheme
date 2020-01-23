@@ -983,69 +983,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5bf43ae447908": {
-                    "key": "layout_5bf43ae447908",
-                    "name": "table",
-                    "label": "Table",
-                    "display": "row",
-                    "sub_fields": [
-                        {
-                            "key": "field_5bf43e3992d12",
-                            "label": "Table Section Heading",
-                            "name": "table_section_heading",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5bf43e4c92d13",
-                            "label": "Table Section Text",
-                            "name": "table_section_text",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_5bf43aea47909",
-                            "label": "Table",
-                            "name": "table",
-                            "type": "table",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "use_header": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5bf59a21285ff": {
                     "key": "layout_5bf59a21285ff",
                     "name": "contact",
@@ -1304,6 +1241,168 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5bf43ae447908": {
+                    "key": "layout_5bf43ae447908",
+                    "name": "table",
+                    "label": "Table",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5bf43e3992d12",
+                            "label": "Table Section Heading",
+                            "name": "table_section_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5bf43e4c92d13",
+                            "label": "Table Section Text",
+                            "name": "table_section_text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5bf43aea47909",
+                            "label": "Table",
+                            "name": "table",
+                            "type": "table",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "use_header": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e28e7fa2fbe4": {
+                    "key": "layout_5e28e7fa2fbe4",
+                    "name": "notification",
+                    "label": "Notification",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e28e8012fbe5",
+                            "label": "Notification Text",
+                            "name": "notification_text",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5e28e80a2fbe6",
+                            "label": "Include Link",
+                            "name": "notification_include_link",
+                            "type": "true_false",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "",
+                            "default_value": 0,
+                            "ui": 1,
+                            "ui_on_text": "",
+                            "ui_off_text": ""
+                        },
+                        {
+                            "key": "field_5e28e8302fbe7",
+                            "label": "Notification Button Link",
+                            "name": "notification_button_link",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5e28e80a2fbe6",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_5e28e8402fbe8",
+                            "label": "Notification Button Label",
+                            "name": "notification_button_label",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_5e28e80a2fbe6",
+                                        "operator": "==",
+                                        "value": "1"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Content",
@@ -1341,5 +1440,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576541411
+    "modified": 1579739709
 }

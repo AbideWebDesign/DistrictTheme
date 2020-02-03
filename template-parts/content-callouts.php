@@ -1,19 +1,19 @@
 <?php
 	
 if ( get_field('sidebar_callout_blocks') ): 
-	
+
 	$value = get_field('sidebar_callout_blocks'); 
 
 	if ( $value ): 
 		
 		// Loop through callout block heading names			
-		if( have_rows('callout_blocks', 'option') ): 
+		if ( have_rows('callout_blocks', 'option') ): 
 						
 			// Loop through all available callout_blocks
-			while( have_rows('callout_blocks', 'option') ): the_row();	
-			
-				if( get_sub_field('callout_block_heading') == $value[0] ):
-				
+			while ( have_rows('callout_blocks', 'option') ): the_row();	
+
+				if ( get_sub_field('callout_block_heading') == $value[0] || get_sub_field('callout_block_heading') == $value ):
+					
 					$valid = true;
 
 					if ( get_sub_field('add_date') ):

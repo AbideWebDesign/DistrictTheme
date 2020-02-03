@@ -71,7 +71,7 @@
             "collapsed": "field_5b687c68b3bec",
             "min": 0,
             "max": 0,
-            "layout": "table",
+            "layout": "block",
             "button_label": "Add Calendar Download",
             "sub_fields": [
                 {
@@ -130,7 +130,7 @@
             "collapsed": "field_59149b14875a2",
             "min": 0,
             "max": 0,
-            "layout": "row",
+            "layout": "table",
             "button_label": "Add Calendar",
             "sub_fields": [
                 {
@@ -142,45 +142,7 @@
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5b687cbeb3bee",
-                    "label": "Calendar Address",
-                    "name": "calendar_address",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
-                },
-                {
-                    "key": "field_5b687cc7b3bef",
-                    "label": "Calendar iCal",
-                    "name": "calendar_ical",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
+                        "width": "25",
                         "class": "",
                         "id": ""
                     },
@@ -199,7 +161,7 @@
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "7",
                         "class": "",
                         "id": ""
                     },
@@ -218,15 +180,53 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "8",
                         "class": "",
                         "id": ""
                     },
                     "message": "",
                     "default_value": 1,
                     "ui": 1,
-                    "ui_on_text": "Yes, display by default",
-                    "ui_off_text": "No, do not display by default"
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No"
+                },
+                {
+                    "key": "field_5b687cbeb3bee",
+                    "label": "Calendar Address",
+                    "name": "calendar_address",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_5b687cc7b3bef",
+                    "label": "Calendar iCal",
+                    "name": "calendar_ical",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "30",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
         }
@@ -248,5 +248,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1539200271
+    "modified": 1578519569
 }

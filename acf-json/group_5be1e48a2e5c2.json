@@ -1,6 +1,6 @@
 {
     "key": "group_5be1e48a2e5c2",
-    "title": "Builder - Full Width",
+    "title": "Full Width Banner",
     "fields": [
         {
             "key": "field_5be1e4e9a1e73",
@@ -34,7 +34,7 @@
             "choices": {
                 "Default": "Default",
                 "Arrow": "Arrow",
-                "Arrow Image": "Arrow Image"
+                "Image": "Image"
             },
             "default_value": [
                 "Default"
@@ -131,7 +131,7 @@
                     {
                         "field": "field_5bef4e3d58d69",
                         "operator": "==",
-                        "value": "Arrow Image"
+                        "value": "Image"
                     }
                 ]
             ],
@@ -182,5 +182,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1566336030
+    "modified": 1579739660
 }

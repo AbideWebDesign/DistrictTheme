@@ -535,24 +535,32 @@ function render_list_view_district() {
 	<div id='calendar-list-district'></div>
 	<script>
 		$(function() {
+			
 			var allEventSources = [];
 			
 			<?php if( have_rows('calendars', 'options') ): ?>
+			
 				<?php while( have_rows('calendars', 'options') ): the_row(); ?>
-					<?php $calendar_address = get_sub_field('calendar_address'); ?>
-					<?php $calendar_name = get_sub_field('calendar_name'); ?>
-					<?php $calendar_color = get_sub_field('calendar_color'); ?>
+				
+					<?php if ( get_sub_field('visible') ): ?>
 					
-					allEventSources.push(
-					{
-						id: '<?php echo $calendar_name; ?>', 
-						googleCalendarId: '<?php echo $calendar_address; ?>', 
-						textColor: '<?php echo $calendar_color; ?>',
-						backgroundColor: '<?php echo $calendar_color; ?>',
-						borderColor: '<?php echo $calendar_color; ?>',
-					});
+						<?php $calendar_address = get_sub_field('calendar_address'); ?>
+						<?php $calendar_name = get_sub_field('calendar_name'); ?>
+						<?php $calendar_color = get_sub_field('calendar_color'); ?>
+						
+						allEventSources.push(
+						{
+							id: '<?php echo $calendar_name; ?>', 
+							googleCalendarId: '<?php echo $calendar_address; ?>', 
+							textColor: '<?php echo $calendar_color; ?>',
+							backgroundColor: '<?php echo $calendar_color; ?>',
+							borderColor: '<?php echo $calendar_color; ?>',
+						});
+						
+					<?php endif; ?>
 	
 				<?php endwhile; ?>
+				
 			<?php endif; ?>	
 			
 			$('#calendar-list-district').fullCalendar({

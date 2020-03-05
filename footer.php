@@ -128,10 +128,8 @@
 								
 								<?php wp_nav_menu( array('theme_location' => 'footer-bottommenu', 'items_wrap' => '<ul class="list-unstyled">%3$s</ul>' )); ?>
 								
-								<p class="footer-text mb-1">
-									Report bullying, harassment or intimidation at your school. The Harassment, Intimidation and Bullying Compliance Officer is <a href="mailto:kevin.bogatin@corvallis.k12.or.us" target="_blank">Kevin Bogatin</a>. The Title IX Compliance Officer is <a href="mailto:jennifer.duval@corvallis.k12.or.us" target="_blank">Jennifer Duvall</a>. The Section 504 & ADA Compliance Officer is <a href="mailto:rynda.gregory@corvallis.k12.or.us" target="blank">Rynda Gregory</a>.  
-								</p>
-								<p class="footer-text mb-1">
+								<div class="footer-text pt-1"><?php the_field('harassment_statement', 'options'); ?></div>
+								<p class="footer-text pt-2">
 									&#169; Corvallis School District. Corvallis, Oregon 97333
 								</p>
 							</div>

@@ -21,7 +21,7 @@
 										<?php if(get_sub_field('tab_type') == 'Link'): ?>
 											<a class="nav-link d-flex <?php echo ($counter == 0 ? 'active' : ''); ?>" href="<?php the_sub_field('tab_external_link'); ?>"><?php the_sub_field('tab_label'); ?></a>
 										<?php else: ?>
-											<a id="<?php the_sub_field('tab_name'); ?>-tab" class="d-flex <?php echo ($counter == 0 ? 'active' : ''); ?>" href="#<?php the_sub_field('tab_name'); ?>" aria-controls="<?php the_sub_field('tab_name'); ?>" role="tab" data-toggle="tab"><?php the_sub_field('tab_label'); ?></a>
+											<a id="<?php echo $counter; ?>-tab" class="d-flex <?php echo ($counter == 0 ? 'active' : ''); ?>" href="#tab-<?php echo $counter; ?>" aria-controls="<?php echo $counter; ?>" role="tab" data-toggle="tab"><?php the_sub_field('tab_label'); ?></a>
 										<?php endif; ?>
 									</li>
 									<?php $counter ++; ?>
@@ -41,7 +41,7 @@
 						<?php if(get_sub_field('tabs')): ?>
 							<?php $counter = 0; ?>
 							<?php while(have_rows('tabs')): the_row(); ?>
-								<div role="tabpanel" class="tab-pane fade <?php echo ($counter == 0 ? 'in active show' : ''); ?>" id="<?php the_sub_field('tab_name'); ?>">
+								<div role="tabpanel" class="tab-pane fade <?php echo ($counter == 0 ? 'in active show' : ''); ?>" id="tab-<?php echo $counter; ?>">
 									<h2 class="d-lg-none mt-2"><?php the_sub_field('tab_label'); ?></h2>								
 									<?php if(get_sub_field('tab_type') == 'Default'): ?>
 										<?php if(get_sub_field('tab_image')): ?>

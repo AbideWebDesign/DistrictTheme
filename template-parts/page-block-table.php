@@ -1,5 +1,7 @@
 <div class="table-responsive">
+	
 	<?php
+		
 	$table = get_sub_field( 'table' );
 	
 	if ( $table ) {
@@ -44,5 +46,7 @@
 	
 	    echo '</table>';
 	}
+	
 	?>
+	
 </div>

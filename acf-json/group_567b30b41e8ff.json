@@ -150,6 +150,25 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_567b376800938",
+                            "label": "Text",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 1,
+                            "delay": 0
+                        },
+                        {
                             "key": "field_567b372600937",
                             "label": "Heading",
                             "name": "heading",
@@ -169,25 +188,6 @@
                             "maxlength": "",
                             "readonly": 0,
                             "disabled": 0
-                        },
-                        {
-                            "key": "field_567b376800938",
-                            "label": "Text",
-                            "name": "text",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
                         }
                     ],
                     "min": "",
@@ -199,30 +199,6 @@
                     "label": "Image",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_56a9b03847694",
-                            "label": "Image",
-                            "name": "image",
-                            "type": "image_crop",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "crop_type": "hard",
-                            "target_size": "thumbnail",
-                            "width": "",
-                            "height": "",
-                            "preview_size": "medium",
-                            "force_crop": "no",
-                            "save_in_media_library": "yes",
-                            "retina_mode": "no",
-                            "save_format": "object",
-                            "library": "all"
-                        },
                         {
                             "key": "field_5c1ac13a8986a",
                             "label": "Image",
@@ -246,6 +222,30 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_56a9b03847694",
+                            "label": "Image",
+                            "name": "image",
+                            "type": "image_crop",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "hard",
+                            "target_size": "thumbnail",
+                            "width": "",
+                            "height": "",
+                            "preview_size": "medium",
+                            "force_crop": "no",
+                            "save_in_media_library": "yes",
+                            "retina_mode": "no",
+                            "save_format": "object",
+                            "library": "all"
                         }
                     ],
                     "min": "",
@@ -473,30 +473,6 @@
                     "display": "row",
                     "sub_fields": [
                         {
-                            "key": "field_56821333e183e",
-                            "label": "Card Image",
-                            "name": "card_image",
-                            "type": "image_crop",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "crop_type": "hard",
-                            "target_size": "thumbnail",
-                            "width": "",
-                            "height": "",
-                            "preview_size": "medium",
-                            "force_crop": "no",
-                            "save_in_media_library": "yes",
-                            "retina_mode": "no",
-                            "save_format": "object",
-                            "library": "all"
-                        },
-                        {
                             "key": "field_5c1ac1638986b",
                             "label": "Card Image",
                             "name": "card_img",
@@ -597,6 +573,30 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
+                        },
+                        {
+                            "key": "field_56821333e183e",
+                            "label": "Card Image",
+                            "name": "card_image",
+                            "type": "image_crop",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "crop_type": "hard",
+                            "target_size": "thumbnail",
+                            "width": "",
+                            "height": "",
+                            "preview_size": "medium",
+                            "force_crop": "no",
+                            "save_in_media_library": "yes",
+                            "retina_mode": "no",
+                            "save_format": "object",
+                            "library": "all"
                         }
                     ],
                     "min": "",
@@ -911,6 +911,25 @@
                     "display": "row",
                     "sub_fields": [
                         {
+                            "key": "field_58af62318a3f8",
+                            "label": "Video ID",
+                            "name": "video_id",
+                            "type": "text",
+                            "instructions": "For Vimeo, this is the number that follows the \"\/\" for Youtube, this is the string that follows \"\/watch?v=\".",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_58af62178a3f7",
                             "label": "Type",
                             "name": "type",
@@ -936,25 +955,6 @@
                             "ajax": 0,
                             "return_format": "value",
                             "placeholder": ""
-                        },
-                        {
-                            "key": "field_58af62318a3f8",
-                            "label": "Video ID",
-                            "name": "video_id",
-                            "type": "text",
-                            "instructions": "For Vimeo, this is the number that follows the \"\/\" for Youtube, this is the string that follows \"\/watch?v=\".",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -971,7 +971,7 @@
                             "label": "Table",
                             "name": "table",
                             "type": "table",
-                            "instructions": "To create a link, you will need to include the HTML code in the form:\r\n<xmp><a href=\"http:\/\/google.com\">Link Text<\/a><\/xmp>",
+                            "instructions": "Example Link:\r\n<xmp><a href=\"URL\">Label<\/a><\/xmp>",
                             "required": 1,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -979,7 +979,8 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "use_header": 0
+                            "use_header": 0,
+                            "use_caption": 2
                         }
                     ],
                     "min": "",
@@ -991,25 +992,6 @@
                     "label": "Blog Posts",
                     "display": "row",
                     "sub_fields": [
-                        {
-                            "key": "field_5bbbbffeb06c0",
-                            "label": "Post List Heading",
-                            "name": "post_list_heading",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
                         {
                             "key": "field_5bbbbdac3146b",
                             "label": "Post List Category",
@@ -1056,21 +1038,11 @@
                             "ajax": 0,
                             "return_format": "value",
                             "placeholder": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5bbcf55efb8aa": {
-                    "key": "layout_5bbcf55efb8aa",
-                    "name": "call_to_action",
-                    "label": "Call to Action",
-                    "display": "row",
-                    "sub_fields": [
+                        },
                         {
-                            "key": "field_5bbcf600fb8ae",
-                            "label": "Call to Action Heading",
-                            "name": "call_to_action_heading",
+                            "key": "field_5bbbbffeb06c0",
+                            "label": "Post List Heading",
+                            "name": "post_list_heading",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -1085,7 +1057,17 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
-                        },
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5bbcf55efb8aa": {
+                    "key": "layout_5bbcf55efb8aa",
+                    "name": "call_to_action",
+                    "label": "Call to Action",
+                    "display": "row",
+                    "sub_fields": [
                         {
                             "key": "field_5bbcf565fb8ab",
                             "label": "Call to Action Type",
@@ -1256,6 +1238,25 @@
                                 "id": ""
                             },
                             "return_format": "url"
+                        },
+                        {
+                            "key": "field_5bbcf600fb8ae",
+                            "label": "Call to Action Heading",
+                            "name": "call_to_action_heading",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -1296,12 +1297,13 @@
                 "id": ""
             },
             "choices": {
+                "2020 Budget Committee": "2020 Budget Committee",
+                "Award Winning Financial Reporting": "Award Winning Financial Reporting",
                 "Board Meeting Agendas and Materials": "Board Meeting Agendas and Materials",
                 "Instructional Technology": "Instructional Technology",
                 "Opportunities for all students": "Opportunities for all students",
                 "Safe Routes to School": "Safe Routes to School",
                 "Student Transfer Requests": "Student Transfer Requests",
-                "Legislative Bills and Hearings": "Legislative Bills and Hearings",
                 "Flyer Distribution Request (electronic and bulletin board)": "Flyer Distribution Request (electronic and bulletin board)",
                 "Healthy Eating Tips for Families": "Healthy Eating Tips for Families",
                 "TAG Advisory Committee": "TAG Advisory Committee",
@@ -1312,10 +1314,7 @@
                 "Get connected and join an e-news list.": "Get connected and join an e-news list.",
                 "Emerging Language Learners": "Emerging Language Learners",
                 "Oregon Seal of Biliteracy": "Oregon Seal of Biliteracy",
-                "Food & Nutrition Services on Facebook": "Food & Nutrition Services on Facebook",
-                "College Information": "College Information",
                 "Keeping Students Safe - Mandatory Reporting": "Keeping Students Safe - Mandatory Reporting",
-                "Register to Vote": "Register to Vote",
                 "Promoting and Protecting Healthy Communities": "Promoting and Protecting Healthy Communities",
                 "College Hill Wish List": "College Hill Wish List",
                 "School Meal Prices": "School Meal Prices",
@@ -1324,30 +1323,22 @@
                 "High School Schedule and Calendar": "High School Schedule and Calendar",
                 "Support students through the Corvallis Public Schools Foundation": "Support students through the Corvallis Public Schools Foundation",
                 "Life Change?": "Life Change?",
-                "Certified New Hire Enrollment Packet": "Certified New Hire Enrollment Packet",
-                "Classified New Hire Enrollment Packet": "Classified New Hire Enrollment Packet",
-                "Non-Represented New Hire Enrollment Packet": "Non-Represented New Hire Enrollment Packet",
                 "2017-18 Long Range Facility Master Plan": "2017-18 Long Range Facility Master Plan",
                 "Volunteer with the Urban Farm": "Volunteer with the Urban Farm",
                 "Request a School Transfer with the Online Form": "Request a School Transfer with the Online Form",
-                "Students Begin to Build the Urban Farm": "Students Begin to Build the Urban Farm",
                 "Rights of Undocumented Students - Board Resolution 16-1201": "Rights of Undocumented Students - Board Resolution 16-1201",
                 "Emergency Alerts and Notifications": "Emergency Alerts and Notifications",
                 "Follow us on Facebook": "Follow us on Facebook",
                 "Board Policy Review": "Board Policy Review",
                 "Healthy and Safe Schools Plan": "Healthy and Safe Schools Plan",
-                "2017 Committee Members": "2017 Committee Members",
-                "Classified & Non-Represented Employee Benefit Help Sessions": "Classified & Non-Represented Employee Benefit Help Sessions",
-                "Certified Employee Benefit Help Sessions": "Certified Employee Benefit Help Sessions",
+                "2019 Committee Members": "2019 Committee Members",
                 "Email and Critical Services Status Updates Available Online": "Email and Critical Services Status Updates Available Online",
-                "2018 Committee Members": "2018 Committee Members",
                 "Learn to research!": "Learn to research!",
                 "Creating a Culture of Safety in our Schools": "Creating a Culture of Safety in our Schools",
                 "Follow the Welcome Center on Facebook!": "Follow the Welcome Center on Facebook!",
                 "Next steps for facilities bond projects": "Next steps for facilities bond projects",
-                "Design Guidance Teams will meet October 24, November 7, & November 28": "Design Guidance Teams will meet October 24, November 7, & November 28",
                 "Inclement Weather Delays and Closures": "Inclement Weather Delays and Closures",
-                "Budget Earns Award": "Budget Earns Award"
+                "CSD Earns Meritorious Budget Award": "CSD Earns Meritorious Budget Award"
             },
             "default_value": [],
             "allow_null": 0,
@@ -1406,7 +1397,10 @@
                 "2018 Facilities Bond": "2018 Facilities Bond",
                 "Wenaha Group- Construction Manager": "Wenaha Group- Construction Manager",
                 "Teen Parenting Program": "Teen Parenting Program",
-                "Call your neighborhood school for Kindergarten enrollment info": "Call your neighborhood school for Kindergarten enrollment info"
+                "Call your neighborhood school for Kindergarten enrollment info": "Call your neighborhood school for Kindergarten enrollment info",
+                "Family Advocacy & Support": "Family Advocacy & Support",
+                "Task Force Staff Liaison": "Task Force Staff Liaison",
+                "CSD Sustainability Program": "CSD Sustainability Program"
             },
             "default_value": [],
             "allow_null": 1,
@@ -1463,5 +1457,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1559583681
+    "modified": 1584814277
 }

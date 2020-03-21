@@ -73,7 +73,7 @@
                             "collapsed": "field_5be4772b0b575",
                             "min": 0,
                             "max": 0,
-                            "layout": "row",
+                            "layout": "block",
                             "button_label": "Add Tab",
                             "sub_fields": [
                                 {
@@ -212,7 +212,15 @@
                                     "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
-                                    "conditional_logic": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5be4772b0b4eb",
+                                                "operator": "!=",
+                                                "value": "Link"
+                                            }
+                                        ]
+                                    ],
                                     "wrapper": {
                                         "width": "",
                                         "class": "",
@@ -223,6 +231,57 @@
                                     "toolbar": "full",
                                     "media_upload": 1,
                                     "delay": 0
+                                },
+                                {
+                                    "key": "field_5e7659058434b",
+                                    "label": "Include Table",
+                                    "name": "include_table",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5be4772b0b4eb",
+                                                "operator": "!=",
+                                                "value": "Link"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui": 1,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
+                                },
+                                {
+                                    "key": "field_5e7659238434c",
+                                    "label": "Tab Table Content",
+                                    "name": "table",
+                                    "type": "table",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5e7659058434b",
+                                                "operator": "==",
+                                                "value": "1"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "use_header": 0,
+                                    "use_caption": 2
                                 },
                                 {
                                     "key": "field_5be4772b0b7a3",
@@ -293,7 +352,7 @@
                                 },
                                 {
                                     "key": "field_5be4772b0b80f",
-                                    "label": "Add Button Group",
+                                    "label": "Include Button Group",
                                     "name": "add_buttons",
                                     "type": "true_false",
                                     "instructions": "",
@@ -302,15 +361,8 @@
                                         [
                                             {
                                                 "field": "field_5be4772b0b4eb",
-                                                "operator": "==",
-                                                "value": "Default"
-                                            }
-                                        ],
-                                        [
-                                            {
-                                                "field": "field_5be4772b0b4eb",
-                                                "operator": "==",
-                                                "value": "List"
+                                                "operator": "!=",
+                                                "value": "Link"
                                             }
                                         ]
                                     ],
@@ -1440,5 +1492,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1579739709
+    "modified": 1584816399
 }

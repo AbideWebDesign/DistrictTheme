@@ -68,6 +68,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "collapsed": "field_5b687c68b3bec",
             "min": 0,
             "max": 0,
@@ -111,6 +112,34 @@
                     "min_size": "",
                     "max_size": "",
                     "mime_types": ""
+                },
+                {
+                    "key": "field_5ee6ae5a2ec30",
+                    "label": "Grade Level",
+                    "name": "grade_level",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 1,
+                    "choices": {
+                        "All Grades": "All Grades",
+                        "High School": "High School",
+                        "Middle School": "Middle School",
+                        "Elementary": "Elementary"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
                 }
             ]
         },
@@ -248,5 +277,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1578519569
+    "modified": 1592177176
 }

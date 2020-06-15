@@ -67,13 +67,6 @@ add_action('admin_head', 'dashboard_styles');
 
 function dashboard_styles() {
   echo '<style>
-    /*
-	** Plugin: Imagify
-	*/
-	.imagify-notice.imagify-notice {
-		display: none !important;
-	}
-	
 	/*
 	** Plugin: SearchWP
 	*/
@@ -85,6 +78,13 @@ function dashboard_styles() {
 	** Plugin: ACF-Crop
 	*/
 	.acf-field-image-crop {
+		display: none;
+	}
+	
+	/* 
+	** Plugin: ACF to Rest API
+	*/
+	.acf-to-rest-api-donation-button, #acf-to-rest-api-settings p {
 		display: none;
 	}
 	
@@ -745,3 +745,6 @@ function cptui_register_district_taxes_efriday_category() {
 	register_taxonomy( "efriday-category", array( "efriday" ), $args );
 }
 add_action( 'init', 'cptui_register_district_taxes_efriday_category' );
+
+
+add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );

@@ -84,7 +84,7 @@ function dashboard_styles() {
 	/* 
 	** Plugin: ACF to Rest API
 	*/
-	.acf-to-rest-api-donation-button, #acf-to-rest-api-settings p {
+	.acf-to-rest-api-donation-button, #acf-to-rest-api-settings p, .acf-to-rest-api-donation-notice {
 		display: none;
 	}
 	
@@ -748,3 +748,11 @@ add_action( 'init', 'cptui_register_district_taxes_efriday_category' );
 
 
 add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
+
+add_filter( 'wpseo_enable_notification_post_trash', '__return_false' );
+
+add_filter( 'wpseo_enable_notification_post_slug_change', '__return_false' );
+
+add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
+
+add_filter( 'wpseo_enable_notification_term_slug_change', '__return_false' );

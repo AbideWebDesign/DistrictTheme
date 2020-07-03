@@ -3463,9 +3463,9 @@ fieldset:disabled .acf-form a.acf-button,
 }
 
 .btn-link {
-    font-weight: 400;
+    font-weight: 500;
     color: #c36714;
-    background-color: transparent
+    background-color: transparent;
 }
 
 .btn-link:hover {
@@ -5700,7 +5700,39 @@ input[type="button"].btn-block,
 .navbar-dark .navbar-text a:focus {
     color: #fff
 }
-
+#collapse-list {
+	.card-header {
+		background-color: #eee;
+		border: none;
+		padding: .35em 0;
+	}
+	.card-body {
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.btn-link {
+		font-weight: 500;
+		text-transform: none;
+		text-align: left;
+		width: 100%;
+	}
+	.btn-link:focus, .btn-link:hover, .btn-link:active:focus {
+		color: #c36714;
+		text-decoration: none;
+		background-color: transparent;
+	}
+	.fa {
+		float: right;
+	}
+	[data-toggle="collapse"] .fa:after {   
+	  content: "\f146";
+	}
+	
+	[data-toggle="collapse"].collapsed .fa:after {
+	  content: "\f0fe";
+	}
+}
 .card {
     position: relative;
     display: flex;

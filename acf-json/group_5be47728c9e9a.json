@@ -31,6 +31,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 0,
             "layouts": {
                 "layout_5bbb9f568d54c": {
                     "key": "layout_5bbb9f568d54c",
@@ -89,14 +90,14 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "show_in_rest": 0,
                                     "choices": {
                                         "Default": "Default",
                                         "Link": "Link",
-                                        "List": "List"
+                                        "List": "List",
+                                        "Collapsible": "Collapsible"
                                     },
-                                    "default_value": [
-                                        "Default"
-                                    ],
+                                    "default_value": "Default",
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 1,
@@ -233,57 +234,6 @@
                                     "delay": 0
                                 },
                                 {
-                                    "key": "field_5e7659058434b",
-                                    "label": "Include Table",
-                                    "name": "include_table",
-                                    "type": "true_false",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5be4772b0b4eb",
-                                                "operator": "!=",
-                                                "value": "Link"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "message": "",
-                                    "default_value": 0,
-                                    "ui": 1,
-                                    "ui_on_text": "",
-                                    "ui_off_text": ""
-                                },
-                                {
-                                    "key": "field_5e7659238434c",
-                                    "label": "Tab Table Content",
-                                    "name": "table",
-                                    "type": "table",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": [
-                                        [
-                                            {
-                                                "field": "field_5e7659058434b",
-                                                "operator": "==",
-                                                "value": "1"
-                                            }
-                                        ]
-                                    ],
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "use_header": 0,
-                                    "use_caption": 2
-                                },
-                                {
                                     "key": "field_5be4772b0b7a3",
                                     "label": "Tab List Content",
                                     "name": "tab_list_content",
@@ -351,6 +301,76 @@
                                     ]
                                 },
                                 {
+                                    "key": "field_5efd18ed65203",
+                                    "label": "Tab Collapsible Content",
+                                    "name": "tab_collapsible_content",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_5be4772b0b4eb",
+                                                "operator": "==",
+                                                "value": "Collapsible"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_rest": 0,
+                                    "collapsed": "field_5efd18ff65204",
+                                    "min": 0,
+                                    "max": 0,
+                                    "layout": "block",
+                                    "button_label": "Add List Item",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_5efd18ff65204",
+                                            "label": "Collapsible Label",
+                                            "name": "collapsible_label",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_rest": 0,
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_5efd191265205",
+                                            "label": "Collapsible Content",
+                                            "name": "collapsible_content",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_rest": 0,
+                                            "default_value": "",
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 0,
+                                            "delay": 0
+                                        }
+                                    ]
+                                },
+                                {
                                     "key": "field_5be4772b0b80f",
                                     "label": "Include Button Group",
                                     "name": "add_buttons",
@@ -371,6 +391,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "show_in_rest": 0,
                                     "message": "",
                                     "default_value": 0,
                                     "ui": 1,
@@ -1492,5 +1513,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1584816399
+    "modified": 1593719077
 }

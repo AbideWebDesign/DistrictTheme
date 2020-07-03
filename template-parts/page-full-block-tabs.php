@@ -131,6 +131,12 @@
 									
 									<?php endif; ?>
 									
+									<?php if ( get_sub_field('tab_type') == 'Collapsible' ): ?>
+									
+										<?php echo get_template_part( 'template-parts/page-block', 'collapsible' ); ?>
+									
+									<?php endif; ?>
+									
 									<?php if ( get_sub_field('add_buttons') ): ?>
 									
 										<div class="mt-3">

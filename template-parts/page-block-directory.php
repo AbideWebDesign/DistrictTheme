@@ -56,13 +56,26 @@ while ( $loop->have_posts() ) : $loop->the_post();
 		endif;
 
 		$meta .= "<br>Elected in " . get_field( 'elected_year', get_the_ID() ) . " | Term Expires " . get_field( 'term_expiration_date', get_the_ID() ); 
-		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a>';
+		
+		if ( $get_field( 'phone', get_the_ID() ) ): 
+			
+			$contact .= '<br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+			
+		endif;
+		
 		$bio = get_field ( 'bio', get_the_ID() );
 		
 	elseif ( $directory_type == 'School Administration' ):
 
 		$meta = get_field( 'title', get_the_ID() ) . ", " . get_field( 'school', get_the_ID() );
-		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a>';
+		
+		if ( $get_field( 'phone', get_the_ID() ) ): 
+			
+			$contact .= '<br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+			
+		endif;
 
 	elseif ( $directory_type == 'School or Program' ):
 		
@@ -73,7 +86,13 @@ while ( $loop->have_posts() ) : $loop->the_post();
 	else:
 			
 		$meta = get_field( 'title', get_the_ID() );
-		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a><br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+		$contact = '<i class="fas fa-envelope"></i> <a href="mailto:' . get_field( 'email', get_the_ID() ) . '">' . get_field( 'email', get_the_ID() ) . '</a>';
+		
+		if ( $get_field( 'phone', get_the_ID() ) ): 
+			
+			$contact .= '<br><i class="fas fa-phone"></i> <a href="tel:' . get_field( 'phone', get_the_ID() ) . '">' . get_field( 'phone', get_the_ID() ) . '</a>';
+			
+		endif;		
 
 	endif;
 	

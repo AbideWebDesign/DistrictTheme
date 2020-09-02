@@ -67,7 +67,8 @@ jQuery(function ($) {
 	})
 
 	// External Link Pop-up with domains to whitelist
- 	var domains = ['csd509j.net', 'csd509j.us2', 'https://teachcorvallis.org'];
+/*
+ 	var domains = ['csd509j.net', 'csd509j.us2', 'https://teachcorvallis.org', 'https://www.parentsquare.com'];
 
 	$('a[href^="http"]').on('click', function (e) {
 		
@@ -85,6 +86,7 @@ jQuery(function ($) {
 		}
 				
 	});
+*/
 	
 });
 

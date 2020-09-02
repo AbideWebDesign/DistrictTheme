@@ -32,17 +32,31 @@ $pages = get_full_width_children_pages($post);
 		</div>
 	</div>
 	<?php if($pages): ?>
-		<div id="full-width-nav" class="py-1 bg-orange d-none d-xl-block">
+		<div id="full-width-nav" class="py-lg-1 bg-orange">
 			<div class="container">
 				<div class="row">
 					<div class="col-12">
-						<ul class="list-inline m-0">
-							<li <?php echo (is_page($pages['parent']) ? 'class="current_page_item"' : ''); ?>><a href="<?php the_permalink($pages['parent']); ?>"><?php echo get_the_title($pages['parent']); ?></a></li>
-							<?php echo $pages['children']; ?>
-						</ul>
+						<nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#subpage-nav-mobile" aria-controls="subpage-nav-mobile" aria-expanded="false" aria-label="Toggle navigation">
+								<i class="fas fa-chevron-down"></i> Menu
+							</button>
+							<div class="collapse navbar-collapse d-none d-lg-block" id="subpage-nav">
+								<ul class="navbar-nav m-0">
+									<li <?php echo ( is_page($pages['parent'] ) ? 'class="nav-item active current_page_item"' : 'nav-item'); ?>><a href="<?php the_permalink($pages['parent']); ?>"><?php echo get_the_title($pages['parent']); ?></a></li>
+									<?php echo $pages['children']; ?>
+								</ul>
+							</div>
+						</nav>
 					</div>
 				</div>
 			</div>
+			<div class="collapse navbar-collapse bg-white py-1 d-lg-none" id="subpage-nav-mobile">
+				<ul class="navbar-nav m-0">
+					<li <?php echo ( is_page($pages['parent'] ) ? 'class="nav-item active current_page_item"' : 'class="nav-item"'); ?>><a href="<?php the_permalink($pages['parent']); ?>"><?php echo get_the_title($pages['parent']); ?></a></li>
+					<?php echo $pages['children']; ?>
+				</ul>
+			</div>
+
 		</div>
 	<?php endif; ?>
 	<?php

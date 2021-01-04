@@ -61,8 +61,8 @@ $total_results = $wp_query->found_posts;
 			</div>
 			<div class="col-md-3 offset-md-1">
 				<div class="bg-gray p-1 text-center">
-					<h3><?php the_field('search_sidebar_title', 'options'); ?></h3>
-					<p class="small"><?php the_field('search_sidebar_text', 'options'); ?></p>
+					<h3>Need Help?</h3>
+					<p><?php the_field('contact_us_text', 'options'); ?></p>
 					<a class="btn btn-primary btn-sm btn-block" href="<?php echo home_url(); ?>/contact">Contact Us</a>
 				</div>
 			</div>

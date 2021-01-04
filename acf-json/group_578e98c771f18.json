@@ -1,6 +1,6 @@
 {
     "key": "group_578e98c771f18",
-    "title": "Options - 404 Page",
+    "title": "Options - 404\/Search Page",
     "fields": [
         {
             "key": "field_578e992cb1a62",
@@ -115,7 +115,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-404-page"
+                "value": "acf-options-404-search-page"
             }
         ]
     ],
@@ -125,7 +125,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1539200255
+    "modified": 1609777689
 }

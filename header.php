@@ -58,7 +58,7 @@
 					<div class="row">
 						<div class="col-12">
 							<form role="search" id="sites-search" action="<?php echo esc_url( home_url( '/' ) ); ?>" method="get">
-								 <label class="sr-only" for="search-text">Search</label>
+								 <label class="sr-only" for="search-text"><?php _e('Search'); ?></label>
 								 <input type="text" class="search-field" id="search-text" placeholder="Search..." value="<?php echo get_search_query(); ?>" name="s">
 								 <button type="submit" id="ss-icon"><i class="fas fa-search"></i></button>
 							</form>
@@ -86,19 +86,19 @@
 			</div>
 			<div id="header-global" class="d-none d-lg-block">
 				<div class="container">
-					<div class="row">
+					<div class="row justify-content-between">
 						<div class="col-lg-5">
 							<div id="logo" class="clearfix">
 								<a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 							</div>
 						</div>
-						<div class="col-lg-7">
-							<div id="nav-top-links" class="d-flex justify-content-end">
+						<div class="col-lg-auto">
+							<div id="nav-top-links" class="d-flex">
 								<div id="nav-top-links-container">
 									<?php wp_nav_menu( array('theme_location' => 'header-toplinks', 'items_wrap' => '<ul class="nav navbar-nav" aria-label="Top Links">%3$s</ul>' )); ?>
 								</div>
 								<div id="nav-top-search-container">
-									<a href="#" id="search-toggle"><i class="fas fa-search"></i></a>
+									<a href="#" id="search-toggle" class="text-sm"><i class="fas fa-search"></i> <?php _e('Search'); ?></a>
 								</div>
 							</div>
 						</div>

@@ -1486,6 +1486,9 @@ pre code {
     margin-bottom: 4rem;
     background-color: rgba(0, 0, 0, 0)
 }
+.page-template-page-calendar .table {
+	margin-bottom: 0;
+}
 
 .table th,
 .table td {
@@ -10770,7 +10773,16 @@ small a {
 .bg-gray-lighten .btn-white {
     color: #ccc
 }
-
+.img-quick-icon {
+	width: 43px;
+	margin-right:.5rem;
+}
+.btn-quick {
+	padding: 1.25em 2.5em;
+	border-radius: 50px;
+	text-decoration: none;
+	box-shadow: 0px 3px 6px #00000029;
+}
 .bg-green,
 .btn-green,
 .btn-quick-1 {
@@ -10982,7 +10994,7 @@ small a {
 }
 
 #nav-top-links #nav-top-search-container {
-    padding-right: 2rem
+    padding-right: 15px;
 }
 
 #nav-top-links #ubermenu-toplinks-2-header-toplinks {
@@ -10999,11 +11011,11 @@ small a {
 }
 
 #nav-top-links .ubermenu li:first-child>.ubermenu-target {
-    padding-left: 36px
+    padding-left: 15px
 }
 
 #nav-top-links .ubermenu li:last-child>.ubermenu-target {
-    padding-right: 36px
+    padding-right: 25px
 }
 
 #nav-top-links .ubermenu .ubermenu-target:hover,
@@ -11028,10 +11040,22 @@ small a {
 }
 
 #nav-top-links #search-toggle {
-    padding-left: 10px;
+    padding: 10px 12px;
+    margin-left: 10px;
     height: 56px;
     line-height: 56px;
-    color: white
+    color: white;
+    background-color: #304E7C;
+    font-size: 12px;
+    text-transform: uppercase;
+    transition: .2s;
+    &:hover {
+	    background-color: darken(#304E7C, 5);
+	    text-decoration: none;
+    }
+    .fas {
+	    padding-right: .5em;
+    }
 }
 
 #nav-top-links #search-toggle:hover {
@@ -11176,7 +11200,9 @@ small a {
 #mainmenu .ubermenu .ubermenu-submenu .ubermenu-target {
     line-height: 1.3em
 }
-
+#quick-links {
+	background-color: #EEEEEE;
+}
 #footer-top h5 {
     text-transform: uppercase;
     color: #004a8d;
@@ -12018,10 +12044,12 @@ body ul.page-numbers span.current {
 }
 
 .page-lead .lead,
-.page-lead .lead p {
+.page-lead .lead p,
+.lead p {
     line-height: 1.3em;
     font-size: 1.4rem;
-    margin-bottom: 0
+    margin-bottom: 0;
+    font-weight: normal;
 }
 
 .page-lead .lead:after {

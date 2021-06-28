@@ -1,5 +1,5 @@
 <?php if(have_rows('calendar_downloads', 'options')): ?>
-	<h3 class="mt-1">Calendar Downloads</h3>
+	<h3>Calendar Downloads</h3>
 	<div class="table-responsive">
 		<table class="table table-white table-bordered">
 		<?php while(have_rows('calendar_downloads', 'options')): the_row(); ?>

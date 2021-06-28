@@ -18,14 +18,18 @@
 			</div>
 		</div>
 	</div>
-	<div class="bg-gray py-2">
+	<div class="bg-gray py-3">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-7">
-					<p class="lead"><?php the_field('calendar_text', 'options'); ?></p>
+			<div class="row justify-content-center">
+				<div class="col-md-12 col-lg-12 mb-2">
+					<div class="lead"><?php the_field('calendar_text', 'options'); ?></div>
 				</div>
-				<div class="col-md-5">
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-6 col-lg-8">
 					<?php get_template_part('template-parts/page-block', 'table-dates'); ?>
+				</div>
+				<div class="col-md-6 col-lg-4 mt-2 mt-md-0">
 					<?php get_template_part('template-parts/page-block', 'table-calendar-downloads'); ?>
 				</div>
 			</div>

@@ -1,0 +1,104 @@
+{
+    "key": "group_60dced83746bf",
+    "title": "Sub Menu",
+    "fields": [
+        {
+            "key": "field_60dced93d40ca",
+            "label": "Menu Type",
+            "name": "menu_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "choices": {
+                "Default": "Default",
+                "Custom": "Custom",
+                "None": "None"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_60dcedd2b8a3f",
+            "label": "Pages",
+            "name": "sub_menu_pages",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_60dced93d40ca",
+                        "operator": "==",
+                        "value": "Custom"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "collapsed": "field_60dceddfb8a40",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Page",
+            "sub_fields": [
+                {
+                    "key": "field_60dceddfb8a40",
+                    "label": "Page",
+                    "name": "page",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "post_type": [
+                        "page"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "id",
+                    "ui": 1
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-full-width.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1625157725
+}

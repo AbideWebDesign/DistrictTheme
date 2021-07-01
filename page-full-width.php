@@ -8,7 +8,6 @@
  */
 
 get_header(); 
-$pages = get_full_width_children_pages($post);
 ?>
 <div id="primary" class="content-area">
 	<div id="full-width-header" class="<?php the_field('banner_background_color'); ?> <?php echo (get_field('banner_type') == 'Arrow' ? 'header-arrow' : ''); ?>">
@@ -31,7 +30,12 @@ $pages = get_full_width_children_pages($post);
 			</div>
 		</div>
 	</div>
-	<?php if($pages): ?>
+	<?php if(get_field('menu_type') != 'None'): ?>
+		<?php if(get_field('menu_type') == 'Custom'): ?>
+			<?php $pages = get_field('pages'); ?>
+		<?php else: ?>
+			<?php $pages = get_full_width_children_pages($post);  ?>
+		<?php endif; ?>
 		<div id="full-width-nav" class="py-lg-1 bg-orange">
 			<div class="container">
 				<div class="row">
@@ -42,8 +46,15 @@ $pages = get_full_width_children_pages($post);
 							</button>
 							<div class="collapse navbar-collapse d-none d-lg-block" id="subpage-nav">
 								<ul class="navbar-nav m-0">
-									<li <?php echo ( is_page($pages['parent'] ) ? 'class="nav-item active current_page_item"' : 'nav-item'); ?>><a href="<?php the_permalink($pages['parent']); ?>"><?php echo get_the_title($pages['parent']); ?></a></li>
-									<?php echo $pages['children']; ?>
+									<?php if(get_field('menu_type') == 'Custom'): ?>
+										<?php while ( have_rows('sub_menu_pages') ): the_row(); ?>
+											<?php $page = get_sub_field('page'); ?>
+											<li class="page_item"><a href="<?php echo get_the_permalink($page); ?>"><?php echo get_the_title($page); ?></a></li>
+										<?php endwhile; ?>									
+									<?php else: ?>
+										<li <?php echo ( is_page($pages['parent'] ) ? 'class="nav-item active current_page_item"' : 'nav-item'); ?>><a href="<?php the_permalink($pages['parent']); ?>"><?php echo get_the_title($pages['parent']); ?></a></li>
+										<?php echo $pages['children']; ?>
+									<?php endif; ?>
 								</ul>
 							</div>
 						</nav>
@@ -52,8 +63,15 @@ $pages = get_full_width_children_pages($post);
 			</div>
 			<div class="collapse navbar-collapse bg-white py-1 d-lg-none" id="subpage-nav-mobile">
 				<ul class="navbar-nav m-0">
-					<li <?php echo ( is_page($pages['parent'] ) ? 'class="nav-item active current_page_item"' : 'class="nav-item"'); ?>><a href="<?php the_permalink($pages['parent']); ?>"><?php echo get_the_title($pages['parent']); ?></a></li>
-					<?php echo $pages['children']; ?>
+					<?php if(get_field('menu_type') == 'Custom'): ?>
+						<?php while ( have_rows('sub_menu_pages') ): the_row(); ?>
+							<?php $page = get_sub_field('page'); ?>
+							<li class="page_item"><a href="<?php echo get_the_permalink($page); ?>"><?php echo get_the_title($page); ?></a></li>
+						<?php endwhile; ?>
+					<?php else: ?>
+						<li <?php echo ( is_page($pages['parent'] ) ? 'class="nav-item active current_page_item"' : 'class="nav-item"'); ?>><a href="<?php the_permalink($pages['parent']); ?>"><?php echo get_the_title($pages['parent']); ?></a></li>
+						<?php echo $pages['children']; ?>
+					<?php endif; ?>
 				</ul>
 			</div>
 

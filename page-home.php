@@ -102,16 +102,16 @@ get_header(); ?>
 					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-1"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
 				</div>
 				<div class="col-auto">
-					<?php $link = get_field('quick_link_1', 'options'); ?>
-					<a href="<?php echo $link['url']; ?>" target="<?php echo $link2['target']; ?>" class="btn-quick btn-quick-2"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+					<?php $link = get_field('quick_link_2', 'options'); ?>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link2['target']; ?>" class="btn-quick btn-quick-2"><?php echo wp_get_attachment_image( get_field('quick_link_icon_2', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
 				</div>
 				<div class="col-auto">
 					<?php $link = get_field('quick_link_3', 'options'); ?>
-					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-3"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-3"><?php echo wp_get_attachment_image( get_field('quick_link_icon_3', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
 				</div>
 				<div class="col-auto">
 					<?php $link = get_field('quick_link_4', 'options'); ?>
-					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-4"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-4"><?php echo wp_get_attachment_image( get_field('quick_link_icon_4', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
 				</div>
 			</div>
 		</div>

@@ -95,7 +95,7 @@ get_header(); ?>
 	<!-- Carousel Section End -->
 	<!-- Quick Links Start -->
 	<section class="py-2 border-bottom bg-light">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row justify-content-center">
 				<div class="col-12 col-md-3 col-xl-auto mb-2 mb-md-0">
 					<?php $link = get_field('quick_link_1', 'options'); ?>

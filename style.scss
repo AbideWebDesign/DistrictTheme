@@ -1,7 +1,7 @@
 /*!
  * Theme Name:       	Corvallis School District Theme
  * Theme URI:        	https://www.csd509j.net/
- * Version:          	1.8.9
+ * Version:          	1.8.10
  * Author:           	Abide Web Design
  * Author URI:			https://abidewebdesign.com
 */
@@ -110,7 +110,9 @@ h6 {
     margin-top: 0;
     margin-bottom: 2rem
 }
-
+h2.small {
+	font-size: 23px;
+}
 p {
     margin-top: 0;
     margin-bottom: 1.675rem
@@ -192,8 +194,18 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects
 }
-
-a:hover {
+.stretched-link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: auto;
+    content: "";
+    background-color: rgba(0,0,0,0);
+}
+a:hover:not(.stretched-link, .btn) {
     color: #7e420d;
     text-decoration: underline
 }
@@ -10003,6 +10015,10 @@ button.bg-dark:focus {
     }
 }
 
+.text-xs {
+	font-size: 14px;
+}
+
 .text-lowercase {
     text-transform: lowercase !important
 }
@@ -13410,4 +13426,7 @@ body ul.page-numbers span.current {
 	a:hover {
 		text-decoration: none;
 	}
+}
+.quick-link-wrap {
+	min-height: 300px;
 }

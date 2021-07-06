@@ -148,6 +148,7 @@ if( function_exists('acf_add_options_page') ) {
 if( function_exists('acf_add_options_sub_page') ) {
     acf_add_options_sub_page( 'General' );
     acf_add_options_sub_page( 'Pages' );
+    acf_add_options_sub_page( 'Quick Links' );
     acf_add_options_sub_page( 'Calendar' );
     acf_add_options_sub_page( 'Food Services' );
     acf_add_options_sub_page( 'eFriday Folders' );

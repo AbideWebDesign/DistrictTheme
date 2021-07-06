@@ -81,11 +81,11 @@ get_header(); ?>
 				</div>
 				<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
 					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
+					<span class="sr-only"><?php _e('Previous'); ?></span>
 				</a>
 				<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
+					<span class="sr-only"><?php _e('Next'); ?></span>
 				</a>
 								
 			<?php endif; ?>
@@ -93,12 +93,36 @@ get_header(); ?>
 		</div>
 	</section>
 	<!-- Carousel Section End -->
+	<!-- Quick Links Start -->
+	<section class="py-2 border-bottom bg-light">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-auto">
+					<?php $link = get_field('quick_link_1', 'options'); ?>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-1"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+				</div>
+				<div class="col-auto">
+					<?php $link = get_field('quick_link_1', 'options'); ?>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link2['target']; ?>" class="btn-quick btn-quick-2"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+				</div>
+				<div class="col-auto">
+					<?php $link = get_field('quick_link_3', 'options'); ?>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-3"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+				</div>
+				<div class="col-auto">
+					<?php $link = get_field('quick_link_4', 'options'); ?>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn-quick btn-quick-4"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Quick Links End -->
 	<!-- News Section Start -->
 	<section id="news" class="container py-3">
 		<div class="row">
 			<div class="col-12 col-lg-8">
 				<div class="headline">
-					<h2>Latest News</h2>
+					<h2><?php _e('Latest News'); ?></h2>
 				</div>
 				<div class="row">
 				
@@ -167,7 +191,7 @@ get_header(); ?>
 	 				
 	 				<div id="news-more" class="col-12 col-xl-4 mt-2 mt-xl-0">
 	 					<div class="subhead">
-	 						<h5>More Headlines</h5>
+	 						<h5><?php _e('More Headlines'); ?></h5>
 	 					</div>
 	 					<ul class="fa-ul">
 	 					
@@ -195,19 +219,19 @@ get_header(); ?>
 						<?php endwhile; wp_reset_query();?>
 						
 						</ul>
-						<small><a href="<?php home_url(); ?>/news">More News</a></small>	
+						<small><a href="<?php home_url(); ?>/news"><?php _e('More News'); ?></a></small>	
 	 				</div>
 	 			</div>
  			</div>
  			<div class="col-12 col-lg-4">
  				<div class="calendar">
  					<div class="headline">
- 						<h2>Calendar</h2>
+ 						<h2><?php _e('Calendar'); ?></h2>
  					</div>
 					
 					<?php render_list_view_district(); ?>
 					<div class="mt-1">
-						<small><a href="<?php home_url(); ?>/calendar">More Events</a></small>
+						<small><a href="<?php home_url(); ?>/calendar"><?php _e('More Events'); ?></a></small>
 					</div>
 				</div>
  			</div>			
@@ -251,7 +275,7 @@ get_header(); ?>
 									<a href="https://twitter.com/SuptNoss/status/<?php echo $tweets[0]['id'] ?>" target="_blank">
 										<?php echo '<span>'.humanTiming(strtotime($tweets[0]['created_at'])) . ' ago</span>'; ?>
 									</a> /
-									<a href="https://twitter.com/intent/retweet?tweet_id=<?php echo $tweets[0]['id'] ?>">Retweet</a>
+									<a href="https://twitter.com/intent/retweet?tweet_id=<?php echo $tweets[0]['id'] ?>"><?php _e('Retweet'); ?></a>
 								</div>
 							</div>
 						</div>
@@ -273,79 +297,52 @@ get_header(); ?>
 	</section>
 	<!-- Social Section End -->
 	<!-- Quick Links Section Start -->
-	<section id="quick-links" class="py-3">
+	<section class="py-3">
 		<div class="container">
 			<div class="row">
-				<div id="quick-links" class="col-md-5 col-lg-4 col-xl-3">
-					<div class="headline">
-						<h2>Quick Links</h2>
-					</div>
-					<div class="row">
-						<?php for( $x = 1; $x < 5; $x++ ): ?>
-							<div class="quick-link col-sm-6 col-md-12"> 
-								<?php if ( get_field('home_quick_link_' . $x . '_type') == "External Link" ): ?>
-									<a href="<?php the_field('home_quick_link_' . $x . '_link'); ?>" target="_blank" class="btn-quick-<?php echo $x; ?>">
-								<?php elseif ( get_field('home_quick_link_' . $x . '_type') == "Media File" ): ?>
-									<a href="<?php the_field('home_quick_link_' . $x . '_media'); ?>" target="_blank" class="btn-quick-<?php echo $x; ?>">
-								<?php elseif ( get_field('home_quick_link_' . $x . '_type') == "Page" ): ?>
-									<a href="<?php the_field('home_quick_link_' . $x . '_page'); ?>" class="btn-quick-<?php echo $x; ?>">
-								<?php endif; ?>
-									<h4><?php the_field('home_quick_link_' . $x . '_text'); ?></h4>
-								</a>
+				<div class="col-md-12 col-lg-4 mb-2 mb-lg-0">
+					<?php $link = get_field('link_1'); ?>
+					<?php $image = wp_get_attachment_image_src( get_field('link_image_1'), 'Large', false ); ?>
+					<a href="<?php echo $link['url']; ?>" class="stretched-link" target="<?php echo $link['target']; ?>">
+						<div class="bg-light-blue">
+							<div class="row">
+								<div class="col-lg-12 align-self-center d-md-none d-lg-block">
+									<?php echo wp_get_attachment_image( get_field('link_image_1'), 'News Image Medium', false, array('class' => 'img-fluid w-100') ); ?>
+								</div>
+								<div class="col-sm-6 d-lg-none">
+									<div class="h-100 w-100" style="background: url(<?php echo $image[0]; ?>) center center no-repeat; background-size: cover"></div>
+								</div>
+								<div class="col-sm-6 col-lg-12">
+									<div class="p-2 text-lg-center text-white">
+										<h2 class="small text-white mb-1"><?php echo $link['title']; ?></h2>
+										<p class="mb-0 text-xs"><?php the_field('link_1_text'); ?></p>
+									</div>
+								</div>
 							</div>
-						<?php endfor; ?>
-					</div>			
+						</div>
+					</a>
 				</div>
-				<div id="message" class="col-md-7 col-lg-8 col-xl-9">
-					<div class="headline">
-						<h2>Superintendent’s Message</h2>
-					</div>
-					<div class="row">
-					<?php 
-
-					$args = array( 
-						'post_type' => 'news', 
-						'posts_per_page' => '1', 
-						'tax_query' => array(
-							array(
-								'taxonomy' => 'news-category',
-								'field'    => 'slug',
-								'terms'    => 'superintendent-message',
-							),
-						),
-					);
-					
-					$loop = new WP_Query( $args );
-					
-					while ( $loop->have_posts() ) : $loop->the_post();
-						
-						if ( get_field('featured_img', $post->ID) ) {
-	
-							$image = get_field('featured_img', $post->ID);
-							
-						} else {
-							
-							// For legacy images added by ACF-Crop
-							$crop = get_field('featured_image', $post->ID);
-							$image = $crop['original_image'];
-							
-						}
-						
-					?>
-						<div class="col-sm-5 col-lg-4">
-							<a href="<?php the_permalink(); ?>">
-								<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img-fluid w-100')); ?>
-							</a>
+				<div class="col-sm-6 col-lg-4 align-self-stretch mb-2 mb-md-0">
+					<?php $link = get_field('link_2'); ?>
+					<?php $image = wp_get_attachment_image_src( get_field('link_image_2'), 'Large', false ); ?>
+					<a href="<?php echo $link['url']; ?>" class="stretched-link" target="<?php echo $link['target']; ?>">
+						<div class="d-flex h-100 quick-link-wrap" style="background: url(<?php echo $image[0]; ?>) center center no-repeat; background-size: cover">
+							<div class="p-2 text-center text-white d-flex justify-content-center align-self-end bg-green w-100">
+								<h2 class="small text-white mb-0"><?php echo $link['title']; ?></h2>
+							</div>
 						</div>
-						<div class="col-sm-7 col-lg-8">
-							<div class="subhead">
-	 							<a href="<?php the_permalink(); ?>"><h3><?php the_title(); ?></h3></a>
-	 						</div>
-							<?php the_field('featured_text_long', $post->ID); ?>
-							<small><a href="<?php the_permalink(); ?>">Read More</a></small>
+					</a>
+				</div>
+				<div class="col-sm-6 col-lg-4 align-self-stretch">
+					<?php $link = get_field('link_3'); ?>
+					<?php $image = wp_get_attachment_image_src( get_field('link_image_3'), 'Large', false ); ?>
+					<a href="<?php echo $link['url']; ?>" class="stretched-link" target="<?php echo $link['target']; ?>">
+						<div class="d-flex h-100 quick-link-wrap" style="background: url(<?php echo $image[0]; ?>) center center no-repeat; background-size: cover">
+							<div class="p-2 text-center text-white d-flex justify-content-center align-self-end bg-dark-gray w-100">
+								<h2 class="small text-white mb-0"><?php echo $link['title']; ?></h2>
+							</div>
 						</div>
-					<?php endwhile; wp_reset_query();?>
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>

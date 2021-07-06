@@ -41,11 +41,13 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ".jpg"
+            "mime_types": ".jpg",
+            "return_format": "array",
+            "preview_size": "medium"
         },
         {
             "key": "field_5773f349efdd9",
-            "label": "Quick Links",
+            "label": "Links",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -56,48 +58,49 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "top",
+            "show_in_rest": 0,
+            "placement": "left",
             "endpoint": 0
         },
         {
-            "key": "field_565a225006599",
-            "label": "Home Quick Link 1 Type",
-            "name": "home_quick_link_1_type",
-            "type": "select",
+            "key": "field_60ddf23350ba4",
+            "label": "Link Image 1",
+            "name": "link_image_1",
+            "type": "image",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "Page": "Page",
-                "External Link": "External Link",
-                "Media File": "Media File"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 0,
-            "return_format": "label",
-            "placeholder": ""
+            "show_in_rest": 0,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         },
         {
-            "key": "field_565a219b6c15d",
-            "label": "Home Quick Link 1 Text",
-            "name": "home_quick_link_1_text",
+            "key": "field_60ddf284b5204",
+            "label": "Link 1 Text",
+            "name": "link_1_text",
             "type": "text",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 0,
             "default_value": "",
             "placeholder": "",
             "prepend": "",
@@ -105,451 +108,102 @@
             "maxlength": ""
         },
         {
-            "key": "field_565a21b96c15e",
-            "label": "Home Quick Link 1 Page",
-            "name": "home_quick_link_1_page",
-            "type": "page_link",
+            "key": "field_60ddf22250ba1",
+            "label": "Link 1",
+            "name": "link_1",
+            "type": "link",
             "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a225006599",
-                        "operator": "==",
-                        "value": "Page"
-                    }
-                ]
-            ],
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 0,
-            "multiple": 0
+            "show_in_rest": 0,
+            "return_format": "array"
         },
         {
-            "key": "field_565a22a20659b",
-            "label": "Home Quick Link 1 Link",
-            "name": "home_quick_link_1_link",
-            "type": "url",
+            "key": "field_60ddf24250ba5",
+            "label": "Link Image 2",
+            "name": "link_image_2",
+            "type": "image",
             "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a225006599",
-                        "operator": "==",
-                        "value": "External Link"
-                    }
-                ]
-            ],
+            "required": 0,
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_565a22d90659c",
-            "label": "Home Quick Link 1 Media",
-            "name": "home_quick_link_1_media",
-            "type": "file",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a225006599",
-                        "operator": "==",
-                        "value": "Media File"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
+            "show_in_rest": 0,
+            "return_format": "id",
+            "preview_size": "medium",
             "library": "all",
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
             "mime_types": ""
         },
         {
-            "key": "field_565a230ee8b89",
-            "label": "Home Quick Link 2 Type",
-            "name": "home_quick_link_2_type",
-            "type": "select",
+            "key": "field_60ddf22d50ba2",
+            "label": "Link 2",
+            "name": "link_2",
+            "type": "link",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "Page": "Page",
-                "External Link": "External Link",
-                "Media File": "Media File"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 0,
-            "return_format": "label",
-            "placeholder": ""
+            "show_in_rest": 0,
+            "return_format": "array"
         },
         {
-            "key": "field_565a21dd6c15f",
-            "label": "Home Quick Link 2 Text",
-            "name": "home_quick_link_2_text",
-            "type": "text",
+            "key": "field_60ddf24350ba6",
+            "label": "Link Image 3",
+            "name": "link_image_3",
+            "type": "image",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_565a21e66c160",
-            "label": "Home Quick Link 2 Page",
-            "name": "home_quick_link_2_page",
-            "type": "page_link",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a230ee8b89",
-                        "operator": "==",
-                        "value": "Page"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
-            "key": "field_565a234a3fe65",
-            "label": "Home Quick Link 2 Link",
-            "name": "home_quick_link_2_link",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a225006599",
-                        "operator": "==",
-                        "value": "External Link"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_565a235b3fe66",
-            "label": "Home Quick Link 2 Media",
-            "name": "home_quick_link_2_media",
-            "type": "file",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a230ee8b89",
-                        "operator": "==",
-                        "value": "Media File"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
+            "show_in_rest": 0,
+            "return_format": "id",
+            "preview_size": "medium",
             "library": "all",
+            "min_width": "",
+            "min_height": "",
             "min_size": "",
+            "max_width": "",
+            "max_height": "",
             "max_size": "",
             "mime_types": ""
         },
         {
-            "key": "field_565a236f3fe67",
-            "label": "Home Quick Link 3 Type",
-            "name": "home_quick_link_3_type",
-            "type": "select",
+            "key": "field_60ddf22f50ba3",
+            "label": "Link 3",
+            "name": "link_3",
+            "type": "link",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "Page": "Page",
-                "External Link": "External Link",
-                "Media File": "Media File"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 0,
-            "return_format": "label",
-            "placeholder": ""
-        },
-        {
-            "key": "field_565a21f46c161",
-            "label": "Home Quick Link 3 Text",
-            "name": "home_quick_link_3_text",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_565a21ff6c162",
-            "label": "Home Quick Link 3 Page",
-            "name": "home_quick_link_3_page",
-            "type": "page_link",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a236f3fe67",
-                        "operator": "==",
-                        "value": "Page"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
-            "key": "field_565a23873fe68",
-            "label": "Home Quick Link 3 Link",
-            "name": "home_quick_link_3_link",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a236f3fe67",
-                        "operator": "==",
-                        "value": "External Link"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_565a239d3fe69",
-            "label": "Home Quick Link 3 Media",
-            "name": "home_quick_link_3_media",
-            "type": "file",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a236f3fe67",
-                        "operator": "==",
-                        "value": "Media File"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_565a23dcd3b63",
-            "label": "Home Quick Link 4 Type",
-            "name": "home_quick_link_4_type",
-            "type": "select",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "Page": "Page",
-                "External Link": "External Link",
-                "Media File": "Media File"
-            },
-            "default_value": [],
-            "allow_null": 0,
-            "multiple": 0,
-            "ui": 1,
-            "ajax": 0,
-            "return_format": "label",
-            "placeholder": ""
-        },
-        {
-            "key": "field_565a2402d3b64",
-            "label": "Home Quick Link 4 Text",
-            "name": "home_quick_link_4_text",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_565a240cd3b65",
-            "label": "Home Quick Link 4 Page",
-            "name": "home_quick_link_4_page",
-            "type": "page_link",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a23dcd3b63",
-                        "operator": "==",
-                        "value": "Page"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "post_type": [],
-            "taxonomy": [],
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
-            "key": "field_565a241ed3b66",
-            "label": "Home Quick Link 4 Link",
-            "name": "home_quick_link_4_link",
-            "type": "url",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a23dcd3b63",
-                        "operator": "==",
-                        "value": "External Link"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
-            "key": "field_565a244ad3b67",
-            "label": "Home Quick Link 4 Media",
-            "name": "home_quick_link_4_media",
-            "type": "file",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_565a23dcd3b63",
-                        "operator": "==",
-                        "value": "Media File"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
+            "show_in_rest": 0,
+            "return_format": "array"
         },
         {
             "key": "field_5773f36befdda",
@@ -790,7 +444,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1545255543
+    "modified": 1625158292
 }

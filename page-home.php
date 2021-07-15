@@ -97,21 +97,41 @@ get_header(); ?>
 	<section class="py-2 border-bottom bg-light">
 		<div class="container-fluid">
 			<div class="row justify-content-center">
-				<div class="col-12 col-md-3 col-xl-auto mb-1 mb-md-0">
+				<div class="col-12 col-md-5 col-lg-3 col-xl-auto mb-1 mb-lg-0 align-self-center">
 					<?php $link = get_field('quick_link_1', 'options'); ?>
-					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-quick btn-quick-1"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-quick btn-quick-1 btn-block">
+						<div class="d-flex justify-content-center">
+							<div class="d-inline d-lg-none d-xl-inline"><?php echo wp_get_attachment_image( get_field('quick_link_icon_1', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?></div>
+							<div class="d-flex align-self-center"><?php echo $link['title']; ?></div>
+						</div>
+					</a>
 				</div>
-				<div class="col-12 col-md-3 col-xl-auto mb-1 mb-md-0">
+				<div class="col-12 col-md-5 col-lg-3 col-xl-auto mb-1 mb-lg-0 align-self-center">
 					<?php $link = get_field('quick_link_2', 'options'); ?>
-					<a href="<?php echo $link['url']; ?>" target="<?php echo $link2['target']; ?>" class="btn btn-quick btn-quick-2"><?php echo wp_get_attachment_image( get_field('quick_link_icon_2', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-quick btn-quick-2 btn-block">
+						<div class="d-flex justify-content-center">
+							<div class="d-inline d-lg-none d-xl-inline"><?php echo wp_get_attachment_image( get_field('quick_link_icon_2', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?></div>
+							<div class="d-flex align-self-center"><?php echo $link['title']; ?></div>
+						</div>
+					</a>				
 				</div>
-				<div class="col-12 col-md-3 col-xl-auto mb-1 mb-md-0">
+				<div class="col-12 col-md-5 col-lg-3 col-xl-auto mb-1 mb-md-0 align-self-center">
 					<?php $link = get_field('quick_link_3', 'options'); ?>
-					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-quick btn-quick-3"><?php echo wp_get_attachment_image( get_field('quick_link_icon_3', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-quick btn-quick-3 btn-block">
+						<div class="d-flex justify-content-center">
+							<div class="d-inline d-lg-none d-xl-inline"><?php echo wp_get_attachment_image( get_field('quick_link_icon_3', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?></div>
+							<div class="d-flex align-self-center"><?php echo $link['title']; ?></div>
+						</div>
+					</a>				
 				</div>
-				<div class="col-12 col-md-3 col-xl-auto">
+				<div class="col-12 col-md-5 col-lg-3 col-xl-auto align-self-center">
 					<?php $link = get_field('quick_link_4', 'options'); ?>
-					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-quick btn-quick-4"><?php echo wp_get_attachment_image( get_field('quick_link_icon_4', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?> <?php echo $link['title']; ?></a>
+					<a href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>" class="btn btn-quick btn-quick-4 btn-block">
+						<div class="d-flex justify-content-center">
+							<div class="d-inline d-lg-none d-xl-inline"><?php echo wp_get_attachment_image( get_field('quick_link_icon_4', 'options'), 'thumbnail', false, array('class'=>'img-quick-icon img-fluid') ); ?></div>
+							<div class="d-flex align-self-center"><?php echo $link['title']; ?></div>
+						</div>
+					</a>				
 				</div>
 			</div>
 		</div>

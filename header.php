@@ -87,12 +87,12 @@
 			<div id="header-global" class="d-none d-lg-block">
 				<div class="container">
 					<div class="row justify-content-between">
-						<div class="col-lg-5">
+						<div class="col-lg-auto">
 							<div id="logo" class="clearfix">
 								<a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 							</div>
 						</div>
-						<div class="col-lg-auto">
+						<div class="col-lg-auto align-self-center">
 							<div id="nav-top-links" class="d-flex">
 								<div id="nav-top-links-container">
 									<?php wp_nav_menu( array('theme_location' => 'header-toplinks', 'items_wrap' => '<ul class="nav navbar-nav" aria-label="Top Links">%3$s</ul>' )); ?>

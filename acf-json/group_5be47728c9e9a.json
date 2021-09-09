@@ -504,9 +504,7 @@
                                                 "External": "External",
                                                 "Tab": "Tab"
                                             },
-                                            "default_value": [
-                                                "Internal"
-                                            ],
+                                            "default_value": "Internal",
                                             "allow_null": 0,
                                             "multiple": 0,
                                             "ui": 1,
@@ -667,9 +665,7 @@
                                 "Left": "Left",
                                 "Right": "Right"
                             },
-                            "default_value": [
-                                "Left"
-                            ],
+                            "default_value": "Left",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
@@ -815,7 +811,7 @@
                                 "bg-white": "White",
                                 "bg-gray": "Gray"
                             },
-                            "default_value": [],
+                            "default_value": false,
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 1,
@@ -852,9 +848,7 @@
                                 "bg-orange": "Orange",
                                 "bg-green": "Green"
                             },
-                            "default_value": [
-                                "Orange"
-                            ],
+                            "default_value": "Orange",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 1,
@@ -898,9 +892,7 @@
                                 "Button": "Button",
                                 "Form": "Form"
                             },
-                            "default_value": [
-                                "Button"
-                            ],
+                            "default_value": "Button",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
@@ -933,9 +925,7 @@
                                 "Vertical": "Vertical",
                                 "Horizontal": "Horizontal"
                             },
-                            "default_value": [
-                                "Horizontal"
-                            ],
+                            "default_value": "Horizontal",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
@@ -992,9 +982,7 @@
                                 "Horizontal": "Horizontal",
                                 "Vertical": "Vertical"
                             },
-                            "default_value": [
-                                "Horizontal"
-                            ],
+                            "default_value": "Horizontal",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 1,
@@ -1476,6 +1464,73 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_611e803dac1ea": {
+                    "key": "layout_611e803dac1ea",
+                    "name": "parentsquare_feed",
+                    "label": "ParentSquare Feed",
+                    "display": "row",
+                    "sub_fields": [
+                        {
+                            "key": "field_611e8047ac1eb",
+                            "label": "ParentSquare Section Header",
+                            "name": "parentsquare_section_header",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_rest": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_611e8057ac1ec",
+                            "label": "ParentSquare Feed",
+                            "name": "parentsquare_feed",
+                            "type": "url",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_rest": 0,
+                            "default_value": "",
+                            "placeholder": ""
+                        },
+                        {
+                            "key": "field_611e81963b864",
+                            "label": "ParentSquare Feed ID",
+                            "name": "parentsquare_feed_id",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_rest": 0,
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Add Content",
@@ -1511,7 +1566,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1593719077
+    "modified": 1629389438
 }

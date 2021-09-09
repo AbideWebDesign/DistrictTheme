@@ -55,6 +55,12 @@
 
 					get_template_part( 'template-parts/page-full-block', 'notification' );
 					
+				endif;	
+				
+				if ( get_row_layout() == "parentsquare_feed" ): 
+
+					get_template_part( 'template-parts/page-full-block', 'parentsquare' );
+					
 				endif;					
 				
 			endwhile;

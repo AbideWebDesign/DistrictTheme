@@ -71,7 +71,7 @@
             "label": "Popular Resources List",
             "name": "popular_resources_list",
             "type": "post_object",
-            "instructions": "",
+            "instructions": "Used on 404 page as well as search page sidebar.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -79,10 +79,11 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 0,
             "post_type": [
                 "attachment"
             ],
-            "taxonomy": [],
+            "taxonomy": "",
             "allow_null": 0,
             "multiple": 1,
             "return_format": "object",
@@ -127,5 +128,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1609777689
+    "modified": 1631209874
 }

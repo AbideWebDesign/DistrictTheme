@@ -9966,7 +9966,13 @@ button.bg-dark:focus {
 .text-center {
     text-align: center !important
 }
-
+.text-sm {
+	font-size: 15px;
+	line-height: 22px;
+}
+.list .text-sm:not(:last-child) {
+	margin-bottom: .7em;
+}
 @media (min-width: 576px) {
     .text-sm-left {
         text-align: left !important

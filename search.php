@@ -59,7 +59,16 @@ $total_results = $wp_query->found_posts;
 				endif;
 				?>
 			</div>
-			<div class="col-md-3 offset-md-1">
+			<div class="col-md-4">
+				<div class="bg-gray p-1 mb-2">
+					<h3>Popular Search Results</h3>
+					<?php $links = get_field('popular_resources_list', 'options'); ?>
+					<ul class="list list-flush mb-0">
+					<?php foreach ( $links as $link ): ?>
+						<li class="text-sm"><a href="<?php echo $link->guid; ?>"><?php echo $link->post_title; ?></a></li>
+					<?php endforeach; ?>
+					</ul>
+				</div>
 				<div class="bg-gray p-1 text-center">
 					<h3>Need Help?</h3>
 					<p><?php the_field('contact_us_text', 'options'); ?></p>

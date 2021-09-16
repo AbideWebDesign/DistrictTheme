@@ -192,7 +192,7 @@ get_header(); ?>
 						$args = array(
 							'post_type' => 'news', 
 							'posts_per_page' => 5,  
-							'post__not_in' => $featured_ids
+							'post__not_in' => array( $featured_1, $featured_2 ),
 						);
 						
 						$loop = new WP_Query( $args );

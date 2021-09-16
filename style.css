@@ -640,7 +640,7 @@ pre code {
 }
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1300px;
   }
 }
 .container-fluid {
@@ -11846,6 +11846,14 @@ small a {
 
 #mainmenu .ubermenu .ubermenu-submenu .ubermenu-target {
   line-height: 1.3em;
+}
+
+#mainmenu .ubermenu .ubermenu-item-layout-image_left > .ubermenu-target-text {
+  padding-left: 0;
+}
+
+#mainmenu .ubermenu .ubermenu-item-layout-image_left > .ubermenu-image {
+  padding-bottom: 0.8em;
 }
 
 #footer-top h5 {

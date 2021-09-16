@@ -64,8 +64,7 @@ $excluded_post_ids = array();
 								
 								if ( get_field('featured_img', $post->ID) ):
 									
-									$image = get_field('featured_img', $post->ID);
-									$imageID = $image['id'];
+									$imageID = get_field('featured_img', $post->ID);
 									$imageURL = wp_get_attachment_url($imageID);
 								
 								else:

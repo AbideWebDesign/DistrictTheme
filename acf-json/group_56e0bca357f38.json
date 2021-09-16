@@ -169,7 +169,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array",
+            "show_in_rest": 0,
+            "return_format": "id",
             "preview_size": "News Image Small",
             "library": "all",
             "min_width": 600,
@@ -372,25 +373,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_56e0bd93696a7",
-                            "label": "Image Caption",
-                            "name": "image_caption",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
                             "key": "field_56e0bd58696a6",
                             "label": "Image",
                             "name": "image",
@@ -437,6 +419,25 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_56e0bd93696a7",
+                            "label": "Image Caption",
+                            "name": "image_caption",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         }
                     ],
                     "min": "",
@@ -637,27 +638,6 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_56e0bea7696b1",
-                            "label": "Blockquote Text",
-                            "name": "blockquote_text",
-                            "type": "textarea",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "maxlength": "",
-                            "rows": "",
-                            "new_lines": "",
-                            "readonly": 0,
-                            "disabled": 0
-                        },
-                        {
                             "key": "field_56e0beb3696b2",
                             "label": "Blockquote Source",
                             "name": "blockquote_source",
@@ -675,6 +655,27 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": "",
+                            "readonly": 0,
+                            "disabled": 0
+                        },
+                        {
+                            "key": "field_56e0bea7696b1",
+                            "label": "Blockquote Text",
+                            "name": "blockquote_text",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "maxlength": "",
+                            "rows": "",
+                            "new_lines": "",
                             "readonly": 0,
                             "disabled": 0
                         }
@@ -741,7 +742,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1557330801
+    "modified": 1631814620
 }

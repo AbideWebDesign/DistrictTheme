@@ -229,6 +229,15 @@ function acf_set_featured_image( $value, $post_id, $field  ){
 }
 add_filter( 'acf/update_value/name=featured_img', 'acf_set_featured_image', 10, 3 );
 
+function featured_news_sort( $args, $field, $post ) {
+
+    $args['orderby'] = 'date';
+    $args['order'] = 'DESC';
+
+    return $args;
+}
+add_filter('acf/fields/post_object/query/name=featured_news_1', 'featured_news_sort', 10, 3);
+add_filter('acf/fields/post_object/query/name=featured_news_2', 'featured_news_sort', 10, 3);
 /*
  * Get pages for full-width subnav
  */
@@ -757,3 +766,29 @@ add_filter( 'wpseo_enable_notification_post_slug_change', '__return_false' );
 add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
 
 add_filter( 'wpseo_enable_notification_term_slug_change', '__return_false' );
+
+// Add search weight to more recently published entries in SearchWP.
+add_filter( 'searchwp\query\mods', function( $mods ) {
+	global $wpdb;
+
+	$mod = new \SearchWP\Mod();
+	$mod->set_local_table( $wpdb->posts );
+	$mod->on( 'ID', [ 'column' => 'id' ] );
+	$mod->relevance( function( $runtime ) use ( $wpdb ) {
+		return "
+			COALESCE( ROUND( ( (
+				UNIX_TIMESTAMP( {$runtime->get_local_table_alias()}.post_date )
+				- (
+					SELECT UNIX_TIMESTAMP( {$wpdb->posts}.post_date )
+					FROM {$wpdb->posts}
+					WHERE {$wpdb->posts}.post_status = 'publish'
+					ORDER BY {$wpdb->posts}.post_date ASC
+					LIMIT 1
+				)
+			) / 86400 ), 0 ), 0 )";
+	} );
+
+	$mods[] = $mod;
+
+	return $mods;
+} );

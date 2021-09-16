@@ -138,77 +138,49 @@ get_header(); ?>
 	</section>
 	<!-- Quick Links End -->
 	<!-- News Section Start -->
+	<?php $featured_1 = get_field('featured_news_1'); ?>
+	<?php $featured_2 = get_field('featured_news_2'); ?>
 	<section id="news" class="container py-3">
 		<div class="row">
 			<div class="col-12 col-lg-8">
 				<div class="headline">
 					<h2><?php _e('Latest News'); ?></h2>
 				</div>
-				<div class="row">
-				
-				<?php 
-				
-				$args = array( 
-					'post_type' => 'news', 
-					'posts_per_page' => '2', 
-					'tax_query' => array(
-						array(
-							'taxonomy' => 'news-category',
-							'field'    => 'slug',
-							'terms'    => 'featured',
-						),
-					), 
-				);
-
-				$loop = new WP_Query( $args );
-				
-				$featured_ids = array();
-
- 				while ( $loop->have_posts() ) : $loop->the_post();
-					
-					$featured_ids[] = $post->ID;
-					
-					if ( get_field('featured_img', $post->ID) ) {
-						
-						$image = get_field('featured_img', $post->ID);
-						
-					} else {
-						
-						// For legacy images add with ACF-Crop
-						$crop = get_field('featured_image', $post->ID);
-						$image = $crop['original_image'];
-					}
-					
-				?>
-				
+				<div class="row">				
 					<div class="col-12 col-md-6 col-xl-4 news-item">
 						<div class="row">
 							<div class="col-3 col-md-12 pb-1 news-img">
-								<a href="<?php the_permalink(); ?>">
-									<?php echo wp_get_attachment_image($image['id'], 'News Image Medium', 0, array('class' => 'img-fluid w-100')); ?>
+								<a href="<?php echo get_the_permalink( $featured_1 ); ?>">
+									<?php echo wp_get_attachment_image(get_field('featured_img', $featured_1), 'News Image Medium', 0, array('class' => 'img-fluid w-100')); ?>
 								</a>
 							</div>
 							<div class="col-9 col-md-12 news-content">
 								<h4>
-									<a href="<?php the_permalink(); ?>">
-										<?php the_title(); ?>
+									<a href="<?php echo get_the_permalink( $featured_1 ); ?>">
+										<?php echo get_the_title( $featured_1 ); ?>
 									</a>
 								</h4>
-								
-								<?php the_field('featured_text', $post->ID); ?>
-								
+								<?php the_field('featured_text', $featured_1); ?>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-xl-4 news-item">
+						<div class="row">
+							<div class="col-3 col-md-12 pb-1 news-img">
+								<a href="<?php echo get_the_permalink( $featured_2 ); ?>">
+									<?php echo wp_get_attachment_image(get_field('featured_img', $featured_2), 'News Image Medium', 0, array('class' => 'img-fluid w-100')); ?>
+								</a>
+							</div>
+							<div class="col-9 col-md-12 news-content">
+								<h4>
+									<a href="<?php echo get_the_permalink( $featured_2 ); ?>">
+										<?php echo get_the_title( $featured_2 ); ?>
+									</a>
+								</h4>
+								<?php the_field('featured_text', $featured_2); ?>
 							</div>
 						</div>
 					</div> 
-					
-		 			<?php 
-		 			
-		 			endwhile; 
-		 			
-		 			wp_reset_query(); 
-		 			
-		 			?>
-	 				
 	 				<div id="news-more" class="col-12 col-xl-4 mt-2 mt-xl-0">
 	 					<div class="subhead">
 	 						<h5><?php _e('More Headlines'); ?></h5>

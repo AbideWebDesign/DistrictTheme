@@ -27,7 +27,7 @@ if ( get_field('news_post_source') == 'External' ) {
 	<div class="row news-item pb-1">
 		<div class="col-3 news-img">
 			<a href="<?php echo $link; ?>" <?php if ( get_field('news_post_source') == 'External' ): ?> target="_blank" <?php endif; ?>>
-				<?php echo wp_get_attachment_image($image['id'], 'News Image Small', 0, array('class' => 'img-fluid')); ?>	
+				<?php echo wp_get_attachment_image($image, 'News Image Small', 0, array('class' => 'img-fluid')); ?>	
 			</a>
 		</div>
 		<div class="col-7">

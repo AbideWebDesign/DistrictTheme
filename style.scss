@@ -642,7 +642,7 @@ pre code {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1140px
+        max-width: 1300px
     }
 }
 
@@ -11229,6 +11229,14 @@ small a {
 
 #mainmenu .ubermenu .ubermenu-submenu .ubermenu-target {
     line-height: 1.3em
+}
+
+#mainmenu .ubermenu .ubermenu-item-layout-image_left>.ubermenu-target-text {
+	padding-left: 0;
+}
+
+#mainmenu .ubermenu .ubermenu-item-layout-image_left>.ubermenu-image {
+	padding-bottom: .8em;
 }
 #footer-top h5 {
     text-transform: uppercase;

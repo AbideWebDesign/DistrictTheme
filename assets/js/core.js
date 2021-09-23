@@ -26,10 +26,6 @@ jQuery(function ($) {
 		e.preventDefault(); // stop form submission
 	});
   
-  	//Reponsive video embeds
-	//$("iframe").wrap('<div class="embed-responsive embed-responsive-16by9"/>');
-	//$("iframe").addClass('embed-responsive-item');
-
 	let url = location.href.replace(/\/$/, "");
 	
 	if (location.hash) {
@@ -67,10 +63,9 @@ jQuery(function ($) {
 	})
 
 	// External Link Pop-up with domains to whitelist
-/*
- 	var domains = ['csd509j.net', 'csd509j.us2', 'https://teachcorvallis.org', 'https://www.parentsquare.com'];
+ 	var domains = ['csd509j.net', 'csd509j.us2', 'https://teachcorvallis.org', 'https://www.parentsquare.com', 'corvallis-school-district.local'];
 
-	$('a[href^="http"]').on('click', function (e) {
+	$('a[href^="http"]:not(.btn-popup)').on('click', function (e) {
 		
 		var link = $(this).attr('href');
 		
@@ -86,7 +81,7 @@ jQuery(function ($) {
 		}
 				
 	});
-*/
+
 	
 });
 

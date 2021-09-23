@@ -168,7 +168,7 @@
 								</ul>
 							</div>
 							<div id="credits" class="col-lg-6 text-center text-lg-right">
-								<a href="https://abidewebdesign.com" target="_blank">Website Designed and Maintained by Abide Web Design</a>
+								<a href="https://abidewebdesign.com" target="_blank">Website Design and Maintenance by Abide Web Design</a>
 							</div>
 						</div>
 					</div>
@@ -176,21 +176,21 @@
 			</div>
 		</div>
 		<div class="modal fade" id="modalNotification" tabindex="-1" role="dialog" aria-labelledby="modalNotification" aria-hidden="true">
-			<div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+			<div class="modal-dialog" role="document">
 				<div class="modal-content">
-					<div class="modal-header">
-						<h5 class="modal-title" id="modalNotificationLable">Notice</h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							<span aria-hidden="true">&times;</span>
-						</button>
+					<div class="modal-header bg-dark py-3">
+						<div class="d-flex w-100 h-100 justify-content-center">
+							<i class="fas fa-external-link-alt fa-3x text-white"></i>
+						</div>
 					</div>
-					<div class="modal-body"><p><?php the_field('external_link_notification', 'options'); ?></p></div>
+					<div class="modal-body p-2 text-center"><h3 class="mb-0"><?php the_field('external_link_notification', 'options'); ?></h3></div>
 					<div class="modal-footer">
-						<a id="externalLink" href="#" class="btn btn-primary btn-block">Proceed</a>
+						<a id="externalLink" href="#" class="btn btn-dark btn-lg btn-block"><?php _e('Proceed','csd'); ?></a>
 					</div>
 				</div>
 			</div>
 		</div>
+		<?php get_template_part('template-parts/content', 'pop-up'); ?>
 		<?php wp_footer(); ?>
 		<div id="google_translate_element" class="d-none"></div>
 		<script type="text/javascript">

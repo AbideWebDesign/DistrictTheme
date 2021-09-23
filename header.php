@@ -75,7 +75,7 @@
 					<div class="row">
 						<div class="col-12">
 							<div id="logo" class="clearfix">
-								<a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+								<a href="<?php echo home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 							</div>
 							
 							<?php wp_nav_menu( array('theme_location' => 'header-menu-mobile' )); ?>
@@ -89,7 +89,7 @@
 					<div class="row justify-content-between">
 						<div class="col-lg-auto">
 							<div id="logo" class="clearfix">
-								<a href="<?php echo get_home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
+								<a href="<?php echo home_url(); ?>"><img class="img-fluid" src="<?php the_field('logo', 'option'); ?>" alt="<?php bloginfo('name'); ?>" /></a>
 							</div>
 						</div>
 						<div class="col-lg-auto align-self-center">

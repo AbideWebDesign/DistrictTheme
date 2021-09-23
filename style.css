@@ -206,7 +206,7 @@ a {
   background-color: rgba(0, 0, 0, 0);
 }
 
-a:hover:not(.stretched-link, .btn, .btn-quick) {
+a:hover:not(.stretched-link, .btn, .btn-quick, .plain-link) {
   color: #7e420d;
   text-decoration: underline;
 }
@@ -7040,6 +7040,28 @@ button.close {
     max-width: 800px;
   }
 }
+.modal {
+  text-align: center;
+  padding: 0 !important;
+}
+
+.modal:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+.modal-dialog .modal-content, .modal-dialog .modal-header, .modal-dialog .modal-footer {
+  border-radius: 0;
+}
+
 .tooltip {
   position: absolute;
   z-index: 1070;

@@ -1,7 +1,70 @@
 {
     "key": "group_57eaaaef41225",
-    "title": "Builder - Emergency Alerts",
+    "title": "Builder - Alerts",
     "fields": [
+        {
+            "key": "field_6143aefa2db19",
+            "label": "Alert Type",
+            "name": "alert_type",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "choices": {
+                "Default": "Default",
+                "Pop-up": "Pop-up",
+                "Both": "Both"
+            },
+            "default_value": "Default",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        },
+        {
+            "key": "field_6144d6cb6dc3f",
+            "label": "Sites",
+            "name": "sites",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "choices": {
+                "Corvallis School District": "Corvallis School District",
+                "Crescent Valley High School": "Crescent Valley High School",
+                "Corvallis High School": "Corvallis High School",
+                "Cheldelin Middle School": "Cheldelin Middle School",
+                "Linus Pauling Middle School": "Linus Pauling Middle School",
+                "Adams Elementary School": "Adams Elementary School",
+                "Garfield Elementary School": "Garfield Elementary School",
+                "Husky Elementary School": "Husky Elementary School",
+                "Jaguar Elementary School": "Jaguar Elementary School",
+                "Lincoln Elementary School": "Lincoln Elementary School",
+                "Mountain View Elementary School": "Mountain View Elementary School",
+                "Wildcat Elementary School": "Wildcat Elementary School",
+                "Franklin K-8 School": "Franklin K-8 School"
+            },
+            "allow_custom": 0,
+            "default_value": [],
+            "layout": "vertical",
+            "toggle": 1,
+            "return_format": "value",
+            "save_custom": 0
+        },
         {
             "key": "field_5b8da7eb9df30",
             "label": "Alert Color",
@@ -9,19 +72,33 @@
             "type": "select",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6143aefa2db19",
+                        "operator": "==",
+                        "value": "Default"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6143aefa2db19",
+                        "operator": "==",
+                        "value": "Both"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "choices": {
                 "C36714": "Orange",
                 "C61723": "Red"
             },
-            "default_value": [
-                "Orange"
-            ],
+            "default_value": "Orange",
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -42,6 +119,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "default_value": "Important News",
             "placeholder": "",
             "prepend": "",
@@ -61,6 +139,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "display_format": "m\/d\/Y g:i a",
             "return_format": "m\/d\/Y g:i a",
             "first_day": 1
@@ -78,6 +157,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "display_format": "m\/d\/Y g:i a",
             "return_format": "m\/d\/Y g:i a",
             "first_day": 1
@@ -95,6 +175,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "message": "",
             "default_value": 1,
             "ui": 0,
@@ -122,11 +203,12 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "choices": {
                 "Internal": "Internal",
                 "External": "External"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 1,
             "multiple": 0,
             "ui": 1,
@@ -160,12 +242,13 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "post_type": [
                 "page",
                 "attachment",
                 "news"
             ],
-            "taxonomy": [],
+            "taxonomy": "",
             "allow_null": 1,
             "allow_archives": 0,
             "multiple": 0
@@ -196,8 +279,49 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 1,
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_6143af482db1b",
+            "label": "Alert Image",
+            "name": "alert_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6143aefa2db19",
+                        "operator": "==",
+                        "value": "Pop-up"
+                    }
+                ],
+                [
+                    {
+                        "field": "field_6143aefa2db19",
+                        "operator": "==",
+                        "value": "Both"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 1,
+            "return_format": "id",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
         }
     ],
     "location": [
@@ -230,7 +354,7 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1545255859
+    "modified": 1631902279
 }

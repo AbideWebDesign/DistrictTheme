@@ -25,6 +25,8 @@ function csd_enqueue_script() {
 	wp_enqueue_script( 'popper.min.js', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', 'jquery', '', true );
 	wp_enqueue_script( 'bootstrap.min.js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', 'jquery', '', true );
 	wp_enqueue_script( 'core.js', get_template_directory_uri() . '/assets/js/core.js', '', $theme->version, true );
+	wp_enqueue_script( 'cookies.js', 'https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js', '', $theme->version, true );
+
 	
 	if ( is_page_template( 'page-calendar.php' ) || is_singular( 'tribe_events' ) || is_singular( 'news' ) || is_singular('tribe_venue') ) {
 		wp_enqueue_script( 'addthis_widget.js', '//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-56c3954e3471722a' );				
@@ -757,6 +759,7 @@ function cptui_register_district_taxes_efriday_category() {
 add_action( 'init', 'cptui_register_district_taxes_efriday_category' );
 
 
+// Yoast SEO
 add_filter( 'acf/rest_api/field_settings/show_in_rest', '__return_true' );
 
 add_filter( 'wpseo_enable_notification_post_trash', '__return_false' );
@@ -767,8 +770,10 @@ add_filter( 'wpseo_enable_notification_term_delete', '__return_false' );
 
 add_filter( 'wpseo_enable_notification_term_slug_change', '__return_false' );
 
+// SearchWP
 // Add search weight to more recently published entries in SearchWP.
-add_filter( 'searchwp\query\mods', function( $mods ) {
+function csd_searchwp_mods( $mods ) {
+	
 	global $wpdb;
 
 	$mod = new \SearchWP\Mod();
@@ -791,4 +796,21 @@ add_filter( 'searchwp\query\mods', function( $mods ) {
 	$mods[] = $mod;
 
 	return $mods;
-} );
+
+}
+
+add_filter( 'searchwp\query\mods', 'csd_searchwp_mods' );
+
+add_filter('acf/rest_api/emergency-alert/get_items', function( $data, $request ) {
+
+  	foreach ( $data->data as $key=>$d ) {
+
+		$data->data[$key]['acf']['alert_title'] = get_the_title( $d['id'] );
+	
+		$data->data[$key]['acf']['alert_image_url'] = wp_get_attachment_image_url( $d['acf']['alert_image'], 'News Image Medium', false );
+	  	
+ 	}
+
+  return $data;
+  
+}, 10, 2 );

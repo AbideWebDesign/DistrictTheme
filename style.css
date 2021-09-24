@@ -2101,23 +2101,23 @@ select.form-control:focus::-ms-value,
 }
 
 .col-form-label {
-  padding-top: calc(.375rem + 1px);
-  padding-bottom: calc(.375rem + 1px);
+  padding-top: calc(0.375rem + 1px);
+  padding-bottom: calc(0.375rem + 1px);
   margin-bottom: 0;
   font-size: inherit;
   line-height: 1.675;
 }
 
 .col-form-label-lg {
-  padding-top: calc(.5rem + 1px);
-  padding-bottom: calc(.5rem + 1px);
+  padding-top: calc(0.5rem + 1px);
+  padding-bottom: calc(0.5rem + 1px);
   font-size: 1.4rem;
   line-height: 1.5;
 }
 
 .col-form-label-sm {
-  padding-top: calc(.25rem + 1px);
-  padding-bottom: calc(.25rem + 1px);
+  padding-top: calc(0.25rem + 1px);
+  padding-bottom: calc(0.25rem + 1px);
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -5908,10 +5908,10 @@ input[type=button].btn-block,
   float: right;
 }
 #collapse-list [data-toggle=collapse] .fa:after {
-  content: "";
+  content: "\f146";
 }
 #collapse-list [data-toggle=collapse].collapsed .fa:after {
-  content: "";
+  content: "\f0fe";
 }
 
 .card {
@@ -5975,7 +5975,7 @@ input[type=button].btn-block,
 }
 
 .card-header:first-child {
-  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 }
 
 .card-header + .list-group .list-group-item:first-child {
@@ -5989,7 +5989,7 @@ input[type=button].btn-block,
 }
 
 .card-footer:last-child {
-  border-radius: 0 0 calc(.25rem - 1px) calc(.25rem - 1px);
+  border-radius: 0 0 calc(0.25rem - 1px) calc(0.25rem - 1px);
 }
 
 .card-header-tabs {
@@ -6015,19 +6015,19 @@ input[type=button].btn-block,
 
 .card-img {
   width: 100%;
-  border-radius: calc(.25rem - 1px);
+  border-radius: calc(0.25rem - 1px);
 }
 
 .card-img-top {
   width: 100%;
-  border-top-left-radius: calc(.25rem - 1px);
-  border-top-right-radius: calc(.25rem - 1px);
+  border-top-left-radius: calc(0.25rem - 1px);
+  border-top-right-radius: calc(0.25rem - 1px);
 }
 
 .card-img-bottom {
   width: 100%;
-  border-bottom-right-radius: calc(.25rem - 1px);
-  border-bottom-left-radius: calc(.25rem - 1px);
+  border-bottom-right-radius: calc(0.25rem - 1px);
+  border-bottom-left-radius: calc(0.25rem - 1px);
 }
 
 .card-deck {
@@ -6927,12 +6927,12 @@ button.close {
 .modal-dialog-centered {
   display: flex;
   align-items: center;
-  min-height: calc(100% - (.5rem * 2));
+  min-height: calc(100% - 1rem);
 }
 
 .modal-dialog-centered::before {
   display: block;
-  height: calc(100vh - (.5rem * 2));
+  height: calc(100vh - 1rem);
   content: "";
 }
 
@@ -7024,11 +7024,11 @@ button.close {
   }
 
   .modal-dialog-centered {
-    min-height: calc(100% - (1.75rem * 2));
+    min-height: calc(100% - 3.5rem);
   }
 
   .modal-dialog-centered::before {
-    height: calc(100vh - (1.75rem * 2));
+    height: calc(100vh - 3.5rem);
   }
 
   .modal-sm {
@@ -7238,7 +7238,7 @@ button.close {
 
 .bs-popover-top .arrow,
 .bs-popover-auto[x-placement^=top] .arrow {
-  bottom: calc((.5rem + 1px) * -1);
+  bottom: calc((0.5rem + 1px) * -1);
 }
 
 .bs-popover-top .arrow::before,
@@ -7267,7 +7267,7 @@ button.close {
 
 .bs-popover-right .arrow,
 .bs-popover-auto[x-placement^=right] .arrow {
-  left: calc((.5rem + 1px) * -1);
+  left: calc((0.5rem + 1px) * -1);
   width: 0.5rem;
   height: 1rem;
   margin: 0.3rem 0;
@@ -7299,7 +7299,7 @@ button.close {
 
 .bs-popover-bottom .arrow,
 .bs-popover-auto[x-placement^=bottom] .arrow {
-  top: calc((.5rem + 1px) * -1);
+  top: calc((0.5rem + 1px) * -1);
 }
 
 .bs-popover-bottom .arrow::before,
@@ -7340,7 +7340,7 @@ button.close {
 
 .bs-popover-left .arrow,
 .bs-popover-auto[x-placement^=left] .arrow {
-  right: calc((.5rem + 1px) * -1);
+  right: calc((0.5rem + 1px) * -1);
   width: 0.5rem;
   height: 1rem;
   margin: 0.3rem 0;
@@ -7372,8 +7372,8 @@ button.close {
   color: #333;
   background-color: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  border-top-left-radius: calc(.3rem - 1px);
-  border-top-right-radius: calc(.3rem - 1px);
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
 }
 
 .popover-header:empty {
@@ -12308,7 +12308,7 @@ small a {
 }
 
 #cta-text ul li:before {
-  content: "";
+  content: "\e080";
   font-family: "Glyphicons Halflings";
   font-size: 9px;
   float: left;
@@ -12474,7 +12474,7 @@ small a {
 }
 
 .calendar-dropdown input[type=checkbox] + .label-text:before {
-  content: "";
+  content: "\f096";
   font-family: "FontAwesome";
   speak: none;
   font-style: normal;
@@ -12489,7 +12489,7 @@ small a {
 }
 
 .calendar-dropdown input[type=checkbox]:checked + .label-text:before {
-  content: "";
+  content: "\f14a";
   color: #2980b9;
   animation: effect 250ms ease-in;
 }
@@ -12499,7 +12499,7 @@ small a {
 }
 
 .calendar-dropdown input[type=checkbox]:disabled + .label-text:before {
-  content: "";
+  content: "\f0c8";
   color: #ccc;
 }
 
@@ -12708,7 +12708,7 @@ body ul.page-numbers span.current {
 
 .page-content ul li:before {
   font-family: "Font Awesome 5 Free";
-  content: "";
+  content: "\f105";
   margin: 0 10px 0 -15px;
   font-size: 13px;
   font-weight: 600;
@@ -13693,9 +13693,64 @@ body ul.page-numbers span.current {
   display: none;
 }
 
-.ginput_complex label,
+.gform_wrapper .gform_fields li.gfield:first-child .gfield_label {
+  margin-top: 0;
+}
+.gform_wrapper input[type=text], .gform_wrapper input[type=email], .gform_wrapper input[type=tel] {
+  height: 64px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-size: 20px;
+  border: 1px solid #d2d3d4;
+  padding: 0 20px;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  cursor: auto;
+}
+.gform_wrapper input[type=text]:focus, .gform_wrapper input[type=email]:focus, .gform_wrapper input[type=tel]:focus {
+  border: 1px solid #004a8d;
+  border-bottom-width: 3px;
+  outline: none;
+  box-shadow: none;
+}
+.gform_wrapper input[type=radio], .gform_wrapper input[type=checkbox] {
+  height: 24px;
+  width: 24px;
+  border-color: #004a8d;
+  background-color: #fff;
+  margin-left: 0.5em;
+}
+.gform_wrapper input[type=radio]:checked, .gform_wrapper input[type=checkbox]:checked {
+  border-width: 3px;
+  background-color: #004a8d;
+}
+.gform_wrapper .gfield_description {
+  font-size: 15px;
+  margin-bottom: 0.75em;
+}
+.gform_wrapper .gchoice {
+  display: flex;
+}
+
 .gfield_label {
-  display: none;
+  font-size: 18px;
+  margin-top: 45px;
+  font-weight: 500;
+  margin-bottom: 9px;
+}
+
+.ginput_complex {
+  padding-top: 0;
+}
+.ginput_complex input[type=text] {
+  margin-bottom: 0;
+}
+.ginput_complex label {
+  color: #333;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 
 .acf-form .acf-fields > .acf-field {

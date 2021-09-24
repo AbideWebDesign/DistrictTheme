@@ -13048,10 +13048,71 @@ body ul.page-numbers span.current {
 .gform_wrapper ul li:before {
     display: none
 }
-
-.ginput_complex label,
+.gform_wrapper {
+	.gform_fields {
+		li.gfield:first-child {
+			.gfield_label {
+				margin-top: 0;
+			}
+		}
+	}
+	input[type=text], input[type=email], input[type=tel] {
+		height: 64px;
+	    width: 100%;
+	    box-sizing: border-box;
+	    border-radius: 3px;
+	    font-size: 20px;
+	    border: 1px solid #d2d3d4;
+	    padding: 0 20px;
+	    -webkit-appearance: textfield;
+	    -moz-appearance: textfield;
+	    appearance: textfield;
+	    cursor: auto;
+	    
+	    &:focus {
+		    border: 1px solid #004a8d;
+			border-bottom-width: 3px;
+			outline: none;
+			box-shadow: none;
+	    }
+	}
+	input[type=radio], input[type=checkbox] {
+		height: 24px;
+	    width: 24px;
+	    border-color: #004a8d;
+	    background-color: #fff;
+	    margin-left: .5em;
+	}
+	input[type=radio]:checked, input[type=checkbox]:checked {
+		border-width: 3px;
+		background-color: #004a8d;
+	}
+	.gfield_description {
+		font-size: 15px;
+		margin-bottom: .75em;
+	}
+	.gchoice {
+		display: flex;
+	}
+}
 .gfield_label {
-    display: none
+	font-size: 18px;
+	margin-top: 45px;
+	font-weight: 500;
+	margin-bottom: 9px;
+}
+
+.ginput_complex  {
+	padding-top: 0;
+	
+	input[type=text] {
+		margin-bottom: 0;
+	}
+	label {
+		color: #333;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
 }
 
 .acf-form .acf-fields>.acf-field {

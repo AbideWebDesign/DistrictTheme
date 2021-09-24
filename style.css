@@ -13701,7 +13701,8 @@ body ul.page-numbers span.current {
   width: 100%;
   box-sizing: border-box;
   border-radius: 3px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
   border: 1px solid #d2d3d4;
   padding: 0 20px;
   -webkit-appearance: textfield;
@@ -13710,6 +13711,32 @@ body ul.page-numbers span.current {
   cursor: auto;
 }
 .gform_wrapper input[type=text]:focus, .gform_wrapper input[type=email]:focus, .gform_wrapper input[type=tel]:focus {
+  border: 1px solid #004a8d;
+  border-bottom-width: 3px;
+  outline: none;
+  box-shadow: none;
+}
+.gform_wrapper select {
+  border: 1px solid #d2d3d4;
+  background-color: white;
+  height: 64px;
+  border-radius: 3px;
+  outline: 0;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  color: #333;
+  padding: 0 18px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #fff url(/wp-content/themes/corvallis-school-district/assets/images/download.svg) no-repeat calc(100% - 18px) center;
+  margin: 0;
+  width: calc(100% - 38px);
+  line-height: 2.5rem;
+  min-width: 90px;
+}
+.gform_wrapper select:focus {
   border: 1px solid #004a8d;
   border-bottom-width: 3px;
   outline: none;
@@ -13736,7 +13763,7 @@ body ul.page-numbers span.current {
 
 .gfield_label {
   font-size: 18px;
-  margin-top: 45px;
+  margin-top: 30px;
   font-weight: 500;
   margin-bottom: 9px;
 }

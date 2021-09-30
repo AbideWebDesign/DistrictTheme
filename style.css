@@ -14276,3 +14276,12 @@ body ul.page-numbers span.current {
 .quick-link-wrap {
   min-height: 300px;
 }
+
+#modalPopup .modal-dialog {
+  min-width: 400px;
+}
+@media (max-width: 767px) {
+  #modalPopup .modal-dialog {
+    min-width: 250px;
+  }
+}

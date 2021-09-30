@@ -1,12 +1,4 @@
-<?php 
-require WP_CONTENT_DIR . '/plugins/plugin-update-checker-master/plugin-update-checker.php';
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/csd509j/DistrictTheme',
-	__FILE__,
-	'DistrictTheme'
-);
-
-$myUpdateChecker->setBranch('master'); 
+<?php
 
 function csd_enqueue_style() {
 	$theme = wp_get_theme();
@@ -147,6 +139,7 @@ add_filter('excerpt_more', 'new_excerpt_more');
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 }
+
 if( function_exists('acf_add_options_sub_page') ) {
     acf_add_options_sub_page( 'General' );
     acf_add_options_sub_page( 'Pages' );

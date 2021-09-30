@@ -1,9 +1,9 @@
 <?php
 
 // find date time now
-$tz = new DateTimeZone('America/Los_Angeles');
+$tz = new DateTimeZone( 'America/Los_Angeles' );
 $date_now = new DateTime();
-$date_now->setTimezone($tz);
+$date_now->setTimezone( $tz );
 
 // query events
 $args = array(
@@ -14,13 +14,13 @@ $args = array(
 		array(
 	        'key'			=> 'start_time',
 	        'compare'		=> '<=',
-	        'value'			=> $date_now->format('Y-m-d H:i:s'),
+	        'value'			=> $date_now->format( 'Y-m-d H:i:s' ),
 	        'type'			=> 'DATETIME'
 	    ),
 	    array(
 	        'key'			=> 'end_time',
 	        'compare'		=> '>=',
-	        'value'			=> $date_now->format('Y-m-d H:i:s'),
+	        'value'			=> $date_now->format( 'Y-m-d H:i:s' ),
 	        'type'			=> 'DATETIME'
 	    )
     ),
@@ -30,36 +30,56 @@ $args = array(
 	'meta_type'			=> 'DATE'
 );
 
-$query = new WP_Query($args);
-    if ($query->have_posts()) :
-    	while ($query->have_posts()) : $query->the_post(); ?>
+$query = new WP_Query( $args );
+ 
+    if ( $query->have_posts() ):
+ 
+    	while ( $query->have_posts() ): $query->the_post(); ?>
     		
     		<?php $sites = get_field('sites', get_the_id()); ?>
     		
-    		<?php if ( in_array( get_bloginfo( 'name' ), $sites ) ): ?>
+    		<?php if ( in_array( get_bloginfo( 'name' ), $sites ) && get_field('alert_type', get_the_id()) != 'Pop-up' ): ?>
 				
 				<div class="alert-emergency-body" style="background-color: #<?php the_field('alert_color', get_the_ID()); ?>">
+
 					<div class="container">
+
 						<div class="row">
+
 							<div class="col-12">
+
 								<h4><?php the_field('alert_sub_title', get_the_ID()); ?></h4>	
+
 								<h3>
+
 									<?php if ( get_field('link_to_post', get_the_id()) ): ?>
+
 										<a class="plain-link" href="<?php the_field('link', get_the_id()); ?>">
+
 									<?php endif; ?>
 									
 									<?php the_title(); ?>
 									
 									<?php if ( get_field('link_to_post', get_the_id()) ): ?>
+
 										</a>
+
 									<?php endif; ?>
+
 								</h3>
+
 							</div>
+
 						</div>				
+
 					</div>
+
 				</div>
 				
 			<?php endif; ?>
+
 	<?php endwhile; ?>
+
 <?php endif; ?>
+
 <?php wp_reset_postdata(); ?>

@@ -96,7 +96,7 @@
             "show_in_rest": 0,
             "choices": {
                 "all_pages": "All Pages",
-                "select_page": "Select Page"
+                "select_page": "Select Pages"
             },
             "default_value": "all",
             "allow_null": 0,
@@ -428,5 +428,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1633035337
+    "modified": 1633040086
 }

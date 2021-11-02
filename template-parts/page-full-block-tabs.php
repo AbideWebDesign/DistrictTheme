@@ -87,7 +87,7 @@
 								
 									<h2 class="d-lg-none mt-2"><?php the_sub_field('tab_label'); ?></h2>								
 										
-									<?php if ( get_sub_field('tab_image') ): ?>
+									<?php if ( get_sub_field('tab_image') && get_sub_field('tab_type') == 'Default' ): ?>
 									
 										<?php $img_id = get_sub_field('tab_image'); ?>
 									

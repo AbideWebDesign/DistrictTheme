@@ -11597,6 +11597,10 @@ small a {
 	#sidebar-link-wrap {
 		.sidebar-link {
 			padding: 1em;
+			
+			.sp {
+				margin-top: .4em;
+			}
 		}
 		.sidebar-link:not(:last-child) {
 			border-bottom: 1px solid #ccc;

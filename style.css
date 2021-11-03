@@ -12210,6 +12210,9 @@ small a {
 .full-width-with-sidebar #sidebar-link-wrap .sidebar-link {
   padding: 1em;
 }
+.full-width-with-sidebar #sidebar-link-wrap .sidebar-link .sp {
+  margin-top: 0.4em;
+}
 .full-width-with-sidebar #sidebar-link-wrap .sidebar-link:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }

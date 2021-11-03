@@ -93,28 +93,42 @@
 							<?php while ( have_rows( 'sidebar_icons', 'options' ) ): the_row(); ?>
 										
 								<div class="sidebar-link">
-									
-									<a class="stretched-link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
-									
+																		
 										<div class="row">
 	
 											<?php $link = get_sub_field('sidebar_icon_link'); ?>
 											
 											<div class="col-xl-4 d-none d-xl-block">
-																							
-												<span class="fa-stack fa-2x">
 												
-													<i class="fas fa-square fa-stack-2x"></i>
+												<a class="plain-link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">											
+											
+													<span class="fa-stack fa-2x">
 													
-													<i class="fas fa-<?php the_sub_field('sidebar_icon'); ?> fa-stack-1x fa-inverse"></i>
-												
-												</span>													
+														<i class="fas fa-square fa-stack-2x"></i>
+														
+														<i class="fas fa-<?php the_sub_field('sidebar_icon'); ?> fa-stack-1x fa-inverse"></i>
+													
+													</span>		
+													
+												</a>											
 												
 											</div>
 											
 											<div class="col-xl-8 align-self-center">
 												
-												<div class="text-body font-weight-bold"><?php echo $link['title']; ?></div>
+												<div class="text-body font-weight-bold">
+													
+													<a class="plain-link text-body" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
+													
+												</div>
+												
+												<?php if ( get_sub_field('sidebar_icon_spanish_version') ): ?>
+												
+													<?php $sp_link = get_sub_field('sidebar_icon_spanish_link'); ?>
+													
+													<div class="sp text-xs"><a class="plain-link font-weight-bold" href="<?php echo $sp_link; ?>" target="_blank"><?php _e('Spanish'); ?> <i class="fa fa-external-link-alt"></i></a></div>
+
+												<?php endif; ?>
 												
 											</div>
 											

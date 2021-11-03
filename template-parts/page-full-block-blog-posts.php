@@ -1,6 +1,9 @@
-<?php $tax = get_sub_field('post_list_category'); ?>
 <?php 
+	
+	$tax = get_sub_field('post_list_category'); 
+
 	global $post;
+
 	$args = array( 
 		'post_type' => 'news', 
 		'posts_per_page' => 3, 
@@ -12,56 +15,101 @@
 			),
 		), 
 	);
-	$query = new WP_Query($args);
+
+	$query = new WP_Query( $args );
+
 ?>
+
 <div class="container">
+
 	<div class="row">
-		<div class="col-12 mt-2">
-			<h2 class="headline"><?php the_sub_field('post_list_heading'); ?></h2>
+
+		<div class="col-12">
+													
+			<h2 class="headline"><?php _e('Latest News', 'csd'); ?></h2>
+						
 		</div>
+
 	</div>
+
 </div>
-<div class="py-1">
+
+<div class="pb-3">
+
 	<div class="container">
-		<div id="posts-block">
+
+		<div id="posts-block" class="bg-white shadow-sm rounded p-1">
+
 			<div class="row">
+
 				<?php while( $query->have_posts() ): $query->the_post(); ?>
-					<?php 
-						
-						if ( get_field('featured_img') ) {
-							
-							$image = get_field('featured_img');
-							
-						} else {
-							
-							// For legacy images added with ACF-Crop
-							$crop = get_field('featured_image');
-							$image = $crop['original_image'];
-							
-						}
-						
-					?>
+
 					<div class="col-lg-4 mb-1 mb-lg-0">
-						<div class="row no-gutters">
-							<div class="col-12 col-sm-4 col-lg-12">
-								<div class="posts-image">
-									<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image($image['id'], 'News Image Medium', false, array('class' => 'img-fluid img-block')); ?></a>
-								</div>
-							</div>
-							<div class="col-12 col-sm-8 col-lg-12">
-								<div class="posts-content h-100 d-flex align-items-center pl-sm-2">
-									<div class="posts-content-heading">
-										<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-										<div class="small"><?php the_date(); ?></div>
+
+						<div class="row no-gutters h-100">
+
+							<div class="col-12 h-100">
+								
+								<div class="bg-gray h-100">
+																													
+									<div class="row h-100">
+									
+										<?php if ( get_field('featured_img') ): ?>
+											
+											<?php $image = get_field('featured_img'); ?>
+											
+											<div class="col-12 col-sm-4 col-lg-12">
+				
+												<div class="posts-image border">
+				
+													<a href="<?php the_permalink(); ?>"><?php echo wp_get_attachment_image( $image, 'News Image Medium', false, array( 'class' => 'img-fluid img-block' ) ); ?></a>
+				
+												</div>
+				
+											</div>
+											
+										<?php endif; ?>
+			
+										<div class="col-12 col-sm-8 col-lg-12">
+											
+											<a href="<?php the_permalink(); ?>" class="stretched-link">
+												
+												<div class="posts-content h-100 d-flex">
+				
+													<div class="posts-content-heading">
+				
+														<?php the_title(); ?>
+				
+														<div class="small"><?php the_date(); ?></div>
+				
+													</div>
+				
+													<?php the_excerpt(); ?>
+				
+												</div>
+												
+											</a>
+			
+										</div>
+										
 									</div>
-									<?php the_excerpt(); ?>
+																													
 								</div>
+								
 							</div>
+
 						</div>
+
 					</div>
+
 				<?php endwhile; ?>
+
 				<?php wp_reset_postdata(); ?>
+
 			</div>
+
 		</div>
+
 	</div>
+
 </div>

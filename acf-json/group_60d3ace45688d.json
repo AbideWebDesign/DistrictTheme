@@ -3,6 +3,23 @@
     "title": "Options - Quick Links",
     "fields": [
         {
+            "key": "field_6181a0190285e",
+            "label": "Home Page",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "placement": "left",
+            "endpoint": 0
+        },
+        {
             "key": "field_60d3acfd33688",
             "label": "Quick Link Icon 1",
             "name": "quick_link_icon_1",
@@ -165,6 +182,153 @@
             },
             "show_in_rest": 0,
             "return_format": "array"
+        },
+        {
+            "key": "field_6181a02b0285f",
+            "label": "Full Width Page",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_6181a04102860",
+            "label": "Sidebar Icons",
+            "name": "sidebar_icons",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "collapsed": "field_6181a09402864",
+            "min": 0,
+            "max": 0,
+            "layout": "block",
+            "button_label": "Add Icon",
+            "sub_fields": [
+                {
+                    "key": "field_6181a05202861",
+                    "label": "Icon",
+                    "name": "sidebar_icon",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "fa-",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6181a06202862",
+                    "label": "Icon Color",
+                    "name": "sidebar_icon_color",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "choices": {
+                        "text-primary": "Orange",
+                        "text-secondary": "Gray",
+                        "text-dark": "Dark",
+                        "text-blue": "Blue"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_6181a09402864",
+                    "label": "Link",
+                    "name": "sidebar_icon_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_6181a0ac02865",
+                    "label": "Spanish Version",
+                    "name": "sidebar_icon_spanish_version",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_6181a10202866",
+                    "label": "Spanish Link",
+                    "name": "sidebar_icon_spanish_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6181a0ac02865",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "return_format": "url"
+                }
+            ]
         }
     ],
     "location": [
@@ -184,5 +348,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1625608093
+    "modified": 1635895758
 }

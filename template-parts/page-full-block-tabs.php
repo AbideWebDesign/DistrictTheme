@@ -4,9 +4,10 @@
 		
 		<div class="row">
 		
-			<div class="col-12 mt-2">
+			<div class="col-12">
 			
 				<h2 class="headline"><?php the_sub_field('tab_section_heading'); ?></h2>
+			
 			</div>
 			
 		</div>
@@ -15,11 +16,11 @@
 	
 </div>
 
-<div id="tabs-block" class="pb-2">
+<div id="tabs-block" class="pb-3">
 	
 	<div class="container">
 		
-		<div id="tabs-list-header" class="mb-1">
+		<div id="tabs-list-header" class="mb-1 shadow-sm rounded">
 			
 			<div class="tab-header-color">
 			
@@ -69,7 +70,7 @@
 	
 	<div class="container">
 		
-		<div class="full-width-block">
+		<div class="full-width-block shadow-sm rounded">
 			
 			<div class="row">
 				
@@ -159,9 +160,9 @@
 											
 												<?php while ( have_rows('buttons') ): the_row(); ?>
 											
-													<div class="col-md-6 col-lg-4 mb-1 mb-lg-2">
+													<div class="col-md-6 col-lg-6 mb-1 mb-lg-2">
 											
-														<div class="button-group">
+														<div class="bg-gray h-100 p-2 text-center">
 											
 															<div class="button-group-title">
 											

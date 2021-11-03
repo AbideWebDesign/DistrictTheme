@@ -12,11 +12,11 @@
 	
 					<div class="card-header" id="collapse-heading-<?php echo $counter; ?>">
 
-						<button class="btn btn-link collapsed d-flex justify-content-between align-content-center" type="button" data-toggle="collapse" data-target="#collapse-<?php echo $counter; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $counter; ?>"><?php the_sub_field('collapsible_label'); ?><i class="fa" aria-hidden="true"></i></button>
+						<button class="btn btn-link btn-lg collapsed d-flex justify-content-between align-content-center" type="button" data-toggle="collapse" data-target="#collapse-<?php echo $counter; ?>" aria-expanded="false" aria-controls="collapse-<?php echo $counter; ?>"><?php the_sub_field('collapsible_label'); ?><i class="fa" aria-hidden="true"></i></button>
 														
 					</div>
 	
-					<div id="collapse-<?php echo $counter; ?>" class="collapse" aria-labelledby="collapseheading-<?php echo $counter; ?>" data-parent="#collapse">
+					<div id="collapse-<?php echo $counter; ?>" class="collapse" aria-labelledby="collapseheading-<?php echo $counter; ?>">
 	
 						<div class="card-body">
 	

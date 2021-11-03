@@ -14,6 +14,12 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+$primary: #004D89;
+$orange: #c36714;
+$green: #8a9140;
+$blue-light: #5d8bac;
+$blue-dark: #323f48;
+
 :root {
     --blue: #004a8d;
     --indigo: #6610f2;
@@ -7591,7 +7597,7 @@ button.bg-dark:focus {
 }
 
 .border-primary {
-    border-color: #c36714 !important
+    border-color: $primary !important
 }
 
 .border-secondary {
@@ -7624,6 +7630,10 @@ button.bg-dark:focus {
 
 .border-white {
     border-color: #fff !important
+}
+
+.border-top-lg {
+	border-top-width: 4px !important;
 }
 
 .rounded {
@@ -8579,6 +8589,9 @@ button.bg-dark:focus {
 .shadow-sm {
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important
 }
+
+.shadow-bottom-sm {
+ box-shadow: 0px 15px 10px -15px #111;  }
 
 .shadow {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important
@@ -9990,6 +10003,9 @@ button.bg-dark:focus {
 	font-size: 15px;
 	line-height: 22px;
 }
+.text-lg {
+	font-size: 20px;
+}
 .list .text-sm:not(:last-child) {
 	margin-bottom: .7em;
 }
@@ -10978,7 +10994,8 @@ small a {
 }
 
 .full-width-container {
-    background-color: #f2f2f2
+    background-color: #eeeeee;
+    border-bottom: 2px solid #ddd;
 }
 
 #search-bar {
@@ -11379,12 +11396,17 @@ small a {
 #full-width-nav a:hover,
 #full-width-nav a:active,
 #full-width-nav a:focus {
-    text-decoration: none
+    text-decoration: none;
+    color: darken(#fff, 10);
 }
 
 #full-width-nav li {
     padding-left: 0px;
-    padding-right: 30px
+    padding-right: 30px;
+    
+    a {
+	   	font-weight: bold;
+    }
 }
 
 #full-width-nav .current_page_item:after {
@@ -11443,9 +11465,6 @@ small a {
 #full-width-nav #subpage-nav-mobile .current_page_item:after {
 	display: none;
 }
-.full-width-container a {
-    font-weight: bold
-}
 
 .full-width-container .btn,
 .full-width-container .gform_button,
@@ -11470,6 +11489,74 @@ small a {
     font-size: 36px
 }
 
+.full-width-container {
+	a:not(.d-flex, .plain-link, .btn), p span {
+		font-weight: normal !important;
+	}
+	a:not(.plain-link, .btn) {
+		color: $primary;
+		border-bottom: 1px solid $blue-light;
+		
+		strong {
+			font-weight: normal !important;
+		}
+		&:hover {
+			text-decoration: none;
+			color: $primary;
+			border-color: $primary;
+		}
+	}
+	h2:not(.headline-plain, .headline) {
+		border-bottom: 2px solid #ccc;
+		padding-bottom: .5em;
+		margin-bottom: 1em;
+	}
+	h3 {
+		font-weight: 500;
+		font-size: 22px;
+		span {
+			font-weight: 500 !important;
+		}
+		a {
+			color: $primary;
+			border-bottom: none !important;
+			font-weight: bold !important;
+						
+			&:after {
+				display: inline-block;
+				font-style: normal;
+				font-variant: normal;
+				text-rendering: auto;
+				-webkit-font-smoothing: antialiased;
+				font-family: "fontawesome"; 
+				font-weight: 700; 
+				font-size: .65em;
+				content: "\f054";
+				margin-left: .5em;
+			}
+			&:hover {
+				color: darken($primary, 20) !important;
+			}
+		}
+	}
+	h4 {
+		font-weight: bold;
+	}
+	.accordion {
+		h2 {
+			font-size: 24px;
+		}
+		p {
+			em {
+				color: lighten(#333, 50);
+			}
+		}
+		.btn {
+			padding: 20px 28px;
+		}
+	}
+}
+
 .full-width-container .headline:after,
 .full-width-container .headline:before {
     content: "";
@@ -11482,6 +11569,39 @@ small a {
 
 .full-width-container .headline:after {
     margin: 0 -55% 0 2%
+}
+.full-width-with-sidebar {
+	.container {
+		.container {
+			padding: 0;
+		}
+	}
+	.full-width-block {
+		padding: 2em;
+	}
+	#tabs-block #tabs-list-header {
+		padding: 0;
+	}
+	#tabs-block .tab-header-color .nav-tabs > li > a.active, #tabs-block .tab-header-color .nav-tabs > li > a.active:hover, #tabs-block .tab-header-color .nav-tabs > li > a.active:focus {
+		background-color: transparent;
+	}
+	#tabs-block .tab-header-color .nav-tabs > li > a.active, #tabs-block .tab-header-color .nav-tabs > li > a.active:hover, #tabs-block .tab-header-color .nav-tabs > li > a.active:focus {
+		color: #333;
+	}
+	#tabs-block .tab-header-color .nav-tabs > li > a {
+		color: #777;
+	}
+	#tabs-block .nav-tabs li a {
+		padding: 1.5em 1em;
+	}
+	#sidebar-link-wrap {
+		.sidebar-link {
+			padding: 1em;
+		}
+		.sidebar-link:not(:last-child) {
+			border-bottom: 1px solid #ccc;
+		}	
+	}
 }
 
 .carousel-wrap {
@@ -12647,9 +12767,6 @@ body ul.page-numbers span.current {
     margin-bottom: 1.5em
 }
 
-#tabs-block .button-group-content .btn,
-#tabs-block .button-group-content .gform_button,
-#tabs-block .button-group-content #loginform #wp-submit,
 #loginform #tabs-block .button-group-content #wp-submit,
 #tabs-block .button-group-content .acf-form .acf-button,
 .acf-form #tabs-block .button-group-content .acf-button {
@@ -12741,7 +12858,7 @@ body ul.page-numbers span.current {
 }
 
 .posts-content {
-    padding: 2em
+    padding: 1em
 }
 
 .posts-content a {
@@ -12762,7 +12879,6 @@ body ul.page-numbers span.current {
 }
 
 #posts-block .posts-content {
-    background-color: white
 }
 
 #cta-block ul {

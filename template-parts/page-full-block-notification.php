@@ -10,7 +10,11 @@
 
 					<div class="mb-1 mb-md-0"><i class="fa fa-bullhorn text-white mr-1"></i> <?php the_sub_field('notification_text'); ?></div>
 
-					<div class="ml-md-auto"><a class="btn btn-light" href="<?php the_sub_field('notification_button_link'); ?>"><?php the_sub_field('notification_button_label'); ?></a></div>
+					<?php if ( get_sub_field('notification_button_link') ): ?>
+					
+						<div class="ml-md-auto"><a class="btn btn-light" href="<?php the_sub_field('notification_button_link'); ?>"><?php the_sub_field('notification_button_label'); ?></a></div>
+						
+					<?php endif; ?>
 
 				</div>
 

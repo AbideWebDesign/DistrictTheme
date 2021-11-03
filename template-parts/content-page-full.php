@@ -14,6 +14,20 @@
 		
 		<?php if ( get_field('include_sidebar_links') ): ?>
 		
+			<?php if ( have_rows('page_content_blocks') ): ?>
+				
+				<?php while ( have_rows('page_content_blocks') ): the_row(); ?>
+				
+					<?php if ( get_row_layout() == "notification" ): ?>
+	
+						<?php get_template_part( 'template-parts/page-full-block', 'notification' ); ?>
+						
+					<?php endif; ?>
+	
+				<?php endwhile; ?>
+				
+			<?php endif; ?>
+		
 			<div class="container">
 				
 				<div class="row">
@@ -60,7 +74,7 @@
 					
 				}		
 				
-				if ( get_row_layout() == "notification" ) {
+				if ( get_row_layout() == "notification" && ! get_field('include_sidebar_links') ) {
 
 					get_template_part( 'template-parts/page-full-block', 'notification' );
 					
@@ -84,7 +98,7 @@
 				
 				<div class="col-xl-3">
 					
-					<h2 class="text-body headline-plain mt-xl-2">See also</h2>
+					<h2 class="text-body headline-plain mt-xl-2"><?php _e('See also', 'csd'); ?></h2>
 					
 					<div class="pb-3">
 						

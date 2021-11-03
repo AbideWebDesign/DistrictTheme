@@ -1,4 +1,4 @@
-				<section id="footer-top" class="bg-gray py-2">
+				<section id="footer-top" class="<?php echo ( is_page_template( 'page-full-width.php' ) ? 'bg-white' : 'bg-gray' ); ?> py-2">
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6 col-lg-3">

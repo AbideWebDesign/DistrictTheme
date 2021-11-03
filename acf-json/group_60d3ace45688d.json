@@ -205,7 +205,7 @@
             "label": "Sidebar Icons",
             "name": "sidebar_icons",
             "type": "repeater",
-            "instructions": "",
+            "instructions": "Find icons here: https:\/\/fontawesome.com\/v5\/cheatsheet",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -225,7 +225,7 @@
                     "label": "Icon",
                     "name": "sidebar_icon",
                     "type": "text",
-                    "instructions": "",
+                    "instructions": "https:\/\/fontawesome.com\/v5\/cheatsheet",
                     "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -239,34 +239,6 @@
                     "prepend": "fa-",
                     "append": "",
                     "maxlength": ""
-                },
-                {
-                    "key": "field_6181a06202862",
-                    "label": "Icon Color",
-                    "name": "sidebar_icon_color",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_rest": 0,
-                    "choices": {
-                        "text-primary": "Orange",
-                        "text-secondary": "Gray",
-                        "text-dark": "Dark",
-                        "text-blue": "Blue"
-                    },
-                    "default_value": false,
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 1,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
                 },
                 {
                     "key": "field_6181a09402864",
@@ -348,5 +320,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1635965394
+    "modified": 1635969800
 }

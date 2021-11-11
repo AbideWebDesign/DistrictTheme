@@ -414,20 +414,8 @@
                                             },
                                             {
                                                 "field": "field_5be4772b0b4eb",
-                                                "operator": "==",
-                                                "value": "Default"
-                                            }
-                                        ],
-                                        [
-                                            {
-                                                "field": "field_5be4772b0b80f",
-                                                "operator": "==",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "field": "field_5be4772b0b4eb",
-                                                "operator": "==",
-                                                "value": "List"
+                                                "operator": "!=",
+                                                "value": "Link"
                                             }
                                         ]
                                     ],
@@ -436,6 +424,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "show_in_rest": 0,
                                     "default_value": "",
                                     "placeholder": "",
                                     "prepend": "",
@@ -458,20 +447,8 @@
                                             },
                                             {
                                                 "field": "field_5be4772b0b4eb",
-                                                "operator": "==",
-                                                "value": "Default"
-                                            }
-                                        ],
-                                        [
-                                            {
-                                                "field": "field_5be4772b0b80f",
-                                                "operator": "==",
-                                                "value": "1"
-                                            },
-                                            {
-                                                "field": "field_5be4772b0b4eb",
-                                                "operator": "==",
-                                                "value": "List"
+                                                "operator": "!=",
+                                                "value": "Link"
                                             }
                                         ]
                                     ],
@@ -480,6 +457,7 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "show_in_rest": 0,
                                     "collapsed": "field_5be4772b88aa6",
                                     "min": 0,
                                     "max": 0,
@@ -1568,5 +1546,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1635875256
+    "modified": 1636588881
 }

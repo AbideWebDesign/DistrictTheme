@@ -16,7 +16,7 @@
 	
 </div>
 
-<div id="tabs-block" class="pb-3">
+<div id="tabs-block" class="pb-2">
 	
 	<div class="container">
 		

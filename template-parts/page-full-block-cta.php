@@ -10,7 +10,7 @@
 
 				<div id="cta-block-heading" class="<?php echo ( get_sub_field('call_to_action_form_type') == 'Horizontal' ? 'col-md-4 text-right' : 'col-12 mb-1' ); ?>">
 
-					<h2 class="mb-0"><?php the_sub_field('call_to_action_heading'); ?></h2>
+					<h2 class="headline-plain mb-0"><?php the_sub_field('call_to_action_heading'); ?></h2>
 
 				</div>
 
@@ -26,7 +26,7 @@
 
 				<div id="cta-block-button" class="align-self-center <?php echo ( get_sub_field('call_to_action_button_type') == 'Horizontal' ? 'col-12 col-md-auto mb-1 mb-md-0' : 'col-12 mb-1' ); ?>">
 
-					<h2 class="mb-0"><?php the_sub_field('call_to_action_heading'); ?></h2>
+					<h2 class="headline-plain mb-0"><?php the_sub_field('call_to_action_heading'); ?></h2>
 
 				</div>
 

@@ -6,9 +6,14 @@
  * @subpackage CSD
  * @since CSD 1.7.0
  */
+ 
+$blocks = get_field('page_content_blocks'); 
+
+$count = count( $blocks );
+
 ?>
 
-<div class="full-width-container pt-2 <?php echo ( get_field('include_sidebar_links') ? 'full-width-with-sidebar' : '' ); ?>">		
+<div class="full-width-container <?php echo ( get_field('include_sidebar_links') ? 'full-width-with-sidebar' : '' ); ?>">		
 	
 	<div class="page-content entry-content">
 		
@@ -18,6 +23,12 @@
 				
 				<?php while ( have_rows('page_content_blocks') ): the_row(); ?>
 				
+					<?php if ( get_row_layout() == "call_to_action" && $blocks[0]['acf_fc_layout'] == 'call_to_action' ): ?>
+
+						<?php get_template_part( 'template-parts/page-full-block', 'cta' ); ?>
+					
+					<?php endif; ?>
+					
 					<?php if ( get_row_layout() == "notification" ): ?>
 	
 						<?php get_template_part( 'template-parts/page-full-block', 'notification' ); ?>
@@ -43,6 +54,12 @@
 			while ( have_rows('page_content_blocks') ) {
 				
 				the_row(); 
+				
+				if ( ! get_field('include_sidebar_links') && get_row_layout() == "call_to_action" || ( get_row_layout() == "call_to_action" && get_field('include_sidebar_links') && $blocks[0]['acf_fc_layout'] != 'call_to_action' && $blocks[$count-1]['acf_fc_layout'] != 'call_to_action' ) ) {
+
+					get_template_part( 'template-parts/page-full-block', 'cta' );
+					
+				}	
 			
 				if ( get_row_layout() == "text_box" ) { 
 
@@ -169,3 +186,19 @@
 	</div>
 
 </div>
+
+<?php if ( get_field('include_sidebar_links') && $blocks[$count-1]['acf_fc_layout'] == 'call_to_action' ): ?>
+
+	<?php while ( have_rows('page_content_blocks') ): ?>
+				
+		<?php the_row(); ?>
+
+		<?php if ( get_row_layout() == "call_to_action" ): ?>
+
+			<?php get_template_part( 'template-parts/page-full-block', 'cta' ); ?>
+					
+		<?php endif; ?>	
+		
+	<?php endwhile; ?>
+
+<?php endif; ?>

@@ -12103,7 +12103,7 @@ small a {
 }
 
 .full-width-container .headline {
-  margin: 20px auto;
+  margin: 3rem auto 20px auto;
   overflow: hidden;
   text-align: center;
   line-height: 1.2em;

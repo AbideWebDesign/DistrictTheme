@@ -16,7 +16,7 @@
 
 </div>
 
-<div id="contact-block" class="pt-1 pb-2 mb-3">
+<div id="contact-block" class="pt-1 pb-2 mb-2">
 
 	<div class="container">
 
@@ -36,7 +36,7 @@
 
 							</div>
 
-							<h3>Contact</h3>
+							<h3><?php _e('Contact'); ?></h3>
 
 							<hr class="hr-sm hr-center">
 
@@ -82,17 +82,17 @@
 
 								</div>
 
-								<h3>Address</h3>
+								<h3><?php _e('Address'); ?></h3>
 
 								<hr class="hr-sm hr-center">
 
-								<?php the_sub_field('contact_address'); ?> - <a href="https://www.google.com/maps/place/<?php the_sub_field('contact_address'); ?>" target="_blank">Google Map</a>
+								<?php the_sub_field('contact_address'); ?> - <a href="https://www.google.com/maps/place/<?php the_sub_field('contact_address'); ?>" target="_blank"><?php _e('Google Map'); ?></a>
 
 								<?php if ( get_sub_field('contact_mailing_address') ): ?>
 
 									<hr class="hr-sm hr-center">
 
-									<strong>Mailing Address:</strong><br>
+									<strong><?php _e('Mailing Address:'); ?></strong><br>
 
 									<?php the_sub_field('contact_mailing_address'); ?>
 
@@ -116,7 +116,7 @@
 
 								</div>
 
-								<h3>Staff</h3>
+								<h3><?php _e('Staff'); ?></h3>
 
 								<hr class="hr-sm hr-center">
 

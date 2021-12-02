@@ -34,7 +34,7 @@
 
 </div>
 
-<div class="pb-3">
+<div class="pb-2">
 
 	<div class="container">
 

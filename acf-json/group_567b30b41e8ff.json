@@ -129,9 +129,7 @@
                                 "White": "White",
                                 "Gray": "Gray"
                             },
-                            "default_value": [
-                                "White"
-                            ],
+                            "default_value": "White",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
@@ -315,7 +313,7 @@
                                         "Internal Media": "Internal Media",
                                         "External": "External"
                                     },
-                                    "default_value": [],
+                                    "default_value": false,
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -346,11 +344,12 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "post_type": [],
-                                    "taxonomy": [],
+                                    "show_in_rest": 0,
+                                    "post_type": "",
+                                    "taxonomy": "",
                                     "allow_null": 0,
-                                    "multiple": 0,
-                                    "allow_archives": 1
+                                    "allow_archives": 1,
+                                    "multiple": 0
                                 },
                                 {
                                     "key": "field_567b6b76924b7",
@@ -420,7 +419,7 @@
                                         "Primary": "Primary",
                                         "Secondary": "Secondary"
                                     },
-                                    "default_value": [],
+                                    "default_value": false,
                                     "allow_null": 0,
                                     "multiple": 0,
                                     "ui": 0,
@@ -715,7 +714,7 @@
                                         "Event Category": "Event Category",
                                         "Media File": "Media File"
                                     },
-                                    "default_value": [],
+                                    "default_value": false,
                                     "allow_null": 1,
                                     "multiple": 0,
                                     "ui": 1,
@@ -946,9 +945,7 @@
                                 "Vimeo": "Vimeo",
                                 "Youtube": "Youtube"
                             },
-                            "default_value": [
-                                "Vimeo"
-                            ],
+                            "default_value": "Vimeo",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
@@ -1031,7 +1028,7 @@
                                 "bg-white": "White",
                                 "bg-gray": "Gray"
                             },
-                            "default_value": [],
+                            "default_value": false,
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 1,
@@ -1085,9 +1082,7 @@
                                 "Button": "Button",
                                 "Form": "Form"
                             },
-                            "default_value": [
-                                "Button"
-                            ],
+                            "default_value": "Button",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
@@ -1120,9 +1115,7 @@
                                 "Vertical": "Vertical",
                                 "Horizontal": "Horizontal"
                             },
-                            "default_value": [
-                                "Horizontal"
-                            ],
+                            "default_value": "Horizontal",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 0,
@@ -1179,9 +1172,7 @@
                                 "Horizontal": "Horizontal",
                                 "Vertical": "Vertical"
                             },
-                            "default_value": [
-                                "Horizontal"
-                            ],
+                            "default_value": "Horizontal",
                             "allow_null": 0,
                             "multiple": 0,
                             "ui": 1,
@@ -1297,8 +1288,9 @@
                 "id": ""
             },
             "choices": {
-                "2020 Budget Committee": "2020 Budget Committee",
+                "2021 Budget Committee": "2021 Budget Committee",
                 "Award Winning Financial Reporting": "Award Winning Financial Reporting",
+                "Important Note for Investors": "Important Note for Investors",
                 "Board Meeting Agendas and Materials": "Board Meeting Agendas and Materials",
                 "Instructional Technology": "Instructional Technology",
                 "Opportunities for all students": "Opportunities for all students",
@@ -1340,7 +1332,7 @@
                 "Inclement Weather Delays and Closures": "Inclement Weather Delays and Closures",
                 "CSD Earns Meritorious Budget Award": "CSD Earns Meritorious Budget Award"
             },
-            "default_value": [],
+            "default_value": false,
             "allow_null": 0,
             "multiple": 0,
             "ui": 1,
@@ -1361,6 +1353,7 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_rest": 0,
             "choices": {
                 "Emergency Alerts (recorded message)": "Emergency Alerts (recorded message)",
                 "District Administration Office": "District Administration Office",
@@ -1392,25 +1385,27 @@
                 "Technology Hotline (recorded message)": "Technology Hotline (recorded message)",
                 "Marcianne Rivera Koetje, Equity Coordinator": "Marcianne Rivera Koetje, Equity Coordinator",
                 "Risk Management": "Risk Management",
-                "Library and Central Instructional Media Center": "Library and Central Instructional Media Center",
+                "Library": "Library",
                 "Bullying & Harassment Prevention": "Bullying & Harassment Prevention",
                 "2018 Facilities Bond": "2018 Facilities Bond",
                 "Wenaha Group- Construction Manager": "Wenaha Group- Construction Manager",
                 "Teen Parenting Program": "Teen Parenting Program",
-                "Call your neighborhood school for Kindergarten enrollment info": "Call your neighborhood school for Kindergarten enrollment info",
+                "Elementary School Main Offices": "Elementary School Main Offices",
                 "Family Advocacy & Support": "Family Advocacy & Support",
                 "Task Force Staff Liaison": "Task Force Staff Liaison",
-                "CSD Sustainability Program": "CSD Sustainability Program"
+                "CSD Sustainability Program": "CSD Sustainability Program",
+                "Boundary Review Oversight Team": "Boundary Review Oversight Team",
+                "Secondary School Main Offices": "Secondary School Main Offices",
+                "Title IX Coordinator": "Title IX Coordinator",
+                "Assistant Superintendent's Office": "Assistant Superintendent's Office"
             },
             "default_value": [],
-            "allow_null": 1,
+            "allow_null": 0,
             "multiple": 1,
             "ui": 1,
-            "ajax": 1,
-            "placeholder": "",
-            "disabled": 0,
-            "readonly": 0,
-            "return_format": "value"
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -1455,7 +1450,8 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1598999718
+    "show_in_rest": 0,
+    "modified": 1638468051
 }

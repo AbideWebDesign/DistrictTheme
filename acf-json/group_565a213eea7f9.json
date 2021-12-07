@@ -31,19 +31,20 @@
                 "class": "",
                 "id": ""
             },
-            "min": 1,
-            "max": "",
+            "show_in_rest": 0,
+            "return_format": "array",
+            "preview_size": "medium",
             "insert": "append",
             "library": "all",
+            "min": 1,
+            "max": "",
             "min_width": 1140,
             "min_height": 425,
             "min_size": "",
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ".jpg",
-            "return_format": "array",
-            "preview_size": "medium"
+            "mime_types": ".jpg, .gif"
         },
         {
             "key": "field_61437fda832a9",
@@ -509,5 +510,6 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1631815215
+    "show_in_rest": 0,
+    "modified": 1638901866
 }

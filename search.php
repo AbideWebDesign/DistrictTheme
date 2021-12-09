@@ -8,8 +8,11 @@
  */
 
 get_header(); 
+
 global $wp_query;
+
 $total_results = $wp_query->found_posts;
+
 ?>
 
 <div id="primary" class="content-area py-2">
@@ -86,6 +89,20 @@ $total_results = $wp_query->found_posts;
 
 				<div class="bg-gray p-1 mb-2">
 
+					<h3>Popular Pages</h3>
+			
+					<?php $links = get_field('popular_pages_list', 'option'); ?>
+					
+					<ul class="fa-ul ml-2 mb-2">
+			
+						<?php foreach( $links as $link ): ?>
+			
+							<li><span class="fa-li"><i class="fas fa-chevron-right fa-xs"></i></span><a href="<?php echo $link->guid; ?>"><?php echo $link->post_title; ?></a></li>
+			
+						<?php endforeach; ?>
+			
+					</ul>
+
 					<h3>Popular Search Results</h3>
 
 					<?php $links = get_field('popular_resources_list', 'options'); ?>
@@ -94,7 +111,7 @@ $total_results = $wp_query->found_posts;
 
 					<?php foreach ( $links as $link ): ?>
 
-						 <li class=""><span class="fa-li"><i class="fas fa-chevron-right fa-xs"></i></span><a href="<?php echo $link->guid; ?>"><?php echo $link->post_title; ?></a></li>
+						 <li><span class="fa-li"><i class="fas fa-chevron-right fa-xs"></i></span><a href="<?php echo $link->guid; ?>"><?php echo $link->post_title; ?></a></li>
 
 					<?php endforeach; ?>
 

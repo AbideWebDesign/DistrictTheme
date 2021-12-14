@@ -211,7 +211,7 @@ a {
     content: "";
     background-color: rgba(0,0,0,0);
 }
-a:hover:not(.stretched-link, .btn, .btn-quick, .plain-link) {
+a:hover:not(.stretched-link, .btn, .btn-quick, .plain-link, .ubermenu-responsive-toggle) {
     color: #7e420d;
     text-decoration: underline
 }

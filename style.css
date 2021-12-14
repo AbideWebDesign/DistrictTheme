@@ -11882,11 +11882,21 @@ small a {
   line-height: 1.3em;
 }
 
-#mainmenu .ubermenu .ubermenu-item-layout-image_left > .ubermenu-target-text {
+#mainmenu .ubermenu .ubermenu-item-layout-image_left > .ubermenu-target-text, #header-mobile .ubermenu .ubermenu-item-layout-image_left > .ubermenu-target-text {
   padding-left: 0;
 }
 
-#mainmenu .ubermenu .ubermenu-item-layout-image_left > .ubermenu-image {
+#header-mobile .ubermenu .ubermenu-item-layout-image_left > .ubermenu-target-title {
+  font-size: 20px;
+  line-height: 26px;
+  padding-bottom: 0.4em;
+}
+
+#header-mobile .ubermenu .ubermenu-submenu-type-stack > .ubermenu-item-normal > .ubermenu-target-with-image {
+  padding: 10px 20px;
+}
+
+#mainmenu .ubermenu .ubermenu-item-layout-image_left > .ubermenu-image, #header-mobile .ubermenu .ubermenu-item-layout-image_left > .ubermenu-image {
   padding-bottom: 0.8em;
 }
 

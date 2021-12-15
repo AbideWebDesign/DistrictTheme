@@ -48,7 +48,7 @@
             "key": "field_566865bfb2030",
             "label": "Contact Title",
             "name": "statement_contact_title",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -57,13 +57,12 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "Human Resources Director",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": "",
-            "readonly": 0,
-            "disabled": 0
+            "show_in_rest": 0,
+            "default_value": "",
+            "tabs": "visual",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
         },
         {
             "key": "field_566865d1b2031",
@@ -120,7 +119,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1583366683
+    "show_in_rest": 0,
+    "modified": 1639605518
 }

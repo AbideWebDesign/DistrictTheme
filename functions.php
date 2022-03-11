@@ -897,3 +897,89 @@ add_filter('acf/rest_api/emergency-alert/get_items', function( $data, $request )
   return $data;
   
 }, 10, 2 );
+
+// Clear Media Cache when replace media is used
+add_action( 'wpmf_after_file_replace', 'clearMediaCache', 10, 2 );
+
+function clearMediaCache( $infopath, $id ) {
+	
+	$file = $infopath['filename'];
+	$extension = $infopath['extension'];
+	
+	$uri = 'https://gateway.stackpath.com/identity/v1/oauth2/token';
+	$api_id = '90dfceeff4e3b8509a2d9f703f3cdc63';
+	$api_secret = 'a52340a9dcbb09b5ad1c0f91f4c704689c58b7d6de53b76e23e6828533b7f26c';
+
+	if ( $extension == 'pdf' || $extension == 'doc' ) {
+			
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '.' . $extension ]; 
+		
+	} else {
+		
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '.' . $extension ]; 
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-1024x798.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-150x150.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-300×300.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-1024×1024.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-1536×1536.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-600×600.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-285×285.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-380×380.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-262×175.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-410×273.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-750×500.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-945×500.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-326×453.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-263×186.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-825×315.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-230×298.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-1600×314.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-1600×500.' . $extension ];
+		$items[] = [ 'purgeAllDynamic' => true, 'url' => 'https://www.csd509j.net/wp-content/uploads/' . $file . '-530×640.' . $extension ];
+	
+	}	
+
+	$options = [
+		'headers' => [
+			'Accept'		=> 'application/json',
+			'Content-Type'	=> 'application/json',
+		],
+		'body' => json_encode([
+			'client_id'		=> $api_id,
+			'client_secret'	=> $api_secret,
+			'grant_type' 	=> 'client_credentials', 
+		]),	
+	];
+
+	$response = wp_remote_post( $uri, $options );
+
+	$responseBody = wp_remote_retrieve_body( $response );
+
+	$result = json_decode( $responseBody );
+
+	if ( ! is_wp_error( $response ) ) {
+	
+		$purge_url = 'https://gateway.stackpath.com/cdn/v1/stacks/my-default-stack-ee58da/purge';
+		
+		$bearer = 'Bearer ' . $result->access_token;
+		
+		$options = [
+			'headers' => [
+				'Accept'		=> 'application/json',
+				'Content-Type'	=> 'application/json',
+				'Authorization'	=> $bearer,
+			],
+			'body' =>  json_encode([
+				'items'	=> $items,
+			]),	
+		];
+
+		$response = wp_remote_post( $purge_url, $options );
+
+		$responseBody = wp_remote_retrieve_body( $response );
+	
+		$result = json_decode( $responseBody );
+
+	} 
+	
+}

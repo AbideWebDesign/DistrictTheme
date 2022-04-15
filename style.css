@@ -10766,6 +10766,10 @@ a.text-dark:focus {
   color: #6c757d !important;
 }
 
+.text-blue {
+  color: #004D89;
+}
+
 .text-black-50 {
   color: rgba(0, 0, 0, 0.5) !important;
 }
@@ -12121,6 +12125,9 @@ small a {
   font-size: 36px;
 }
 
+.full-width-container .plain-link {
+  line-height: 1.45;
+}
 .full-width-container a:not(.d-flex, .plain-link, .btn), .full-width-container p span {
   font-weight: normal !important;
 }

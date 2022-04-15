@@ -1,0 +1,155 @@
+{
+    "key": "group_6259a759e1d44",
+    "title": "Sidebar Links",
+    "fields": [
+        {
+            "key": "field_6259adb904afd",
+            "label": "Include Sidebar",
+            "name": "include_sidebar_links",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_6259a78594eb8",
+            "label": "Sidebar Icons",
+            "name": "sidebar_icons",
+            "type": "repeater",
+            "instructions": "Find icons here: https:\/\/fontawesome.com\/v5\/cheatsheet",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_6259adb904afd",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "collapsed": "field_6259a7bf94eba",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add Link",
+            "sub_fields": [
+                {
+                    "key": "field_6259a7a094eb9",
+                    "label": "Icon",
+                    "name": "sidebar_icon",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "fa-",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_6259a7bf94eba",
+                    "label": "Link",
+                    "name": "sidebar_icon_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_6259a7f394ebb",
+                    "label": "Spanish Version",
+                    "name": "sidebar_icon_spanish_version",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "",
+                    "ui_off_text": ""
+                },
+                {
+                    "key": "field_6259a82494ebc",
+                    "label": "Spanish Link",
+                    "name": "sidebar_icon_spanish_link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6259a7f394ebb",
+                                "operator": "==",
+                                "value": "1"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_rest": 0,
+                    "return_format": "url"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-full-width.php"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1650044598
+}

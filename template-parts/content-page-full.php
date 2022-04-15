@@ -121,51 +121,41 @@ $count = count( $blocks );
 						
 						<div id="sidebar-link-wrap" class="bg-white shadow-sm rounded border-top border-primary border-top-lg">
 							
-							<?php while ( have_rows( 'sidebar_icons', 'options' ) ): the_row(); ?>
+							<?php while ( have_rows( 'sidebar_icons' ) ): the_row(); ?>
+							
+								<?php $link = get_sub_field('sidebar_icon_link'); ?>
 										
 								<div class="sidebar-link">
-																		
-										<div class="row">
-	
-											<?php $link = get_sub_field('sidebar_icon_link'); ?>
+									
+									<div class="d-flex">
+										
+										<div class="mr-1 text-blue">
 											
-											<div class="col-xl-4 d-none d-xl-block">
+											<span class="fa-stack fa-2x">
+													
+												<i class="fas fa-square fa-stack-2x"></i>
 												
-												<a class="plain-link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">											
+												<i class="fas fa-<?php the_sub_field('sidebar_icon'); ?> fa-stack-1x fa-inverse"></i>
 											
-													<span class="fa-stack fa-2x">
-													
-														<i class="fas fa-square fa-stack-2x"></i>
-														
-														<i class="fas fa-<?php the_sub_field('sidebar_icon'); ?> fa-stack-1x fa-inverse"></i>
-													
-													</span>		
-													
-												</a>											
-												
-											</div>
-											
-											<div class="col-xl-8 align-self-center">
-												
-												<div class="text-body font-weight-bold">
-													
-													<a class="plain-link text-body" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a>
-													
-												</div>
-												
-												<?php if ( get_sub_field('sidebar_icon_spanish_version') ): ?>
-												
-													<?php $sp_link = get_sub_field('sidebar_icon_spanish_link'); ?>
-													
-													<div class="sp text-xs"><a class="plain-link font-weight-bold" href="<?php echo $sp_link; ?>" target="_blank"><?php _e('Spanish'); ?> <i class="fa fa-external-link-alt"></i></a></div>
-
-												<?php endif; ?>
-												
-											</div>
+											</span>		
 											
 										</div>
 										
-									</a>
+										<div class="align-self-center">
+										
+											<div><a class="plain-link font-weight-bold text-body" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title']; ?></a></div>
+																									
+											<?php if ( get_sub_field('sidebar_icon_spanish_version') ): ?>
+											
+												<?php $sp_link = get_sub_field('sidebar_icon_spanish_link'); ?>
+												
+												<div class="sp text-xs"><a class="plain-link font-weight-bold" href="<?php echo $sp_link; ?>" target="_blank"><?php _e('Spanish'); ?> <i class="fa fa-external-link-alt fa-xs"></i></a></div>
+
+											<?php endif; ?>
+																							
+										</div>
+										
+									</div>									
 									
 								</div>
 							

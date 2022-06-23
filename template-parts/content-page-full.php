@@ -101,6 +101,12 @@ $count = count( $blocks );
 
 					get_template_part( 'template-parts/page-full-block', 'parentsquare' );
 					
+				}	
+				
+				if ( get_row_layout() == "image" ) {
+
+					get_template_part( 'template-parts/page-full-block', 'image' );
+					
 				}					
 				
 			}

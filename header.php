@@ -48,6 +48,49 @@
 	    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
 	  })(document);
 	</script>
+	<script type="text/javascript">
+	    window._monsido = window._monsido || {
+	        token: "Ba974TadvYL0bAReZ6EyRg",
+	        statistics: {
+	            enabled: true,
+	            documentTracking: {
+	                enabled: false,
+	                documentCls: "monsido_download",
+	                documentIgnoreCls: "monsido_ignore_download",
+	                documentExt: [],
+	            },
+	        },
+	        pageCorrect: {
+	            enabled: true,
+	        },
+	        pageAssistV2: {
+	            enabled: true,
+	            theme: "light",
+	            mainColor: "#783CE2",
+	            textColor: "#ffffff",
+	            linkColor: "#783CE2",
+	            buttonHoverColor: "#783CE2",
+	            mainDarkColor: "#052942",
+	            textDarkColor: "#ffffff",
+	            linkColorDark: "#FFCF4B",
+	            buttonHoverDarkColor: "#FFCF4B",
+	            greeting: "Discover your personalization options",
+	            direction: "leftbottom",
+	            coordinates: "undefined undefined undefined undefined",
+	            iconShape: "circle",
+	            title: "Personalization Options",
+	            titleText: "Welcome to PageAssist™ toolbar! Adjust the options below to cater the website to your accessibility needs.",
+	            iconPictureUrl: "logo",
+	            logoPictureUrl: "",
+	            logoPictureBase64: "",
+	            languages: ["en-US", "es-MX"],
+	            defaultLanguage: "en-US",
+	            skipTo: false,
+	            alwaysOnTop: false,
+	        },
+	    };
+	</script>
+	<script type="text/javascript" async src="https://app-script.monsido.com/v2/monsido-script.js"></script>
 </head>
 <body <?php body_class(); ?>>
 	<?php get_template_part('template-parts/content','alert'); ?>

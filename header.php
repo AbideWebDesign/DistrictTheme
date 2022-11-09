@@ -50,7 +50,7 @@
 	</script>
 	<script type="text/javascript">
 	    window._monsido = window._monsido || {
-	        token: "Ba974TadvYL0bAReZ6EyRg",
+	        token: "1rYykbPd0f2CRrSwJaMoYQ",
 	        statistics: {
 	            enabled: true,
 	            documentTracking: {

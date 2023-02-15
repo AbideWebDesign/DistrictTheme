@@ -12236,13 +12236,18 @@ body ul.page-numbers span.current {
 
 .page-lead .lead,
 .page-lead .lead p,
-.lead p {
+.lead p, .page-lead .lead li {
     line-height: 1.3em;
     font-size: 1.4rem;
     margin-bottom: 0;
     font-weight: normal;
 }
-
+.page-lead .lead ul {
+	margin-top: 1.675rem;
+}
+.page-lead .lead li {
+	margin-bottom: .5em;
+}
 .page-lead .lead:after {
     display: block;
     content: " ";

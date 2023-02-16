@@ -19,7 +19,7 @@
 			if( get_sub_field('lead_text_block') ): ?>
 				
 				<div class="page-lead">
-					<p class="lead"><?php the_sub_field('lead_text_block'); ?></p>
+					<div class="lead"><?php the_sub_field('lead_text_block'); ?></div>
 				</div>			
 			
 			<?php 

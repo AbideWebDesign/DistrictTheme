@@ -84,7 +84,7 @@ function csd_theme_setup() {
 
 	add_image_size( 'Callout Block', 263, 186, true );
 
-	add_image_size( 'Page Builder Image', 945, true );
+	add_image_size( 'Page Builder Image', 945, false );
 
 	add_image_size( 'eFriday Folder Image', 230, 298, true );
 

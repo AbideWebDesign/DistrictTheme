@@ -8,8 +8,6 @@ function csd_enqueue_style() {
 
 	wp_enqueue_style( 'print', get_template_directory_uri() . '/css/print.css', '', $theme->version ); 
 
-	wp_enqueue_style( 'ie10-viewport-bug-workaround', get_template_directory_uri() . '/css/ie10-viewport-bug-workaround.css' ); 
-
 	wp_enqueue_style( 'font-awesome-5', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css' ); 
 
 }
@@ -41,6 +39,13 @@ function csd_enqueue_script() {
 	}
 		
 }
+
+add_action( 'send_headers', function() {
+	if ( is_page('about-us') ) {
+	
+		header( 'Cache-Control: public, max-age=30, stale-while-revalidate=30, stale-if-error=600', true );
+	}
+}, 99 );
 
 add_action( 'wp_enqueue_scripts', 'csd_enqueue_script' );
 

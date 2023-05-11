@@ -14405,3 +14405,84 @@ body ul.page-numbers span.current {
     min-width: 250px;
   }
 }
+
+#search-text {
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#search-text:focus {
+  box-shadow: none;
+}
+
+.search-submit {
+  padding: 10px 16px;
+  background-color: #c36714;
+  color: white;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#letter-nav div {
+  padding: 0.25em 0;
+  width: 28px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+#letter-nav div:not(:last-child) {
+  margin-right: 0.2em;
+}
+#letter-nav a:hover {
+  text-decoration: none;
+}
+
+#department-list a:hover, #department-select a:hover {
+  text-decoration: none;
+}
+
+#course-header .badge {
+  margin-right: 0.5em;
+}
+
+.archive-description p:last-child {
+  margin-bottom: 0;
+}
+
+.facetwp-selections ul {
+  padding: 0;
+}
+.facetwp-selections li {
+  background-color: white;
+  padding: 0.5em;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  border-radius: 3px;
+  margin-right: 0.5em;
+}
+.facetwp-selections li:last-child {
+  margin-right: 0;
+}
+.facetwp-selections .facetwp-selection-label {
+  font-weight: bold;
+}
+
+.facetwp-counter {
+  display: none;
+}
+
+body .facetwp-facet {
+  margin-bottom: 20px;
+}
+
+body .facet-last .facetwp-facet {
+  margin-bottom: 0;
+}
+
+body .facetwp-facet input.facetwp-search, body .facetwp-facet input.facetwp-location, body .facetwp-per-page-select {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.facet-mb-0 .facetwp-facet {
+  margin-bottom: 0;
+}

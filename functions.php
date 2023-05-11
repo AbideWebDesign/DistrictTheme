@@ -988,3 +988,128 @@ function clearMediaCache( $infopath, $id ) {
 	} 
 	
 }
+
+// Course Catalog
+function get_catalog_terms( $taxonomies ) {
+
+	$args = array(
+		'orderby' => 'name',
+		'order' => 'ASC',
+		'hide_empty' => false,
+	);
+	
+	$taxonomy_terms = get_terms( $taxonomies, $args );
+
+	return ( $taxonomy_terms );
+	
+}
+
+function get_courses( $department_slug ) {
+
+	$courses = get_posts( array (
+    	'post_type' => 'course',
+    	'numberposts' => -1,
+		'tax_query' => array(
+	        array (
+	            'taxonomy' => 'department',
+	            'field' => 'slug',
+	            'terms' => $department_slug,
+	        )
+		),
+	) );
+
+	return $courses;
+	
+}
+
+function get_course_letters() {
+	
+	$letters = array(); 
+	
+	$taxonomy_terms = get_catalog_terms( 'department' );
+	
+	foreach( $taxonomy_terms as $taxonomy_term ) {
+	
+		$letter = strtoupper( substr( $taxonomy_term->name, 0, 1 ) );
+		
+		if ( ! in_array( $letter , $letters ) ) {
+			
+			$letters[] = $letter; 
+			
+		}
+		
+	}
+	
+	return $letters;
+	
+}
+
+function get_course_grades( $grades ) {
+
+	if ( in_array_all( ['9','10','11','12'], $grades ) ) {
+		
+		return '9-12';
+		
+	} elseif ( in_array_all( ['9','10','11'], $grades ) ) {
+
+		return '9-11';
+		
+	} elseif ( in_array_all( ['9','10'], $grades ) ) {
+
+		return '9-10';
+		
+	} elseif ( in_array_all( ['9'], $grades ) ) {
+
+		return '9';
+		
+	} elseif ( in_array_all( ['10','11','12'], $grades ) ) {
+
+		return '10-12';
+		
+	} elseif ( in_array_all( ['10','11'], $grades ) ) {
+
+		return '10-11';
+		
+	} elseif ( in_array_all( ['10'], $grades ) ) {
+
+		return '10';
+		
+	} elseif ( in_array_all( ['11','12'], $grades ) ) {
+
+		return '11-12';
+		
+	} elseif ( in_array_all( ['11'], $grades ) ) {
+
+		return '11';
+		
+	} elseif ( in_array_all( ['12'], $grades ) ) {
+
+		return '12';
+		
+	}
+	
+}
+
+function in_array_all( $needles, $haystack ) {
+
+	return empty( array_diff( $needles, $haystack ) );
+
+}
+
+add_action( 'pre_get_posts', 'set_courses_order' );
+
+function set_courses_order( $wp_query ) {
+
+	if ( ! is_admin() ) {
+
+		if ( is_tax() ) {
+
+			$wp_query->set( 'orderby', 'menu_order' );
+
+			$wp_query->set( 'order', 'ASC' );
+		
+    	}
+	
+	}
+
+}

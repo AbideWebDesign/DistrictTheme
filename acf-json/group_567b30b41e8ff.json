@@ -1503,21 +1503,10 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content",
-        "excerpt",
-        "discussion",
-        "comments",
-        "revisions",
-        "slug",
-        "author",
-        "format",
-        "featured_image",
-        "categories",
-        "tags",
-        "send-trackbacks"
+        "the_content"
     ],
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1676567843
+    "modified": 1683669584
 }

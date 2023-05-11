@@ -132,6 +132,10 @@ function dashboard_styles() {
 		display: none;
 	}
 	
+	.litespeed_meta_boxes {
+		display: none !important;
+	}
+	
 	</style>';
 
 }

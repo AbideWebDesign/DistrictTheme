@@ -6,6 +6,7 @@
             "key": "field_5be47729a7a30",
             "label": "Page Builder",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -22,6 +23,7 @@
             "key": "field_5be47729a7aaa",
             "label": "Page Content Blocks",
             "name": "page_content_blocks",
+            "aria-label": "",
             "type": "flexible_content",
             "instructions": "",
             "required": 1,
@@ -43,6 +45,7 @@
                             "key": "field_5bf43c1e212cd",
                             "label": "Tab Section Heading",
                             "name": "tab_section_heading",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -62,6 +65,7 @@
                             "key": "field_5be47729ba00a",
                             "label": "Tabs",
                             "name": "tabs",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -78,9 +82,32 @@
                             "button_label": "Add Tab",
                             "sub_fields": [
                                 {
+                                    "key": "field_6497396a82f64",
+                                    "label": "Hide Tab",
+                                    "name": "tab_hidden",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_rest": 0,
+                                    "message": "",
+                                    "default_value": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": "",
+                                    "ui": 1,
+                                    "parent_repeater": "field_5be47729ba00a"
+                                },
+                                {
                                     "key": "field_5be4772b0b4eb",
                                     "label": "Tab Type",
                                     "name": "tab_type",
+                                    "aria-label": "",
                                     "type": "select",
                                     "instructions": "",
                                     "required": 1,
@@ -103,12 +130,14 @@
                                     "ui": 1,
                                     "ajax": 0,
                                     "return_format": "value",
-                                    "placeholder": ""
+                                    "placeholder": "",
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b575",
                                     "label": "Tab Name",
                                     "name": "tab_name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "Single word identifier that is not used in the display of this page block.",
                                     "required": 1,
@@ -130,12 +159,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b5e6",
                                     "label": "Tab Label",
                                     "name": "tab_label",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "Used in the tab as a label that describes tab content.",
                                     "required": 1,
@@ -149,12 +180,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b656",
                                     "label": "Tab Link",
                                     "name": "tab_link",
+                                    "aria-label": "",
                                     "type": "link",
                                     "instructions": "",
                                     "required": 1,
@@ -172,12 +205,14 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "url"
+                                    "return_format": "url",
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b6c4",
                                     "label": "Tab Image",
                                     "name": "tab_image",
+                                    "aria-label": "",
                                     "type": "image",
                                     "instructions": "",
                                     "required": 0,
@@ -204,12 +239,14 @@
                                     "max_width": "",
                                     "max_height": "",
                                     "max_size": "",
-                                    "mime_types": ""
+                                    "mime_types": "",
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b736",
                                     "label": "Tab Content",
                                     "name": "tab_content",
+                                    "aria-label": "",
                                     "type": "wysiwyg",
                                     "instructions": "",
                                     "required": 0,
@@ -231,12 +268,14 @@
                                     "tabs": "all",
                                     "toolbar": "full",
                                     "media_upload": 1,
-                                    "delay": 0
+                                    "delay": 0,
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b7a3",
                                     "label": "Tab List Content",
                                     "name": "tab_list_content",
+                                    "aria-label": "",
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 1,
@@ -264,6 +303,7 @@
                                             "key": "field_5be4772b43a2d",
                                             "label": "List Item Title",
                                             "name": "list_item_title",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 1,
@@ -277,12 +317,14 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5be4772b0b7a3"
                                         },
                                         {
                                             "key": "field_5be4772b43ae3",
                                             "label": "List Item Text",
                                             "name": "list_item_text",
+                                            "aria-label": "",
                                             "type": "wysiwyg",
                                             "instructions": "",
                                             "required": 0,
@@ -296,14 +338,18 @@
                                             "tabs": "all",
                                             "toolbar": "basic",
                                             "media_upload": 0,
-                                            "delay": 0
+                                            "delay": 0,
+                                            "parent_repeater": "field_5be4772b0b7a3"
                                         }
-                                    ]
+                                    ],
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5efd18ed65203",
                                     "label": "Tab Collapsible Content",
                                     "name": "tab_collapsible_content",
+                                    "aria-label": "",
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 1,
@@ -332,6 +378,7 @@
                                             "key": "field_5efd18ff65204",
                                             "label": "Collapsible Label",
                                             "name": "collapsible_label",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 1,
@@ -346,12 +393,14 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5efd18ed65203"
                                         },
                                         {
                                             "key": "field_5efd191265205",
                                             "label": "Collapsible Content",
                                             "name": "collapsible_content",
+                                            "aria-label": "",
                                             "type": "wysiwyg",
                                             "instructions": "",
                                             "required": 1,
@@ -366,14 +415,18 @@
                                             "tabs": "all",
                                             "toolbar": "full",
                                             "media_upload": 0,
-                                            "delay": 0
+                                            "delay": 0,
+                                            "parent_repeater": "field_5efd18ed65203"
                                         }
-                                    ]
+                                    ],
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b80f",
                                     "label": "Include Button Group",
                                     "name": "add_buttons",
+                                    "aria-label": "",
                                     "type": "true_false",
                                     "instructions": "",
                                     "required": 0,
@@ -396,12 +449,14 @@
                                     "default_value": 0,
                                     "ui": 1,
                                     "ui_on_text": "",
-                                    "ui_off_text": ""
+                                    "ui_off_text": "",
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b882",
                                     "label": "Button Group Heading",
                                     "name": "button_group_heading",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -429,12 +484,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5be47729ba00a"
                                 },
                                 {
                                     "key": "field_5be4772b0b95a",
                                     "label": "Buttons",
                                     "name": "buttons",
+                                    "aria-label": "",
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
@@ -468,6 +525,7 @@
                                             "key": "field_5df818e5985f8",
                                             "label": "Button Link Type",
                                             "name": "button_link_type",
+                                            "aria-label": "",
                                             "type": "select",
                                             "instructions": "",
                                             "required": 0,
@@ -488,12 +546,14 @@
                                             "ui": 1,
                                             "ajax": 0,
                                             "return_format": "value",
-                                            "placeholder": ""
+                                            "placeholder": "",
+                                            "parent_repeater": "field_5be4772b0b95a"
                                         },
                                         {
                                             "key": "field_5be4772b88aa6",
                                             "label": "Button Heading",
                                             "name": "button_heading",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 1,
@@ -507,12 +567,14 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5be4772b0b95a"
                                         },
                                         {
                                             "key": "field_5be4772b88b32",
                                             "label": "Button Label",
                                             "name": "button_label",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 1,
@@ -526,12 +588,14 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5be4772b0b95a"
                                         },
                                         {
                                             "key": "field_5be4772b88baf",
                                             "label": "Button Link",
                                             "name": "button_link",
+                                            "aria-label": "",
                                             "type": "link",
                                             "instructions": "",
                                             "required": 1,
@@ -556,12 +620,14 @@
                                                 "class": "",
                                                 "id": ""
                                             },
-                                            "return_format": "url"
+                                            "return_format": "url",
+                                            "parent_repeater": "field_5be4772b0b95a"
                                         },
                                         {
                                             "key": "field_5df81c33b9b24",
                                             "label": "Tab Name",
                                             "name": "tab_name",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 1,
@@ -583,11 +649,15 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5be4772b0b95a"
                                         }
-                                    ]
+                                    ],
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_5be47729ba00a"
                                 }
-                            ]
+                            ],
+                            "rows_per_page": 20
                         }
                     ],
                     "min": "",
@@ -603,6 +673,7 @@
                             "key": "field_5bede55eab98d",
                             "label": "Include Text Block Image",
                             "name": "include_text_block_image",
+                            "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
                             "required": 0,
@@ -622,6 +693,7 @@
                             "key": "field_5bedbea546e89",
                             "label": "Text Block Image Side",
                             "name": "text_block_image_side",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
@@ -655,6 +727,7 @@
                             "key": "field_5bedbe9146e88",
                             "label": "Text Block Image",
                             "name": "text_block_image",
+                            "aria-label": "",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
@@ -687,6 +760,7 @@
                             "key": "field_5bedb9a12fd1b",
                             "label": "Text Block Heading",
                             "name": "text_block_heading",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -706,6 +780,7 @@
                             "key": "field_5bedb9c12fd1c",
                             "label": "Text Block Content",
                             "name": "text_block_content",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 1,
@@ -735,6 +810,7 @@
                             "key": "field_5be47729ba0fa",
                             "label": "Post List Heading",
                             "name": "post_list_heading",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -754,6 +830,7 @@
                             "key": "field_5be47729ba1a3",
                             "label": "Post List Category",
                             "name": "post_list_category",
+                            "aria-label": "",
                             "type": "taxonomy",
                             "instructions": "",
                             "required": 1,
@@ -776,6 +853,7 @@
                             "key": "field_5be47729ba27f",
                             "label": "Post List Background Color",
                             "name": "post_list_background_color",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 1,
@@ -811,6 +889,7 @@
                             "key": "field_5c06e53979eda",
                             "label": "Background Color",
                             "name": "call_to_action_background_color",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 1,
@@ -838,6 +917,7 @@
                             "key": "field_5be47729ba32c",
                             "label": "Call to Action Heading",
                             "name": "call_to_action_heading",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -857,6 +937,7 @@
                             "key": "field_5be47729ba405",
                             "label": "Call to Action Type",
                             "name": "call_to_action_type",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 1,
@@ -882,6 +963,7 @@
                             "key": "field_5be47729ba4b1",
                             "label": "Call to Action Form Type",
                             "name": "call_to_action_form_type",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 1,
@@ -915,6 +997,7 @@
                             "key": "field_5be47729ba5c7",
                             "label": "Call to Action Form",
                             "name": "call_to_action_form",
+                            "aria-label": "",
                             "type": "gravity_forms_field",
                             "instructions": "",
                             "required": 1,
@@ -939,6 +1022,7 @@
                             "key": "field_5be47729ba69d",
                             "label": "Call to Action Button Type",
                             "name": "call_to_action_button_type",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
@@ -972,6 +1056,7 @@
                             "key": "field_5be47729ba769",
                             "label": "Call to Action Button Label",
                             "name": "call_to_action_button_label",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -999,6 +1084,7 @@
                             "key": "field_5be47729ba848",
                             "label": "Call to Action Button Link",
                             "name": "call_to_action_button_link",
+                            "aria-label": "",
                             "type": "link",
                             "instructions": "",
                             "required": 1,
@@ -1032,6 +1118,7 @@
                             "key": "field_5bf59a2628600",
                             "label": "Contact Section Heading",
                             "name": "contact_section_heading",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -1051,6 +1138,7 @@
                             "key": "field_5bf59a3128601",
                             "label": "Contact",
                             "name": "contact",
+                            "aria-label": "",
                             "type": "repeater",
                             "instructions": "",
                             "required": 0,
@@ -1070,6 +1158,7 @@
                                     "key": "field_5bf59a4228602",
                                     "label": "Contact Name",
                                     "name": "contact_name",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 1,
@@ -1083,12 +1172,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5bf59a3128601"
                                 },
                                 {
                                     "key": "field_5bf59a9028603",
                                     "label": "Contact Email",
                                     "name": "contact_email",
+                                    "aria-label": "",
                                     "type": "email",
                                     "instructions": "",
                                     "required": 0,
@@ -1101,12 +1192,14 @@
                                     "default_value": "",
                                     "placeholder": "",
                                     "prepend": "",
-                                    "append": ""
+                                    "append": "",
+                                    "parent_repeater": "field_5bf59a3128601"
                                 },
                                 {
                                     "key": "field_5bf59a9a28604",
                                     "label": "Contact Address",
                                     "name": "contact_address",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1120,12 +1213,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5bf59a3128601"
                                 },
                                 {
                                     "key": "field_5bf59aa728605",
                                     "label": "Contact Mailing Address",
                                     "name": "contact_mailing_address",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1139,12 +1234,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5bf59a3128601"
                                 },
                                 {
                                     "key": "field_5bf59ab028606",
                                     "label": "Contact Phone",
                                     "name": "contact_phone",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1158,12 +1255,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5bf59a3128601"
                                 },
                                 {
                                     "key": "field_5bf59ab728607",
                                     "label": "Contact Fax",
                                     "name": "contact_fax",
+                                    "aria-label": "",
                                     "type": "text",
                                     "instructions": "",
                                     "required": 0,
@@ -1177,12 +1276,14 @@
                                     "placeholder": "",
                                     "prepend": "",
                                     "append": "",
-                                    "maxlength": ""
+                                    "maxlength": "",
+                                    "parent_repeater": "field_5bf59a3128601"
                                 },
                                 {
                                     "key": "field_5bf59ac028608",
                                     "label": "Contact Staff",
                                     "name": "contact_staff",
+                                    "aria-label": "",
                                     "type": "repeater",
                                     "instructions": "",
                                     "required": 0,
@@ -1202,6 +1303,7 @@
                                             "key": "field_5bf59aeb2860c",
                                             "label": "Contact Staff Title",
                                             "name": "contact_staff_title",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 0,
@@ -1215,12 +1317,14 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5bf59ac028608"
                                         },
                                         {
                                             "key": "field_5bf59acf28609",
                                             "label": "Contact Staff Name",
                                             "name": "contact_staff_name",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 0,
@@ -1234,12 +1338,14 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5bf59ac028608"
                                         },
                                         {
                                             "key": "field_5bf59ad72860a",
                                             "label": "Contact Staff Email",
                                             "name": "contact_staff_email",
+                                            "aria-label": "",
                                             "type": "email",
                                             "instructions": "",
                                             "required": 0,
@@ -1252,12 +1358,14 @@
                                             "default_value": "",
                                             "placeholder": "",
                                             "prepend": "",
-                                            "append": ""
+                                            "append": "",
+                                            "parent_repeater": "field_5bf59ac028608"
                                         },
                                         {
                                             "key": "field_5bf59ae12860b",
                                             "label": "Contact Staff Phone",
                                             "name": "contact_staff_phone",
+                                            "aria-label": "",
                                             "type": "text",
                                             "instructions": "",
                                             "required": 0,
@@ -1271,11 +1379,15 @@
                                             "placeholder": "",
                                             "prepend": "",
                                             "append": "",
-                                            "maxlength": ""
+                                            "maxlength": "",
+                                            "parent_repeater": "field_5bf59ac028608"
                                         }
-                                    ]
+                                    ],
+                                    "rows_per_page": 20,
+                                    "parent_repeater": "field_5bf59a3128601"
                                 }
-                            ]
+                            ],
+                            "rows_per_page": 20
                         }
                     ],
                     "min": "",
@@ -1291,6 +1403,7 @@
                             "key": "field_5bf43e3992d12",
                             "label": "Table Section Heading",
                             "name": "table_section_heading",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -1310,6 +1423,7 @@
                             "key": "field_5bf43e4c92d13",
                             "label": "Table Section Text",
                             "name": "table_section_text",
+                            "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
@@ -1329,6 +1443,7 @@
                             "key": "field_5bf43aea47909",
                             "label": "Table",
                             "name": "table",
+                            "aria-label": "",
                             "type": "table",
                             "instructions": "",
                             "required": 1,
@@ -1354,6 +1469,7 @@
                             "key": "field_5e28e8012fbe5",
                             "label": "Notification Text",
                             "name": "notification_text",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -1373,6 +1489,7 @@
                             "key": "field_5e28e80a2fbe6",
                             "label": "Include Link",
                             "name": "notification_include_link",
+                            "aria-label": "",
                             "type": "true_false",
                             "instructions": "",
                             "required": 0,
@@ -1392,6 +1509,7 @@
                             "key": "field_5e28e8302fbe7",
                             "label": "Notification Button Link",
                             "name": "notification_button_link",
+                            "aria-label": "",
                             "type": "url",
                             "instructions": "",
                             "required": 1,
@@ -1416,6 +1534,7 @@
                             "key": "field_5e28e8402fbe8",
                             "label": "Notification Button Label",
                             "name": "notification_button_label",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -1453,6 +1572,7 @@
                             "key": "field_611e8047ac1eb",
                             "label": "ParentSquare Section Header",
                             "name": "parentsquare_section_header",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 1,
@@ -1473,6 +1593,7 @@
                             "key": "field_611e8057ac1ec",
                             "label": "ParentSquare Feed",
                             "name": "parentsquare_feed",
+                            "aria-label": "",
                             "type": "url",
                             "instructions": "",
                             "required": 1,
@@ -1490,6 +1611,7 @@
                             "key": "field_611e81963b864",
                             "label": "ParentSquare Feed ID",
                             "name": "parentsquare_feed_id",
+                            "aria-label": "",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -1520,6 +1642,7 @@
                             "key": "field_62b4decc2fffc",
                             "label": "Padding Type",
                             "name": "full_block_image_padding",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 1,
@@ -1548,6 +1671,7 @@
                             "key": "field_62b4d798f69ad",
                             "label": "Image Size",
                             "name": "full_block_image_size",
+                            "aria-label": "",
                             "type": "select",
                             "instructions": "",
                             "required": 1,
@@ -1574,6 +1698,7 @@
                             "key": "field_62b4d7e6f69ae",
                             "label": "Image",
                             "name": "full_block_image",
+                            "aria-label": "",
                             "type": "image",
                             "instructions": "",
                             "required": 1,
@@ -1599,6 +1724,7 @@
                             "key": "field_62b4dd2963f20",
                             "label": "Mobile Image",
                             "name": "full_block_mobile_image",
+                            "aria-label": "",
                             "type": "image",
                             "instructions": "",
                             "required": 1,
@@ -1610,7 +1736,7 @@
                             },
                             "show_in_rest": 0,
                             "return_format": "id",
-                            "preview_size": "medium",
+                            "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": 800,
                             "min_height": "",
@@ -1661,5 +1787,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1656020997
+    "modified": 1687632818
 }

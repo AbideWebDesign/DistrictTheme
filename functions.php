@@ -132,7 +132,7 @@ function dashboard_styles() {
 		display: none;
 	}
 	
-	#litespeed_meta_boxes {
+	#litespeed_meta_boxes, #dashboard_rediscache {
 		display: none !important;
 	}
 	

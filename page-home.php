@@ -388,7 +388,7 @@ get_header(); ?>
 
 						<div class="col-md-3 col-lg-3 order-2 order-md-1 mt-2 mt-md-0 align-self-center">
 
-							<a href="https://twitter.com/intent/user?screen_name=CSDNow" target="_blank" id="twitter-id-link" >
+							<a href="https://twitter.com/intent/user?screen_name=csdnow" target="_blank" id="twitter-id-link" >
 
 								<div class="well d-flex justify-content-center">
 
@@ -434,7 +434,7 @@ get_header(); ?>
 								
 								<div id="tweet-meta">
 
-									<a href="https://twitter.com/CSDNow/status/<?php echo $tweets[0]['id'] ?>" target="_blank">
+									<a href="https://twitter.com/csdnow/status/<?php echo $tweets[0]['id'] ?>" target="_blank">
 
 										<?php echo '<span>'.humanTiming(strtotime($tweets[0]['created_at'])) . ' ago</span>'; ?>
 
@@ -454,7 +454,7 @@ get_header(); ?>
 
 				<div id="socialbtns" class="col-lg-3 col-xl-2 d-none d-lg-block">
 
-					<a href="https://www.twitter.com/CSDNow" target="_blank" class="social">
+					<a href="https://www.twitter.com/csdnow" target="_blank" class="social">
 
 						<i class="fab fa-twitter-square fa-3x social"></i> 
 

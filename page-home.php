@@ -376,6 +376,7 @@ get_header(); ?>
 
 	<!-- Social Section Start -->
 
+<!--
 	<section id="social" class="bg-gray py-2">
 
 		<div class="container">
@@ -479,6 +480,7 @@ get_header(); ?>
 		</div>
 
 	</section>
+-->
 
 	<!-- Social Section End -->
 

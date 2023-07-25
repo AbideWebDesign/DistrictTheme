@@ -136,7 +136,6 @@
 							<div class="col-lg-5">
 								<div class="text-xs text-white">
 									<div class="footer-text"><?php the_field('non_discrimination_statement', 'options'); ?></div>
-									<p class="mb-0"><a href="mailto:<?php the_field('statement_contact_email', 'options'); ?>" target="_blank"><?php the_field('statement_contact_email', 'options'); ?></a> <?php the_field('statement_contact_phone', 'options'); ?></p>
 								</div>
 							</div>
 						</div>

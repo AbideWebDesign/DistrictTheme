@@ -170,7 +170,6 @@ function custom_menu_render() {
 
 	if ( $user->user_login != 'abide_admin' && $user->user_login != 'admin' ) {
 		
-		remove_menu_page( 'appearance' );
 		remove_menu_page( 'edit.php' );
 		remove_menu_page( 'tools.php' );
 		remove_menu_page( 'plugins.php' );
@@ -228,7 +227,8 @@ function register_my_menus() {
 	);
 	
 	add_filter( 'searchwp\admin_bar', '__return_false' );
-	
+	remove_role( 'wpseo_editor' );
+	remove_role( 'wpseo_manager' );
 }
 
 add_action( 'init', 'register_my_menus' );

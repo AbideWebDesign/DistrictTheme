@@ -40,13 +40,6 @@ function csd_enqueue_script() {
 		
 }
 
-add_action( 'send_headers', function() {
-	if ( is_page('about-us') ) {
-	
-		header( 'Cache-Control: public, max-age=30, stale-while-revalidate=30, stale-if-error=600', true );
-	}
-}, 99 );
-
 add_action( 'wp_enqueue_scripts', 'csd_enqueue_script' );
 
 function csd_calendar_scripts() {
@@ -140,6 +133,81 @@ function dashboard_styles() {
 
 }
 
+/*
+ * Admin menu customizations
+ */
+add_action( 'admin_menu', 'custom_menu_render', 99999 );
+
+function custom_menu_render() {
+	
+	$user = wp_get_current_user();
+	
+	$roles = ( array ) $user->roles;
+	
+	remove_submenu_page( 'tools.php', 'site-health.php' );
+	
+	remove_menu_page( 'edit-comments.php' );
+	
+	global $submenu;
+	
+	if ( isset( $submenu['themes.php'] ) ) {
+	
+		foreach ( $submenu['themes.php'] as $index => $menu_item ) {
+	    
+	    	foreach ( $menu_item as $value ) {
+	        
+	        	if ( strpos( $value,'customize' ) !== false ) {
+	            
+	            	unset( $submenu['themes.php'][$index] );
+	        	
+	        	}
+	    	
+	    	}
+	
+		}
+	
+	}
+
+	if ( $user->user_login != 'abide_admin' && $user->user_login != 'admin' ) {
+		
+		remove_menu_page( 'appearance' );
+		remove_menu_page( 'edit.php' );
+		remove_menu_page( 'tools.php' );
+		remove_menu_page( 'plugins.php' );
+		remove_menu_page( 'options-general.php' );
+		remove_submenu_page( 'themes.php', 'themes.php' );
+		remove_submenu_page( 'themes.php', 'theme-editor.php' );
+		remove_submenu_page( 'themes.php', 'shiftnav-settings' );
+		remove_submenu_page( 'themes.php', 'ubermenu-settings' );
+		remove_submenu_page( 'users.php', 'users-user-role-editor.php' );
+		remove_menu_page( 'aiwp_settings' );
+		remove_menu_page( 'wpseo_dashboard' );
+		remove_menu_page( 'itsec-dashboard' );
+ 		remove_menu_page( 'postman' );
+		remove_menu_page( 'edit.php?post_type=acf-field-group' );
+		remove_menu_page( 'litespeed' );
+		remove_submenu_page( 'options-general.php', 'codepress-admin-columns' );
+		remove_menu_page( 'wpseo_workouts' ); 
+		remove_menu_page( 'cptui_main_menu' );
+		remove_menu_page( 'ai1wm_export' );
+		remove_submenu_page( 'gf_edit_forms', 'gf_export' );
+		remove_submenu_page( 'gf_edit_forms', 'gf_help' );
+		remove_submenu_page( 'gf_edit_forms', 'gf_settings' );
+		remove_submenu_page( 'gf_edit_forms', 'gf_addons' );
+		remove_submenu_page( 'gf_edit_forms', 'gf_system_status' );
+		
+	}
+	
+	if ( $roles[0] != 'administrator' ) {
+				
+		remove_menu_page( 'users.php' );
+		remove_menu_page( 'settings');
+		
+	}
+
+
+}
+
 // Register 
 function register_my_menus() {
 	
@@ -159,31 +227,11 @@ function register_my_menus() {
 		)
 	);
 	
+	add_filter( 'searchwp\admin_bar', '__return_false' );
+	
 }
 
 add_action( 'init', 'register_my_menus' );
-
-function csd_widgets_init() {
-	
-	register_sidebar( array(
-	    'name' => __( 'Main Sidebar', 'csd' ),
-	    'id' => 'sidebar',
-	    'description' => __( 'Widgets in this area will be shown on all posts and pages.', 'csd' ),
-	    'before_widget' => '<li id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</li>',
-		'before_title'  => '<h2 class="widgettitle">',
-		'after_title'   => '</h2>',
-	) );
-	register_sidebar( array(
-	    'name' => __( 'Calendar - Home', 'csd' ),
-	    'id' => 'home_calendar',
-	    'description' => __( 'Widget area for calendar events on home page.', 'csd' ),
-	
-	) );
-	
-}
-
-add_action( 'widgets_init', 'csd_widgets_init' );
 
 // Limit number of excerpt characters
 function custom_excerpt_length( $length ) {

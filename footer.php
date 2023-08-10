@@ -101,11 +101,14 @@
 								<?php wp_nav_menu( array('theme_location' => 'footer-topmenu-col-4-1', 'items_wrap' => '<ul>%3$s</ul>' )); ?>
 								
 								<h5>District Information</h5>
+								
 								<p>District Office<br>
 								
 									<?php the_field('district_office_address_street', 'options'); ?><br>
 								
 									<?php the_field('district_office_city', 'options'); ?> Oregon, <?php the_field('district_office_zip', 'options'); ?></p>
+									
+									<p><?php the_field('district_office_hours', 'options'); ?></p>
 								
 									<p><?php the_field('district_office_phone', 'options'); ?> - Office<br>
 								

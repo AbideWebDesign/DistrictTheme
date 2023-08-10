@@ -6,6 +6,7 @@
             "key": "field_5667715682d0c",
             "label": "Address - Street",
             "name": "district_office_address_street",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -27,6 +28,7 @@
             "key": "field_5667717582d0d",
             "label": "City",
             "name": "district_office_city",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -48,6 +50,7 @@
             "key": "field_566771f182d0e",
             "label": "Zip",
             "name": "district_office_zip",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -66,9 +69,31 @@
             "disabled": 0
         },
         {
+            "key": "field_64d562b178a10",
+            "label": "District Office Hours",
+            "name": "district_office_hours",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_5667720082d0f",
             "label": "Phone",
             "name": "district_office_phone",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -90,6 +115,7 @@
             "key": "field_5667722082d10",
             "label": "Fax",
             "name": "district_office_fax",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -111,6 +137,7 @@
             "key": "field_5667722b82d11",
             "label": "Email",
             "name": "district_office_email",
+            "aria-label": "",
             "type": "email",
             "instructions": "",
             "required": 1,
@@ -141,7 +168,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1539200287
+    "show_in_rest": 0,
+    "modified": 1691706048
 }

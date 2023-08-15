@@ -108,7 +108,11 @@
 								
 									<?php the_field('district_office_city', 'options'); ?> Oregon, <?php the_field('district_office_zip', 'options'); ?></p>
 									
-									<p><?php the_field('district_office_hours', 'options'); ?></p>
+									<?php if ( get_field('district_office_hours', 'options') ): ?>
+									
+										<p><?php the_field('district_office_hours', 'options'); ?></p>
+										
+									<?php endif; ?>
 								
 									<p><?php the_field('district_office_phone', 'options'); ?> - Office<br>
 								

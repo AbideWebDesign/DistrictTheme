@@ -1226,14 +1226,16 @@ function csd_admin_bar_exclude_edit() {
 	
 }
 
-add_filter( 'acf/update_value/key=field_64df8ee233643', 'csd_update_user_access_value', 10, 3 );
+add_filter( 'acf/load_value/key=field_64df8ee233643', 'csd_update_user_access_value', 10, 3 );
 
 function csd_update_user_access_value( $value, $post_id, $field ) {
+
+    global $pagenow;
     
-    if ( $value ) {
-				
+    if ( $value && $pagenow == 'edit.php' ) {
+					
 		$all_wp_pages = get_posts( [ 'post_type' => 'page', 'posts_per_page' => -1 ] );
-	
+
 		$children = array();
 		
 		$children_pages = array();
@@ -1257,8 +1259,8 @@ function csd_update_user_access_value( $value, $post_id, $field ) {
 		$value = array_merge( $value, $children_pages );
 
     }
-    
-    return $value;
+	    	
+	return $value;
 
 }
 
@@ -1269,26 +1271,24 @@ add_filter( 'parse_query', 'csd_user_access' );
 
 function csd_user_access( $query ) {
 	
-	if ( is_admin() ) {
+	if ( ! is_admin() || ! $query->is_main_query() ) return;
+         
+	global $pagenow;
 		
-		global $pagenow;
+	if ( $query->is_admin && $pagenow == 'edit.php' && $query->query_vars['post_type'] == 'page' ) {
 		
-		if ( $query->is_admin && $pagenow == 'edit.php' && $query->query_vars['post_type'] == 'page' ) {
+		$user = wp_get_current_user();
+		
+		$allowed_pages = get_field('allowed_pages', $user);
+		
+		if ( $allowed_pages ) {
+					
+			$query->set('post__in', $allowed_pages );
 			
-			$user = wp_get_current_user();
-			
-			if ( get_field('allowed_pages', $user) ) {
-				
-				$pages_user_can_edit = get_field('allowed_pages', $user);
-				
-				$query->set('post__in', $pages_user_can_edit );
-				
-			}
-							
-		} 
+		}
+						
+	} 
 		
-		return $query;
-		
-	}
+	return $query;	
 
 }

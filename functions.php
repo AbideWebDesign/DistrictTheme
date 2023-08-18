@@ -1204,22 +1204,18 @@ function csd_admin_bar_exclude_edit() {
 	
 	$user = wp_get_current_user();
 		
-	if ( isset( $post ) ) {
+	if ( isset( $post ) && get_field('allowed_pages', $user) ) {
 				
 		$user_can_edit = false;
-
-		if ( get_field('allowed_pages', $user) ) {
 							
-			$pages_user_can_edit = get_field('allowed_pages', $user);
-			
-			if ( in_array( $post->ID, $pages_user_can_edit ) || array_intersect( $pages_user_can_edit, get_post_ancestors( $post->ID ) ) ) {
-			
-				$user_can_edit = true;
-				
-			} 
-												
-		}
+		$pages_user_can_edit = get_field('allowed_pages', $user);
 		
+		if ( in_array( $post->ID, $pages_user_can_edit ) || array_intersect( $pages_user_can_edit, get_post_ancestors( $post->ID ) ) ) {
+		
+			$user_can_edit = true;
+			
+		} 
+														
 		if ( ! $user_can_edit ) {
 			
 			$wp_admin_bar->remove_menu('edit');

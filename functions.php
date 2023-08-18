@@ -1,5 +1,7 @@
 <?php
 
+add_filter( 'wp_is_application_passwords_available', '__return_false' );
+
 function csd_enqueue_style() {
 
 	$theme = wp_get_theme();
@@ -118,6 +120,13 @@ function dashboard_styles() {
 		display: none;
 	}
 	
+	/*
+	** Plugin: User Role
+	*/
+	.user-capabilities-wrap, .user-language-wrap {
+		display: none;
+	}
+	
 	/* 
 	** Plugin: ACF to Rest API
 	*/
@@ -129,7 +138,25 @@ function dashboard_styles() {
 		display: none !important;
 	}
 	
+	/* 
+	** Plugin: ACF Extended 
+	*/
+	.wrap>form .form-table {
+		border-top: 1px solid #c3c4c7;
+	}
+	
 	</style>';
+	
+		
+	$user = wp_get_current_user();
+	
+	$roles = ( array ) $user->roles;
+	
+	if ( $roles[0] != 'administrator' ) {
+	
+		echo '<style>.acf-field-relationship{display:none; }</style>';
+		
+	}
 
 }
 
@@ -1162,6 +1189,110 @@ function set_courses_order( $wp_query ) {
 		
     	}
 	
+	}
+
+}
+
+/*
+ * Admin bar customizations
+ */
+add_action( 'wp_before_admin_bar_render', 'csd_admin_bar_exclude_edit' );
+
+function csd_admin_bar_exclude_edit() {
+	
+	global $wp_admin_bar, $post;
+	
+	$user = wp_get_current_user();
+		
+	if ( isset( $post ) ) {
+				
+		$user_can_edit = false;
+
+		if ( get_field('allowed_pages', $user) ) {
+							
+			$pages_user_can_edit = get_field('allowed_pages', $user);
+			
+			if ( in_array( $post->ID, $pages_user_can_edit ) || array_intersect( $pages_user_can_edit, get_post_ancestors( $post->ID ) ) ) {
+			
+				$user_can_edit = true;
+				
+			} 
+												
+		}
+		
+		if ( ! $user_can_edit ) {
+			
+			$wp_admin_bar->remove_menu('edit');
+			
+		}	
+		
+	}
+	
+}
+
+add_filter( 'acf/update_value/key=field_64df8ee233643', 'csd_update_user_access_value', 10, 3 );
+
+function csd_update_user_access_value( $value, $post_id, $field ) {
+    
+    if ( $value ) {
+				
+		$all_wp_pages = get_posts( [ 'post_type' => 'page', 'posts_per_page' => -1 ] );
+	
+		$children = array();
+		
+		$children_pages = array();
+		
+		foreach ( $value as $page_id ) {
+		
+			$children[] = get_page_children( $page_id, $all_wp_pages );
+		
+		}
+		
+		foreach ( $children as $child ) {
+			
+			foreach ( $child as $c ) {
+				
+				$children_pages[] = strval( $c->ID );
+				
+			}
+		
+		}
+
+		$value = array_merge( $value, $children_pages );
+
+    }
+    
+    return $value;
+
+}
+
+/*
+ * Control User Access
+ */
+add_filter( 'parse_query', 'csd_user_access' );
+
+function csd_user_access( $query ) {
+	
+	if ( is_admin() ) {
+		
+		global $pagenow;
+		
+		if ( $query->is_admin && $pagenow == 'edit.php' && $query->query_vars['post_type'] == 'page' ) {
+			
+			$user = wp_get_current_user();
+			
+			if ( get_field('allowed_pages', $user) ) {
+				
+				$pages_user_can_edit = get_field('allowed_pages', $user);
+				
+				$query->set('post__in', $pages_user_can_edit );
+				
+			}
+							
+		} 
+		
+		return $query;
+		
 	}
 
 }

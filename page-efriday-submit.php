@@ -21,7 +21,6 @@ get_header('simple');
 					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 				</header><!-- .entry-header -->
 				<?php the_field('content'); ?>
-<!--
 				<div class="acf-form mt-2">
 					<?php
 			
@@ -54,7 +53,6 @@ get_header('simple');
 					
 					?>
 				</div>
--->
 	
 			</div>
 			<div class="col-12 col-md-3 float-left">

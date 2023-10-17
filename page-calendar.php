@@ -21,11 +21,14 @@
 	<div class="page-content py-3">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8">
+				<div class="col-lg-9">
+					
 					<?php get_template_part( 'template-parts/page', 'blocks' ); ?>
+					
+					<div class="mt-2"><?php get_template_part('template-parts/page-block', 'table-dates'); ?></div>
+
 				</div>
-				<div class="col-lg-4">
-					<div class="mb-2"><?php get_template_part('template-parts/page-block', 'table-dates'); ?></div>
+				<div class="col-lg-3">
 					<?php get_template_part('template-parts/page-block', 'table-calendar-downloads'); ?>
 				</div>
 

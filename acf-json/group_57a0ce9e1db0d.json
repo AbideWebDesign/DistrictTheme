@@ -6,6 +6,7 @@
             "key": "field_57a0ceaf7d10e",
             "label": "Name of Organization",
             "name": "name_of_organization",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -27,6 +28,7 @@
             "key": "field_57a0ceb87d10f",
             "label": "Event Description\/Announcment",
             "name": "event_name",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -46,6 +48,7 @@
             "key": "field_586d63424e88d",
             "label": "Targeted Age Group",
             "name": "targeted_age_group",
+            "aria-label": "",
             "type": "checkbox",
             "instructions": "",
             "required": 1,
@@ -68,12 +71,14 @@
             "allow_custom": 0,
             "save_custom": 0,
             "toggle": 0,
-            "return_format": "value"
+            "return_format": "value",
+            "custom_choice_button_text": "Add new choice"
         },
         {
             "key": "field_57acfc461ab9c",
             "label": "Event\/Opportunity Description",
             "name": "event_description",
+            "aria-label": "",
             "type": "textarea",
             "instructions": "",
             "required": 1,
@@ -89,12 +94,14 @@
             "rows": "",
             "new_lines": "wpautop",
             "readonly": 0,
-            "disabled": 0
+            "disabled": 0,
+            "acfe_textarea_code": 0
         },
         {
             "key": "field_57a0d41291000",
             "label": "Event Type",
             "name": "event_type",
+            "aria-label": "",
             "type": "taxonomy",
             "instructions": "",
             "required": 1,
@@ -111,12 +118,14 @@
             "save_terms": 1,
             "load_terms": 1,
             "return_format": "object",
-            "multiple": 0
+            "multiple": 0,
+            "bidirectional_target": []
         },
         {
             "key": "field_57a0cec57d110",
             "label": "Contact Person",
             "name": "contact_person",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -138,6 +147,7 @@
             "key": "field_57a0cecf7d111",
             "label": "Organization Phone Number",
             "name": "contact_phone_number",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 1,
@@ -157,6 +167,7 @@
             "key": "field_57a0cf177d112",
             "label": "Organization Email",
             "name": "contact_email",
+            "aria-label": "",
             "type": "email",
             "instructions": "",
             "required": 1,
@@ -175,6 +186,7 @@
             "key": "field_57a0cf567d113",
             "label": "Start Date",
             "name": "start_date",
+            "aria-label": "",
             "type": "date_picker",
             "instructions": "The date you would like to begin displaying the flyer. Please format 12\/30\/2016.",
             "required": 1,
@@ -192,6 +204,7 @@
             "key": "field_57a0cf737d114",
             "label": "End Date",
             "name": "end_date",
+            "aria-label": "",
             "type": "date_picker",
             "instructions": "The date you would like to stop displaying the flyer. Max 3 months. Please format 12\/30\/2016.",
             "required": 1,
@@ -209,6 +222,7 @@
             "key": "field_57a0cfbf7d115",
             "label": "Attach a .pdf of your flyer (English)",
             "name": "attach_pdf",
+            "aria-label": "",
             "type": "file",
             "instructions": "No bigger than 10mb.",
             "required": 0,
@@ -222,12 +236,14 @@
             "library": "all",
             "min_size": "",
             "max_size": "10mb",
-            "mime_types": ".pdf"
+            "mime_types": ".pdf",
+            "uploader": ""
         },
         {
             "key": "field_57f82693435b8",
             "label": "Attach a .pdf of your flyer (Spanish)",
             "name": "attach_pdf_spanish",
+            "aria-label": "",
             "type": "file",
             "instructions": "No bigger than 10mb.",
             "required": 0,
@@ -241,12 +257,14 @@
             "library": "all",
             "min_size": "",
             "max_size": "10mb",
-            "mime_types": ".pdf"
+            "mime_types": ".pdf",
+            "uploader": ""
         },
         {
             "key": "field_5b588bc01ac03",
             "label": "Flyer Image",
             "name": "flyer_image",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -265,12 +283,15 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ".jpg, .jpeg"
+            "mime_types": ".jpg, .jpeg",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_5bcf724c0ce78",
             "label": "Flyer Image Spanish",
             "name": "flyer_image_spanish",
+            "aria-label": "",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -289,12 +310,15 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ".jpg, .jpeg"
+            "mime_types": ".jpg, .jpeg",
+            "uploader": "",
+            "acfe_thumbnail": 0
         },
         {
             "key": "field_586d77783701b",
             "label": "Website URL",
             "name": "ticket_url",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -306,29 +330,6 @@
             },
             "default_value": "",
             "placeholder": ""
-        },
-        {
-            "key": "field_5c06f24f23bbd",
-            "label": "Disclaimer",
-            "name": "disclaimer",
-            "type": "checkbox",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "My flyer has the following disclaimer: The Corvallis School District does not necessarily sponsor this organization or its activities. The District assumes no liability for its contents or events arising out of this distribution.": "My flyer has the following disclaimer: The Corvallis School District does not necessarily sponsor this organization or its activities. The District assumes no liability for its contents or events arising out of this distribution."
-            },
-            "allow_custom": 0,
-            "default_value": [],
-            "layout": "horizontal",
-            "toggle": 0,
-            "return_format": "value",
-            "save_custom": 0
         }
     ],
     "location": [
@@ -361,7 +362,15 @@
         "tags",
         "send-trackbacks"
     ],
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1545255886
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1697555379
 }

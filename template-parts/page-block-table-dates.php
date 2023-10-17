@@ -3,7 +3,7 @@ $table = get_field( 'calendar_dates', 'options' );
 
 if ( $table ) {
 
-    echo '<h3>Key Dates</h3><div class="table-responsive"><table class="table table-white table-bordered">';
+    echo '<h3>Key Dates</h3><div class="table-responsive"><table class="table table-white table-bordered table-striped table-sm">';
 
         if ( $table['header'] ) {
 

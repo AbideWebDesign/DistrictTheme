@@ -1912,6 +1912,13 @@
                 "operator": "==",
                 "value": "page-food-services.php"
             }
+        ],
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-calendar.php"
+            }
         ]
     ],
     "menu_order": 10,
@@ -1932,5 +1939,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1696639642
+    "modified": 1697575679
 }

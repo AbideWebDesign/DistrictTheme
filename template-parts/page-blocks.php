@@ -135,7 +135,13 @@
 
 				get_template_part( 'template-parts/page-block', 'cta' );
 				
-			endif;				
+			endif;	
+			
+			if ( get_row_layout() == "key_dates" ): 
+
+				get_template_part( 'template-parts/content', 'calendar-dates' );
+				
+			endif;							
 			
 		endwhile;
 		

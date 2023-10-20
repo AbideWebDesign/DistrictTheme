@@ -1,0 +1,1 @@
+<div class="mt-2"><?php get_template_part('template-parts/page-block', 'table-dates'); ?></div>

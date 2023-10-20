@@ -25,8 +25,6 @@
 					
 					<?php get_template_part( 'template-parts/page', 'blocks' ); ?>
 					
-					<div class="mt-2"><?php get_template_part('template-parts/page-block', 'table-dates'); ?></div>
-
 				</div>
 				<div class="col-lg-3">
 					<?php get_template_part('template-parts/page-block', 'table-calendar-downloads'); ?>

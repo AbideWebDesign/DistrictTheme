@@ -144,7 +144,8 @@ function dashboard_styles() {
 	.wrap>form .form-table {
 		border-top: 1px solid #c3c4c7;
 	}
-	
+	.acf-escaped-html-notice {
+		display: none !important;
 	</style>';
 	
 		

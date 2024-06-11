@@ -18,7 +18,7 @@
 			
 				}  else if ( get_sub_field('link_type') == 'Email' ) {
 			
-					$link = 'mailto:' . get_sub_field('email');
+					$link = 'mailto:' . get_sub_field('email_address');
 			
 				} 
 				

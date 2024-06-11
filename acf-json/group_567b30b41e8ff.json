@@ -490,20 +490,20 @@
                                         "class": "",
                                         "id": ""
                                     },
+                                    "show_in_rest": 0,
                                     "choices": {
                                         "Internal Page": "Internal Page",
                                         "Internal Media": "Internal Media",
-                                        "External": "External"
+                                        "External": "External",
+                                        "Email": "Email"
                                     },
                                     "default_value": false,
-                                    "allow_null": 0,
+                                    "return_format": "value",
                                     "multiple": 0,
+                                    "allow_null": 0,
                                     "ui": 0,
                                     "ajax": 0,
                                     "placeholder": "",
-                                    "disabled": 0,
-                                    "readonly": 0,
-                                    "return_format": "value",
                                     "allow_custom": 0,
                                     "search_placeholder": "",
                                     "parent_repeater": "field_567b6aff924b3"
@@ -1976,5 +1976,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1697815650
+    "modified": 1718113797
 }

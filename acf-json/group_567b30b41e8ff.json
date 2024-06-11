@@ -595,6 +595,35 @@
                                     "parent_repeater": "field_567b6aff924b3"
                                 },
                                 {
+                                    "key": "field_666855cd9d776",
+                                    "label": "Email Address",
+                                    "name": "email_address",
+                                    "aria-label": "",
+                                    "type": "email",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": [
+                                        [
+                                            {
+                                                "field": "field_567b6b1e924b5",
+                                                "operator": "==",
+                                                "value": "Email"
+                                            }
+                                        ]
+                                    ],
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_rest": 0,
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_567b6aff924b3"
+                                },
+                                {
                                     "key": "field_56831c412f88a",
                                     "label": "Button Type",
                                     "name": "button_type",
@@ -1976,5 +2005,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1718113797
+    "modified": 1718114168
 }

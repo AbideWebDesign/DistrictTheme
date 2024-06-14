@@ -5,17 +5,39 @@
 		if( have_rows('post_content_blocks') ):
 			
 			while( have_rows('post_content_blocks') ): the_row(); 
-			
-				if( get_row_layout() == 'image' ): 
+
+				if( get_row_layout() == 'table_of_contents' ): ?>
 				
-					get_template_part( 'template-parts/page-block', 'image' );	
+					<div class="mb-1 pb-1 border-bottom">
+	
+						<?php echo ( get_sub_field('table_of_contents_heading') ? '<h2 class="mb-1">' . get_sub_field('table_of_contents_heading') . '</h2>' : '' ); ?>
+					
+						<?php while ( have_rows('links') ): the_row(); ?>
+						
+							<div><i class="fas fa-angle-right text-xs text-muted"></i> <a class="anchor" href="#<?php the_sub_field('anchor'); ?>"><?php the_sub_field('label'); ?></a></div>
+						
+						<?php endwhile; ?>
+						
+					</div>
 							
-				endif;
-				
+				<?php endif;
+							
+				if( get_row_layout() == 'image' ): 
+			
+					echo ( get_sub_field('anchor') ? '<div id="'. get_sub_field('anchor') . '">' : '' ); 
+					
+						get_template_part( 'template-parts/page-block', 'image' );	
+						
+					echo ( get_sub_field('anchor') ? '</div>' : '' ); 
+							
+				endif;	
+						
 				if( get_sub_field('lead_text_block') ): ?>
 					
 					<div class="entry-lead">
+						
 						<p class="lead"><?php the_sub_field('lead_text_block'); ?></p>
+					
 					</div>			
 				
 				<?php 
@@ -33,8 +55,12 @@
 					endif;
 			
 					if( get_sub_field('text') ):
-					
+				
+						echo ( get_sub_field('anchor') ? '<div id="'. get_sub_field('anchor') . '">' : '' ); 
+						
 						the_sub_field('text'); 
+						
+						echo ( get_sub_field('anchor') ? '</div>' : '' ); 
 						
 					endif; 
 					
@@ -42,6 +68,8 @@
 				
 				if( get_row_layout() == 'button_group' ):
 					
+					echo ( get_sub_field('anchor') ? '<div id="'. get_sub_field('anchor') . '">' : '' ); 
+
 					if( have_rows('button') ): ?>
 					
 						<div class="pb-1">
@@ -86,10 +114,14 @@
 						
 					endif;
 					
+					echo ( get_sub_field('anchor') ? '</div>' : '' ); 
+					
 				endif; 
 										
 				if( get_row_layout() == 'blockquote' ): ?>
-				
+					
+					<?php echo ( get_sub_field('anchor') ? '<div id="'. get_sub_field('anchor') . '">' : '' ); ?>
+					
 					<div class="blockquote">
 						
 						<p><?php the_sub_field('blockquote_text'); ?></p>
@@ -109,14 +141,20 @@
 						?>
 						
 					</div>
+					
+					<?php echo ( get_sub_field('anchor') ? '</div>' : '' ); ?>
 				
 				<?php
 				
 				endif;
 				
 				if( get_row_layout() == 'table' ): ?>
-				
+					
+					<?php echo ( get_sub_field('anchor') ? '<div id="'. get_sub_field('anchor') . '">' : '' ); ?>
+					
 					<?php get_template_part('template-parts/page-block', 'table'); ?>
+					
+					<?php echo ( get_sub_field('anchor') ? '</div>' : '' ); ?>
 									
 				<?php
 				

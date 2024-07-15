@@ -21,16 +21,12 @@
 	<div class="page-content py-3">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-9">
+				<div class="col-lg-12">
 					
 					<?php get_template_part( 'template-parts/page', 'blocks' ); ?>
 					
 				</div>
-				<div class="col-lg-3">
-					<?php get_template_part('template-parts/page-block', 'table-calendar-downloads'); ?>
-				</div>
-
-			</div>
+							</div>
 		</div>
 	</div>
 	<div class="py-3 bg-light">

@@ -45,6 +45,7 @@
 							</div>
 						</div>
 					</div>
+					<div class="facetwp-template">
 					<?php if(have_posts()): ?>
 						<?php while(have_posts()): the_post(); ?>
 							<?php $image = get_field('flyer_image'); ?>
@@ -84,6 +85,7 @@
 					<?php else: ?>
 						<strong>No Results Returned</strong>
 					<?php endif; ?>
+					</div>
 				</div>
 			</div>
 		</div>

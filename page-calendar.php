@@ -22,11 +22,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					
-					<?php get_template_part( 'template-parts/page', 'blocks' ); ?>
-					
+					<?php get_template_part( 'template-parts/page', 'blocks' ); ?>					
 				</div>
-							</div>
+			</div>
 		</div>
 	</div>
 	<div class="py-3 bg-light">

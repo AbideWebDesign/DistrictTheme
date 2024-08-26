@@ -47,7 +47,7 @@ get_header('simple');
 					
 					<?php
 					
-					//acf_form( $new_post );
+					acf_form( $new_post );
 				
 					endwhile;
 					

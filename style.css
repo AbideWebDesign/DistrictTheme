@@ -14486,3 +14486,6 @@ body .facetwp-facet input.facetwp-search, body .facetwp-facet input.facetwp-loca
 .facet-mb-0 .facetwp-facet {
   margin-bottom: 0;
 }
+#primary-nav .ubermenu-sub-indicator-close {
+	display: none !important;
+}

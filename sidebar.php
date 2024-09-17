@@ -8,8 +8,6 @@
  */
 ?>
 
-<?php if ( is_active_sidebar( 'sidebar' )  ) : ?>
-	<div class="sidebar">
-		<?php get_template_part('template-parts/content','sidenav'); ?>
-	</div><!-- .sidebar -->
-<?php endif; ?>
+<div class="sidebar">
+	<?php get_template_part('template-parts/content','sidenav'); ?>
+</div><!-- .sidebar -->

@@ -183,6 +183,32 @@
             "append": ""
         },
         {
+            "key": "field_66e9c00afb951",
+            "label": "I have included the required disclaimer statement above on my flyer",
+            "name": "disclaimer_statement",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_rest": 0,
+            "choices": {
+                "Yes, I have included the required disclaimer statement above on my flyer.": "Yes, I have included the required disclaimer statement above on my flyer."
+            },
+            "default_value": [],
+            "return_format": "value",
+            "allow_custom": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
             "key": "field_57a0cf567d113",
             "label": "Start Date",
             "name": "start_date",
@@ -372,5 +398,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1697555379
+    "modified": 1726595145
 }

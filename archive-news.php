@@ -32,7 +32,7 @@ $excluded_post_ids = array();
 				<h1 class='mb-0 text-white'>District News</h1>
 			</div>
 			<div class="col text-center text-lg-right">
-				<a href="https://csd509j.us2.list-manage.com/subscribe?u=018348dc6e5df65c071cb232d&id=e96b4b4c88" target="_blank" class="btn btn-light btn-sm"><i class="fas fa-rss"></i> Subscribe</a>
+				<a href="https://www.parentsquare.com/community_signups/085ebec4-f181-4e07-a732-4a6ca78049c0/new" target="_blank" class="btn btn-light btn-sm"><i class="fas fa-rss"></i> Subscribe</a>
 			</div>
 		</div>
 	</div>

@@ -50,7 +50,7 @@
 
 							<div class="col-12 h-100">
 								
-								<div class="bg-gray h-100">
+								<div class="h-100">
 																													
 									<div class="row h-100">
 									
@@ -76,7 +76,7 @@
 												
 												<div class="posts-content h-100 d-flex">
 				
-													<div class="posts-content-heading">
+													<div class="posts-content-heading text-center">
 				
 														<?php the_title(); ?>
 				

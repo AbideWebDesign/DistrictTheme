@@ -12833,7 +12833,7 @@ body ul.page-numbers span.current {
   font-size: 13px;
   font-weight: 600;
 }
-
+.page-content ul.nav-tabs li:before,
 .page-content ul.nav-tabs li:before,
 .page-content ul.list-unstyled li:before,
 .page-content .gform_wrapper ul li:before,

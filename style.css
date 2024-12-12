@@ -12834,6 +12834,7 @@ body ul.page-numbers span.current {
   font-weight: 600;
 }
 
+.page-content ul.nav-tabs li:before,
 .page-content ul.list-unstyled li:before,
 .page-content .gform_wrapper ul li:before,
 .gform_wrapper .page-content ul li:before,
@@ -14485,7 +14486,4 @@ body .facetwp-facet input.facetwp-search, body .facetwp-facet input.facetwp-loca
 
 .facet-mb-0 .facetwp-facet {
   margin-bottom: 0;
-}
-#primary-nav .ubermenu-sub-indicator-close {
-	display: none !important;
 }

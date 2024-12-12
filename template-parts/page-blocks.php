@@ -142,6 +142,12 @@
 				get_template_part( 'template-parts/content', 'calendar-dates' );
 				
 			endif;							
+
+			if ( get_row_layout() == "tabbed_content" ): 
+
+				get_template_part( 'template-parts/content', 'tabs' );
+				
+			endif;							
 			
 		endwhile;
 		

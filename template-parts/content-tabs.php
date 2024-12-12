@@ -37,6 +37,12 @@
 				<div id="id_<?php echo $counter; ?>" class="tab-pane fade<?php echo $counter == 0 ? ' show active' : ''; ?>" role="tabpanel" aria-labelledby="tab-<?php echo $counter; ?>">
 					   
 					<?php echo $content; ?>
+					
+					<?php if ( get_sub_field('table') ): ?>
+					
+						<?php get_template_part( 'template-parts/page-block', 'table' ); ?>
+					
+					<?php endif; ?>
 							
 				</div>
 						            		        

@@ -1845,6 +1845,25 @@
                                     "media_upload": 1,
                                     "delay": 0,
                                     "parent_repeater": "field_675a542716e5c"
+                                },
+                                {
+                                    "key": "field_675b365f79016",
+                                    "label": "Table",
+                                    "name": "table",
+                                    "aria-label": "",
+                                    "type": "table",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_rest": 0,
+                                    "use_header": 0,
+                                    "use_caption": 2,
+                                    "parent_repeater": "field_675a542716e5c"
                                 }
                             ]
                         }
@@ -2094,5 +2113,5 @@
     "acfe_form": 0,
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1733973468
+    "modified": 1734030968
 }
